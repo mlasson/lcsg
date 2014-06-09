@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}
+  My title
+{% endblock %}
+{% block header %}
+  Index of letters
+{% endblock %}
+{% block content %}
+{% if letter_list %}
+<div class="input-group input-group-xs">
+  <span class="input-group-addon">Result by page:</span>
+  <input type="number" class="form-control" value="{{ pagesize }}" min="1" max="300">
+</div>
+<div id="letters_index">
+  <table class="table table-striped">
+    <thead><tr><th> </th> 
+    <th class="sort" data-sort="volume"> Volume </th>
+    <th class="sort" data-sort="number"> Number </th> 
+    <th class="sort" data-sort="length"> Length </th> 
+    <th class="sort" data-sort="date"> Date </th> 
+    <th class="sort" data-sort="period"> Period </th></tr></thead>
+  <tbody class="list">
+  {% for letter in letter_list %}
+  <tr><td>
+<div class="btn-group btn-group-xs">
+       <a type="button" class="btn btn-default btn-lg" href="{% url 'letter' letter.pk %}"><span class="glyphicon glyphicon-link"></span></a>  
+       <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal" data-content-url="{% url 'modal-letter' letter.pk %}">
+          <span class="glyphicon glyphicon-eye-open"></span>
+       </button> 
+</div>
+       </td>
+        <td class="volume">{{ letter.volume }}</td>
+        <td class="number">{{ letter.number }}</td>
+        <td class="length">{{ letter.length }}</td>
+        <td class="date">{{ letter.date }}</td>
+        <td class="period">{{ letter.period.name }}</td></tr>
+  {% endfor %}
+  </tbody>
+</table>
+<ul class="pagination">
+{% if letter_list.has_previous %}
+  <li><a href="{% url 'index-with-page' pagesize letter_list.previous_page_number %}">&laquo;</a></li>
+{% else %}
+<li class="disabled"><a href="#">&laquo;</a></li>
+{% endif %}
+{% for x in letter_list.paginator.page_range %}
+  <li><a href="{% url 'index-with-page' pagesize x %}">{{ x }}</a></li>
+{% endfor %}
+{% if letter_list.has_next %}
+  <li><a href="{% url 'index-with-page' pagesize letter_list.next_page_number %}">&raquo;</a></li>
+{% else %}
+<li class="disabled"><a href="#">&raquo;</a></li>
+{% endif %}
+</ul>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Loading title ...</h4>
+      </div>
+      <div class="modal-body">
+        <p>Loading body ...</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal fade -->
+<script>
+  var default_modal = $("#myModal").clone();
+  $('button[data-target="#myModal"]').click(function(){
+     $("#myModal").empty();
+     $("#myModal").append(default_modal);
+     var letter_url = $(this).data('content-url');
+     $.ajax({
+      url: letter_url,
+      success: function(html){
+          $("#myModal").empty();
+          $("#myModal").append(html);
+        }
+      });
+  });
+</script>
+{% else %}
+<p>No letters are available.</p>
+{% endif %}
+{% endblock %}

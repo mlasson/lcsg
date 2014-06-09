@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}
+  Index de la france
+{% endblock %}
+{% block header %}
+  Index de la france
+{% endblock %}
+{% block content %}
+<h2> Test </h2>
+<table class="table table-striped" id="myIndexList" width="100%">
+    <thead><tr>
+      <th> Famille </th>
+      <th> Compte </th>
+      <th> Fréq. </th>
+      <th> Fréq. * </th>
+      <th> Compte total </th>
+      <th> Fréq. totale  </th>
+      <th> Fréq. totale * </th>
+      <th> Difference </th>
+      <th> Difference * </th>
+      <th> Rapport </th>
+      <th> Rapport * </th>
+      <th> Chaton </th>
+    </tr></thead>
+  <tbody>
+  </tbody>
+</table>
+<script>
+  $(document).ready(function() {
+    var oTable = $('#myIndexList').dataTable({
+        "bProcessing": true,
+        "sAjaxSource": "{% url 'index-francia-ajax' %}",
+        "aoColumns": [
+             { "mData": "name" },
+             { "mData": "count" },
+             { "mData": "frequence" },
+             { "mData": "frequence_ign" },
+             { "mData": "count_all" },
+             { "mData": "frequence_all" },
+             { "mData": "frequence_all_ign" },
+             { "mData": "diff" },
+             { "mData": "diff_ign" },
+             { "mData": "rapport" },
+             { "mData": "rapport_ign" },
+             { "mData": "chaton"}
+        ] 
+      });
+  });
+</script>
+{% endblock %}

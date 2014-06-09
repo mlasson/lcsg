@@ -1,0 +1,20 @@
+{% extends "modal.html" %}
+{% load i18n %}
+{% block header %}
+{% blocktrans with number=letter.number volume=letter.volume %} 
+  Letter number {{ number }} volume {{ volume }}
+{% endblocktrans %}
+{% endblock %}
+{% block content %}
+<div id="content">{{ letter.text }}</div>
+<script>
+  var text = $("#content").text();
+  $("#content").html(format_letters(text));
+  $.getJSON( "{% url 'occurrences-ajax' letter.id %}", function( data ) {
+      var new_text = format_letters(add_spans_letters(text,data["aaData"])); 
+      $("#content").html(new_text);
+      $('*[data-toggle="tooltip"').tooltip();
+  });
+</script>
+
+{% endblock %}

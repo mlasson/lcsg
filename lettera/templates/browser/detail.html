@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}
+{% blocktrans with number=letter.number volume=letter.volume %} 
+  Letter number {{ number }} volume {{ volume }}
+{% endblocktrans %}
+{% endblock %}
+{% block header %}
+{% blocktrans with number=letter.number volume=letter.volume %} 
+  Letter number {{ number }} volume {{ volume }}
+{% endblocktrans %}
+{% endblock %}
+{% block content %}
+<div id="content">{{ letter.text }}</div>
+
+<script>
+  var text = $("#content").text();
+  $("#content").html(format_letters(text));
+  $.getJSON( "{% url 'occurrences-ajax' letter.id %}", function( data ) {
+      var new_text = format_letters(add_spans_letters(text,data["aaData"])); 
+      $("#content").html(new_text);
+      $('*[data-toggle="tooltip"').tooltip();
+  });
+</script>
+
+<h1> Period </h1>
+{% if letter.period %}
+<p> {{ letter.period.name }} </p>
+{% else %}
+ <p> Period is not set. </p>
+{% endif %}
+
+
+<h2> Occurrences </h2>
+
+<table class="table table-striped" id="myIndexList" width="100%">
+    <thead><tr>
+      <th> Word </th>
+      <th> Start </th> 
+      <th> End </th> 
+    </tr></thead>
+  <tbody>
+  </tbody>
+</table>
+
+<script>
+  $(document).ready(function() {
+    var oTable = $('#myIndexList').dataTable({
+        "bProcessing": true,
+        "sAjaxSource": "{% url 'occurrences-ajax' letter.id %}",
+        "aoColumnDefs" : [],
+        "aaSorting": [[ 1, "asc" ]],
+        "aoColumns": [
+             { "mData": "word" },
+             { "mData": "start_position" },
+             { "mData": "end_position" }
+        ] 
+      });
+  });
+</script>
+
+
+{% endblock %}
