@@ -225,7 +225,7 @@ if __name__ == "__main__" :
 
   for i in xrange(0,len(corpis)) : 
     print '-- Traitement du volume', corpus_name[i]
-    output = parsing.parse_file(corpis[i])
+    output = parsing.parse_file("data/"+corpis[i])
     for num, title, text, comment in output : 
       lettera = Lettera(parsing_letter_number(num), corpus_name[i], title, text, comment)
       for p in periods : 
