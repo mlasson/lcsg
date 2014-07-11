@@ -4,8 +4,9 @@ from browser.models import Letter, Period, Word, Occurrence, Family, Tag, Senten
 from optparse import make_option
 from itertools import tee
 from collections import defaultdict
+from django.db.models import Q
 
-max_dist = 1
+max_dist = 3
 
 class Command(BaseCommand):
   args = '<???>'
@@ -13,30 +14,22 @@ class Command(BaseCommand):
 
   def handle(self, *args, **options):
     print('Retrieve occurrences ...')
-    occurrences = Occurrence.objects.order_by('letter', 'start_position').select_related('word', 'sentence')
-    print('Sorting occurrences ...')
-    occ_sorted=defaultdict(list)
-    cpt = 0
-    max = len(occurrences)
-    for x in occurrences:
-      if cpt % 10 == 0 :
-        sys.stdout.write("%5d / %d\r" % (cpt, max))
-        sys.stdout.flush()
-      cpt += 1
-      occ_sorted[x.sentence_id].append(x)
+    occurrences = Occurrence.objects.filter(Q(word__name='stato') | Q(word__name='stati'))
+    print(len(occurrences),'occurrences')
+    print('Fetch sentences ...')
+    sentences = set(x.sentence_id for x in occurrences)
+    print(len(sentences),'sentences')
     print('Drop all tags ...')
     Tag.objects.all().delete()
-    def pairwise(it):
-      a,b = tee(it)
-      next(b,None)
-      return zip(a,b)
     cpt = 0
     tags = list()
     dist = 0
-    for l in occ_sorted.values():
+    max = len(occurrences)
+    for s in sentences:
+      phrase = Occurrence.objects.filter(sentence__id=s).order_by('start_position').select_related('word')
       found = False
       essere = False
-      for x in l :
+      for x in phrase :
         if cpt % 10 == 0 :
           sys.stdout.write("%5d / %d\r" % (cpt, max))
           sys.stdout.flush()
@@ -44,8 +37,9 @@ class Command(BaseCommand):
         dist += 1
         if dist > max_dist:
             essere = False
-        if (x.word.name == 'stato' or x.word.name == 'stati'):
-          if essere:
+        if (x.word.name == 'stato' 
+         or x.word.name == 'stati'):
+          if essere and dist == 2:
             tag = Tag(occurrence=x, name = 'participe') 
             tags.append(tag)
           found = True
@@ -55,9 +49,9 @@ class Command(BaseCommand):
           dist = 0
     print('\nSaving ...')
     Tag.objects.bulk_create(tags)
-    print('\nRetrieve essere')
+    print('Retrieve essere')
     essere = Family.objects.get(name='essere')
-    print('\nUpdating all participe ...')
+    print('Updating all participe ...')
     participes = Occurrence.objects.filter(tag__name="participe").update(family=essere)
 
         

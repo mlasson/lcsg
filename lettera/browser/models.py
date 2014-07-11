@@ -43,12 +43,32 @@ class Word(models.Model):
   def __str__(self):
     return self.name
 
-
-class Occurrence(models.Model):
-  word = models.ForeignKey(Word)
+class Sentence(models.Model):
   letter = models.ForeignKey(Letter)
   start_position = models.IntegerField(default=0)
   end_position = models.IntegerField(default=0)
+  
+  def __str__(self):
+    return '{0} : {1} - {2}'.format(str(self.letter), self.start_position, self.end_position)
+
+class Occurrence(models.Model):
+  word = models.ForeignKey(Word)
+  family = models.ForeignKey(Family)
+  letter = models.ForeignKey(Letter)
+  sentence = models.ForeignKey(Sentence)
+  start_position = models.IntegerField(default=0)
+  end_position = models.IntegerField(default=0)
+
+  def __str__(self):
+    return '{0}@{1}+{2}'.format(self.word, str(self.letter), self.start_position)
+
+
+
+class Tag(models.Model):
+  occurrence = models.ForeignKey(Occurrence)
+  name = models.CharField(max_length=word_size)
+  def __str__(self):
+    return '{0}({1})'.format(self.name, str(self.occurrence))
 
 class Cache(models.Model):
   name = models.TextField()

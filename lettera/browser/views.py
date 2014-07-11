@@ -1,13 +1,13 @@
 import json
 import math
+from datetime import datetime, time
 from django.core.urlresolvers import reverse
 from django.template import RequestContext, loader
-from django.db.models import Count
-from django.db.models import query
+from django.db.models import Count, Q, query
 from django.shortcuts import render
 from django.http import HttpResponse 
 from django.views import generic
-from browser.models import Letter, Occurrence, Word, Family, Period, Cache
+from browser.models import *
 from django.core.paginator import Paginator
 
 class json_cache(object):
@@ -16,14 +16,24 @@ class json_cache(object):
     self.name = func.__name__
     
   def __call__(self, arg, **args):
-    try :
-      result = Cache.objects.get(name = self.name, args = repr(arg.path)).value
-      print ('!!! using cache for '+self.name+'\n')
-    except Cache.objects.model.DoesNotExist:
+    query = Cache.objects.filter(name = self.name, args = repr(arg.path)).first()
+    if not query:
       result = self.func(arg, **args)
       new_entry = Cache(name=self.name, args=repr(arg.path), value = result)
       new_entry.save()
+    else :
+      result = query.value
     return HttpResponse(result, content_type='application/javascript')
+
+class json_nocache(object):
+  def __init__(self, func):
+    self.func = func
+    self.name = func.__name__
+    
+  def __call__(self, arg, **args):
+    result = self.func(arg, **args)
+    return HttpResponse(result, content_type='application/javascript')
+
 
 def date_handler(obj):
   if hasattr(obj, 'isoformat') : 
@@ -53,19 +63,69 @@ def index_letter(request) :
   return json.dumps({ 'aaData' : answer }, default=date_handler)
 
 @json_cache
-def index_occurrences(request, pk) : 
-  objects = Occurrence.objects.filter(letter_id = pk).order_by('pk')
+def occurrences_letter(request, pk) : 
+  objects = Occurrence.objects.filter(letter_id = pk).order_by('pk').select_related('family','word')
   answer = list()
   for o in objects :
     r = dict()
     r['word'] = o.word.name
-    r['letter'] = o.letter.pk 
+    r['letter'] = o.letter_id
     r['start_position'] = o.start_position
     r['end_position'] = o.end_position
-    r['family'] = o.word.family.name
+    r['family'] = o.family.name
     answer.append(r)
 
   return json.dumps({ 'aaData' : answer })
+
+@json_nocache
+def sentence(request, pk):
+  sentence = Sentence.objects.get(pk=pk)
+  letter = sentence.letter
+  phrase = letter.text[sentence.start_position:sentence.end_position]
+  return json.dumps(phrase)
+
+def ellipse(front, word, back, maxsize=100):
+  size = len(front)+len(word)+len(back)
+  half = int((maxsize - len(word)) / 2) 
+  diff = size - maxsize
+  if diff > 0: 
+    if len(front) < half :
+      back = back[0:maxsize + len(back) - size]+u' …'
+    elif len(back) < half :
+      front =u'… '+front[-maxsize - len(front) + size:]
+    else :
+      back = back[:half]+u' …'
+      front = u'… '+front[-half:]
+  return (front,word,back)
+
+def build_occurrence_table(pks) : 
+  occs = Occurrence.objects.filter(pk__in=pks).select_related('word','sentence','letter')
+  answer = list()
+  for o in occs:
+    r = dict()
+    r['link'] = (reverse('modal-letter', args=(o.letter_id,)),o.start_position,o.end_position)
+    r['volume'] = o.letter.volume
+    r['letter'] = o.letter.number
+    r['date'] = o.letter.date
+    r['word'] = o.word.name
+    r['sentence'] = ellipse(o.letter.text[o.sentence.start_position:o.start_position-1],
+                     o.letter.text[o.start_position:o.end_position], 
+                     o.letter.text[o.end_position+1:o.sentence.end_position])
+    answer.append(r)
+  return answer
+
+@json_cache
+def occurrences_index(request, pks) :
+  pks = map(int,pks.split(','))
+  answer = build_occurrence_table(pks)
+  return json.dumps({ 'aaData' : answer }, default=date_handler)
+
+@json_cache
+def participe(request) :
+  pks = [x.occurrence_id for x in Tag.objects.filter(name='participe')]
+  answer = build_occurrence_table(pks)
+  return json.dumps({ 'aaData' : answer }, default=date_handler)
+
 
 @json_cache
 def index_word(request) : 
@@ -107,12 +167,22 @@ def index_period(request) :
     r = dict()
     r['id'] = cpt
     r['content'] = o.name
-    r['start'] = o.start
-    r['end'] = o.end
+    r['start'] = datetime.combine(o.start, time.min)
+    r['end'] = datetime.combine(o.end, time.max)
     answer.append(r)
     cpt+=1
+  letters = Letter.objects.order_by('pk')
+  for l in letters : 
+    if l.date :
+      r = dict()
+      r['id'] = cpt
+      r['content'] = "{0}@{1}".format(l.number,l.volume)
+      r['start'] = l.date
+      answer.append(r)
+      cpt+=1
 
   return json.dumps({ 'aaData' : answer }, default=date_handler)
+
 
 @json_cache
 def index_francia(request) : 
@@ -156,19 +226,41 @@ def index_francia(request) :
     r['chaton'] = "{0:.3f}".format(math.pow(rapport_ign,2)*math.sqrt(count[w]))
     answer.append(r)
 
-  #return HttpResponse(json.dumps({
-  #    'size_francia' : size_francia,
-  #    'size_all' : size_all, 
-  #    'size_rate': float(size_all) / float(size_francia),
-  #    'aaData' : answer }, default=date_handler), content_type='application/javascript')
   return json.dumps({
       'size_francia' : size_francia,
       'size_all' : size_all, 
       'size_rate': float(size_all) / float(size_francia),
       'aaData' : answer }, default=date_handler)
 
+@json_cache
+def index_quote(request) : 
+  letters =  Letter.objects.filter(period__name__icontains="franc").filter(Q(text__contains="«") | Q(text__contains="\"") | Q(text__contains="''")).annotate(length=Count('occurrence')).order_by('pk')
+  answer = list()
+  for l in letters :
+    r = dict()
+    r['link'] = reverse('letter', args=(l.pk,))
+    r['modal'] = reverse('modal-letter', args=(l.pk,))
+    r['volume'] = l.volume
+    r['number'] = l.number
+    r['length'] = l.length
+    r['date'] = l.date
+    if l.period : 
+      r['period'] = l.period.name
+    else : 
+      r['period'] = ''
+    answer.append(r)
+
+  return json.dumps({ 'aaData' : answer }, default=date_handler)
+
+  
+class QuoteView(generic.TemplateView):
+  template_name = 'browser/quote.html'
+
 class IndexView(generic.TemplateView):
   template_name = 'browser/index.html'
+
+class ParticipeView(generic.TemplateView):
+  template_name = 'browser/participe.html'
 
 class WordView(generic.TemplateView):
   template_name = 'browser/index-word.html'

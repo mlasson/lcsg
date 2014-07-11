@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load staticfiles %}
 {% load i18n %}
 {% block title %}
   Index of periods
@@ -7,7 +8,10 @@
   Index of periods
 {% endblock %}
 {% block content %}
-<h2> Test </h2>
+
+<h2> Timeline </h2>
+<div id="period-timeline">Loading timeline ...</div>
+<h2> Index </h2>
 <table class="table table-striped" id="myIndexList" width="100%">
     <thead><tr>
       <th> Name </th>
@@ -18,16 +22,17 @@
   </tbody>
 </table>
 <script>
-  $(document).ready(function() {
-    var oTable = $('#myIndexList').dataTable({
-        "bProcessing": true,
-        "sAjaxSource": "{% url 'index-period-ajax' %}",
-        "aoColumns": [
-             { "mData": "content" },
-             { "mData": "start" },
-             { "mData": "end" }
-        ] 
-      });
+  $.getJSON("{% url 'index-period-ajax' %}", function (data) {
+    var container = document.getElementById('period-timeline');
+    var options = {
+    height: '600px',
+    min: new Date(1498, 0, 1),                // lower limit of visible range
+    max: new Date(1513, 0, 1),                // upper limit of visible range
+    zoomMin: 1000 * 60 * 60 * 24,             // one day in milliseconds
+    zoomMax: 1000 * 60 * 60 * 24 * 365    // about twelve months in milliseconds
+    }
+    var timeline = new vis.Timeline(container, data['aaData'], options);
   });
+
 </script>
 {% endblock %}
