@@ -10,6 +10,7 @@
 <p> (Beware, it may take some time). </p>
 <table class="table table-striped" id="myIndexList" width="100%">
     <thead><tr>
+      <th> View </th>
       <th> Name </th>
       <th> Family </th>
       <th> Occurrences </th>
@@ -52,7 +53,13 @@
     var oTable = $('#myIndexList').dataTable({
         "bProcessing": true,
         "sAjaxSource": "{% url 'index-word-ajax' %}",
+        "aoColumnDefs" : [
+             { "mRender" : function (data, type, row) { 
+             return '<a href="'+data+'" class="btn btn-default btn-xs">'+
+                    '<span class="glyphicon glyphicon-link"></span></a>';
+                }, "aTargets": [ 0 ] }],
         "aoColumns": [
+             { "mData": "link" },
              { "mData": "name" },
              { "mData": "family" },
              { "mData": "occurrences" }
