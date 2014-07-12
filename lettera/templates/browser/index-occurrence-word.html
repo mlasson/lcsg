@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}
+  My title
+{% endblock %}
+{% block header %}
+  Index of letters
+{% endblock %}
+{% block content %}
+<table class="table table-striped" id="myIndexList" width="100%">
+    <thead><tr>
+    <th> View </th>
+    <th> Vol </th>
+    <th> Num </th> 
+    <th> Date </th> 
+    <th> Sentence </th></tr></thead>
+  <tbody>
+  </tbody>
+</table>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Loading title ...</h4>
+      </div>
+      <div class="modal-body">
+        <p>Loading body ...</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal fade -->
+<script>
+  var default_modal = $("#myModal").clone();
+  function onclick_modal(elem){
+     $("#myModal").empty();
+     $("#myModal").append(default_modal);
+     var letter_url = $(elem).find("span").data('content-url');
+     $.ajax({
+      url: letter_url,
+      success: function(html){
+          $("#myModal").empty();
+          $("#myModal").append(html);
+        }
+      });
+  }
+  $(document).ready(function() {
+    var oTable = $('#myIndexList').dataTable({
+        "bProcessing": true,
+        "sAjaxSource": "{% url 'occurrence-word-ajax' word.id %}",
+        "aoColumnDefs" : [
+             { "mRender" : function (data, type, row) { 
+             return '<button type="button" class="btn btn-default btn-xs" onclick="onclick_modal(this)">'+
+                    '<span class="glyphicon glyphicon-eye-open" data-toggle="modal" data-target="#myModal"'+ 
+                    'data-content-url="'+data+'"></span></button>'+
+                    '</a>';
+                }, 
+               "aTargets": [ 0 ]
+               }, { "mRender" : function (data, type, row) { 
+                   return data[0]+' <span class="bg-info">'+data[1]+'</span> '+data[2];
+                }, 
+               "aTargets": [ 4 ]
+               },
+                 {"bVisible" : false, "aTargets":[]}, 
+                 {"sType" : "date", "aTargets":[3]},
+                 {"sType" : "numeric", "aTargets":[1,2]}],
+        "aoColumns": [
+             { "mData": "link" },
+             { "mData": "volume" },
+             { "mData": "letter" },
+             { "mData": "date" },
+             { "mData": "sentence" }
+        ] 
+      });
+  });
+</script>
+{% endblock %}
