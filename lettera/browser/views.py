@@ -127,11 +127,16 @@ def participe(request) :
   return json.dumps({ 'aaData' : answer }, default=date_handler)
 
 @json_cache
-def all_occurrences(request, pk) :
+def occurrence_word(request, pk) :
   pks = [x.id for x in Occurrence.objects.filter(word_id=pk)]
   answer = build_occurrence_table(pks)
   return json.dumps({ 'aaData' : answer }, default=date_handler)
 
+@json_cache
+def occurrence_family(request, pk) :
+  pks = [x.id for x in Occurrence.objects.filter(family_id=pk)]
+  answer = build_occurrence_table(pks)
+  return json.dumps({ 'aaData' : answer }, default=date_handler)
 
 @json_cache
 def index_word(request) : 
@@ -155,6 +160,7 @@ def index_family(request) :
   answer = list()
   for o in objects :
     r = dict()
+    r['link'] = reverse('occurrence-family', args=(o.pk,))
     r['name'] = o.name
     r['size'] = Word.objects.filter(family_id = o.id).count()
     r['occurrences'] = o.occurrences
@@ -275,6 +281,10 @@ class WordView(generic.TemplateView):
 class OccurrenceWordView(generic.DetailView):
   model = Word
   template_name = 'browser/index-occurrence-word.html'
+
+class OccurrenceFamilyView(generic.DetailView):
+  model = Word
+  template_name = 'browser/index-occurrence-family.html'
 
 class FamilyView(generic.TemplateView):
   template_name = 'browser/index-family.html'
