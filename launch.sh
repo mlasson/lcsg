@@ -3,7 +3,8 @@ message() {
   echo -e "\e[31m$1\e[0m"
 }
 message 'moving to script location'
-cd "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+cd "$( dirname "${BASH_SOURCE[0]}" )"
+message "current directory is : $(pwd)"
 message 'setting up the environement'
 source activate.sh || exit
 message 'moving to the root of the project'
