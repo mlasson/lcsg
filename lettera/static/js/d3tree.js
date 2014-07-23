@@ -27,9 +27,6 @@ function draw_tree (fw_json, bw_json, anchor) {
                   .append("svg:g")
                   .attr("transform", "translate(" + (w/2 + m[3]) + "," + m[0] + ")");
  
-  var line = vis.append("line").attr("x1", 0).attr("x2", w/2).attr("y1",0).attr("y2",0).attr("stroke-width", 2).attr("color", "black")
-
-
   d3.json(fw_json, function (json) {
     fw_root = json;
     fw_root.x0 = h/2;
@@ -58,9 +55,7 @@ function draw_tree (fw_json, bw_json, anchor) {
 
   });
 
-  function update(source) {
-    var duration = d3.event && d3.event.altKey ? 5000 : 500;
-
+  function resize() {
     // compute the new height
     var levelWidth = [1];
     var childCount = function(level, n, k) {
@@ -78,7 +73,36 @@ function draw_tree (fw_json, bw_json, anchor) {
     };
     childCount(0, fw_root, 0);  
     childCount(0, bw_root, 1);  
-        // Compute the new tree layout.
+    h = d3.max(levelWidth) * 20 + levelWidth.length * 5; // 20 pixels per line  
+    fw_root.x = h/2;
+    bw_root.x = h/2;
+    
+    var depthCount = function(n) {
+      if(n.children && n.children.length > 0) {
+        return 1 + d3.max(n.children.map(depthCount));
+      } else {
+        return 0;
+      }
+    };
+
+
+    var fw_depth = depthCount(fw_root)
+    var bw_depth = depthCount(bw_root)
+
+    fw_w =  fw_depth * separation;
+    bw_w =  bw_depth * separation;
+    w = fw_w + bw_w;
+    fw_tree = fw_tree.size([h, fw_w]);
+    bw_tree = bw_tree.size([h, bw_w]);
+    canvas.attr('height', h + m[0]+m[2]);
+    canvas.attr('width', w + m[1]+m[3]);
+    vis.attr("transform", "translate(" + (bw_w + m[3]) + "," + m[0] + ")");
+  }
+
+  function update(source) {
+    var duration = d3.event && d3.event.altKey ? 5000 : 500;
+    resize ();
+    // Compute the new tree layout.
     var fw_nodes = fw_tree.nodes(fw_root).reverse();
     var bw_nodes = bw_tree.nodes(bw_root).reverse();
 
@@ -89,22 +113,6 @@ function draw_tree (fw_json, bw_json, anchor) {
     bw_nodes.forEach(function(d) { 
         d.y = -50 + (-d.depth + 1) * separation; 
     });
-
-    fw_root.x = h/2;
-    bw_root.x = h/2;
-    
-    h = d3.max(levelWidth) * 20 + levelWidth.length * 5; // 20 pixels per line  
-    var fw_depth = d3.max(fw_nodes, function(x) { return x.depth;});
-    var bw_depth = d3.max(bw_nodes, function(x) { return x.depth;});
-
-    fw_w =  fw_depth * separation;
-    bw_w =  bw_depth * separation;
-    w = fw_w + bw_w;
-    fw_tree = fw_tree.size([h, fw_w]);
-    bw_tree = bw_tree.size([h, bw_w]);
-    canvas.attr('height', h + m[0]+m[2]);
-    canvas.attr('width', w + m[1]+m[3]);
-    vis.attr("transform", "translate(" + (bw_w + m[3]) + "," + m[0] + ")");
 
     
 
@@ -208,5 +216,5 @@ function draw_tree (fw_json, bw_json, anchor) {
       d._children = null;
     }
   }
-
 }
+

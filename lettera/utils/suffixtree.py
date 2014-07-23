@@ -16,14 +16,14 @@ class SuffixTree():
       current[x] = (nxt, val)
       current = nxt
 
-  def json(self, name):
+  def json(self):
     def aux(root, name): 
       l = [ x for x in root.items() ]
       l.sort(key=lambda x:x[1][1], reverse=True)
       l = [ aux(r, x+' ({0})'.format(n)) for x, (r, n) in l ]
       return { 'name' : name, 'children' : l }
 
-    return json.dumps(aux(self.root, name))
+    return json.dumps(aux(self.root, "root"))
 
 if False:
   test = SuffixTree()

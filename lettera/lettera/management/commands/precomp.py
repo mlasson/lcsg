@@ -24,9 +24,9 @@ class Command(BaseCommand):
     cpt = 0
     tags = list()
     dist = 0
-    max = len(occurrences)
     for s in sentences:
       phrase = Occurrence.objects.filter(sentence__id=s).order_by('start_position').select_related('word')
+      max = len(phrase)
       found = False
       essere = False
       for x in phrase :
@@ -39,12 +39,12 @@ class Command(BaseCommand):
             essere = False
         if (x.word.name == 'stato' 
          or x.word.name == 'stati'):
-          if essere and dist == 2:
+          if essere and dist <= 2:
             tag = Tag(occurrence=x, name = 'participe') 
             tags.append(tag)
           found = True
-        if (x.word.name in ['è','essere','sono','era','fussi','sia','sonne']
-         or x.word.name in ['sono','essere','siamo','sieno','fussino','erano','sendo']):
+        if (x.word.name in ['è','essere', 'sono', 'era', 'fussi', 'sia', 'sonne', 'tu', 'dipoi', 'già', 'io', 'massime', 'ancora', 'bene', 'sempre', 'mai']
+         or x.word.name in ['sono', 'essere', 'siamo', 'sieno', 'fussino', 'erano', 'sendo', 'siate', 'noi', 'loro', 'ancora', 'dipoi', 'mai', 'suti']):
           essere = True
           dist = 0
     print('\nSaving ...')

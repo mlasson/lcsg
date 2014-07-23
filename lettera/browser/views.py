@@ -78,7 +78,7 @@ def occurrences_letter(request, pk) :
 
   return json.dumps({ 'aaData' : answer })
 
-@json_nocache
+@json_cache
 def sentence(request, pk):
   sentence = Sentence.objects.get(pk=pk)
   letter = sentence.letter
@@ -127,7 +127,15 @@ def participe(request) :
   occs = Occurrence.objects.filter(tag__name='participe')
   answer = build_occurrence_table(occs)
   return json.dumps({ 'aaData' : answer }, default=date_handler)
-
+@json_cache
+def participe_forward_tree(request) :
+  occs = Occurrence.objects.filter(tag__name='participe')
+  return forward_tree(occs)
+@json_cache
+def participe_backward_tree(request) :
+  occs = Occurrence.objects.filter(tag__name='participe')
+  return backward_tree(occs)
+ 
 @json_cache
 def occurrence_word(request, pk) :
   occs = Occurrence.objects.filter(word__id=pk)
@@ -140,42 +148,38 @@ def occurrence_family(request, pk) :
   answer = build_occurrence_table(occs)
   return json.dumps({ 'aaData' : answer }, default=date_handler)
 
-def forward_tree(name, occs) :
+def forward_tree(occs) :
   st = SuffixTree()
   for o in occs:
     nexts = Occurrence.objects.filter(sentence_id=o.sentence.id).order_by('start_position').filter(start_position__gte=o.start_position).select_related('word')
     l = [x.word.name for x in nexts]
     st.add(l)
-  return st.json(name)
+  return st.json()
 
-def backward_tree(name, occs) :
+def backward_tree(occs) :
   st = SuffixTree()
   for o in occs:
     nexts = Occurrence.objects.filter(sentence_id=o.sentence.id).order_by('-start_position').filter(start_position__lte=o.start_position).select_related('word')
     l = [x.word.name for x in nexts]
     st.add(l)
-  return st.json(name)
+  return st.json()
 
 @json_cache
 def word_forward_tree(request, pk) :
-  name = Word.objects.get(id=pk).name
   occs = Occurrence.objects.filter(word__id=pk)
-  return forward_tree(name, occs)
+  return forward_tree(occs)
 @json_cache
 def word_backward_tree(request, pk) :
-  name = Word.objects.get(id=pk).name
   occs = Occurrence.objects.filter(word__id=pk)
-  return backward_tree(name, occs)
+  return backward_tree(occs)
 @json_cache
 def family_forward_tree(request, pk) :
-  name = Family.objects.get(id=pk).name
   occs = Occurrence.objects.filter(family__id=pk)
-  return forward_tree(name, occs)
+  return forward_tree(occs)
 @json_cache
 def family_backward_tree(request, pk) :
-  name = Family.objects.get(id=pk).name
   occs = Occurrence.objects.filter(family__id=pk)
-  return backward_tree(name, occs)
+  return backward_tree(occs)
  
 
 @json_cache
