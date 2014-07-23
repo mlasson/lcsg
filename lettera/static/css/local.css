@@ -21,6 +21,7 @@ path.link {
 }
 
 #tree {
+  text-align: center;
   border-color: steelblue;
   border-style: groove;
   border-width: medium;
