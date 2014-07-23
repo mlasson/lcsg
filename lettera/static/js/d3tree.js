@@ -15,7 +15,12 @@ function draw_tree (fw_json, bw_json, anchor) {
   var diagonal = d3.svg.diagonal()
       .projection(function(d) { return [d.y, d.x]; });
 
-  var canvas = d3.select(anchor).append("svg:svg");
+  var start = d3.select(anchor);
+  var top_scrollbar = start.append("div").attr("class", "topscroll");
+  top_scrollbar.style("overflow-x: scroll;");
+  var bot_scrollbar = start.append("div").attr("class", "botscroll");
+  bot_scrollbar.style("overflow-x: scroll;");
+  var canvas = bot_scrollbar.append("svg:svg");
  
   var vis = canvas.attr("width", w + m[1] + m[3])
                   .attr("height", h + m[0] + m[2])
@@ -79,10 +84,10 @@ function draw_tree (fw_json, bw_json, anchor) {
 
     // Normalize for fixed-depth.
     fw_nodes.forEach(function(d) { 
-        d.y = d.depth * separation; 
+        d.y = 50 + (d.depth - 1) * separation; 
     });
     bw_nodes.forEach(function(d) { 
-        d.y = -d.depth * separation; 
+        d.y = -50 + (-d.depth + 1) * separation; 
     });
 
     fw_root.x = h/2;
@@ -117,11 +122,13 @@ function draw_tree (fw_json, bw_json, anchor) {
 
       nodeEnter.append("svg:circle")
       .attr("r", 1e-6)
-      .style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; });
+      .style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; })
+      .style("visibility", function(d) { return d.depth ? "visible" : "hidden" ; });
 
       nodeEnter.append("svg:text")
       .attr("x", function(d) { return d.children || d._children ? -10 : 10; })
       .attr("dy", ".35em")
+      .style("visibility", function(d) { return d.depth ? "visible" : "hidden" ; })
       .attr("text-anchor", function(d) { return d.children || d._children ? "end" : "start"; })
       .text(function(d) { return d.name; })
       .style("fill-opacity", 1e-6);
@@ -157,6 +164,7 @@ function draw_tree (fw_json, bw_json, anchor) {
       // Enter any new links at the parent's previous position.
       link.enter().insert("svg:path", "g")
       .attr("class", "link")
+      .style("visibility", function(d) { return d.source.depth ? "visible" : "hidden" ; })
       .attr("d", function(d) {
         var o = {x: source.x0, y: source.y0};
         return diagonal({source: o, target: o});
