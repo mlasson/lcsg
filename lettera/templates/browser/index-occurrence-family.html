@@ -4,7 +4,7 @@
   My title
 {% endblock %}
 {% block header %}
-  Index of letters
+Occurrences of {{ family.name }}
 {% endblock %}
 {% block content %}
 <table class="table table-striped" id="myIndexList" width="100%">
@@ -13,10 +13,13 @@
     <th> Vol </th>
     <th> Num </th> 
     <th> Date </th> 
+    <th> Word </th> 
     <th> Sentence </th></tr></thead>
   <tbody>
   </tbody>
 </table>
+<h2> Tree  </h2>
+<div id="tree"></div>
 
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
@@ -36,6 +39,11 @@
 </div><!-- /.modal fade -->
 <script>
   var default_modal = $("#myModal").clone();
+
+
+  draw_tree("{% url 'family-forward-tree-ajax' family.id %}", 
+            "{% url 'family-backward-tree-ajax' family.id %}", "#tree"); 
+
   function onclick_modal(elem){
      $("#myModal").empty();
      $("#myModal").append(default_modal);
@@ -51,7 +59,7 @@
   $(document).ready(function() {
     var oTable = $('#myIndexList').dataTable({
         "bProcessing": true,
-        "sAjaxSource": "{% url 'occurrence-family-ajax' word.id %}",
+        "sAjaxSource": "{% url 'occurrence-family-ajax' family.id %}",
         "aoColumnDefs" : [
              { "mRender" : function (data, type, row) { 
              return '<button type="button" class="btn btn-default btn-xs" onclick="onclick_modal(this)">'+
@@ -63,7 +71,7 @@
                }, { "mRender" : function (data, type, row) { 
                    return data[0]+' <span class="bg-info">'+data[1]+'</span> '+data[2];
                 }, 
-               "aTargets": [ 4 ]
+               "aTargets": [ 5 ]
                },
                  {"bVisible" : false, "aTargets":[]}, 
                  {"sType" : "date", "aTargets":[3]},
@@ -73,6 +81,7 @@
              { "mData": "volume" },
              { "mData": "letter" },
              { "mData": "date" },
+             { "mData": "word" },
              { "mData": "sentence" }
         ] 
       });

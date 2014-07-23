@@ -4,7 +4,7 @@
   My title
 {% endblock %}
 {% block header %}
-  Index of letters
+Occurrences of {{ word.name }}
 {% endblock %}
 {% block content %}
 <table class="table table-striped" id="myIndexList" width="100%">
@@ -17,6 +17,8 @@
   <tbody>
   </tbody>
 </table>
+<h2> Tree  </h2>
+<div id="tree"></div>
 
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
@@ -48,6 +50,10 @@
         }
       });
   }
+  
+  draw_tree("{% url 'occurrence-forward-tree-ajax' word.id %}", 
+            "{% url 'occurrence-backward-tree-ajax' word.id %}", "#tree"); 
+
   $(document).ready(function() {
     var oTable = $('#myIndexList').dataTable({
         "bProcessing": true,

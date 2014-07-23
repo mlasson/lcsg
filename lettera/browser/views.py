@@ -9,6 +9,7 @@ from django.http import HttpResponse
 from django.views import generic
 from browser.models import *
 from django.core.paginator import Paginator
+from utils.suffixtree import SuffixTree
 
 class json_cache(object):
   def __init__(self, func):
@@ -98,9 +99,9 @@ def ellipse(front, word, back, maxsize=100):
       front = u'… '+front[-half:]
   return (front,word,back)
 
-def build_occurrence_table(pks) : 
-  occs = Occurrence.objects.filter(pk__in=pks).select_related('word','sentence','letter')
+def build_occurrence_table(occs) : 
   answer = list()
+  occs = occs.select_related('word','sentence','letter')
   for o in occs:
     r = dict()
     r['link'] = (reverse('modal-letter', args=(o.letter_id,)),o.start_position,o.end_position)
@@ -117,26 +118,65 @@ def build_occurrence_table(pks) :
 @json_cache
 def occurrences_index(request, pks) :
   pks = map(int,pks.split(','))
+  occs = Occurrence.objects.filter(pk__in=pks)
   answer = build_occurrence_table(pks)
   return json.dumps({ 'aaData' : answer }, default=date_handler)
 
 @json_cache
 def participe(request) :
-  pks = [x.occurrence_id for x in Tag.objects.filter(name='participe')]
-  answer = build_occurrence_table(pks)
+  occs = Occurrence.objects.filter(tag__name='participe')
+  answer = build_occurrence_table(occs)
   return json.dumps({ 'aaData' : answer }, default=date_handler)
 
 @json_cache
 def occurrence_word(request, pk) :
-  pks = [x.id for x in Occurrence.objects.filter(word_id=pk)]
-  answer = build_occurrence_table(pks)
+  occs = Occurrence.objects.filter(word__id=pk)
+  answer = build_occurrence_table(occs)
   return json.dumps({ 'aaData' : answer }, default=date_handler)
 
 @json_cache
 def occurrence_family(request, pk) :
-  pks = [x.id for x in Occurrence.objects.filter(family_id=pk)]
-  answer = build_occurrence_table(pks)
+  occs = Occurrence.objects.filter(word__family_id=pk)
+  answer = build_occurrence_table(occs)
   return json.dumps({ 'aaData' : answer }, default=date_handler)
+
+def forward_tree(name, occs) :
+  st = SuffixTree()
+  for o in occs:
+    nexts = Occurrence.objects.filter(sentence_id=o.sentence.id).order_by('start_position').filter(start_position__gte=o.start_position).select_related('word')
+    l = [x.word.name for x in nexts]
+    st.add(l)
+  return st.json(name)
+
+def backward_tree(name, occs) :
+  st = SuffixTree()
+  for o in occs:
+    nexts = Occurrence.objects.filter(sentence_id=o.sentence.id).order_by('-start_position').filter(start_position__lte=o.start_position).select_related('word')
+    l = [x.word.name for x in nexts]
+    st.add(l)
+  return st.json(name)
+
+@json_cache
+def word_forward_tree(request, pk) :
+  name = Word.objects.get(id=pk).name
+  occs = Occurrence.objects.filter(word__id=pk)
+  return forward_tree(name, occs)
+@json_cache
+def word_backward_tree(request, pk) :
+  name = Word.objects.get(id=pk).name
+  occs = Occurrence.objects.filter(word__id=pk)
+  return backward_tree(name, occs)
+@json_cache
+def family_forward_tree(request, pk) :
+  name = Family.objects.get(id=pk).name
+  occs = Occurrence.objects.filter(family__id=pk)
+  return forward_tree(name, occs)
+@json_cache
+def family_backward_tree(request, pk) :
+  name = Family.objects.get(id=pk).name
+  occs = Occurrence.objects.filter(family__id=pk)
+  return backward_tree(name, occs)
+ 
 
 @json_cache
 def index_word(request) : 
@@ -283,7 +323,7 @@ class OccurrenceWordView(generic.DetailView):
   template_name = 'browser/index-occurrence-word.html'
 
 class OccurrenceFamilyView(generic.DetailView):
-  model = Word
+  model = Family
   template_name = 'browser/index-occurrence-family.html'
 
 class FamilyView(generic.TemplateView):

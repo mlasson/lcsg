@@ -13,7 +13,6 @@ class Period(models.Model):
   def __str__(self):
     return '{0} : {1} - {2}'.format(self.name, self.start, self.end)
 
-
 class Letter(models.Model):
   number = models.IntegerField(default=0)
   volume = models.IntegerField(default=0)
@@ -25,13 +24,11 @@ class Letter(models.Model):
   def __str__(self):
     return '{0} volume {1}'.format(self.number, self.volume)
 
-
 class Family(models.Model):
   name = models.CharField(max_length=word_size)
 
   def __str__(self):
     return self.name
-
 
 class Word(models.Model):
   name = models.CharField(max_length=word_size)
@@ -61,8 +58,6 @@ class Occurrence(models.Model):
 
   def __str__(self):
     return '{0}@{1}+{2}'.format(self.word, str(self.letter), self.start_position)
-
-
 
 class Tag(models.Model):
   occurrence = models.ForeignKey(Occurrence)
