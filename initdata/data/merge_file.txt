@@ -6254,8 +6254,7 @@ stanziare : stanziano stanziamo stanziare stanziato stanziorno stanziata
 stanzia : stanzia stanzie
 stare : standomi standone stesseno stessero standovi stettevi stetti stettonvi stiacci stiamone stiano stiàno stavamo stavavi stavo stativi statogli statovi stannone stannosi stano starai starassi starcene starci starebbesi starebbe starebbono staremo stieno stessi stanno standosi starvi stavano stettono stessisi stette stare starà stava stessino stareno stiamo stia starete starsi starò stando staranno stiate stavono staresti staretevi staria starmi starne starommi starsene star starvene stassi state stata statevi istar istanzia istare istanza istando
 statico : statichi statico
-stati : stati
-stato : stato
+stato : stato stati
 statum : statum
 statura : statura
 statu : statu
@@ -6801,7 +6800,6 @@ umore : umore umori
 uncino : uncino
 undecima : undecima
 unde : unde
-undici : undici
 ungheria : ungheria
 unguenti : unguenti unguento unguem
 unica : unica unico

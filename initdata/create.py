@@ -157,7 +157,7 @@ class Lettera :
     self.month = None
     self.year = None
     self.date = None
-    self.ignore = None
+    self.ignore = False
     self.note = None
     self.period_id = None
     if title : 
@@ -185,7 +185,8 @@ class Lettera :
     "period" : {3}, 
     "date" : {1},
     "text" : "{2}",
-    "author" : "{0.author}"
+    "author" : "{0.author}",
+    "ignore" : "{0.ignore}"
   }}
 }}'''.format(self, date, escape(self.text), period)
 
