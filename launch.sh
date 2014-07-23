@@ -12,6 +12,6 @@ message 'moving to the root of the project'
 cd lettera  || exit
 message 'killing all servers'
 for x in $(ps aux | grep "python manage.py" | grep -v grep | awk '{print $2}'); do kill -s 9 $x; done
-message 'python manage.py runserver'
-screen -d -m python manage.py runserver || exit
+message "python manage.py runserver $1"
+screen -d -m python manage.py runserver $1 || exit
 message 'finished without error'

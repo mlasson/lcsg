@@ -11,4 +11,4 @@ then
   message 'done.'
 fi
 message 'launching remotely'
-ssh vitrine.ovh "srv/lcsg/launch.sh"
+ssh vitrine.ovh "srv/lcsg/launch.sh 192.168.1.1:8087"
