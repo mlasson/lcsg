@@ -16,11 +16,12 @@ function draw_tree (fw_json, bw_json, anchor) {
       .projection(function(d) { return [d.y, d.x]; });
 
   var start = d3.select(anchor);
-  var top_scrollbar = start.append("div").attr("class", "topscroll");
-  top_scrollbar.style("overflow-x: scroll;");
-  var bot_scrollbar = start.append("div").attr("class", "botscroll");
-  bot_scrollbar.style("overflow-x: scroll;");
-  var canvas = bot_scrollbar.append("svg:svg");
+  // var top_scrollbar = start.append("div").attr("class", "topscroll");
+  // top_scrollbar.style("overflow-x: scroll;");
+  // var bot_scrollbar = start.append("div").attr("class", "botscroll");
+  /// bot_scrollbar.style("overflow-x: scroll;");
+  // var canvas = start.append("svg:svg");
+  var canvas = start.append("svg:svg");
  
   var vis = canvas.attr("width", w + m[1] + m[3])
                   .attr("height", h + m[0] + m[2])
@@ -94,6 +95,8 @@ function draw_tree (fw_json, bw_json, anchor) {
     w = fw_w + bw_w;
     fw_tree = fw_tree.size([h, fw_w]);
     bw_tree = bw_tree.size([h, bw_w]);
+    console.log(w+m[1]+m[3]);
+
     canvas.attr('height', h + m[0]+m[2]);
     canvas.attr('width', w + m[1]+m[3]);
     vis.attr("transform", "translate(" + (bw_w + m[3]) + "," + m[0] + ")");

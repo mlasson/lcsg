@@ -27,3 +27,9 @@ path.link {
   border-width: medium;
   overflow-x:scroll;
 }
+
+#tree svg {
+  display: inline;
+  width : auto !important;
+  height : auto !important;
+}
