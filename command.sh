@@ -10,6 +10,6 @@ source activate.sh || exit
 message "current python version : $(python --version)"
 message 'moving to the root of the project'
 cd lettera  || exit
-message "python manage.py runserver $1"
+message "python manage.py $1"
 python manage.py $1 || exit
 message 'finished without error'

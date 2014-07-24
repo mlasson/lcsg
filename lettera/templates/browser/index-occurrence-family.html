@@ -1,12 +1,24 @@
 {% extends "base.html" %}
 {% load i18n %}
 {% block title %}
-  My title
+Occurrences of {{ family.name }}
 {% endblock %}
 {% block header %}
 Occurrences of {{ family.name }}
 {% endblock %}
 {% block content %}
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+  <li class="active"><a href="#tabtable" role="tab" data-toggle="tab">Table</a></li>
+  <li><a href="#tabheat" role="tab" data-toggle="tab">Heat Map</a></li>
+  <li id="histotab"><a href="#tabhisto" role="tab">Histogram of spellings</a></li>
+  <li><a href="#tabtree" role="tab" data-toggle="tab">Context trees</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane active" id="tabtable">
+  <h2> Table of occurrences </h2>
 <table class="table table-striped" id="myIndexList" width="100%">
     <thead><tr>
     <th> View </th>
@@ -18,10 +30,21 @@ Occurrences of {{ family.name }}
   <tbody>
   </tbody>
 </table>
-<h2> Histogram </h2>
-<div id="chart"><svg style="height:500px"> </svg> </div>
-<h2> Tree  </h2>
-<div id="tree"></div>
+  </div>
+  <div class="tab-pane" id="tabheat">
+    <h2> Heat Map </h2>
+    <div id="cal-heatmap"></div>
+  </div>
+  <div class="tab-pane" id="tabhisto">
+    <h2> Histogram of spellings </h2>
+    <div id="chart">
+      <svg style="height:500px"></svg>
+    </div>
+  </div>
+  <div class="tab-pane" id="tabtree">
+    <div id="tree"></div>
+  </div>
+</div>
 
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
@@ -41,7 +64,16 @@ Occurrences of {{ family.name }}
 </div><!-- /.modal fade -->
 <script>
   var default_modal = $("#myModal").clone();
+  var cal = new CalHeatMap();
+  var chart;
 
+  $('#histotab a').click(function (e) {
+    e.preventDefault()
+    $(this).tab('show')
+    if (chart) {
+      chart.update();
+    }
+  })
 
   draw_tree("{% url 'family-forward-tree-ajax' family.id %}", 
             "{% url 'family-backward-tree-ajax' family.id %}", "#tree"); 
@@ -79,6 +111,7 @@ Occurrences of {{ family.name }}
                "aTargets": [ 5 ]
                },
                  {"bVisible" : false, "aTargets":[]}, 
+                 {"sWidth" : "3%", "aTargets":[0,1,2]}, 
                  {"sType" : "date", "aTargets":[3]},
                  {"sType" : "numeric", "aTargets":[1,2]}],
         "aoColumns": [
@@ -108,12 +141,13 @@ Occurrences of {{ family.name }}
           chartdata.push({ label : index, value : attr});
       }
     }
-    
+     
+    cal.init({});
+
     console.log(chartdata);
     nv.addGraph(function() {
       var total = 0;
- 
-      var chart = nv.models.discreteBarChart()
+      chart = nv.models.discreteBarChart()
       .x(function(d) { return d.label })    //Specify the data accessors.
       .y(function(d) { return d.value })
       .valueFormat(function(d) { return d + " ("+d3.format(',.2f')(100.0*d/cpt)+" %)"  })
@@ -126,7 +160,7 @@ Occurrences of {{ family.name }}
       d3.select('#chart svg')
         .datum([{ key : "spellings", values : chartdata}])
         .call(chart);
-
+     
       nv.utils.windowResize(chart.update);
 
       return chart;

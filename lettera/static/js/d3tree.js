@@ -86,7 +86,6 @@ function draw_tree (fw_json, bw_json, anchor) {
       }
     };
 
-
     var fw_depth = depthCount(fw_root)
     var bw_depth = depthCount(bw_root)
 
