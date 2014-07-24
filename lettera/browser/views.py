@@ -146,7 +146,7 @@ def occurrence_word(request, pk) :
 
 @json_cache
 def occurrence_family(request, pk) :
-  occs = Occurrence.objects.filter(word__family_id=pk)
+  occs = Occurrence.objects.filter(family_id=pk)
   answer = build_occurrence_table(occs)
   return json.dumps({ 'aaData' : answer }, default=date_handler)
 
