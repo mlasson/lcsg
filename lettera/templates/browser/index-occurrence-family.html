@@ -18,6 +18,8 @@ Occurrences of {{ family.name }}
   <tbody>
   </tbody>
 </table>
+<h2> Histogram </h2>
+<div id="chart"><svg style="height:500px"> </svg> </div>
 <h2> Tree  </h2>
 <div id="tree"></div>
 
@@ -57,9 +59,12 @@ Occurrences of {{ family.name }}
       });
   }
   $(document).ready(function() {
-    var oTable = $('#myIndexList').dataTable({
+    $.getJSON("{% url 'occurrence-family-ajax' family.id %}", function( json ) {
+      data = json.aaData;
+      var oTable = $('#myIndexList').dataTable({
         "bProcessing": true,
-        "sAjaxSource": "{% url 'occurrence-family-ajax' family.id %}",
+        "bAutoWith": true,
+        "data": data,
         "aoColumnDefs" : [
              { "mRender" : function (data, type, row) { 
              return '<button type="button" class="btn btn-default btn-xs" onclick="onclick_modal(this)">'+
@@ -85,6 +90,48 @@ Occurrences of {{ family.name }}
              { "mData": "sentence" }
         ] 
       });
+    var dict = {};
+    var cpt = 0;
+    data.forEach(function(e){
+      cpt += 1;
+      if (dict.hasOwnProperty(e.word)){
+        dict[e.word] += 1;
+      } else {
+        dict[e.word] = 1; 
+      }
+    });
+    chartdata = [];
+    for(var index in dict) { 
+      if (dict.hasOwnProperty(index)) {
+        var attr = dict[index];
+        if (attr / cpt > 0.01) 
+          chartdata.push({ label : index, value : attr});
+      }
+    }
+    
+    console.log(chartdata);
+    nv.addGraph(function() {
+      var total = 0;
+ 
+      var chart = nv.models.discreteBarChart()
+      .x(function(d) { return d.label })    //Specify the data accessors.
+      .y(function(d) { return d.value })
+      .valueFormat(function(d) { return d + " ("+d3.format(',.2f')(100.0*d/cpt)+" %)"  })
+      .staggerLabels(true)    //Too many bars and not enough room? Try staggering labels.
+      .tooltips(false)        //Don't show tooltips
+      .showValues(true)       //...instead, show the bar value right on top of each bar.
+      .transitionDuration(350)
+      ;
+
+      d3.select('#chart svg')
+        .datum([{ key : "spellings", values : chartdata}])
+        .call(chart);
+
+      nv.utils.windowResize(chart.update);
+
+      return chart;
+    });
   });
+});
 </script>
 {% endblock %}

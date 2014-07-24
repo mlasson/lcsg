@@ -114,8 +114,6 @@ function draw_tree (fw_json, bw_json, anchor) {
         d.y = -50 + (-d.depth + 1) * separation; 
     });
 
-    
-
     // Update the nodes…
     nodes = fw_nodes.concat(bw_nodes);
     var node = vis.selectAll("g.node")

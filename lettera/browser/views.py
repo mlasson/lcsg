@@ -127,10 +127,12 @@ def participe(request) :
   occs = Occurrence.objects.filter(tag__name='participe')
   answer = build_occurrence_table(occs)
   return json.dumps({ 'aaData' : answer }, default=date_handler)
+
 @json_cache
 def participe_forward_tree(request) :
   occs = Occurrence.objects.filter(tag__name='participe')
   return forward_tree(occs)
+
 @json_cache
 def participe_backward_tree(request) :
   occs = Occurrence.objects.filter(tag__name='participe')
@@ -168,19 +170,21 @@ def backward_tree(occs) :
 def word_forward_tree(request, pk) :
   occs = Occurrence.objects.filter(word__id=pk)
   return forward_tree(occs)
+
 @json_cache
 def word_backward_tree(request, pk) :
   occs = Occurrence.objects.filter(word__id=pk)
   return backward_tree(occs)
+
 @json_cache
 def family_forward_tree(request, pk) :
   occs = Occurrence.objects.filter(family__id=pk)
   return forward_tree(occs)
+
 @json_cache
 def family_backward_tree(request, pk) :
   occs = Occurrence.objects.filter(family__id=pk)
   return backward_tree(occs)
- 
 
 @json_cache
 def index_word(request) : 
