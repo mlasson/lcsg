@@ -4,6 +4,36 @@ from browser.models import Letter, Period, Word, Occurrence, Family, Sentence
 from optparse import make_option
 from itertools import tee
 
+# checker les bornes
+
+contractions = ['l', 's', 't', 'dell', 'l', 'all', 'sull', 'c', 'd', 'nell']
+def split_contraction(string, start, end):
+  splitname = string.split("'")
+
+  if len(splitname) == 0:
+    logging.warning('Zero contraction: \"{0}\"'.format(splitname))
+    return []
+  if splitname == ['']: 
+    logging.warning('Zero contraction: \"{0}\"'.format(splitname))
+    return []
+  if splitname[0] == '':
+    splitname = splitname[1:]
+    splitname[0] = "'"+splitname[0]
+  if splitname[-1] == '':
+    splitname = splitname[:-1]
+    splitname[-1] = splitname[0]+"'"
+  if len(splitname) > 2:
+    logging.warning('Multiple contraction: \"{0}\"'.format(splitname))
+    return []
+  if len(splitname) == 2:
+    front, back = splitname
+    if front in contractions :
+      return [(front+"'", start, start+len(front)+1), (back, start+len(front)+2, end)]
+    else :
+      return [(string, start, end)]       
+  return [(string, start, end)]
+
+
 
 class Command(BaseCommand):
   args = '<???>'
@@ -56,20 +86,20 @@ class Command(BaseCommand):
                                          x.start_position >= position and 
                                          position <= x.end_position)), None)
         if not sentence:
-
             print('Bug : phantom sentence ?', position, len([x for x in sentences if x.letter_id == l.id]))
             continue
         for m in re.finditer("(([^\W\d]|')+)", phrase):
-          name = m.group(0)
-          try :
-            word = dic_words[name]
-          except KeyError :
-            word = Word(name=name, family=ignored_family)
-            word.save()
-            dic_words[name] = word
-            ignored.add(name)
-          occ = Occurrence(word=word, family_id=word.family_id, letter=l,sentence=sentence,start_position=position+m.start(), end_position=position+m.end())
-          occurrences.append(occ)
+          namelist = split_contraction(m.group(0), position+m.start(), position+m.end())
+          for name, start, end in namelist:
+            try :
+              word = dic_words[name]
+            except KeyError :
+              word = Word(name=name, family=ignored_family)
+              word.save()
+              dic_words[name] = word
+              ignored.add(name)
+            occ = Occurrence(word=word, family_id=word.family_id, letter=l,sentence=sentence,start_position=start, end_position=end)
+            occurrences.append(occ)
         position += len(phrase)+1
     if len(ignored) > 0:
       logging.warning('Beware the following words have been ignored:\n'+', '.join(list(ignored)))

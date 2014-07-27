@@ -58,7 +58,7 @@ accomunarla : accomunato accomunarla
 acconcalla : acconcalla
 acconciare : acconcio acconciavono acconce acconcie acconci acconciassino acconciossi acconciarsi acconcia acconcerebbe acconcino acconcerebbesi acconciarlo aconciare acconciassi acconciare acconciò acconciarle
 acconsentire : acconsentirebbe acconsente acconsentì acconsentirebbono acconsentirvi acconsentirci acconsentito acconsentire acconsentita acconsentimo acconsentitovi acconsentissimo
-accordare : accorderebbesi accordati accordandosi accordavano accordasse accorderebbe accordereno accordano accordassino acordo accordava accordo accordino accordarsi accorderanno accorda accordiàno accordassi accordiamo accordata accorderà accordono accordò accordando accordare accordarli accordi accordar accordato
+accordare : d'accordare accorderebbesi accordati accordandosi accordavano accordasse accorderebbe accordereno accordano accordassino acordo accordava accordo accordino accordarsi accorderanno accorda accordiàno accordassi accordiamo accordata accorderà accordono accordò accordando accordare accordarli accordi accordar accordato
 accorga : accorgimento accorta accorga accorto
 accostare : accosta acostare accostai accostamo accostandosi accostare accostarsi accostasi accostassi accostatici accostato accostatomi accosterete accosti accostino accostò accostono accostorno
 accostumati : accostumati
@@ -156,7 +156,7 @@ agia : agia
 aginti : aginti
 agio : agio
 agitarsi : agitata agitazioni agitandosi agitarsi agitazione
-agli : agli
+agli : agli all'
 agnola : agnola
 agnolaccio : agnolaccio
 agnoleti : agnoletti agnoleti
@@ -226,7 +226,7 @@ alpe : alpi alpe alpibus
 alquante : alquante alquanto alquanti
 alsí : alsí
 altante : altanti altanto altante
-alterare : alterassi alterassino alteri altera alterarlo alterazioni alterare alterandosi alterazione alterò alterate alterassero alterino alterossi alterata alteravono altererebbe alterato alterati alterorno alterarsi alteralli
+alterare : l'alterazione, alterassi alterassino alteri altera alterarlo alterazioni alterare alterandosi alterazione alterò alterate alterassero alterino alterossi alterata alteravono altererebbe alterato alterati alterorno alterarsi alteralli
 alterius : alterius altrui
 alto : alta altamente alte alti altezza altissimo alto
 altobello : altobello
@@ -434,7 +434,7 @@ arrostiva : arrostiva
 arrotatori : arrotatori arrotatura arroti arrotino arroto
 arrupto : arrupto
 arte : arte arti artis
-arteglierie : artiglerie artiglierie artigleria artiglieria arteglierie altiglierie
+arteglierie : artiglerie artiglierie artigleria artiglieria arteglierie altiglierie, l'artiglierie
 articolo : articolo articulo
 artificiosamente : artificiosamente
 artimone : artimone
@@ -1239,7 +1239,7 @@ cianciando : cianciando
 cianni : cianni
 ciappella : ciappella
 ciasco : ciasco
-ciascuno : ciascuna ciascuno ciascheduna ciascheduno ciascun
+ciascuno : ciascuna ciascuno ciascheduna ciascheduno ciascun ciaschun
 ciasmiro : ciasmiro
 ciatiglione : ciatiglion ciatiglioni ciattiglione
 cicalino : cicalino
@@ -1881,7 +1881,7 @@ dino : dino
 dionigi : dionisio dionigi dionigio dionisi
 diparti : diparti
 dipignere : dipignere dipintovi dipingere dipigne dipintore
-dipoi : dipoi
+dipoi : dipoi, poi
 diportono : diportono
 dipositario : dipositario
 dipresso : dipresso
@@ -2170,10 +2170,8 @@ espressa : espressione espressa espresse espressamente esprimere espresso espres
 espugnare : espugnare espugnarlo espugnarla espugnò espugnando espugnerebbolo espugnata espugnazione espugnargli espugnassino espugnato espugnano
 espurgazione : espurgazione
 essa : essa essi esse esso
-essegli : essegli
-èssegli : èssegli
 esseguirete : esseguirete essequire
-essere : esseli èsseli fossi fossimo fosse fossero èvvi eravi eravate eravamo èssi eran ècci erano eraci sendoci sendoli sendomene sendomi sendogli sendo sendone sendocene sendovi sendosene sendosi sendole sendoti sendov saragli saralle saranne sarannno saran sarassi saràvici sarebbemi sarebbeno sarebbesene sarebb sarei sarèno sare saresti sariano sarranno sutaci sutagli sute suto sutoci suta suti sutati sutele sutogli sutoli siamone siamo siàno siate siete siesi sieno siamoci siano sien fussimo fusse furon fussin fussino furono furno fussi saranno sarai sarebbe sareno sarebbano sarà sarebbon saremo saretene saria sarieno saracci sarebbeci sarete sarebbono sarò essendoti essendosi esserci essergli sono esserli essendovene essendomi essendoché essendocene esserne essendogli esserle sonvi essendoli essendone essere èssene essersi esservisi essendosene esser essersene essendo essendocisi essermi essermici essendoci sonsi esserti sonci esonne essendovi essercene esservi esservene esset sia è essegli èssegli
+essere : essegli èssegli esseli èsseli fossi fossimo fosse fossero èvvi eravi eravate eravamo èssi eran ècci erano eraci sendoci sendoli sendomene sendomi sendogli sendo sendone sendocene sendovi sendosene sendosi sendole sendoti sendov saragli saralle saranne sarannno saran sarassi saràvici sarebbemi sarebbeno sarebbesene sarebb sarei sarèno sare saresti sariano sarranno sutaci sutagli sute suto sutoci suta suti sutati sutele sutogli sutoli siamone siamo siàno siate siete siesi sieno siamoci siano sien fussimo fusse furon fussin fussino furono furno fussi saranno sarai sarebbe sareno sarebbano sarà sarebbon saremo saretene saria sarieno saracci sarebbeci sarete sarebbono sarò essendoti essendosi esserci essergli sono esserli essendovene essendomi essendoché essendocene esserne essendogli esserle sonvi essendoli essendone essere èssene essersi esservisi essendosene esser essersene essendo essendocisi essermi essermici essendoci sonsi esserti sonci esonne essendovi essercene esservi esservene esset sia è essegli èssegli v'eri
 estante : estante
 estasi : estasi
 estate : estate
@@ -2320,6 +2318,7 @@ feltro : feltro
 femmina : femmina
 fenci : fenci
 fenestra : fenestra
+fenomeno : fenomeno
 ferantino : ferantino
 ferire : ferisse ferire ferite ferirai ferí ferirno ferì ferirci feriate ferischino feritone ferita ferito ferirli ferirono ferirsi feriti
 ferma : ferme fermi fermo ferma
@@ -2524,7 +2523,7 @@ fraudato : fraudato
 fraude : fraude
 fredda : freddi freddamente freddo fredda freddezza fredde
 fregosa : fregoso fregosa
-frenare : frenare freno
+frenare : frenare freno frenino
 frequentano : frequentano frequentato frequentata frequentati
 fresca : freschi fresca fresche fresco
 frescobaldi : frescobaldi frescobaldo
@@ -3161,7 +3160,7 @@ insaziabile : insaziabile
 insegnare : insegna insegnassi insegnato insegnono insegni insegnare insegnino
 inserte : inserte
 insieme : insieme
-insignorirsi : insignorircene insignorendoci insignorirono insignorirsi insignorisca insignorimo insignoriti insignorirsene insignorito insignorissi insignoriscono insignoriva insignorissino insignoritosi insignoritosene insignorischino
+insignorirsi : v'insignorissi, insignorircene insignorendoci insignorirono insignorirsi insignorisca insignorimo insignoriti insignorirsene insignorito insignorissi insignoriscono insignoriva insignorissino insignoritosi insignoritosene insignorischino
 insine : insine insino insin
 insisté : insisterete insisterai insistevo insisté
 insolente : insolenzie insolenti insolenzia insolente insolentemente insolenza
@@ -3561,7 +3560,7 @@ mancare : manchino mancherebbono mancarvi mancarti mancandoti mancassino mancarn
 mancino : mancino
 manco : manco
 mandamusque : mandamusque mandavimusque
-mandare : mandaci mandandocene mandandoci mandatati mandatavi manderia manderolla manderò manderonne manderrebbono mandiamo mandiamotele mandiamoti mandiamovi mandiano mandiàno mandianvi mandiate mandi mandinlo mandinmi mandino mandinsi mandisi mandolle mandollo mando mandò mandommela mandono mandonsi mandonvi mandorno mandorono mandoronsi mandoronvisi mandossi mandovi mandovvi  mandateci mandatele mandate mandatemi mandatene mandateti mandatevele mandatevi mandati mandatisi màndatisi mandatis mandatoci mandatogli mandatoli mandato mandatorum mandatotene mandatoti mandava mandavamo mandavano mandavi mandavimus mandavisi mandavo mandavono manderai mandera manderà manderanno manderannosi manderannotisi manderasi manderassi manderavvisi manderebbe manderebbene manderebbevi manderebbono manderegli manderei manderello manderemola manderemo manderemoti mandereno manderenti manderenvi manderesti manderetecene mandereteci manderetegli manderetelo manderete manderetemene manderetevi mandarne mandarono mandarsi mandartela mandartele mandarteli mandartelo mandartene mandarti mandarvegli mandarvele mandarveli mandarvene mandarvi mandasi mandasse mandassi mandassimo mandassino mandassivi mandasti mandataci mandatali mandata mandandogli mandandola mandandoli mandandolo mandando mandandomela mandandomi mandandone mandandosi mandandoti mandandovela mandandovisi mandarai mandara mandarannosegli mandarcela mandarcele mandarceli mandarcene mandarci mandare mandarevi mandarla mandarle mandarliene mandarli mandarlo mandar mandarmelo mandarmi  mandagli mandai mandale mandalli manda mandammo mandamole mandamo mandamoti mandamovi 
+mandare : mandatolo mandaci mandandocene mandandoci mandatati mandatavi manderia manderolla manderò manderonne manderrebbono mandiamo mandiamotele mandiamoti mandiamovi mandiano mandiàno mandianvi mandiate mandi mandinlo mandinmi mandino mandinsi mandisi mandolle mandollo mando mandò mandommela mandono mandonsi mandonvi mandorno mandorono mandoronsi mandoronvisi mandossi mandovi mandovvi  mandateci mandatele mandate mandatemi mandatene mandateti mandatevele mandatevi mandati mandatisi màndatisi mandatis mandatoci mandatogli mandatoli mandato mandatorum mandatotene mandatoti mandava mandavamo mandavano mandavi mandavimus mandavisi mandavo mandavono manderai mandera manderà manderanno manderannosi manderannotisi manderasi manderassi manderavvisi manderebbe manderebbene manderebbevi manderebbono manderegli manderei manderello manderemola manderemo manderemoti mandereno manderenti manderenvi manderesti manderetecene mandereteci manderetegli manderetelo manderete manderetemene manderetevi mandarne mandarono mandarsi mandartela mandartele mandarteli mandartelo mandartene mandarti mandarvegli mandarvele mandarveli mandarvene mandarvi mandasi mandasse mandassi mandassimo mandassino mandassivi mandasti mandataci mandatali mandata mandandogli mandandola mandandoli mandandolo mandando mandandomela mandandomi mandandone mandandosi mandandoti mandandovela mandandovisi mandarai mandara mandarannosegli mandarcela mandarcele mandarceli mandarcene mandarci mandare mandarevi mandarla mandarle mandarliene mandarli mandarlo mandar mandarmelo mandarmi  mandagli mandai mandale mandalli manda mandammo mandamole mandamo mandamoti mandamovi 
 mandarnelo : mandarneli mandarnelo
 mandatarie : mandatarium mandatarie mandatarius mandatarii mandatario mandatari mandantes
 manecti : manecti
@@ -4044,7 +4043,7 @@ notario : notarii notario notarius notaro
 notificare : notifichi notificando notificarai notificare notificarli notificasi notificassi notificata notificati notificato notificatore notificazione notificherai notificherà 
 notitia : nuove notitia novamente nuova nuovamente nuovo notizia nuovi notizie nouova novam novità novissime
 notoria : notoria
-novanta : cinquecento cinquecentoottantasette cinquemila diciannove diciassette diecimila dodici dodicimila duecento duecentocinquanta duemila dugento dugentocinquanta dugentomila dumila migliaia migliaio mila milione mill mille millecinquecento millecinquecentodua millecinquecentosette milledugento millesecento milon novanta novantaquattro nove novecento novemila ottanta otto ottocento ottomila quaranta quarantamila quattordici quattro quattrocento quattrocentocinquanta quattromila quindici quindicimila secento secentomila sedici sedicimila seicento seimila sessanta sessantamila settanta settantamila sette settecento settemila trecento trecentocinquanta tredici tredicimilasettecento tremila tremilacinquecento trenta trentacinque trentamila trentatré trentuno undici venticinque venticinquemila ventidua ventidue ventimila ventinove ventiquattro ventisei ventisette ventitré ventiuno ventotto ventuno centinaia cento centinaio centocinquanta centomila centootto centroquattro centum diciotto
+novanta : dua,  cinquecento cinquecentoottantasette cinquemila diciannove diciassette diecimila dodici dodicimila duecento duecentocinquanta duemila dugento dugentocinquanta dugentomila dumila migliaia migliaio mila milione mill mille millecinquecento millecinquecentodua millecinquecentosette milledugento millesecento milon novanta novantaquattro nove novecento novemila ottanta otto ottocento ottomila quaranta quarantamila quattordici quattro quattrocento quattrocentocinquanta quattromila quindici quindicimila secento secentomila sedici sedicimila seicento seimila sessanta sessantamila settanta settantamila sette settecento settemila trecento trecentocinquanta tredici tredicimilasettecento tremila tremilacinquecento trenta trentacinque trentamila trentatré trentuno undici venticinque venticinquemila ventidua ventidue ventimila ventinove ventiquattro ventisei ventisette ventitré ventiuno ventotto ventuno centinaia cento centinaio centocinquanta centomila centootto centroquattro centum diciotto
 novara : novara
 novella : novella novelle novello
 novembre : novembre novembris
@@ -4176,7 +4175,7 @@ ordelaffi : ordelaffi ordelaffo
 ordigni : ordigni
 ordinamenti : ordinamenti ordinamento 
 ordinanza : ordinanza ordinanze
-ordinare : ordinavano ordinandogli ordinandovi ordinatovi ordinera ordinerebbe ordineremo ordininsi ordinisi ordinommi ordinono ordino ordinò ordinorono ordinossi ordinarsi ordiniate ordinarle ordinarli ordinar ordinarti ordinasi ordinasse ordinassimo ordinateli ordinatoli ordinatoti ordiniamo ordinino ordinassi ordinarlo ordinasti ordinereno ordinassino ordinarvi ordinarci ordineranno ordinare ordinando ordinano ordinati ordinerai ordinerà ordinorno ordinate ordinerete ordinata ordinamo ordinavi ordinerò ordinavono ordinato ordinatoci ordinerassi ordinava ordina ordinarai
+ordinare : d'ordinare ordinavano ordinandogli ordinandovi ordinatovi ordinera ordinerebbe ordineremo ordininsi ordinisi ordinommi ordinono ordino ordinò ordinorono ordinossi ordinarsi ordiniate ordinarle ordinarli ordinar ordinarti ordinasi ordinasse ordinassimo ordinateli ordinatoli ordinatoti ordiniamo ordinino ordinassi ordinarlo ordinasti ordinereno ordinassino ordinarvi ordinarci ordineranno ordinare ordinando ordinano ordinati ordinerai ordinerà ordinorno ordinate ordinerete ordinata ordinamo ordinavi ordinerò ordinavono ordinato ordinatoci ordinerassi ordinava ordina ordinarai
 ordinaria : ordinario ordinatamente ordinarii ordinariamente ordinaria ordinarie ordinari ordinatissimo
 ordine : ordine ordini ordinazione ordinum
 orecchie : orecchie orechi orecchi orecchio
@@ -4616,7 +4615,7 @@ pistoia : pistorii pistoia pistolesi pistolese pistoriensi pistorio
 piteglio : piteglio
 pitigliano : pitigliano
 piti : piti pitti pittis
-piue : piue
+piue : piue, piu
 piutosto : piuttosto piutosto
 pivieri : pivieri
 pizicagnolo : pizicagnolo pizicaton pizzicagnolo
@@ -5990,11 +5989,9 @@ sinistra : sinistra
 sino : sino
 sint : sint
 sion : sion
-sipolcro : sipolcro
-sipulcro : sipulcro
+sipolcro : sipolcro sipulcro
 sire : sire
-sirocchia : sirocchia
-sirocchie : sirocchie
+sirocchia : sirocchie : sirocchie
 sirochia : sirochia
 sisto : sisto
 sito : sito
@@ -6385,9 +6382,8 @@ suggestione : suggestione
 suggezione : suggezione
 sughereto : sughereto
 sugiungere : sugiungere
-sugli : sugli
+sugli : sugli sulla sull'
 suis : suis
-sulla : sulla
 sullecitudine : sullecitudine
 summamente : summamente summam summariamente summarii summarie summario
 summa : summa
@@ -7072,3 +7068,7 @@ zucaro : zucaro
 zucca : zucca
 zuffa : zuffa zuffe
 zugo : zugo
+si : mi ti ci si s' c' t'
+di : del dello dell' delle degli delli della d'
+nello : nelle nelle negli nell'
+il : lo la le gli i l'un uno un'
