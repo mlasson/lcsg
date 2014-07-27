@@ -1,4 +1,5 @@
-﻿abbandonare : abbandonatamente abandonati abbandonarsi abbandonono abbandonasti abbandonarti abbandonarmi abbandonarlo abbandonassino abbandonando abbandonarli abbandonati abbandonato abbandonorno abbandonò abbandonata abbandonate abbandonino abbandona abbandonarci abbandonare abbandoni
+﻿NUMERALS : lxxx xii xxxi mdi xiii xix xi xviiii xxxxi mdvii mccccxcviii mdiii xviiiiii xxviiii viiii xxiv xiix ix mdx mdviii md ccccc xxiiii mdvi vii xiiiii iii xxiiiii iix mmi iiii xiv xxxviiii xxvii mdii iiiix mdviiii mcccccxii xxxv xv xxx xxxiii xxiii xvi xxii mccccc xxi xxviii mdxii viii cc xiiii xxv ii xviii mdv xvii xxvi xx mccccic iiiiii lx mcccclxxxxviiii clxxx mcccclxxxviii mcccclxxxxix lx mcccclxxxxviii
+abbandonare : abbandonatamente abandonati abbandonarsi abbandonono abbandonasti abbandonarti abbandonarmi abbandonarlo abbandonassino abbandonando abbandonarli abbandonati abbandonato abbandonorno abbandonò abbandonata abbandonate abbandonino abbandona abbandonarci abbandonare abbandoni
 abbassare : abbassarla abbassi abbassare abassare abbassate
 abbastanza : abbastante abbastanza abastanza
 abbergare : abberga abbergai abbergare abbergarvi
@@ -3495,7 +3496,6 @@ lupaccio : lupaccio
 lupo : lupo
 luppius : luppius
 lutozo : lutozo lutozzo
-lxxx : lxxx
 macario : macario
 macchia : macchia
 macchinare : macchinando macchinazione macchinato macchinavano macchinazioni macchinava macchinare

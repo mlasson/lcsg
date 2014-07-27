@@ -59,7 +59,7 @@ class Command(BaseCommand):
 
             print('Bug : phantom sentence ?', position, len([x for x in sentences if x.letter_id == l.id]))
             continue
-        for m in re.finditer("[^\W\d]+", phrase):
+        for m in re.finditer("(([^\W\d]|')+)", phrase):
           name = m.group(0)
           try :
             word = dic_words[name]

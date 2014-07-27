@@ -40,6 +40,13 @@ svg {
   height : auto !important;
 }
 
+#chart svg {
+  width : auto !important;
+  height : 500px !important;
+}
+
+
+
 #yearmap, #monthmap1, #monthmap2 {
   float:left;
   width: auto;

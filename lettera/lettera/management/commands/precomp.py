@@ -8,6 +8,9 @@ from django.db.models import Q
 
 max_dist = 3
 
+before_stato = [s.lower() for s in [ 'è', 'e', 'ha', 'essere', 'se\'', 'fussi', 'fosse', 'esserli', 'esserci', 'esserti', 'tu', 'io', 'sarà', 'saria', 'sarei', 'Èvi', 'essendo', 'essendoci', 'era', 'erono', 'esserne', 'sarebbe', 'sia', 'dipoi', 'già', 'ragionamento', 'sono', 'sonne', 'massime', 'ancora', 'bene', 'sempre', 'mai', 'sendone', 'mattina', 'ventura' ]]
+before_stati = [ 'sono', 'essere', 'siamo', 'sieno', 'fussino', 'erano', 'erono', 'eri', 'sendo', 'siate', 'noi', 'loro', 'ancora', 'dipoi', 'mai', 'suti', 'sareno', 'mattina', 'esservi', 'disordini', 'orsini', 'ora', 'e', 'non', 'medesimo']
+
 class Command(BaseCommand):
   args = '<???>'
   help = 'Do some post-treatments on the database'
@@ -21,38 +24,26 @@ class Command(BaseCommand):
     print(len(sentences),'sentences')
     print('Drop all tags ...')
     Tag.objects.all().delete()
-    cpt = 0
     tags = list()
-    dist = 0
+    def pairwise(iterable):
+      a, b = tee(iterable)
+      next(b, None)
+      return zip(a, b)
+
     for s in sentences:
       phrase = Occurrence.objects.filter(sentence__id=s).order_by('start_position').select_related('word')
       max = len(phrase)
-      found = False
-      essere = False
-      for x in phrase :
-        if cpt % 10 == 0 :
-          sys.stdout.write("%5d / %d\r" % (cpt, max))
-          sys.stdout.flush()
-        cpt += 1
-        dist += 1
-        if dist > max_dist:
-            essere = False
-        if (x.word.name == 'stato' 
-         or x.word.name == 'stati'):
-          if essere and dist <= 2:
-            tag = Tag(occurrence=x, name = 'participe') 
-            tags.append(tag)
-          found = True
-        if (x.word.name in ['è','essere', 'sono', 'era', 'fussi', 'sia', 'sonne', 'tu', 'dipoi', 'già', 'io', 'massime', 'ancora', 'bene', 'sempre', 'mai']
-         or x.word.name in ['sono', 'essere', 'siamo', 'sieno', 'fussino', 'erano', 'sendo', 'siate', 'noi', 'loro', 'ancora', 'dipoi', 'mai', 'suti']):
-          essere = True
-          dist = 0
-    print('\nSaving ...')
+      for x, y in pairwise(phrase):
+        if (y.word.name == 'stato' and x.word.name in before_stato
+         or y.word.name == 'stati' and x.word.name in before_stati
+         or y.word.name == 'stato' and 
+           (x.word.name, x.letter.volume, x.letter.number) in
+             [('discreto', 6, 62), ('montevarchi', 6, 89), ('viniziani', 6, 75), ('che', 5, 68)]):
+          tag = Tag(occurrence=y, name = 'participe') 
+          tags.append(tag)
+    print('Saving ...')
     Tag.objects.bulk_create(tags)
     print('Retrieve essere')
     essere = Family.objects.get(name='essere')
     print('Updating all participe ...')
     participes = Occurrence.objects.filter(tag__name="participe").update(family=essere)
-
-        
-        
