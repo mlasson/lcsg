@@ -45,6 +45,11 @@ svg {
   height : 500px !important;
 }
 
+#periodchart svg {
+  width : auto !important;
+  height : 500px !important;
+}
+
 
 
 #yearmap, #monthmap1, #monthmap2 {

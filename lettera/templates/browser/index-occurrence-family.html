@@ -12,6 +12,7 @@ Occurrences of {{ family.name }}
   <li class="active"><a href="#tabtable" role="tab" data-toggle="tab">Table</a></li>
   <li id="heattab"><a href="#tabheat" role="tab">Heat Map</a></li>
   <li id="histotab"><a href="#tabhisto" role="tab">Histogram of spellings</a></li>
+  <li id="periodtab"><a href="#tabperiod" role="tab">Repartition in periods</a></li>
   <li><a href="#tabtree" role="tab" data-toggle="tab">Context trees</a></li>
 </ul>
 
@@ -46,6 +47,13 @@ Occurrences of {{ family.name }}
       <svg></svg>
     </div>
   </div>
+  <div class="tab-pane" id="tabperiod">
+    <h2> Repartition in periods </h2>
+    <div id="periodchart">
+      <svg></svg>
+    </div>
+  </div>
+
   <div class="tab-pane" id="tabtree">
     <div id="tree"></div>
   </div>
@@ -73,6 +81,7 @@ Occurrences of {{ family.name }}
   var monthcal1 = new CalHeatMap();
   var monthcal2 = new CalHeatMap();
   var chart;
+  var chartPeriod;
 
   // update the chart when tab is clicked for resizing issues
   $('#histotab a').click(function (e) {
@@ -82,6 +91,14 @@ Occurrences of {{ family.name }}
       chart.update();
     }
   })
+  $('#periodtab a').click(function (e) {
+    e.preventDefault();
+    $(this).tab('show');
+    if (chartPeriod) {
+      chart.update();
+    }
+  })
+
   $('#heattab a').click(function (e) {
     e.preventDefault();
     $(this).tab('show');
@@ -194,10 +211,6 @@ Occurrences of {{ family.name }}
         });
     initYear(min.getFullYear());
 
-
-
-
-    console.log(chartdata);
     nv.addGraph(function() {
       var total = 0;
       chart = nv.models.discreteBarChart()
@@ -218,6 +231,46 @@ Occurrences of {{ family.name }}
 
       return chart;
     });
+    var periods = {};
+    data.forEach(function(e){
+      cpt += 1;
+      if (e.hasOwnProperty('period')){
+        if (periods.hasOwnProperty(e.period)){
+          periods[e.period] += 1;
+        } else {
+          periods[e.period] = 1; 
+        }
+      }
+    });
+    chartperioddata = [];
+    for(var index in periods) { 
+      if (periods.hasOwnProperty(index)) {
+        var attr = periods[index];
+        chartperioddata.push({ label : index, value : attr});
+      }
+    }
+    nv.addGraph(function() {
+      var total = 0;
+      chartPeriod = nv.models.discreteBarChart()
+      .x(function(d) { return d.label })    //Specify the data accessors.
+      .y(function(d) { return d.value })
+      .staggerLabels(true)    //Too many bars and not enough room? Try staggering labels.
+      .tooltips(false)        //Don't show tooltips
+      .showValues(true)       //...instead, show the bar value right on top of each bar.
+      .transitionDuration(350)
+      ;
+
+      d3.select('#periodchart svg')
+        .datum([{ key : "spellings", values : chartperioddata}])
+        .call(chart);
+     
+      nv.utils.windowResize(chartPeriod.update);
+
+      return chart;
+    });
+
+
+
   });
 });
 </script>

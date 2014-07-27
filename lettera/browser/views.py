@@ -101,12 +101,14 @@ def ellipse(front, word, back, maxsize=100):
 
 def build_occurrence_table(occs) : 
   answer = list()
-  occs = occs.select_related('word','sentence','letter')
+  occs = occs.select_related('word','sentence','letter', 'period')
   for o in occs:
     r = dict()
     r['link'] = (reverse('modal-letter', args=(o.letter_id,)),o.start_position,o.end_position)
     r['volume'] = o.letter.volume
     r['letter'] = o.letter.number
+    if o.letter.period :
+      r['period'] = o.letter.period.name
     r['date'] = o.letter.date
     r['word'] = o.word.name
     r['sentence'] = ellipse(o.letter.text[o.sentence.start_position:o.start_position-1],
