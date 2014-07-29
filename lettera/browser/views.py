@@ -315,7 +315,6 @@ def index_quote(request) :
 
   return json.dumps({ 'aaData' : answer }, default=date_handler)
 
-  
 class QuoteView(generic.TemplateView):
   template_name = 'browser/quote.html'
 
@@ -352,3 +351,6 @@ class FranciaView(generic.TemplateView):
 class ModalLetterView(generic.DetailView):
   model = Letter
   template_name = 'browser/modal-letter.html'
+
+class ZipfView(generic.TemplateView):
+  template_name = 'browser/zipflaw.html'

@@ -33,4 +33,5 @@ urlpatterns = [
         url(r'^(?P<pagesize>\d+)/(?P<page>\d+)/$', views.IndexView.as_view(), name='index-with-page'), 
         url(r'^(?P<pk>\d+)/', views.LetterView.as_view(), name='letter'),
         url(r'^modal/(?P<pk>\d+)/', views.ModalLetterView.as_view(), name='modal-letter'),
+        url(r'^zipf/', views.ZipfView.as_view(), name='zipflaw')
   ]

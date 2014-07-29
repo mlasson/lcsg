@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}
+ Zipf's Law
+{% endblock %}
+{% block header %}
+ Zipf's Law
+{% endblock %}
+{% block content %}
+    <h2> For families </h2>
+    <div id="chartFamily">
+      <svg></svg>
+    </div>
+    <h2> For words </h2>
+    <div id="chartWord">
+      <svg></svg>
+    </div>
+<script>
+var buildGraph = function (json, selector) {
+    values = [];
+    occurrences = 0;
+    json.aaData.forEach (function (entry) {
+         if (entry.occurrences > 0) {
+           occurrences += entry.occurrences;
+           values.push({name : entry.name, value : entry.occurrences });
+         }
+      });
+    values.sort(function(a, b){return b.value  - a.value});
+//    values = values.slice(0, 3000);
+    console.log(values);
+    var data = [];
+    var Log = function(x) { return Math.log(x) / Math.log(10); };
+    var Exp = function(x) { return Math.pow(10, x); };
+    for (var i = 0; i < values.length; i++) {
+      data.push({ y : Log(values[i].value), x : Log(i+1) });
+    }
+    console.log(data);
+    var graph = { values : data, key : 'Zipf laws', color:'steelblue' };
+    // Compute the linear regression using simple ordinary least square
+    var sum = function(f) {
+      var result = 0;
+      data.forEach(function(x){ result += f(x); })
+      return result;
+    }
+    var square = function (x) { return x * x; };
+    var n = data.length;
+    var cova = sum (function (e) {return e.x * e.y}) - sum (function(e){return e.x}) * sum (function(e){return e.y}) / n;
+    var vari = sum (function (e) {return square(e.x)}) - square(sum (function(e){return e.x})) / n;
+    var beta = cova / vari;
+    var alpha = sum (function (e) {return e.y}) / n -  beta * sum (function (e) {return e.x}) / n; 
+    var regression = function (x) {return alpha + beta * x; };
+    var reggraph = { values : data.map(function(d){return { x: d.x, y:regression(d.x)}}), 
+                    key : 'Linear regression (α = '+d3.format('0.2f')(alpha)+', β = '+d3.format('0.2f')(beta)+')',
+                    color : 'red'}; 
+
+    nv.addGraph(function() {
+      var chart = nv.models.lineChart()
+                    .margin({left: 100})  //Adjust chart margins to give the x-axis some breathing room.
+                    .useInteractiveGuideline(true)  //We want nice looking tooltips and a guideline!
+                    .transitionDuration(350)  //how fast do you want the lines to transition?
+                    .showLegend(true)       //Show the legend, allowing users to turn on/off line series.
+                    .showYAxis(true)        //Show the y-axis
+                    .showXAxis(true)        //Show the x-axis
+                    .tooltipContent(function(key, x, y, e, graph){
+                        return '<h3>' + key + '</h3>' +
+                               '<p>' +  y + ' at ' + x + '</p>'
+                        
+                      })
+      ;
+
+
+
+      chart.xAxis     //Chart x-axis settings
+          .axisLabel('Rank')
+          .tickFormat(function(x){ return d3.format('0.2f')(Exp(x))});
+
+      chart.yAxis     //Chart y-axis settings
+          .axisLabel('Frequency')
+          .tickFormat(function(x){ return d3.format('0.2f')(Exp(x))});
+
+      /* Done setting the chart up? Time to render it!*/
+
+      d3.select(selector)    //Select the <svg> element you want to render the chart in.   
+          .datum([graph, reggraph])           //Populate the <svg> element with chart data...
+          .call(chart);          //Finally, render the chart!
+
+      //Update the chart when window resizes.
+      nv.utils.windowResize(function() { chart.update() });
+      return chart;
+    });
+}
+
+$(document).ready(function() {
+  $.getJSON("{% url 'index-family-ajax' %}", function( json ) {
+    buildGraph(json, "#chartFamily svg");
+  });
+  $.getJSON("{% url 'index-word-ajax' %}", function( json ) {
+    buildGraph(json, "#chartWord svg");
+  });
+});
+</script>
+{% endblock %}
