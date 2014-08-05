@@ -50,8 +50,6 @@ svg {
   height : 500px !important;
 }
 
-
-
 #yearmap, #monthmap1, #monthmap2 {
   float:left;
   width: auto;
@@ -59,4 +57,28 @@ svg {
   text-align: center;
 }
 
+
+.bar rect {
+  fill: steelblue;
+  shape-rendering: crispEdges;
+}
+
+.bar text {
+  fill: white;
+}
+.bar .above {
+  fill: red;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.brush .extent {
+  stroke: #fff;
+  fill-opacity: .125;
+  shape-rendering: crispEdges;
+}
 

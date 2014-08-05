@@ -20,6 +20,11 @@
   </tbody>
 </table>
 
+<h2> Histogram </h2>
+<div class="histogram">
+</div>
+<h2> <3 </h2>
+
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
@@ -74,6 +79,12 @@
              { "mData": "period" }
         ] 
       });
+    draw_period(function (f){ 
+        $.getJSON("{% url 'index-ajax' %}", function( data ) {
+            f(data.aaData.filter(function(x){return x.date})
+                     .map(function(x){ return (new Date(x.date)) }));
+        })
+      }, '.histogram');
   });
 </script>
 {% endblock %}

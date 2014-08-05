@@ -1,9 +1,11 @@
-﻿NUMERALS : lxxx xii xxxi mdi xiii xix xi xviiii xxxxi mdvii mccccxcviii mdiii xviiiiii xxviiii viiii xxiv xiix ix mdx mdviii md ccccc xxiiii mdvi vii xiiiii iii xxiiiii iix mmi iiii xiv xxxviiii xxvii mdii iiiix mdviiii mcccccxii xxxv xv xxx xxxiii xxiii xvi xxii mccccc xxi xxviii mdxii viii cc xiiii xxv ii xviii mdv xvii xxvi xx mccccic iiiiii lx mcccclxxxxviiii clxxx mcccclxxxviii mcccclxxxxix lx mcccclxxxxviii
+﻿NUMERALS : lxxx xii xxxi mdi xiii xix xi xviiii xxxxi mdvii mccccxcviii mdiii xviiiiii xxviiii viiii xxiv xiix ix mdx mdviii md ccccc xxiiii mdvi vii xiiiii iii xxiiiii iix mmi iiii xiv xxxviiii xxvii mdii iiiix mdviiii mcccccxii xxxv xv xxx xxxiii xxiii xvi xxii mccccc xxi xxviii mdxii viii cc xiiii xxv ii xviii mdv xvii xxvi xx mccccic iiiiii lx mcccclxxxxviiii clxxx mcccclxxxviii mcccclxxxxix lx mcccclxxxxviii x
+abate : abate
 abbandonare : abbandonatamente abandonati abbandonarsi abbandonono abbandonasti abbandonarti abbandonarmi abbandonarlo abbandonassino abbandonando abbandonarli abbandonati abbandonato abbandonorno abbandonò abbandonata abbandonate abbandonino abbandona abbandonarci abbandonare abbandoni
 abbassare : abbassarla abbassi abbassare abassare abbassate
 abbastanza : abbastante abbastanza abastanza
+abbate : abbati
 abbergare : abberga abbergai abbergare abbergarvi
-abbiente : abbienti abbiente
+abbiente : abbienti abbiente abiente
 abbigliamenti : abbiliamenti abbigliamenti
 abbisognare : abbisognare abbisognava abbisognando abbisognono abbisogni abbisognassero
 abboccare : abbocca abboccati abboccatomi abboccato abboccando abboccò abbochi abboccherai abboccare abboccassino abboccamento abboccarsi abboccativi abboccarti abbocherà aboccato abboccature abboccassi abboccatura abbocchino abboccata abbocchi
@@ -14,17 +16,13 @@ abbozzare : abbozzare
 abbracciare : abbracciato abbracciare abbraccia
 abbruciare : abbruciarli abbruciare abbrucerete
 abeto : abeto abeti
-abiente : abiente
 abilità : abilità
-abis : abis
 abitare : abitando abitanti abitava abitavono abitante abitassi abitare abitarvi abitano abitazione abitato abitati abita abitatori abitazioni abitono
-abiti : abiti
-abito : abito
+abiti : abiti abito
 abolisca : abolisca
 abreviare : abbreviata abbrevviata abreviare
 abruzzi : abruzzi
 absentia : absentia
-absit : absit
 absolute : absolutionem absolute
 abusono : abusono
 acascandove : acascandove
@@ -40,12 +38,10 @@ accedente : accedente
 accelerare : accelerereno accelerarla accelerandosi accelerare acceleriate accelerassi accelererebbe aceleri accelererai acceleri accelerate accelerando
 accendere : accenda accenderà accendessi accendere
 accennare : accennasi accennando acennasti accennava accennandomi accennino accennò accennorno accennandogli accennare accennano accennato accenna accennate accennandoli accennamo accenni accennono
-acceperit : acceperit
-acceptanti : acceptanti
 accercato : accercato
 accertare : accertiamo accertandovi accertarsi accertandolo accerti accertandosi accertato accertarlo accertano accertassi accertarci accertò accertarla accertare accerterai
-accesi : accesi accessu
-accettare : accettandola accettissimo accettabile accettati accettato accettassino accetteremo accetti accetto accettino accetteranno accetta accettarla accettassi accettiamo accettata accetterà accettare accettiate accettiano accettando accettò accettarli accettava accettarlo accettavono accettate accettissime accette
+accesi : accesi accessu acessi
+accettare : accettandola accettissimo accettabile accettati accettato accettassino acceperit acceptantiaccetteremo accetti accetto accettino accetteranno accetta accettarla accettassi accettiamo accettata accetterà accettare accettiate accettiano accettando accettò accettarli accettava accettarlo accettavono accettate accettissime accette acetti
 acciaioli : acciaiolis acciaiuoli acciaiolo acciaioli acciaiuolo
 accidente : accidenti accidente accidentali
 acciò : acciocché accioché acciò
@@ -66,10 +62,7 @@ accozzare : accozza accozzarti accozzati accozzatisi accozzerebbe accozzi accozz
 accrescere : accresciuti accrescendo accresciuto accresciuta accrescerne accresciute accrescerli accrescere accrescervi accrescerlo accrescimento accrescesi accrescieva accrescerle accriescere accresca accrescono accresce accresciere accreschino accrescerete accrescerti accresciutovi accrescessi accrescerebbe accrescessino accrescerla accresciemo
 accumulati : accumulati
 accusare : accusarne accusiamone accusare accusorno accuserei accusò accusato accuserà accusiamo accusazione accusarmi accusati accusi accusassi accusarti accusiamoti
-acerba : acerba acerbità acerbamente acremente acerbo
-acerrimo : acerrimo
-acessi : acessi
-acetti : acetti
+acerba : acerba acerbità acerbamente acremente acerbo acerrimo
 achille : achille
 acqua : acque acqua acquosi
 acquapendente : acquapendente
@@ -77,7 +70,6 @@ acquasparta : acquasparta
 acquiescere : acquiesca acquiescere acquiescerà
 acquistare : acquistarsi acquisterai acquisterà acquistassi acquistare acquistando acquistarne acquisterebbe acquisto acquistato acquisti acquistata acquistono acquistar
 acrescere : acrescere accrebbegli accrescerà
-actione : actione
 acuti : acuti
 adagio : adagio
 adamo : adamo
@@ -85,7 +77,7 @@ adattare : adattando adattereno adattare adatti
 adchino : adchino
 addatur : addatur
 addestrarli : addestrarli addestri
-addì : addì
+addì : addì adì
 addirittura : addirittura
 additur : additur additus
 addobavono : addobavono addobbata
@@ -191,7 +183,7 @@ albitrio : albitrio
 albizi : albizi albizzi albizis albitio albitis albitius
 albo : albo
 albororo : albororo
-alcun : alcuno alcune alcuni alcuna alcun
+alcun : alcuno alcune alcuni alcuna alcun alcun'
 aldobrandini : aldobrandinis aldrobandino aldobrandini
 alesandro : alesandro
 aless : aless
@@ -205,6 +197,7 @@ alia : alia aliam alias alii aliis alio alios allio
 alienare : alienarsi alienate alienati alienato alieni alienazione alienarla alienare alieno alienassi alienarlo alienono alienerai aliena
 alimentarsi : alimentato alimentarsi
 aliqua : aliqua aliquam aliisque aliquid aliquo
+alla : all all' alle alli allo a' ai al
 allagare : allagare allagato
 allegare : allegandogli allegandoli aligato allegandovi allegherò allegando allegato allegandosi allegassino allegarla allegare allego allegòmmi allega allegherete allegorno allegandone allegata aliga allegherai allegate alleghi allegava allegarne allegono allegò alligate allegati allegavo alligata allegassi alligato allegai allegano allegovi allegavate alligati
 alleggerire : alleggeriti alleggierirli alleggerissinsi alleggerissi alleggerito alleggerirsi alleggerite alleggerirli alleggierire alleggerirne alleggerissino alleggerirai alleggerirvi alleggerire alleggerilla
@@ -232,14 +225,16 @@ alto : alta altamente alte alti altezza altissimo alto
 altobello : altobello
 altopascio : altopascio
 altoviti : altoviti altovitis altovito
-altramente : altramente altrimente antrimenti altr
+altra : altre altr altri altro
+altramente : altramente altrimente antrimenti altrimenti
+altrettante : altrettanti altrettanto
 altronde : altronde altrove
 alumi : alumi
 alviano : alviano
 alzò : alzò
-amare : amadori amando amantissimo amassi amava amatore amarci amatori amerà amati amato amiamo amarla amare amata amino
+amare : ama ami amo amadori amando amantissimo amassi amava amatore amarci amatori amerà amati amato amiamo amarla amare amata amino
 amaritudine : amaritudine amaro
-ambasceria : imbasciadori mbasciadore ambasciatori ambasceria imbasciadore ambasciate ambasciadore ambasciata mbasciadori ambasciadori mbascerie ambasciatore imbasceria imbascerie imbasciata imbasciate ‘mbasciadore mbasciatore mbasciata
+ambasceria : imbasciadori mbasciadore ambasciatori ambasceria imbasciadore ambasciate ambasciadore ambasciata mbasciadori ambasciadori mbascerie ambasciatore imbasceria imbascerie imbasciata imbasciate ‘mbasciadore mbasciatore mbasciata 'mbascerie 'mbasciadore 'mbasciadori
 ambigua : ambigui ambigue ambiguo ambigua ambiguità
 ambizione : ambiziosi ambizione
 ambra : ambra
@@ -275,7 +270,7 @@ anchora : ancora ancor anchora anco ancorch ancorché ancoraché
 ancona : ancona anconitano
 àncora : àncora
 andamenti : andamento andamenti
-andare : andrò andandovi andavono andamo andiate andorono andar andavo andai andra anderò anderà andando andracci andandovene andreno andrebbe andorno andaranno andarcene andresti andrà anda andrebbon andarle andarla andranne andarne andavamo vadane andarli andarsene andrete andranno andarlo andò andata vadino andate andandosi andavano andati andonne vada andava andavate andrei andasse andassino andarvi andandolo andassi andornosene andrassi andato andrai andiamo andoron andrebbono andarsi andare andandosene andatine andara andremo andr vadi andatevi andossene
+andare : vo andrò andandovi andavono andamo andiate andorono andar andavo andai andra anderò anderà andando andracci andandovene andreno andrebbe andorno andaranno andarcene andresti andrà anda andrebbon andarle andarla andranne andarne andavamo vadane andarli andarsene andrete andranno andarlo andò andata vadino andate andandosi andavano andati andonne vada andava andavate andrei andasse andassino andarvi andandolo andassi andornosene andrassi andato andrai andiamo andoron andrebbono andarsi andare andandosene andatine andara andremo andr vadi andatevi andossene anda'ne anda'vi n'andaranno n'andassi n'andassino n'andò n'andorono n'andrà n'andranno n'andrebbe ita ite iti ito va verra'
 andari : andari
 andrea : andrea andreae
 andre : andre
@@ -434,7 +429,7 @@ arrostiva : arrostiva
 arrotatori : arrotatori arrotatura arroti arrotino arroto
 arrupto : arrupto
 arte : arte arti artis
-arteglierie : artiglerie artiglierie artigleria artiglieria arteglierie altiglierie, l'artiglierie
+arteglierie : artiglerie artiglierie artigleria artiglieria arteglierie altiglierie, artiglierie altiglierie
 articolo : articolo articulo
 artificiosamente : artificiosamente
 artimone : artimone
@@ -444,7 +439,7 @@ ascendere : ascenderebbe ascesi ascendevono ascendere ascendono
 ascia : asce ascia 
 asciesi : asciesi
 asciutto : asciutto
-ascoltare : ascoltarlo ascoltati ascolta ascoltò ascoltare ascoltassi ascoltate ascolte ascoltiate
+ascoltare : ascoltarlo ascoltati ascolta ascoltò ascoltare ascoltassi ascoltate ascolte ascoltiate ascoltarci
 asconda : asconda
 ascosamente : ascosamente
 ascriviamo : ascriviamo
@@ -463,7 +458,7 @@ assassinamento : assassinato assassinati assassini assassinate assassinamento as
 asse : asse
 assecondare : assecondare
 assediare : assediare assediato assedio assediati
-assegnare : assegnò assegnatevi assegnatogli assegnonne assegnono assegnare assegnatone assegnamento assegnate assegnamenti assegna assegnati assegnatamente assegni assegnato assegnandoci assegnavi
+assegnare : assegnò assegnatevi assegnatogli assegnonne assegnono assegnare assegnatone assegnamento assegnate assegnamenti assegna assegnati assegnatamente assegni assegnato assegnandoci assegnavi n'assegna
 assentare : assenti assentare assentassino assenzia assentassi assentarsi assenza assentati assente assentato
 assessori : assessori
 assettare : assetterete assettino assetteranno assetta assetterebbe assetterai assettata assettarla assettare assettate assetterebbono assetterassi assetto assettandosi assettato
@@ -494,7 +489,7 @@ attenenti : attenenti attinente
 attenute : attenute attenuti
 attenzione : attenzione attento attentamente
 attesta : attesta
-attestare : attestò attestato attestando attestazione attestare attestorno attestargli attestera
+attestare : attestò attestato attestando attestazione attestare attestorno attestargli attestera attestera'gli
 attitudine : attitudine
 atto : atto atti
 attonito : attonito
@@ -525,10 +520,9 @@ avanza : avanzar avanziate avanzarlo avanzasse avanzava avanzati avanzarne avanz
 avello : avello
 avenire : avenire avvenire
 avenza : avenza
-avere : arrà àcci arieno arìa arrebbono aranne hannno hannoci hannogli hanno hassi havendogli hannoli hannomi hannone hannosene hannosi hannovi abbino abbiamoliene abbiamogli abbiamotelo abbiamolo abbiamola abbi abbiano abbiamoli abbiàno abbian abbiam abbiate abbiamo abiamo abbia abbiamoti abbiamolli abbiamone arei avrà avevasi avrebbe aremmo avevamo avevami avamo avrò avieno avendoli averliene abia aresti arèmo avendogliene avendosene aranno aven avean aremo aren averci avea avevon aùtogli averti avendogli aviate avute aver avutane aviamovi aveno avrete aveano arete avercelo averceli avendotene avrebb auto avete auti avergli aùtine avendovele avate aversene avevono arai averli avessimo avendolo aùtone avendo avendone avertene avrei avèno averne avavamo ebbino avervelo aviamogli àllo arebbano avevano avervene aversi avendovene avergliene avendoci avevo averle avessin ebbon avian avezare aretelo avermi arebbonno averria arebbono averla averrete aùto arebbevegli avendole avessino aviamo avranno avén avervi averlo avesse ebbimi ebbe avendosi arebbeno averene aviamoti avessivi avessero aútovi avermene ebbono aùti avevi ebbano avercene autolo aùta aveva ebbi aveono aùte averai aviamone avuti avianne avéno aúto ebbeli avuta avervisi avendoti aremovi avemmo avendola avessi aúti arebbe averneli averà avemo avendovelo aùtola avesti avendomi areno avevane aremmovi avessili avevan avuto avrebbero avendovi ha habbiamo habbi habeant habeat habebimus habere haberi hacci hagli hammi hanne hano harà havessi haviànvi auta aúta aute aúte ànno habuerit hammene haus hogli hola holi hollo honne
+avere : v'abbiàno arà are' arò hai han ha' ho arrà àcci arieno arìa arrebbono aranne hannno hannoci hannogli hanno hassi havendogli hannoli hannomi hannone hannosene hannosi hannovi abbino abbiamoliene abbiamogli abbiamotelo abbiamolo abbiamola abbi abbiano abbiamoli abbiàno abbian abbiam abbiate abbiamo abiamo abbia abbiamoti abbiamolli abbiamone arei avrà avevasi avrebbe aremmo avevamo avevami avamo avrò avieno avendoli averliene abia aresti arèmo avendogliene avendosene aranno aven avean aremo aren averci avea avevon aùtogli averti avendogli aviate avute aver avutane aviamovi aveno avrete aveano arete avercelo averceli avendotene avrebb auto avete auti avergli aùtine avendovele avate aversene avevono arai averli avessimo avendolo aùtone avendo avendone avertene avrei avèno averne avavamo ebbino avervelo aviamogli àllo arebbano avevano avervene aversi avendovene avergliene avendoci avevo averle avessin ebbon avian avezare aretelo avermi arebbonno averria arebbono averla averrete aùto arebbevegli avendole avessino aviamo avranno avén avervi averlo avesse ebbimi ebbe avendosi arebbeno averene aviamoti avessivi avessero aútovi avermene ebbono aùti avevi ebbano avercene autolo aùta aveva ebbi aveono aùte averai aviamone avuti avianne avéno aúto ebbeli avuta avervisi avendoti aremovi avemmo avendola avessi aúti arebbe averneli averà avemo avendovelo aùtola avesti avendomi areno avevane aremmovi avessili avevan avuto avrebbero avendovi ha habbiamo habbi habeant habeat habebimus habere haberi hacci hagli hammi hanne hano harà havessi haviànvi auta aúta aute aúte ànno habuerit hammene haus hogli hola holi hollo honne n'averrete n'abbino n'ha n'hanno ài ara are
 aversare : aversare
 avezzano : avezzano
-avicinandoti : avicinato avicinandoti
 avilire : avilire
 aviluppare : aviluppare
 avolo : avolo
@@ -537,16 +531,15 @@ avvelenare : avvelenare avvelenato
 avvenga : avvenissi avvenuto avvenghino avvenga avvierete avviene
 avventura : aventura avventura
 avversa : avversari avversa avversario avverso avversità avversarii
-avvertire : avvertisca avvertigli avvertenzia avvertisco avvertisce avertenza avvertenzie avvertente avvertirci avvertirvi avvertirai avvertisci avvertirete avvertendo avvertissi avvertirtene avvertiamo avvertendolo avvertirreno avvertendone avvertendoli avvertissimo avvertiamoti avvertenza avvertendoti avverta avvertitolo avvertimo avvertiamti avvertirti avvertireno avvertischino avvertendovi avvertirgli avvertiate avvertirla avvertire avvertite avvertira avvertiti avvertiva avvertirne avvertirlo avvertito
+avvertire : avvertisca avvertigli avvertenzia avvertisco avvertisce avertenza avvertenzie avvertente avvertira'gli avvertirci avvertirvi avvertirai avvertisci avvertirete avvertendo avvertissi avvertirtene avvertiamo avvertendolo avvertirreno avvertendone avvertendoli avvertissimo avvertiamoti avvertenza avvertendoti avverta avvertitolo avvertimo avvertiamti avvertirti avvertireno avvertischino avvertendovi avvertirgli avvertiate avvertirla avvertire avvertite avvertira avvertiti avvertiva avvertirne avvertirlo avvertito
 avvezzare : avvezzare
 avviare : avviamento avviati aviato avviare avvierebbe 
-avvicinarsi : avvicinarti avvicinato avvicinarsi
+avvicinarsi : avvicinarti avvicinato avvicinarsi avicinato avicinandoti
 avvilito : avvilito
 avviluppare : avviluppare avviluppato 
-avvisare : avisara avisarci avisatene avisato avisera aviso avvirsarne avvisa avvisacene avvisaci avvisai avvisamo avvisando avvisandoci avvisandogli avvisano avvisarci avvisare avvisarle avvisarmi avvisarne avvisartene avvisarti avvisarvene avvisarvi avvisassi avvisassinne avvisassino avvisasti avvisata avvisate avvisati avvisato avvisatone avvisava avvisavano avvisavate avvisavi avvisavo avvisera avviserà avviserai avviseranno avviserebbe avviseremo avvisereno avviserete avvisereteci avviserò avviseronne avvisiamo avvisiamotelo avvisiamotene avvisiamoti avvisiamovi avvisiate avvisi avvisino avviso avvisono avvisorno
-avvisiti : avvisiti
+avvisare : avisara'cene avisara avisarci avisatene avisato avisera aviso avvirsarne avvisa avvisacene avvisaci avvisai avvisamo avvisando avvisandoci avvisandogli avvisano avvisarci avvisare avvisarle avvisarmi avvisarne avvisartene avvisarti avvisarvene avvisarvi avvisassi avvisassinne avvisassino avvisasti avvisata avvisate avvisati avvisato avvisatone avvisava avvisavano avvisavate avvisavi avvisavo avvisera avviserà avviserai avviseranno avviserebbe avviseremo avvisereno avviserete avvisereteci avviserò avviseronne avvisiamo avvisiamotelo avvisiamotene avvisiamoti avvisiamovi avvisiate avvisi avvisino avviso avvisono avvisorno n'avvisa n'avvisate n'avvisi n'avvisono avvisiti
 avvocare : avvocare
-azione : azioni azione
+azione : azioni azione actione
 azzennato : azzennato
 azzuffarsi : azzuffarsi
 baccanella : baccanella
@@ -557,12 +550,10 @@ bacocci : bacocci bacocco
 badare : badò bada badono badino badai badare
 badia : badia badìa
 badiali : badiali
-bagli : bagli
-baglì : baglì
-bagliò : bagliò
+bagli : bagli baglì bagliò
 baglioni : baglioni balione balioneschi balioneseche balioni balionibus baliono ballioni
 bagnato : bagnato
-bagni : bagni
+bagni : bagni 
 bagno : bagno
 bagnone : bagnone bagnoni
 baia : baia
@@ -582,7 +573,7 @@ baldracano : baldraccani baldracano baldraccane
 balduccio : balduccio
 balestieri : balestieri balestrieri balestreri balestriere
 balestra : balestra balestrata balestrate balestre balestri balestro
-balía : balia balía balìa baliae balie
+balía : balia balía balìa baliae balie 
 balì : balì
 balle : balle
 ballino : ballino
@@ -631,20 +622,17 @@ bardella : bardella
 bardi : bardi bardis
 barducci : barducci
 barerie : barerie
-barga : barga bargae barge
+barga : barga bargae barge bargie
 bargello : bargello
 barghigiani : barghigiani barghigiano
-bargie : bargie
 bariglione : bariglione bariglioni barilotti
 barignone : barignone
 barile : barile barili
 barone : baroncelli barone baronum baron baroncellis barones baroni
-bartholomeo : bartholomeo
 bartolegli : bartolegli
-bartoli : bartoli bartholis
+bartoli : bartoli bartholis bartolo
 bartolino : bartolino bartolini bartholino
-bartolo : bartolo
-bartolomeo : bartolomeum bartolomè bartolomeo bartolommeo bartolommè
+bartolomeo : bartolomeum bartolomè bartolomeo bartolommeo bartolommè bartholomeo batolomeo
 barzalona : barzalona
 basciano : basciano
 basilea : basilea
@@ -652,18 +640,15 @@ basilio : basilio basiolio
 bassano : bassano
 bassezza : bassezza bassi basso bassa basse 
 bastarde : bastardo bastarde bastardello
-bastare : basterebbe bastandoci bastassi bastarci basteracci bastano bastandomi bastanti bastare basterebbono bastavano basteranno bastante bastò basterà bastono bastando bastate bastarli bastassino bastava basterebbegli bastato bastiamo bastavono bastanza bastino basta bastati bastargli basti bastarti bastivi
+bastare : basteria basterebbe bastandoci bastassi bastarci basteracci bastano bastandomi bastanti bastare basterebbono bastavano basteranno bastante bastò basterà bastono bastando bastate bastarli bastassino bastava basterebbegli bastato bastiamo bastavono bastanza bastino basta bastati bastargli basti bastarti bastivi
 bastiano : bastiano bastian
 bastariame : bastariame
-basteria : basteria
 bastione : bastione bastioni bastionis
 basto : basto
 bastonate : bastonate bastone
 batistone : batistone
-batolomeo : batolomeo
-batta : batta
 battaglia : battaglioni battaglia battaglie battaglino battaglio battaglione
-battere : batterci batterlo battuti battessino batte battuto battutola battere battuta battute
+battere : batterci batterlo battuti battessino batte battuto battutola battere battuta battute batta
 battezare : battezzare battezare battezzata battezzi battezzando
 battifolle : battifolle
 battista : battista batista
@@ -679,7 +664,7 @@ befanía : befanía
 beffa : beffe beffa
 belacqua : belacqua
 belanti : belanti
-bella : bello bella belli bell belle bellissima bellissimo bellissime begli
+bella : bello bella belli bell belle bellissima bellissimo bellissime begli bel bell'
 bellacci : bellacci
 bellicosi : bellicosi
 bellinzona : bellinzona
@@ -688,7 +673,7 @@ belmonte : belmonte
 belvedere : belvedere
 benché : benché
 benci : benci
-bene : bene
+bene : bene ben
 benedetto : benedecto benedicto 
 benedetta : benedette benedetti benedire benedizione
 benefactor : benefactor benefattore benificatore
@@ -697,7 +682,7 @@ beneficii : benefitii beneficio benefizii benefitia benefiziale beneficii benefi
 beneplaciti : beneplaciti beneplacito
 benessere : benessere
 benestanti : benestanti
-benevolenzia : benevolenzia benivolo benevolo benevolere benivole benivolenti benivolentissima benivolenza benivolenzia
+benevolenzia : benevolenzia benivolo benevolo benevolere benivole benivolenti benivolentissima benivolenza benivolenzia benivola
 beni : beni
 benignamente : benignamente benini benino
 benintendi : benintendi
@@ -715,7 +700,7 @@ berlingozzo : berlingozzo
 berlo : berlo
 bernaba : bernaba
 berna : berna
-bernardi : bernardi bernardini bernardino bernardo bernardus
+bernardi : bernardi bernardini bernardino bernardo bernardus bernardum
 berretta : berretta
 bersighella : berzigalla berzighella bersighella
 bertimbergh : bertimbergh bertimberghe bertinberche bertinberg
@@ -805,7 +790,7 @@ borghetto : borghetto
 borghi : borghi
 borghini : borghini
 borgia : borgia
-borgo : borgo
+borgo : borgo borgum
 borgogna : borgogna borgognoni
 boria : boria
 borromei : borromei borromeo
@@ -876,9 +861,7 @@ bugia : bugie bugia
 bugliò : bugliò
 buglioth : buglioth bugliotth bugliotti bugliotto
 buio : buio
-bullectinum : bullectinum
-bulletta : bulletta bullette
-bullettini : bullettini bullettino
+bulletta : bulletta bullette bullettini bullettino bullectinum
 bulsano : bulsano
 bunò : bunò
 buoi : buoi
@@ -888,7 +871,7 @@ buonaiuti : buonaiuti
 buonaventura : buonaventura bonaventura
 buonconvento : buonconvento
 buondelmonti : buondelmonti buondelmontis
-buono : buoni buone buono buona buon bonissima bonissimi bono bona
+buono : buoni buone buono buona buon bonissima bonissimi bono bona buon'
 buonvisi : buonvisi
 buosi : buosi buosis
 bureggia : bureggia
@@ -898,8 +881,7 @@ burgo : burgo burgos
 buscaino : buscaino
 busichetta : busichetta
 busini : busini
-busse : busse
-bussé : bussé
+busse : busse bussé
 buti : buti
 butriano : butriano
 cacce : cacce
@@ -1138,7 +1120,7 @@ caterina : caterina catherinae
 catignano : catignano
 cattani : cattani
 cattare : cattare
-cattiva : cattiva cattivo cattivi cattive
+cattiva : cattiva cattivo cattivi cattive 'cattivo
 cattolica : cattolica catholicam cattolico catolico
 cattura : cattura
 catulo : catulo
@@ -1261,7 +1243,7 @@ cinghie : cinghie
 cini : cini
 cinone : cinone
 cinte : cinte cinti cinto
-cioè : cioè
+cioè : cioè zoè
 ciofi : ciofi
 ciola : ciola
 cipriano : cipriano cipri cipro
@@ -1343,7 +1325,7 @@ colte : colte
 coltellata : coltellata
 colubrine : colubrine
 colui : colui
-comandare : comandorno comandiano comanda comandereno comandarmi commandamenti comandarvi commandamento comandamenti comandando comandamento comandasti comandorono comandare comandassimo comandara comandiamo comandino comandava comanderà comandono comandianvi comandianti comandiamoti comanderebbe comanderai comandano comandarli comandera comandasse comandandogli comandassi comandò comandi comandarti comandatoli comandatolo comandatore comandate commandi comandati comandato comanderete
+comandare : comandara'lo comandorno comandiano comanda comandereno comandarmi commandamenti comandarvi commandamento comandamenti comandando comandamento comandasti comandorono comandare comandassimo comandara comandiamo comandino comandava comanderà comandono comandianvi comandianti comandiamoti comanderebbe comanderai comandano comandarli comandera comandasse comandandogli comandassi comandò comandi comandarti comandatoli comandatolo comandatore comandate commandi comandati comandato comanderete
 combattere : combattono combatte combattere combatterebbe combatterlo combattuto combattergli combattuti
 come : come
 comeisso : comeisso
@@ -1352,17 +1334,17 @@ comentava : commenta comenterebbono comenti comentava commentarle
 comerzio : comerzio
 comestabile : comestabilibus comestaboli comestabile comestabolibus comestabili
 comfermò : comfermò
-cominciare : cominciarsi cominceranno cominciai comincereno comincerebbono cominci cominciar cominciassi cominciarvi cominciata comincerebbe comincerò comincerai comincerà cominciono cominciasi comincino cominciò cominciandola comincierà cominciavamo cominciamo cominciandolo comincia cominciavano cominciarla cominciandosi cominciato cominciavon cominciati cominciera cominciava cominciorno cominciate cominciarci comincionsi comincerete cominciassino cominciando cominciare comincioronsi
+cominciare : cominciarsi cominceranno cominciai comincereno comincerebbono cominci cominciar cominciassi cominciarvi cominciata comincerebbe comincerò comincerai comincerà cominciono cominciasi comincino cominciò cominciandola comincierà cominciavamo cominciamo cominciandolo comincia cominciavano cominciarla cominciandosi cominciato cominciavon cominciati cominciera cominciava cominciorno cominciate cominciarci comincionsi comincerete cominciassino cominciando cominciare comincioronsi cominciera'ti
 comissione : commissioni comissioni commessioni commessione comissoli comissione conmissione commissione
 comiti : comiti comitis
 comitiva : comitiva
 commedianti : commedianti
 commen : commen
 commendare : commenda commendamus commendandolo commendandoti commendano commendare commendarla commendartene commendarti commendarvi commendate commendati commendatione commendato commendatori commendava commendazione commenderà commenderai commenderebbe commenderemo commendereno commenderete commenderetelo commendiamo commendiamogli commendiamone commendiamotene commendiamoti commendiamovene commendiamovi commendiamti commendiano commendianti commendi commendo commendò commendono comendarti comendiamo comendiamone comendiamotene
-commettere : commettesti commessariotti commissa commissoli commettianti commesse commissi commissio commisse commissesi commisso commettela commette commetta commessogli commetti commetterliene commission commissogli commissonmi commissionis commissono commissionario commissionem commetterti commettervi commettemmo commettermi commettendoli commessa commettiamoti commettereno commetteranno commettera commettemogli commettendogli commettete commetteva commetervi commettevi commettemo commesso commessoli commessi commettere commetterai commetterà commettavamo commettino commettessimo commettila commettendo commetterete commetterli commettertene commettervelo commettessi commettiamo commettendoti commettendoliene commetteremo commettevano commettono comettervi cometterti comettera cometo commise
+commettere : commettera'li commettesti commessariotti commissa commissoli commettianti commesse commissi commissio commisse commissesi commisso commettela commette commetta commessogli commetti commetterliene commission commissogli commissonmi commissionis commissono commissionario commissionem commetterti commettervi commettemmo commettermi commettendoli commessa commettiamoti commettereno commetteranno commettera commettemogli commettendogli commettete commetteva commetervi commettevi commettemo commesso commessoli commessi commettere commetterai commetterà commettavamo commettino commettessimo commettila commettendo commetterete commetterli commettertene commettervelo commettessi commettiamo commettendoti commettendoliene commetteremo commettevano commettono comettervi cometterti comettera cometo commise
 commini : commini
 commisione : commisione
-commissari : commissario comissarii commmissario comissarius comissario commissarium commissarius commissarie commissarii commissariis commissaris commessari commessarii commessario commissari
+commissari : commissario comissarii commmissario comissarius comissario commissarium commissarius commissarie commissarii commissariis commissaris commessari commessarii commessario commissari commisario
 commoda : commodissimamente commodo commodi comodamente comodità commodamente commode comodo commodità commoda commodissimo
 commossi : commossi commoverà commoveva
 commune : commune
@@ -1380,7 +1362,7 @@ compensa : compensazione compensata compensa compensato compensationem compensan
 comperare : comperata comperatori comperare compererai comperate comperrai comperati comperarli comprati comperrà comperato comperi comperò compera comprendo comperassi
 compiacere : compiacernela compiaceremo compiacia compiacerneli compiacemo compiaciuto compiaciuti compiacerti compiacernelo compiaciuta compiaccino compiacervene compiacerne compiacerli compiacerlo compiacervi compiacertene compiacerla compiacere compiacessi
 compimento : compimento
-comporre : componessi compoghino comporsi componga comporre comporli comporlo composte componessino comporgli composta componendovi composto comporvi componendo componendoti composti comporla
+comporre : componessi compoghino comporsi componga comporre comporli comporlo composte componessino comporgli composta componendovi composto comporvi componendo compongono componendoti composti comporla
 comportare : comportare comporterà comportò comporteranno comporta comportabile comportava comportarlo comportano comportino
 compositionem : composizione compositionem compositore
 comprendere : comprende compreendere comprendessi comprendere compreso comprenda comprese
@@ -1390,9 +1372,10 @@ comprovò : comprovò
 computando : computati computandovi computato computatis computatovi computando computata
 comunanze : comunanze
 comune : comune comun comunem comunemente
-comunicare : comunicarla comunicherò comunicarle comunicassi comunicarli comunicarmi comunicarvi comunicate comunicornosi comunicabile comunicai comunicherà comunichera comunicherete comunicabili comunicava comunicocci comunicato comunicata comunichi comunicavo comunichiate comunica comunicherai comunicheretela comunicare comunicando comunicò comunicazione
+comunicare : comunicarla comunicherò comunicarle comunicassi comunicarli comunicarmi comunichera'lli comunicarvi comunicate comunicornosi comunicabile comunicai comunicherà comunichera comunicherete comunicabili comunicava comunicocci comunicato comunicata comunichi comunicavo comunichiate comunica comunicherai comunicheretela comunicare comunicando comunicò comunicazione
 comuni : comuni comunitati comunitatis comunitatem comunità
 comunque : comunque comunche
+con : col coll' coi
 conabimur : conabimur
 conati : conati conato
 concedere : concederlo concedendolo concederete concederli concedessino concessi concederle concessa concederai concederla concedeva concessono concediamo concestoro concessioue concederemo concedessi concedemoli concederanno conceda concederà concede concederliene concederne concedute concessogli concesse concedendo conceduta concederebbono concedere concesso concederno conceduto concedé concessione concediate
@@ -1405,11 +1388,8 @@ conchiudere : conchiuse conchiudere conchiudendosi
 conci : conci
 concilio : concilio
 conciossiacosaché : conciossiacosaché
-concistorio : concistorio
-concistoro : concistoro
-concive : concive
-concivibus : concivibus
-concivi : concivi concivis concivo
+concistorio : concistorio concistoro
+concivi : concivi concivis concivo concive concivibus
 conclavi : conclavi conclavista
 concludere : concluda concludendosi conclude concludano concluderà concludino conclusono concludesse concluderai concludessi concludiamo concluderebbe conclusioni concludemo concludavamo conclusa concludendo concluse concluderrà conclusione concludessino concluso concluderre concluderli concludere concluderlo concluderla concludeva conclusi conclusio conclusionem
 concordare : concordi concordarsi concordassi concordare concordarti concordiam concordia
@@ -1421,18 +1401,17 @@ condizionata : condizione condizionate condizioni condizionata condizionale
 condotta : condotte condotti condutta condutte condutti condutto condotto
 condottiere : condottieri condottiero condottiere condotteri conduttieri conduttiere conduttori
 condurre : conducessin conductum condurrebbe conducemo condurrebbesi conduciate condottolo condurci conduchino condusseno condurli conduca condussono conduce condurrai conducono condursi conducemmo condurrete condussi condurlo conductae condurralli condurle conducevono condurne condurvisi conducessino condurrò conduconle condurvi condottogli condurla conduceva condurranno condurremo conducere condurre condur conduchi conducendosi condurrà condurti condussino conducendo conducesti condurvele condurra conduciamo condurvelo conducessi condusse
-conestabole : conestabolotto conestaboluzzi conestaboli conestabolotti conestabili conestabole conestabile cconestaboli commestabole commestaboli
+conestabole : conestabolotto conestaboluzzi conestaboli conestabolotti conestabili conestabole conestabile cconestaboli commestabole commestaboli comestabole
 confederata : confederazione confederati confederata confederato confedera confederatosque
-conferire : conferirete conferisco conferirotti conferì conferí conferisca conferi conferire conferirlo conferirli conferira conferirà conferissino conferirla conferirne conferito conferendo conferitoli conferitomi conferendola conferendogliela conferita conferiate conferissi conferimo conferirti conferirai
+conferire : conferi' conferira'gli conferirete conferisco conferirotti conferì conferí conferisca conferi conferire conferirlo conferirli conferira conferirà conferissino conferirla conferirne conferito conferendo conferitoli conferitomi conferendola conferendogliela conferita conferiate conferissi conferimo conferirti conferirai
 confermare : confermava confirmato confermamo confirmarlo confermi confermano confermono confermino confirmazione conferma confermerebbe confirmando confermati confermo confermato confermasi confermare confermiamo confermata confirmavit confermate confirmarli confermarla confermarti confermazione confermavano confermò confermavit confirmemur confirmare confirmat confermarlo conferme
-confessa : confessiamo confesso confessono confessa confessati confessai confessando confessato confessavano confessorono confessò
-confessavono : confessavono
+confessa : confessiamo confesso confessono confessa confessati confessai confessando confessato confessavano confessorono confessò confessavono confessare confessione
 confidare : confidono confidavano confidi confidarsi confidente confidenza confidenzia confida confiderebbe confidava confidentemente confidile confidatevi confidavi confidenti confidati confidandoti confidare confidiamo confidassino confidarti confidassimo confidano confidino confidando confiderai confidandoci confidato confidassi
 confinare : confinare confinarli confinando confini confinono confinerete confino confinato confinano confinollo confiniamo confinati confine confinorono confina
 confiscazione : confiscazione
 conflitto : conflitto
 conformare : conforme conforma conformiàno conformati conformiamo conformarvi conformi conformità conformare conformatevi
-confortare : confortavi conforteranno conforterebbe conforteremo conforterenti conforteretelo conforterollo confortiamola confortiantene confortici confortilo confortò confortollo confortono confortovi confortatolo confortandovi confortandola confortalli confortassi confortassivi confortai confortamo confortandogli confortarli confortarne confortiano confortando confortarlo confortiamoti conforterei confortera confortiate confortarono confortiamo confortano confortereno conforterai confortandoti confortili conforterete confortandomi conforteremovi confortassigli confortarvi confortarti confortianvi confortagli confortandoli confortianti confortiamovi confortati confortato confortargli confortata confortava confortatevi confortate confortarci confortino conforta confortandoci conforto conforti confortare confortandolo confortatoria
+confortare : confortera'gli confortera'li confortera'lo confortavi conforteranno conforterebbe conforteremo conforterenti conforteretelo conforterollo confortiamola confortiantene confortici confortilo confortò confortollo confortono confortovi confortatolo confortandovi confortandola confortalli confortassi confortassivi confortai confortamo confortandogli confortarli confortarne confortiano confortando confortarlo confortiamoti conforterei confortera confortiate confortarono confortiamo confortano confortereno conforterai confortandoti confortili conforterete confortandomi conforteremovi confortassigli confortarvi confortarti confortianvi confortagli confortandoli confortianti confortiamovi confortati confortato confortargli confortata confortava confortatevi confortate confortarci confortino conforta confortandoci conforto conforti confortare confortandolo confortatoria
 confundere : confundere confundo confusa confusamente confuse confusi confusione confusioni confuso confondino
 confutò : confutò
 congiugnere : congiugnere congiugnersi congiugnerti congiugnessi congiungersi congiunga congiungasi congiunta congiunte congiunti congiunto
@@ -1534,7 +1513,7 @@ contratti : contratti
 contribuischino : contribuischino
 controaffare : controaffare controaffacessi controaffacessino controaffaranno controaffarà controffà
 contro : contro
-còntroli : còntroli
+controllare : còntroli
 controversia : controversia controversie
 contugi : contugi
 contumace : contumacia contumaci contumacie contumace
@@ -1625,22 +1604,17 @@ corvo : corvo
 cosa : cose cosa
 coscia : coscie coscia
 coscienza : coscienza cosenza coscienzia
-cosi : cosi
-cosí : cosí
-così : così
-cosimo : cosimo
-cosmo : cosmo
+cosi : cosi cosí così
+cosimo : cosimo cosmo
 cospetto : cospetto
 cossa : cossa
-costa : costa
-costà : costà costi costì costí
+costà : costà costi costì costí costa
 costantino : costantino
 costantinopoli : costantinopoli
 costanzio : costanzio
-costassi : costassi
 cost : cost
 costeggiare : costeggiare costeggiò costeggiassi
-costerà : costerà costerebbe costino costerebbono costeranno costorno costono costo
+costerà : costerà costerebbe costino costerebbono costeranno costorno costono costo costassi
 costodia : costodia
 costoro : costoro
 costrignere : costringne costringe costrignere costrinse costringni costringessi costrignerai costrigneva costretto costretti costringeva
@@ -1721,7 +1695,7 @@ cutiliano : cutiliano
 daccio : daccio
 dadi : dadi
 dadovero : dadovero
-dagl : dagl
+dalla : da dal dall dall' dai dagl' dalle dalli dallo dagl dagli
 damiano : damiano
 damigella : damigella
 damo : damo
@@ -1730,7 +1704,7 @@ daniello : daniello
 dannare : dannoso dannose dannosi danniamo danneggino dannosa dannificati dannano dannificato dannificare danniate dannando danneggiati danni danneggiato dannificassino dannificarli danno dannare danna danne damni
 dante : dante
 dapoi : dapoi dappoi
-dare : daremo dassene démoti demmo darò datoci darete darebbe dandoci datavi darmi daremoli datotene davan darliene daccene darentur dettesegli darà datone dandone dateli datovi davi dàvvisi daretecene dettemi dargli datemi dandosi datum dessino davamoti darebbono datene datane darne daratti darcene dava dando dara darebbevisi dare datomi daretur dettesi dareteci daretemene dareteliene dessimo dandovi darvi darci dandovidarà dandogli datami darebbesi dartene davono darsi demo datele dandocene datagli datela darmegli datici darmelo datati dettemela dettero dacci datolo datoli datogli dargliene demogli daranno dandole datevi darannoci dandoli desse datali darai dessimegli davano datoti dareno dessi darti davamo darebbeci darlo dati darli date darle dateti data darla darvene darei daretevi daria dandoti dato dataci daremoti darannoli darassi dàtati darenvene daronne davit dareteli dieno diamoti diamotene diamone diàno diamovi diano diamovene diate diatelli diamo diànti diedi diegli díegli  diene dienmi diesi diantene diavi dàlli
+dare : da' de' diè dar dài dà dara'cene dara'ci dara'gli darà'gli dara'la daremo dassene démoti demmo darò datoci darete darebbe dandoci datavi darmi daremoli datotene davan darliene daccene darentur dettesegli darà datone dandone dateli datovi davi dàvvisi daretecene dettemi dargli datemi dandosi datum dessino davamoti darebbono datene datane darne daratti darcene dava dando dara darebbevisi dare datomi daretur dettesi dareteci daretemene dareteliene dessimo dandovi darvi darci dandovidarà dandogli datami darebbesi dartene davono darsi demo datele dandocene datagli datela darmegli datici darmelo datati dettemela dettero dacci datolo datoli datogli dargliene demogli daranno dandole datevi darannoci dandoli desse datali darai dessimegli davano datoti dareno dessi darti davamo darebbeci darlo dati darli date darle dateti data darla darvene darei daretevi daria dandoti dato dataci daremoti darannoli darassi dàtati darenvene daronne davit dareteli dieno diamoti diamotene diamone diàno diamovi diano diamovene diate diatelli diamo diànti diedi diegli díegli  diene dienmi diesi diantene diavi dàlli
 datario : datario
 datio : datio
 davanti : davanti davanzati davanzato davanzatis
@@ -1738,8 +1712,8 @@ davitte : davitte
 dazii : dazii dazio
 debile : debilezza debili debile debilezze debilmente
 debilitare : debilitare
-debita : debita debitamente debite debiti debito debitor debitori debitore
-debole : debolezza debole debolissimo deboli
+debita : debita debitamente debite debiti debito debitor debitori debitore v'indettassi
+debole : debolezza debole debolissimo deboli 
 decapitare : decapitare
 decem : decem
 decemviratu : decemviratu decemviris decemvirorum
@@ -1759,10 +1733,9 @@ dedurre : dedurre deducendoli
 defalcato : defalcato defalcatone
 degenerare : degenerare
 degit : degit
-degl : degl
+degl : degl deli dei dell dell'
 delfinato : delfinato
 deliberare : delibera delibe deliberai delliberassi deliberamo deliberando deliberanno deliberano deliberàno deliberarci deliberare deliberarla deliberarli deliberarne deliberarsi deliberarvi deliberassi deliberassino deliberata deliberate deliberati deliberationum deliberato deliberatone deliberatosi deliberaverunt deliberazione deliberazioni delibererà delibererai delibererann delibereranno delibereremo delibererete deliberiamo deliberiàno deliberiate deliberi deliberino deliberò deliberorno deliberorono deliberossi deliberrà deliberrai deliberranno deliberremo deliberreno deliberrete  diliberazione
-deli : deli
 delinquente : delinquente delinquenti
 delitti : dellitto delitti delitto
 demeritato : demeritato demeriti
@@ -1837,7 +1810,7 @@ diet : diet
 dietisalvi : dietisalvi dietisalvis
 dietro : dietro
 difendere : difendessino difendersi difende difenderemo difenda difeso difendere difendessi difenderle difendono difenderli difenderebbe difesa difensione difendino difendergli difenderlo difenderla difenderanno difendervi difenderà difendermi defendolo defenda defendersi defende defendendosi defendervi defendono defendendo defensori defenderlo defendergli defenderci defensore defensione defenderla defendevano defenderà defenderli defendere defension defensioni defesa difensori difese difesi difesono
-diferire : differimo differi differiva diferisce differì differivi differiamo differirallo differiscono differendo differisca differito differita differire differiranno differirà differissero differirai differisce differireno differissino diferire differite differirebbe differirlo differendosi differissi differirla differirle differirsi disferisce
+diferire : differi' differimo differi differiva diferisce differì differivi differiamo differirallo differiscono differendo differisca differito differita differire differiranno differirà differissero differirai differisce differireno differissino diferire differite differirebbe differirlo differendosi differissi differirla differirle differirsi disferisce
 difetti : difetto difetti difettavi defettato defetto defetti
 diffamato : diffamato
 differenza : differenze differenzia differenti differenza differenzie diferenzia
@@ -1879,18 +1852,17 @@ dini : dini dinis
 dinnanzi : dinnanzi dinanzi
 dino : dino
 dionigi : dionisio dionigi dionigio dionisi
-diparti : diparti
+diparti : diparti dipartimo
 dipignere : dipignere dipintovi dipingere dipigne dipintore
 dipoi : dipoi, poi
 diportono : diportono
 dipositario : dipositario
 dipresso : dipresso
 diradare : diradare diradi diredato diredò
-dire : dissevisi dissili dissesi dissono disseli dissero dite disse dissemi dissene dissi dissegli dixisti dissigli diteli diciamovi detto dicemo diciate diciamoti detti dette dettomi dettoli detta dettono diceva dicendogli dèttonci dicevasi dicesi dica dicono dice dettogli dicessi dici dicendo dicitore dicieno diciamotelo dètte diciamo diciàno dicendoli dicevano dico dirò diranno diremoti dircene dirci diremo dira dirà direnvi direteli dire dirreno direi dirtene dirti dirsi direno dirmi dirlo direte dirrà dirne dirai dirvi dirle direbbe dirgli dirli dicessimo dicesti dicesse dicene dicemi dicemoli dicano diconne dicessino dicendola diconmi dicemmo dicemoti dicevono dicendoti dicendoci diceste dicevo dicon dicendomi dictae dictam dicta dictarum dicte dicti dictis dicto dictorum dictus dicitori dètti dettigli dettimi ditelo digli
+dire : di'dir dira'gli dira'lli dissevisi dissili dissesi dissono disseli dissero dite disse dissemi dissene dissi dissegli dixisti dissigli diteli diciamovi detto dicemo diciate diciamoti detti dette dettomi dettoli detta dettono diceva dicendogli dèttonci dicevasi dicesi dica dicono dice dettogli dicessi dici dicendo dicitore dicieno diciamotelo dètte diciamo diciàno dicendoli dicevano dico dirò diranno diremoti dircene dirci diremo dira dirà direnvi direteli dire dirreno direi dirtene dirti dirsi direno dirmi dirlo direte dirrà dirne dirai dirvi dirle direbbe dirgli dirli dicessimo dicesti dicesse dicene dicemi dicemoli dicano diconne dicessino dicendola diconmi dicemmo dicemoti dicevono dicendoti dicendoci diceste dicevo dicon dicendomi dictae dictam dicta dictarum dicte dicti dictis dicto dictorum dictus dicitori dètti dettigli dettimi ditelo digli dir dira'gli dira'lli
 diretta : diretta diretto diritta diritte directe
 dirimpetto : dirimpetto
-diritti : diritti
-diritto : diritto
+diritti : diritti diritto
 dirittura : dirittura
 dirizare : dirizare dirizzando dirizzandosi dirizzarle dirizzarli dirizzassi dirizzate dirizzerà dirizziamo 
 disabiti : disabiti
@@ -1940,7 +1912,7 @@ dispetto : dispetto
 dispiacere : dispiacquelli dispiacer dispiacquemi dispiacci dispiacque dispiaceva dispiacerebbe dispiacerci dispiaciuta dispiacerebbeci dispiacessi dispiaceci dispiacuto dispiaciuti dispiacendoci dispiaccia dispiaciono dispiacerebbono dispiacciono dispiacervi dispiacerà dispiaciuto dispiacessino dispiace dispiacere dispiaciute dispiaceri dispiacelli dispiacerli dispiacqueci
 dispo : dispo
 dispollo : dispollo
-disporre : disporrà disporre disponente disponendosi disporgli disporne disponiate disporlo disporli disponghino disporle disponga disponeva disponesse dispongono dispose disponessi disporresti disponessino dispone disporrai disporreno disposizione disporrebbe disponendo
+disporre : disporrà disporre disponente disponendosi disporgli disporne disponiate disporlo disporli disponghino disporle disponga disponeva disponesse dispongono dispose disponessi disporresti disponessino dispone disporrai disporreno disposizione disporrebbe disponendo disponendogli
 disposto : disposizioni disposte dispostissima disposta disposto disposizion dispostissimi disposti
 dispregiandola : dispregiandola dispregiato
 disputare : disputarsi disputassisi disputato disputata disputassimo disputamo disputino disputarla disputarlo disputossi disputa disputazione disputare dispute
@@ -1964,7 +1936,7 @@ distruggere : distruggere distruggitori distruggessino distruzione
 disturbare : disturbino disturbereno disturberà disturbo disturbarlo disturbi
 disubbidire : disubbidiente disubbidiscie disubbidissi disubbiedienti disubidienze disubbidienza disubbidienti disubbidissino disubbidirno disubbidienzia disubbidisce disubbidire disubbi
 disuggellare : disuggellate disuggellerete disuggellare
-disunione : disunite disunirsi disunita disunire disunione
+disunione : disunite disunirsi disunita disunire disunione 'disunione'
 disutile : disutili disutilissimi disutile
 disversità : disversità
 dita : dita dito
@@ -1995,7 +1967,7 @@ dolce : dolcezza dolce dolcie
 dolersi : dogliate dolo duolci doglienza dolersi dolendoci dogliamo dorresti dorreno dolgonsi dolsimi dogliamoci dolsono dolevono dolere dolghino dolesseno doglianze dolutosi dolessi dolgati doliamo dolore dolgomi doluta dolsi dolse dolfe dolendomi dolessino doluti dolutoti doluto dolevano dolgono dolsesene dolervi dolsesi dolerci doglioso dolendosi doleva duole dolersene dolutosene dorrà dogliamocene dolemo dolgo dolendo dolfesi doglia dolorosi doglio doliate dolga dolermi duolsi dorranno dorrebbono
 dolfimi : dolfo dolfonsi dolfimi
 doma : doma
-domandare : domanda domandai domandamo domandando domandandogli domandandoli domandandolo domandano domandarci domandare domandargli domandarli domandarmene domandarne domandarti domandasera domandassera domandassero domandassi domandassino domandasti domandata domandate domandatene domandati domandatoci domandato domandatogli domandatolo domandatomi domandatone domandava domandavan domandavano domandavi domandavo domandavono domande domandera domanderà domanderai domanderebbono domanderete domandi domando domandò domandono domandorno domandossi riaddomandiamo addomanderà addimandano addimandassi addimandato addimandi addimandati addimandava addimandate adimandati addimandateci addimandassino addimandare addimandavi addimanda addimandasti adomanderà addimandono addimandata addomandavi addomanda addomandate addomandassi addomandati addomandato demandare demandate dimandino dimandatola dimandate dimandi dimandandolo dimandandogli dimandato dimandatolo dimandarne dimandò dimandateci dimandare dimandommi dimanda dimandai dimande dimandarli
+domandare : domanda domandai domandamo domandando domandandogli domandandoli domandandolo domandano domandarci domandare domandargli domandarli domandarmene domandarne domandarti domandasera domandassera domandassero domandassi domandassino domandasti domandata domandate domandatene domandati domandatoci domandato domandatogli domandatolo domandatomi domandatone domandava domandavan domandavano domandavi domandavo domandavono domande domandera domanderà domanderai domanderebbono domanderete domandi domando domandò domandono domandorno domandossi riaddomandiamo addomanderà addimandano addimandassi addimandato addimandi addimandati addimandava addimandate adimandati addimandateci addimandassino addimandare addimandavi addimanda addimandasti adomanderà addimandono addimandata addomandavi addomanda addomandate addomandassi addomandati addomandato demandare demandate dimandino dimandatola dimandate dimandi dimandandolo dimandandogli dimandato dimandatolo dimandarne dimandò dimandateci dimandare dimandommi dimanda dimandai dimande dimandarli domanda'lo
 domani : domane domani doman
 domare : domare
 domaschino : domaschino
@@ -2027,8 +1999,8 @@ dotté : dotté
 dottissimo : dottissimo
 dottor : dottore dottori dottor
 dottrina : dottrina
-dove : dove
-dovere : dovvene doviamo doverrebbeno doverci dobbian doviate dovuteli dovere dovettono dovevo dovevono dovevi debebimus dobbiate doveva doveno debban doveresti dovero doverebbe debbesi doverre dovranno doverrallo dovendosi dovessimo doverrieno doverrebbonlo doverrassi doverebbono dovendovene dové doveranno dovevano doverravi dovéno doverne dovutoli doverno doverete debbano debeat debba debbonne debbiano dovieno doverà doveano debbonsi dovavamo debbesene doverranno dovete doverieno dovrebbe doverria doverti dovesse dovessi doverrà debbon debeant doverré doverrebbono doverrebbe doverrai debbino dovrà dobbiamo dovessino dovuto dovercene debbasi doverrete doverremo doverresti dovesti doverrassene dovervi dovute dovendo dovea doverréno debbo dovendovi debbi doversi debbe doveremmo debbono doverdevino : devono devo devino deve devenerunt
+dove : dove ove dov
+dovere : dovvene doviamo doverrebbeno doverci dobbian doviate dovuteli dovere dovettono dovevo dovevono dovevi debebimus dobbiate doveva doveno debban doveresti dovero doverebbe debbesi doverre dovranno doverrallo dovendosi dovessimo doverrieno doverrebbonlo doverrassi doverebbono dovendovene dové doveranno dovevano doverravi dovéno doverne dovutoli doverno doverete debbano debeat debba debbonne debbiano dovieno doverà doveano debbonsi dovavamo debbesene doverranno dovete doverieno dovrebbe doverria doverti dovesse dovessi doverrà debbon debeant doverré doverrebbono doverrebbe doverrai debbino dovrà dobbiamo dovessino dovuto dovercene debbasi doverrete doverremo doverresti dovesti doverrassene dovervi dovute dovendo dovea doverréno debbo dovendovi debbi doversi debbe doveremmo debbono dover devino devono devo devino deve devenerunt
 dovunche : dovunque dovunche
 dragucci : draguccio dragucci
 drappi : drappi
@@ -2105,7 +2077,7 @@ ennio : ennio
 entendendo : entendendo entendi
 enterrà : enterrà enterrai enterranno enterrebbe enterrebbono enterremo enterrò
 entraches : entraches entraghes
-entrare : entra entrando entrai entrandoli entravono entrandole entrorono entrono entrarli entrano entrino entrar entrasti entrerranno entrommi entrato entrassi entrandovi entrarvi entrati entrava entrassimo entrate entramo entrata entrossi entrassino entrò entri entrare entrorno ntrarvi rientrò rientrare rienterrebbono rientrarvi rientrati rientrino intrato intrati intrare
+entrare : entra entrando entrai entrandoli entravono entrandole entrorono entrono entrarli entrano entrino entrar entrasti entrerranno entrommi entrato entrassi entrandovi entrarvi entrati entrava entrassimo entrate entramo entrata entrossi entrassino entrò entri entrare entrorno ntrarvi rientrò rientrare rienterrebbono rientrarvi rientrati rientrino intrato intrati intrare 'ntrarvi
 enudare : enudare
 enumerare : enumerare
 eodem : eodem
@@ -2138,7 +2110,7 @@ esazione : esazione
 esclamare : esclamate esclamavano esclamare esclamato esclamazioni
 escludere : esclusione escludere escluso escludesse escludernela escluderne escluderai escludendoli esclusa esclusi
 esecutore : esecuzioni esecuzione esecutoriali esecutore
-eseguire : eseguire esequito esequita eseguirlo eseguito esequiremo esequire esequirà eseguita esequì esequirai esequisca esequiate eseguirai esequiranno esequirò eseguíto
+eseguire : eseguire esequito esequita eseguirlo eseguito esequiremo esequire esequirà eseguita esequì esequirai esequisca esequiate eseguirai esequiranno esequirò eseguíto esequira'la
 esempio : exemplo esempli esemplare esemplarità esempio esemplo
 esenti : esenti
 esenzione : esenzioni esenzione
@@ -2171,7 +2143,7 @@ espugnare : espugnare espugnarlo espugnarla espugnò espugnando espugnerebbolo e
 espurgazione : espurgazione
 essa : essa essi esse esso
 esseguirete : esseguirete essequire
-essere : essegli èssegli esseli èsseli fossi fossimo fosse fossero èvvi eravi eravate eravamo èssi eran ècci erano eraci sendoci sendoli sendomene sendomi sendogli sendo sendone sendocene sendovi sendosene sendosi sendole sendoti sendov saragli saralle saranne sarannno saran sarassi saràvici sarebbemi sarebbeno sarebbesene sarebb sarei sarèno sare saresti sariano sarranno sutaci sutagli sute suto sutoci suta suti sutati sutele sutogli sutoli siamone siamo siàno siate siete siesi sieno siamoci siano sien fussimo fusse furon fussin fussino furono furno fussi saranno sarai sarebbe sareno sarebbano sarà sarebbon saremo saretene saria sarieno saracci sarebbeci sarete sarebbono sarò essendoti essendosi esserci essergli sono esserli essendovene essendomi essendoché essendocene esserne essendogli esserle sonvi essendoli essendone essere èssene essersi esservisi essendosene esser essersene essendo essendocisi essermi essermici essendoci sonsi esserti sonci esonne essendovi essercene esservi esservene esset sia è essegli èssegli v'eri
+essere : é essegli èssegli esseli èsseli fossi fossimo fosse fossero èvvi eravi eravate eravamo son èssi eran ècci erano eraci sendoci sendoli sendomene sendomi sendogli sendo sendone sendocene sendovi sendosene sendosi sendole sendoti sendov saragli saralle saranne sarannno saran sarassi saràvici sarebbemi sarebbeno sarebbesene sarebb sarei sarèno sare saresti sariano sarranno sutaci sutagli sute suto sutoci suta suti sutati sutele sutogli sutoli siamone siamo siàno siate siete siesi sieno siamoci siano sien fussimo fusse furon fussin fussino furono furno fussi saranno sarai sarebbe sareno sarebbano sarà sarebbon saremo saretene saria sarieno saracci sarebbeci sarete sarebbono sarò essendoti essendosi esserci essergli sono esserli essendovene essendomi essendoché essendocene esserne essendogli esserle sonvi essendoli essendone essere èssene essersi esservisi essendosene esser essersene essendo essendocisi essermi essermici essendoci sonsi esserti sonci esonne essendovi essercene esservi esservene esset sia è essegli èssegli v'eri fu fu' fue fuerunt fui èvi era èraci erami eransi eri erimus ero erò erono erunt èmi èci v'è v'era fia fìa n'è n'essere se'
 estante : estante
 estasi : estasi
 estate : estate
@@ -2273,20 +2245,19 @@ fantonio : fantonio
 fanvisi : fanvisi
 faorirle : faorirle
 faragani : faragani faragano
-fare : facendoci fece faciendo facendo facendogli facendola facendole facendoli facendolo facendomi facendosene facendosi facendoti facendovi faceno facéno facere facesse facessero facessi facessimo facessin facessino facessisi faceste facesti facestilo faceva facevano facevansi facevi facevo facevon facevono faciamo faciàno faciate faciavamo faciavàno faciavate  faccin facciendoci facciendo facciendolo facciendone facci faccinli faccino faccinsi faccion faccisi facemmo facemo faccia facciallo facciam facciamo facciamole facciamotelo facciamoti facciamovi faccian facciàn facciano facciàno facciansi facciate facciatene facciavi  facte facto fara farà farai faralli faccendocelo fanno fannoci faccendocene faccendoci faccendo faccendogli faccendola faccendole faccendoliene faccendoli faccendolo faccendomi faccendone faccendosene faccendosi faccendoti faccendovi faccessi faccessino  fargliene farebbemelo farme farsi fartelo fartene farti farvelo farvene farvi farvisi farò farollo farotti farrai farrete farrò farseli farselo fannosi farebbero fecero farebbeno fannone feciogli fecionsegli fecionmi feceli fecemi fecili fecigli fannomi farenvi farmelo fecit farannone farmene farassene feceno fareteliene faran farengli farnegli fecegli farebbesene faresti farcene farello fecie faranno farassi farliene farli farlo farla farle farmi farne farnele farneli fargliela fargli faria farieno farcelo farci farebbe farebbeli farebbene farebbono fare farei farelle faremo faremolo fareno fareteci farete faretegli faretele fareteli faretelo faretevi fate fateli fatelo fecesi feci feciono fecionsi fatemene fatene fattaci fatta fattagli fassene fassi fattosi fattoti fattovi fattola fattole fattoliene fattoli fattolo fattomi fattone fattali fattam fattami fattane fattati fattavi fatteci fatte fattesi fatti fattigli fattine fattoci fatto fattogliene fattogli 
+fare : fa facendoci fece faciendo facendo facendogli facendola facendole facendoli facendolo facendomi facendosene facendosi facendoti facendovi faceno facéno facere facesse facessero facessi facessimo facessin facessino facessisi faceste facesti facestilo faceva facevano facevansi facevi facevo facevon facevono faciamo faciàno faciate faciavamo faciavàno faciavate  faccin facciendoci facciendo facciendolo facciendone facci faccinli faccino faccinsi faccion faccisi facemmo facemo faccia facciallo facciam facciamo facciamole facciamotelo facciamoti facciamovi faccian facciàn facciano facciàno facciansi facciate facciatene facciavi  facte facto fara farà farai faralli faccendocelo fanno fannoci faccendocene faccendoci faccendo faccendogli faccendola faccendole faccendoliene faccendoli faccendolo faccendomi faccendone faccendosene faccendosi faccendoti faccendovi faccessi faccessino  fargliene farebbemelo farme farsi fartelo fartene farti farvelo farvene farvi farvisi farò farollo farotti farrai farrete farrò farseli farselo fannosi farebbero fecero farebbeno fannone feciogli fecionsegli fecionmi feceli fecemi fecili fecigli fannomi farenvi farmelo fecit farannone farmene farassene feceno fareteliene faran farengli farnegli fecegli farebbesene faresti farcene farello fecie faranno farassi farliene farli farlo farla farle farmi farne farnele farneli fargliela fargli faria farieno farcelo farci farebbe farebbeli farebbene farebbono fare farei farelle faremo faremolo fareno fareteci farete faretegli faretele fareteli faretelo faretevi fate fateli fatelo fecesi feci feciono fecionsi fatemene fatene fattaci fatta fattagli fassene fassi fattosi fattoti fattovi fattola fattole fattoliene fattoli fattolo fattomi fattone fattali fattam fattami fattane fattati fattavi fatteci fatte fattesi fatti fattigli fattine fattoci fatto fattogliene fattogli fa' facieno fai fan far fara' fara'ci fara'gli fara'le fara'li fara'lli fara'lo fara'ne fare' fei fec fé
 farfaro : farfaro
 farina : farine farina
 farlic : farlic
 farnese : farnese
 farneta : farneta
-farsettaio : farsettaio
-farsetto : farsetto
+farsettaio : farsettaio farsetto
 fasciare : fasciare fasciata fasciati
 fascine : fascine
 fastidi : fastidio fastidiose fastidi fastidii fastidioso
 fatica : faticosa fatiche fatica fatighiamo
 fattoio : fattoio
-fattore : fattore fattori
+fattore : fattore fattori fattura
 fatucchio : fatucchio
 fautori : fautori
 fava : fava
@@ -2322,7 +2293,7 @@ fenomeno : fenomeno
 ferantino : ferantino
 ferire : ferisse ferire ferite ferirai ferí ferirno ferì ferirci feriate ferischino feritone ferita ferito ferirli ferirono ferirsi feriti
 ferma : ferme fermi fermo ferma
-fermare : fermeza fermandone fermai fermarvi fermezza fermandosi fermarsi fermiate fermorono fermerebbe fermarteli fermamente fermarle fermarlo fermarli fermereno fermassino fermarvisi fermarla fermerei fermarvele fermarviti fermeranno fermorno fermano fermerà fermare fermera fermerai fermassisi fermò fermassi fermòsi fermerete fermarvelo fermàmo fermono fermossi fermerò fermino fermeransi fermato
+fermare : fermera'lo fermera'ti fermeza fermandone fermai fermarvi fermezza fermandosi fermarsi fermiate fermorono fermerebbe fermarteli fermamente fermarle fermarlo fermarli fermereno fermassino fermarvisi fermarla fermerei fermarvele fermarviti fermeranno fermorno fermano fermerà fermare fermera fermerai fermassisi fermò fermassi fermòsi fermerete fermarvelo fermàmo fermono fermossi fermerò fermino fermeransi fermato
 ferno : ferno
 feroci : feroci
 ferono : ferono
@@ -2481,6 +2452,7 @@ forse : forse
 forte : forte forti fortemente fortissima
 forteze : forteze fortezza fortezze
 fortificare : fortificarlo fortifichi fortificare fortificarsi fortificarli fortificarla fortificando fortificate fortificazione fortificati fortificato fortifichino
+fortilitii : fortilitii
 fortini : fortini
 fortinis : fortinis
 fortuna : fortuna fortune fortunato fortunatissimo
@@ -2521,7 +2493,7 @@ fratri : fratri
 fratta : fratta
 fraudato : fraudato
 fraude : fraude
-fredda : freddi freddamente freddo fredda freddezza fredde
+fredda : freddi freddamente freddo fredda freddezza fredde freddare
 fregosa : fregoso fregosa
 frenare : frenare freno frenino
 frequentano : frequentano frequentato frequentata frequentati
@@ -2553,12 +2525,10 @@ fumo : fumo
 funa : funa
 funaio : funaio
 funditus : funditus
-fune : fune
-funi : funi
+fune : fune funi
 fuochi : fuochi fuoco
 fuorausciti : fuorausciti fuorauscito fuoruscito fuoriusciti fuoriuscito fuorusciti
-fuore : fuore
-fuor : fuor fuora
+fuor : fuor fuora fuore
 fuori : fuori
 fuorini : fuorini
 furia : furia furioso
@@ -2780,8 +2750,7 @@ giustificare : giustificandoci giustificarsi giustificato giustificatamente gius
 giustina : giustina
 giva : giva
 glaris : glaris
-glene : glene
-gliele : gliele gliene gnene
+gliele : gliele gliene gnene glene
 gloria : gloriare glorioso gloria gloriosissimam gloriosa gloriosissima gloriosissime
 gnagni : gnagni
 gnuno : gnuno
@@ -2817,9 +2786,9 @@ grafis : grafis
 graglia : graglia
 gramondo : gramondo
 gramonte : gramonte
-grande : grandezza grandissimi grande gran grandi grandissima grandissimo grandissime
+grande : grandezza grandissimi grande gran grandi grandissima grandissimo grandementegrandissime
 granello : granello
-grano : grano grano
+grano : grano grano grani
 granopoli : granopoli
 grascia : grascia grascie grasce
 grasso : grassi grassis grassissimi grasso grassa grassamente grassarla
@@ -2925,7 +2894,7 @@ ianni : ianni
 iannisino : iannisino
 iannozio : iannozio iannozo
 ianuae : ianuae ianuari ianuarii iauuarii
-iarsera : iarsera iersera ieri iermattina ierisera iernotte
+iarsera : iarsera iersera ieri iermattina ierisera iernotte arsera
 iattanzia : iattanzia
 iattura : iattura
 ibique : ibique
@@ -2939,7 +2908,8 @@ iesus : iesus
 ignagni : ignagni
 ignoranza : ignoranza ignoranzia ignore ignoti
 ignudi : ignudi
-illeso : illeso
+illeso : illeso illesi
+ira : ire
 illi : illi
 illud : illud
 illustre : illustre illustrissima illustres illustrissimo illustris illustribus illustri illustrissime illustrissimi illustrissimos illustrissimum 
@@ -2968,11 +2938,11 @@ imolae : imolae imola imole imolese imolesi imol
 impacciare : impaccierebbe impacciare impaccerei impacciono impaccia
 imparare : impareranno impari imparati imparino imparare
 impazienzia : impazienzia
-impedire : mpedisca mpediscono impedendo impedimenti impedimento impedirà impediranno impedirci impedirebbe impedire impedirgli impedirla impedirle impedirli impedirlo impedirno impedisca impedisce impedischi impedischino impediscono impedissi impedissino impedita impedite impediti impedito 
+impedire : 'mpediscono mpedisca mpediscono impedendo impedimenti impedimento impedirà impediranno impedirci impedirebbe impedire impedirgli impedirla impedirle v'impediscono impedirli impedirlo impedirno impedisca impedisce impedischi impedischino  impediscono impedissi impedissino impedita impedite impediti impedito 
 impegnare : impegnare impegnate impegnati impegneranno impegnato impegneremoci impegnerai impegnerommi
-imperatore : imperatoris imperatori mperatore mperiali imperatorem imperatoria mperadore imperadori imperatore imperiale imperator imperadore imperiali
+imperatore : imperatoris imperatori mperatore mperiali imperatorem imperatoria mperadore imperadori imperatore imperiale imperator imperadore imperiali 'mperadore
 imperfetta : imperfetta imperfetto
-imperio : imperio imperium mperio imperii
+imperio : imperio imperium mperio imperii 'mperio
 imperoché : imperoché
 impertinenti : impertinenti
 impeto : impetuoso impeto
@@ -2982,16 +2952,16 @@ impietà : impietà impia
 implica : implicato implica implicare
 impliciter : impliciter
 implorare : implorare
-imporre : imponevono mposizione impostogli impose impostoti imposizione imposta impostoli imporvi imposti imposonti imposto imponiamoti imponendogli imporre imponiate imponiamovi impognamo imponessino imponevi imponendo imponghiamo imponendomi imponendoti imporemogli imporreno imponemogli impone imponendoli imponete imponga imponemo impongono imponiamo imponiamti imporrai
-importare : importato impórti importano importandoci importerebbono importava mportanza importino importar importi importavano importanza importare importa mporti inporta importante impòrti importantissima importerebbe importerà importanti importono importassi importantissime mportono mporta importantissimo importando importanzia
+imporre : v'imponiamo imponevono mposizione impostogli impose impostoti imposizione imposta impostoli imporvi imposti imposonti imposto imponiamoti imponendogli imporre imponiate imponiamovi impognamo imponessino imponevi imponendo imponghiamo imponendomi imponendoti imporemogli imporreno imponemogli impone imponendoli imponete imponga imponemo impongono imponiamo imponiamti imporrai 'mposizione m'impose
+importare : importato impórti importano importandoci importerebbono importava mportanza importino importar importi importavano importanza importare importa mporti inporta importante impòrti importantissima importerebbe importerà importanti importono importassi importantissime mportono mporta importantissimo importando importanzia 'mporta 'mportanza
 importunino : importunino importuno
 impossibile : impossibili impossibilità impossibile mpossibile
 impotente : impotenza impotenzia impotenti impotente
 impoverire : impoverire impoverirli impoverirei
-impresa : mpresa mprese imprese impresa npresa
-impressione : mpressione impressioni impressione
-imprestanza : imprestanza mprestanza
-impreviste : improvista impreviste improviso improviste improvvista improvisti mprovisto improvvisto improvvisti improvisto
+impresa : mpresa mprese imprese impresa npresa 'mpresa 'npresa
+impressione : mpressione impressioni impressione 'mpressione
+imprestanza : imprestanza mprestanza 'mprestanza
+impreviste : improvista impreviste improviso improviste improvvista improvisti mprovisto improvvisto improvvisti improvisto 'mprovisto
 imprimere : imprimere
 imprudente : imprudente
 impruneta : impruneta
@@ -3013,13 +2983,12 @@ incautamente : incauti incautamente incauto
 incenderlo : incendi incendii incendio incenderlo
 inceppare : inceppare inceppate
 incerta : incerti incertitudine incerta incerte incertezza
-incesa : incesa
 incetta : incetto incetta
 inchiostro : inchiostro
 inciderint : inciderint
 incipiendo : incipiendo
 incirca : incirca
-incisione : incisione
+incisione : incisione 'ncisa incesa
 incitare : incitare incitati incitato incitarla
 inclinare : incliniamo inclinati inclinato inclinarli inclinata inclinazione inclinare inclinino
 includa : inclusi incluso inclusa includervi incluse includa
@@ -3033,12 +3002,12 @@ inconsiderata : inconsiderata
 inconsueta : inconsueti inconsueta
 incontinente : incontinente
 incontrare : incontrorono incontrassino incontrarvi incontralli incontrarli incontrato incontrarlo incontrati incontrassi incontra incontri incontrare incontro inconterrà inconterranno
-inconveniente : inconveniente inconvenienti
+inconveniente : inconveniente inconvenienti 'nconveniente
 incorona : incoronazione incoronato incorona
 incorporazione : incorporazione
-incorra : incorra incorre incorrerai incorrerà incorrerebbe incorrere incorreremo incorressi incorressino incorreva incorriamo incorsa incorsi incorso incorerrebbe
+incorra : n'occorra incorra incorre incorrerai incorrerà incorrerebbe incorrere incorreremo incorressi incorressino incorreva incorriamo incorsa incorsi incorso incorerrebbe
 incredibile : incredibile
-incresca : incresca increscerebbe incresce incresceva
+incresca : incresca increscerebbe incresce incresceva m'incresce
 incrudelire : incrudelire
 inculcarle : inculcarle inculcarlo
 incuria : incuria
@@ -3073,6 +3042,7 @@ indugiare : indugio indugerà indugiamo indugino indugiare indugiai indugiato in
 indulgenzia : indulgenzia
 indulti : indulti indulto
 indurato : indurato indurire
+v'indussono : v'indussono
 industria : industria
 indutti : indutti induzione
 inequalità : inequalità
@@ -3080,7 +3050,7 @@ inequità : inequità iniqui iniquitatis
 inespettata : inespettato inespettata
 inespugnabile : inespugnabile
 inestimata : inestimata
-infallanter : infallanter
+infallanter : infallanter infallante
 infamia : infamia
 infangati : infangati
 infastidire : infastidire infastidir
@@ -3098,21 +3068,21 @@ infetta : infetta infetti infetto infezione
 infiate : infiate
 infilzando : infilzando
 infima : infima
-infine : infino infin 
+infine : infino infin  infìno
 infinita : infinite infiniti infinito infinita infinitissimo
 infirmità : infirmità
 infocò : infocò
-informare : informata informartene informate informazione informatissimo informarlo informati informarti informatomi informi informato informatolo informar informeranno informare informassi informerai informera
+informare : informera'li informata informartene informate informazione informatissimo informarlo informati informarti informatomi informi informato informatolo informar informeranno informare informassi informerai informera
 infortunii : infortunii infortunio
 infracidando : infracidando
 infra : infra
 infrascriptae : infrascripta infrascriptam infrascriptum infrascriptae infrascritte infrascriptis infrascritta infrascriptus infrascriptas infrascritti infrascritto
-infruttuoso : infruttuoso
+infruttuoso : infruttuoso infruttuosa
 infuora : infuora
 infuori : infuori
-ingannare : ingannare ingannato ingannarlo ingannino ingannono ingannarla inganna ingannerebbe ingannassi ingannerà inganno ingannati inganni ingannarsi
+ingannare : 'ngannassi ingannare ingannato ingannarlo ingannino ingannono ingannarla inganna ingannerebbe ingannassi ingannerà inganno ingannati inganni ingannarsi
 ingarbugliando : ingarbugliando
-ingegnare : ingegneròmi ingegneretevi ingegnono ingegnatevi ingegniate ingegnamo ingenioso ingegnarci ingenia ingegnino ingegnandoci ingegnandovi ingegnerebbono ingegnandoti ingegnerai ingegnerò ingegnandosi ingenerai ingegnassi ingegnerà ingegnera ingegnereno ingegnarsi ingegnai ingegneranno ingegnarti ingegnerenci ingeneremo ingegna ingegnate ingegnare ingegnata ingegnato ingegnerebbe ingegnati ingegnerassi ingegneremo ingegneremoci ingegnerommi ingegneromi ingegniti ingegnerete ingeniandosi
+ingegnare : ingegnera'ti ingegneròmi ingegneretevi ingegnono ingegnatevi m'ingegnai m'ingegnerò ingegniate ingegnamo ingenioso ingegnarci ingenia ingegnino ingegnandoci ingegnandovi ingegnerebbono ingegnandoti ingegnerai ingegnerò ingegnandosi ingenerai ingegnassi ingegnerà ingegnera ingegnereno ingegnarsi ingegnai ingegneranno ingegnarti ingegnerenci ingeneremo ingegna ingegnate ingegnare v'ingegnassi ingegnata ingegnato ingegnerebbe ingegnati ingegnerassi ingegneremo ingegneremoci v'ingegnerete ingegnerommi ingegneromi ingegniti ingegnerete ingeniandosi
 ingegnere : ingegnere ingegneri
 ingegni : ingegno ingegni ingegnio
 ingelosire : ingelosirebbe ingelosire ingelosita ingelosirci
@@ -3142,7 +3112,7 @@ innamorata : innamorato innamorata
 innanzi : innanzi innazi
 innata : innata
 innocenti : innocenti innocenzia
-innovare : innovassi innovato innuova innovata innovandosi innuovi innovarsi innuovino innovando innovare innoverà innovazione innoviate innuovano
+innovare : innova innovassi innovato innuova innovata innovandosi innuovi innovarsi innuovino innovando innovare innoverà innovazione innoviate innuovano
 innumerabili : innumerabili
 inobbedienti : inobbedienza inobbedienti inobbedienzia
 inoltre : inoltre
@@ -3160,7 +3130,7 @@ insaziabile : insaziabile
 insegnare : insegna insegnassi insegnato insegnono insegni insegnare insegnino
 inserte : inserte
 insieme : insieme
-insignorirsi : v'insignorissi, insignorircene insignorendoci insignorirono insignorirsi insignorisca insignorimo insignoriti insignorirsene insignorito insignorissi insignoriscono insignoriva insignorissino insignoritosi insignoritosene insignorischino
+insignorirsi : insignorire v'insignorissi, insignorircene insignorendoci insignorirono insignorirsi insignorisca insignorimo insignoriti insignorirsene insignorito insignorissi insignoriscono insignoriva insignorissino insignoritosi insignoritosene insignorischino rinsignoriscono : rinsignoriscono v'insignorissi
 insine : insine insino insin
 insisté : insisterete insisterai insistevo insisté
 insolente : insolenzie insolenti insolenzia insolente insolentemente insolenza
@@ -3175,7 +3145,7 @@ instando : instanno instando
 instante : instantemente instantiam instante
 instanza : instanzia instanza
 instare : instare instavano instavono
-instaurare : instaurarlo instaurare instaurati instaurazione
+instaurare : instaurarlo instauratione instaurare instaurati instaurazione
 instigare : instigare
 instinto : instinto
 instituto : instituto
@@ -3183,7 +3153,7 @@ instruire : instruirvi instruito instruirai instruirne instruiti instruire instr
 instrumenti : instrumenti instrumento instrumentum
 instruzione : instruzione
 insufficienza : insufficienza
-insulti : insulto insulti insultò nsulti
+insulti : insulto insulti insultò nsulti 'nsulti
 insuperabile : insuperabile
 insuperbito : insuperbito
 intanto : intanto
@@ -3193,13 +3163,13 @@ integra : integrità integra
 intelligente : intelligenzie intelligenzia intelligente intelligenze intelligenza
 intempestiva : intempestivamente intempestivo intempestiva
 intendente : intendenti intendente intendentissimo
-intendere : intesi intesosi inteso intesone intesola intesolo intesa intese intendete intendersi intendonsi intenderete intesero intendevono intendesti intenderlo intenderli intenderle intenderla intendiamo intenda intendendole intendavamo intende intendessimo intendimento intendendone intendi intenderò intendendolo intendo intesono intendendosi intendereno intenderai intendeva intendano intenderà intendera intendevo intendevi intendiate intendea intendiàno intendemmo intenderebbe intendevasi intenderselo intender intendino intesesi intendessisi intendendovi intendessi intendervi intendesse intendono intendiano intendersene intendiatevi intenderanno intendendola intendati intenderetevene intendevano intenderne intendesi intendere intendeno intenderci intendendo intenderemo intendend intèndessi intendessino intendemo intenderei ntenda ntende ntenderai ntenderanno ntenderà ntenderebbe ntendessi ntendeva ntendevo ntendiate ntendino ntendi ntendono ntendo ntenzione
+intendere : intesi intesosi inteso intesone gl'intenderà intesola intesolo intesa intese intendete intendersi intendonsi intenderete intesero intendevono intendesti intenderlo intenderli intenderle intenderla intendiamo intenda intendendole intendavamo intende intendessimo intendimento intendendone intendi intenderò intendendolo intendo intesono intendendosi intendereno intenderai intendeva intendano intenderà intendera intendevo intendevi intendiate intendea intendiàno intendemmo intenderebbe intendevasi intenderselo intender intendino intesesi intendessisi intendendovi intendessi intendervi intendesse intendono intendiano intendersene intendiatevi intenderanno intendendola intendati intenderetevene intendevano intenderne intendesi intendere intendeno intenderci intendendo intenderemo intendend intèndessi intendessino intendemo intenderei ntenda ntende ntenderai ntenderanno ntenderà ntenderebbe ntendessi ntendeva ntendevo ntendiate ntendino ntendi ntendono ntendo ntenzione 'ntenda 'ntenderai 'ntenderanno 'ntenderebbe 'ntendessi 'ntendeva 'ntendiate 'ntendino 'ntenzione 'nteso v'intenderete
 inten : inten
 intenso : intenso
 intenzione : intenzione intenzion  intentata intento
 intera : intere intero intera interamente ntero
 intercedenti : intercedenti
-intercedere : intercetta intercedere intercette intercessione intercepessi ntercedessi intercedenti
+intercedere : intercedessi intercetta intercedere intercette intercessione intercepessi ntercedessi intercedenti
 intercludevano : intercludevano
 interdetti : interdetto interditta interditto interditti interdetti
 interesse : interessi interesso interesse
@@ -3207,7 +3177,7 @@ interim : interim
 inter : inter
 intermettere : intermissione intermettere
 internunzii : internunzii
-ntero : ntero interi
+ntero : ntero interi 'ntero
 interpetrare : interpetrato interpetrando interpetravasi interpretiamo interpretata interpretazione interprete interpretato interpetrono interpretare interpetrazione interpretassino interpetriamo interpetrare interpetra interpretino interpreti
 interporre : interponessi interporsi interporrai interposizione interponga interporre
 interrompere : interrotto interrompa interrompino interrotti interrompere
@@ -3223,7 +3193,7 @@ in­torno : in­torno intorno
 intra : intra
 intrametterebbe : intrametterebbe
 intraprendere : intraprendere intraprendessino intraprendino intraprendessi
-intrattenere : intratterra intrattenga intrattenessigli intrattenessino intrattenergli intrattenendosi intrattenerci intratterete intrattenendolo intrattenendoli intratterrete intrattengono intratterrai intrattegnate intrattenerli intrattenuto intrattenghino intrattenermi intrattenervi intrattenerlo intrattenuti intrattenerla intrattenere intrattenerle intrattenendo intrattenuta intrattenimenti intrattiene intratteniate intrattenessi intrattengonsi intrattenerti intrattenemo ntrattenga ntrattenne ntractenga
+intrattenere : 'ntractenga intratterra intrattenga intrattenessigli intrattenessino intrattenergli intrattenendosi intrattenerci intratterete intrattenendolo ntrattamenti 'ntrattenne intrattenendoli intratterrete intrattengono intratterrai intrattegnate intrattenerli intrattenuto intrattenghino intrattenermi intrattenervi intrattenerlo intrattenuti intrattenerla intrattenere intrattenerle intrattenendo intrattenuta intrattenimenti intrattiene intratteniate intrattenessi intrattengonsi intrattenerti intrattenemo ntrattenga ntrattenne ntractenga
 intricare : intricate intricare
 intridura : intridura
 intrinsecato : intrinsechi intrinsecato intrinseche
@@ -3247,7 +3217,7 @@ investigare : investigare investigando investigassi investigazione
 investiti : investiti investitura
 inviare : invierai inviorno inviavamo inviate inviarci inviarli invigili inviarlo inviati inviereno inviò inviato invierete inviassino inviare invieranno invierelli inviarne inviino inviamo inviassi inviano inviarvi invii inviasse nviassino nvii
 invicem : invicem
-invidia : invidiano invidia invidiato nvidia
+invidia : invidiano invidia invidiato nvidia 'nvidia
 invilire : invilire invilisca invilite
 inviolabilmente : inviolabilmente
 inviso : inviso
@@ -3325,6 +3295,7 @@ lanciole : lanciole lanciola
 lanc : lanc
 lanclanio : lanclanio
 lancre : lancre
+lagrime : lagrime
 landec : landec
 landriano : landriano
 lane : lane
@@ -3345,7 +3316,7 @@ larga : larga largheggiare larghi largamente larghissime largo larghe larghissim
 larii : lari larii laris
 larione : larione
 lasca : lasca lascheri
-lasciare : lassarai lasciamo lasciava lascia lasciandoci lasciami lasciassilo lasciarsi lasciono lasciereno lascio lasciati lascereno lascinmi lasciandone lasciato lasciata lassi lasciare lasciate lasso lasciasti lasciai lasciarai lasciarvi lascerà lasciassino lasciandoti lastricarli lasciarmi lascieremo lasciatogli lasciavano lascera lasciar lascierai lasciavi lasciàno lasciavono lasciano lascerai lasciatolo lasceranno lasci lascerollo lassando lasciorno lascieronne lascerebbe lasciatosi lasciatagli lasciarci lasceremo lasciò lasciandolo lascerò lasciandoli lasciarne lasciandole lascialo lascerete lasciandola lasciorono lasciassin lasciossi lascerassi lasciarli lasciando lasciassi lascino lasciarlo lascerei lasciarla lasceronne lasciarle
+lasciare : lascera'lo lassarai lasciamo lasciava lascia lasciandoci lasciami lasciassilo lasciarsi lasciono lasciereno lascio lasciati lascereno lascinmi lasciandone lasciato lasciata lassi lasciare lasciate lasso lasciasti lasciai lasciarai lasciarvi lascerà lasciassino lasciandoti lastricarli lasciarmi lascieremo lasciatogli lasciavano lascera lasciar lascierai lasciavi lasciàno lasciavono lasciano lascerai lasciatolo lasceranno lasci lascerollo lassando lasciorno lascieronne lascerebbe lasciatosi lasciatagli lasciarci lasceremo lasciò lasciandolo lascerò lasciandoli lasciarne lasciandole lascialo lascerete lasciandola lasciorono lasciassin lasciossi lascerassi lasciarli lasciando lasciassi lascino lasciarlo lascerei lasciarla lasceronne lasciarle
 lassù : lassù
 lastra : lastra lastricare
 laterina : laterina
@@ -3372,7 +3343,7 @@ lega : lega leghe
 legame : legassino legato legame legata legati
 legazione : legazione
 leggera : leggiere leggeri leggiera legieri leggera leggieri
-leggere : leggere lessila leggerla lessono leggiemo leggierai lessesi leggerai lessonsi lessemi letto lesse letta lessi legoli legge legga leggetela leggessi leggi leggerò lette leggerete leggemo lèggere leggeranno lessigli letti
+leggere : leggiera'la leggere lessila leggerla lessono leggiemo leggierai lessesi leggerai lessonsi lessemi letto lesse letta lessi legoli legge legga leggetela leggessi leggi leggerò lette leggerete leggemo lèggere leggeranno lessigli letti rileggere
 leggerezza : leggerimente leggermente leggerire leggerezza
 legittimare : legittimario legittima ligittima legittimo legittimare legitime legittimi
 legnaia : legnaia legnami legne legname legno legna legni
@@ -3396,7 +3367,7 @@ lettori : lettori
 levare : leverò levarvi levandovi levarti levinsi levarsele levino levatosi leverai leverà levarlo levarla levante levarle leverebbe levato levati levata levi levarteli leverete leviano levane levando levarglieli levò leverebbono levandoli levandogli levarsi levorno leveretevi levandosi levava levar leva levare levarne levarnelo levavano levai levassino levarneli levarli levatone levereno leveranno leviate levassi levate levarsilo levarci
 levatoio : levatoi levatoio
 lezeri : lezeri
-libbra : libbra libbre
+libbra : libbra libbre librae libre
 liberale : liberali liberalmente liberale liberamente liberalità
 liberare : libera liberato libere liberrai liberassino liberi libero liberremo liberarle liberati liberarli liberarvi liberassi libererai liberarlo liberare liberino libererebbono
 libertà : liberatis liberazione libertatem libertà libertatis liberationem
@@ -3495,6 +3466,7 @@ lupaccio : lupaccio
 lupo : lupo
 luppius : luppius
 lutozo : lutozo lutozzo
+ma : ma
 macario : macario
 macchia : macchia
 macchinare : macchinando macchinazione macchinato macchinavano macchinazioni macchinava macchinare
@@ -3538,7 +3510,7 @@ malcontenta : malcontenta malcontenti malcontento
 maledice : maledice maleficio
 malegonnelle : malegonnelle
 malegrado : malegrado
-male : male mali malore malivoli malissimo malissima malissimi malo
+male : male mali malore malivoli malissimo malissima malissimi malo mal
 malignare : malignare  maligni malignità malignamente
 maliscalco : maliscalco
 malizia : malizia
@@ -3556,11 +3528,12 @@ mamiano : mamiano
 mamino : mamino
 mamma : mamma mammi mammona
 mana : mana
-mancare : manchino mancherebbono mancarvi mancarti mancandoti mancassino mancarne manchiate mancherassi mancai mancamento mancarci mancandoci mancarai mancava mancherete manchivi mancheremo mancar manchai mancate mancareno mancato manca manchiamo mancassi mancherebbe mancati manchi mancassimo mancandogli mancheranno mancata mancò mancamenti mancano mancherai mancare mancante mancando mancarli mancherieno mancandoli mancherò manchereno mancorono mancandone mancavano mancherà mancheria mancono mancarsi
+mancare : manchino mancherebbono mancarvi mancarti mancandoti mancassino mancarne manchiate mancherassi mancai mancamento mancarci mancandoci mancarai mancava mancherete manchivi mancheremo mancar manchai mancate mancareno mancato manca manchiamo mancassi mancherebbe mancati manchi mancassimo mancandogli mancheranno mancata mancò mancamenti mancano mancherai mancare mancante mancando mancarli mancherieno mancandoli mancherò manchereno mancorono mancandone mancavano mancherà mancheria mancono mancarsi rimanchino
 mancino : mancino
 manco : manco
 mandamusque : mandamusque mandavimusque
-mandare : mandatolo mandaci mandandocene mandandoci mandatati mandatavi manderia manderolla manderò manderonne manderrebbono mandiamo mandiamotele mandiamoti mandiamovi mandiano mandiàno mandianvi mandiate mandi mandinlo mandinmi mandino mandinsi mandisi mandolle mandollo mando mandò mandommela mandono mandonsi mandonvi mandorno mandorono mandoronsi mandoronvisi mandossi mandovi mandovvi  mandateci mandatele mandate mandatemi mandatene mandateti mandatevele mandatevi mandati mandatisi màndatisi mandatis mandatoci mandatogli mandatoli mandato mandatorum mandatotene mandatoti mandava mandavamo mandavano mandavi mandavimus mandavisi mandavo mandavono manderai mandera manderà manderanno manderannosi manderannotisi manderasi manderassi manderavvisi manderebbe manderebbene manderebbevi manderebbono manderegli manderei manderello manderemola manderemo manderemoti mandereno manderenti manderenvi manderesti manderetecene mandereteci manderetegli manderetelo manderete manderetemene manderetevi mandarne mandarono mandarsi mandartela mandartele mandarteli mandartelo mandartene mandarti mandarvegli mandarvele mandarveli mandarvene mandarvi mandasi mandasse mandassi mandassimo mandassino mandassivi mandasti mandataci mandatali mandata mandandogli mandandola mandandoli mandandolo mandando mandandomela mandandomi mandandone mandandosi mandandoti mandandovela mandandovisi mandarai mandara mandarannosegli mandarcela mandarcele mandarceli mandarcene mandarci mandare mandarevi mandarla mandarle mandarliene mandarli mandarlo mandar mandarmelo mandarmi  mandagli mandai mandale mandalli manda mandammo mandamole mandamo mandamoti mandamovi 
+mandare : mittatur mitterentur mittimus
+mandano mandera'gli mandera'la mandera'le mandera'lli mandera'lo manderieno mandatolo mandaci mandandocene mandandoci mandatati mandatavi manderia manderolla manderò manderonne manderrebbono mandiamo mandiamotele mandiamoti mandiamovi mandiano mandiàno mandianvi mandiate mandi mandinlo mandinmi mandino mandinsi mandisi mandolle mandollo mando mandò mandommela mandono mandonsi mandonvi mandorno mandorono mandoronsi mandoronvisi mandossi mandovi mandovvi  mandateci mandatele mandate mandatemi mandatene mandateti mandatevele mandatevi mandati mandatisi màndatisi mandatis mandatoci mandatogli mandatoli mandato mandatorum mandatotene mandatoti mandava mandavamo mandavano mandavi mandavimus mandavisi mandavo mandavono manderai mandera manderà manderanno manderannosi manderannotisi manderasi manderassi manderavvisi manderebbe manderebbene manderebbevi manderebbono manderegli manderei manderello manderemola manderemo manderemoti mandereno manderenti manderenvi manderesti manderetecene mandereteci manderetegli manderetelo manderete manderetemene manderetevi mandarne mandarono mandarsi mandartela mandartele mandarteli mandartelo mandartene mandarti mandarvegli mandarvele mandarveli mandarvene mandarvi mandasi mandasse mandassi mandassimo mandassino mandassivi mandasti mandataci mandatali mandata mandandogli mandandola mandandoli mandandolo mandando mandandomela mandandomi mandandone mandandosi mandandoti mandandovela mandandovisi mandarai mandara mandarannosegli mandarcela mandarcele mandarceli mandarcene mandarci mandare mandarevi mandarla mandarle mandarliene mandarli mandarlo mandar mandarmelo mandarmi  mandagli mandai mandale mandalli manda mandammo mandamole mandamo mandamoti mandamovi 
 mandarnelo : mandarneli mandarnelo
 mandatarie : mandatarium mandatarie mandatarius mandatarii mandatario mandatari mandantes
 manecti : manecti
@@ -3570,7 +3543,7 @@ mane : mane
 manente : manente
 manesco : manesco
 manetti : manetti manettis manetto
-manfredi : manfredi
+manfredi : manfredi manfredis
 manfroni : manfroni
 mangiamarchi : mangiamarchi
 mangiare : mangiaresi mangiarle mangiato mangiarsela mangiatori mangiares mangiare
@@ -3579,14 +3552,14 @@ manichini : manichini
 manico : manico
 maniera : maniera
 manifestare : manifesterai manifesto manifestare manifesti manifestiate manifeste manifestamente manifesta manifestando
-mani : mani mano
+mani : mani mano man
 maniscal : maniscal
 manno : manno
 manomettere : manomessa manomettessi manometterli manomessi manumessi manometterle manomettere
 manovali : manovali manovegli
 mans : mans
 mantello : mantello
-mantener : mantenendoci mantenerlo mantenuti mantenersegli mantenuto mantenersela mantenerli mantenghino mantenessino mantenuta mantenerle mantenere mantenimento mantenute mantenerla mantenessimo mantenessi manteneva mantenersi manterremo mantenete manterrai mantenitori manterranno mantenervi mantenendovi mantenga mantener manterrassi mantengo mantenendosi mantengono mantenervele manteniate mantenutosi mantenervelo mantenerseli mantenerci mantenendoci mantenendoli mantenendo
+mantener : mantenendoci mantenerlo mantenuti mantenersegli mantenuto mantenersela mantegnamo mantenerli mantenghino mantenessino mantenuta mantenerle mantenere mantenimento mantenute mantenerla mantenessimo mantenessi manteneva mantenersi manterremo mantenete manterrai mantenitori manterranno mantenervi mantenendovi mantenga mantener manterrassi mantengo mantenendosi mantengono mantenervele manteniate mantenutosi mantenervelo mantenerseli mantenerci mantenendoci mantenendoli mantenendo
 mantova : mantuam mantua mantova mantuae mantoa mantuano mantovano
 manu : manu
 manzino : manzino
@@ -3604,7 +3577,7 @@ marchioni : marchioni marchionne
 marchionisse : marchionisse
 marcho : marcho
 marciaglia : marciaglia
-marciano : marciano
+marciano : marciano marciani
 marco : marco
 marcone : marcone
 marecchia : marecchia
@@ -3624,6 +3597,7 @@ maritare : maritata mariti marito maritare
 marostico : marostico
 marradi : marradi maratis marratis
 marraioli : marraiolo marraiuoli marraioli
+marraccio : marraccio
 marre : marre marri
 marritta : marritta
 marsiglia : marsilia marsiglia marsiliis
@@ -3711,6 +3685,7 @@ meminghe : meminghe meming
 memin : memin
 memoria : memoria memorabile
 menare : menono menale menorno menarle menatolo menarlo menava menare menati menassino menò menorono menato menatine mena menate menorollo menerete meni
+mencio : mencio
 mencocane : mencocane
 menco : menco
 mende : mende
@@ -3745,7 +3720,7 @@ mestier : mestiero mestier
 mestizia : mestizia
 metà : metà
 metropolitana : metropolitana
-mettersi : messa mettino messe messavi mèttella metterselo metterti mettervi mettessi mettono metteranno metterete metter messole mettendovi mettendoci mettessero messele metterai mettendo metteremo metterci messonsi metterceli metterieno metterteli mettendosi mettersi mettergli mettendole mettevono mettesti metterlo metessimo messo metterli metterle mettiamo metterla metterne metta metterò mette metterebbe metti messovi mettendovelo mettolo mettessinsi mettereno metterebbono mettere messono mettete metterà mettera mettessino metteva mettasi mettiate metteretelo messi missa misse missi misson missono missus mitera
+mettersi : mettera'la mettera'lo messa mettino messe messavi mèttella metterselo metterti mettervi mettessi mettono metteranno metterete metter messole mettendovi mettendoci mettessero messele metterai mettendo metteremo metterci messonsi metterceli metterieno metterteli mettendosi mettersi mettergli mettendole mettevono mettesti metterlo metessimo messo metterli metterle mettiamo metterla metterne metta metterò mette metterebbe metti messovi mettendovelo mettolo mettessinsi mettereno metterebbono mettere messono mettete metterà mettera mettessino metteva mettasi mettiate metteretelo messi missa misse missi misson missono missus mitera
 meza : mezzani mezzano mezze mezzana mezza mezzane meza mezi mezano mezanam mezo
 mezzanotte : mezzogiorno mezzanotte mezzodì mezzodí
 mezzi : mezzo mezzi
@@ -3761,7 +3736,7 @@ mignoni : mignoni
 mihi : mihi
 milano : milanese milanesi milano 
 milia : milia
-militando : militare militando militono militassi
+militando : militare militando militono militassi militano
 milizia : militiae milizia
 minacciare : minaccino minacciono minacciassilo minacci minacciassino minaccia minaccerai minacciato minacciatogli minacce minacciare minacciatili minacciavono minacciarci minacciava minacciando minacciati minacciarli minacciar minacciano
 minali : minali
@@ -3884,7 +3859,7 @@ morostico : morostico
 mortine : mortine
 mosa : mosa
 mossa : mossa mossoti mosse mossono mossi mosso mossimi
-mostrare : mostrigli mostrassero mostrava mostrarmi mostrargli mostrassisi mostravo mostrare mostrassi mostriate mostratogli mostrando mostrarsi mostrandoti mostramo mostrasse mostrassigli mostrate mostrosi mostrarvi mostramovi mosterrete mostrarci mosterretene mosterreteli mostrolli mostri mostrandomi mosterreno mostrai mosterrebbesi mostravano mostrarsene mostrandosene mostrasi mostrassino mostrarli mostrono mostrarle mosterrebbe mostrògli mostro mostravi mostravono mostrano mostrandotela mostrorno mostrerai mostronne mostrarti mostrommi mostrandogli mostroti mosterrai mostrornosi mostrategli mostrino mostre mostrandoli mostrorono mostrò mostra mostrossi mosterrebbono mosterrà mosterra mostrandole
+mostrare : mostrigli mostrassero mostrava mostrarmi mostrargli mostrassisi mostravo mostrare mostrassi mostriate mostratogli mostrando mostrarsi mostrandoti mostramo mostrasse mostrassigli mostrate mostrosi mostrarvi mosterra'le mostramovi mosterrete mostrarci mosterretene mosterreteli mostrolli mostri mostrandomi mosterreno mostrai mosterrebbesi mostravano mostrarsene mostrandosene mostrasi mostrassino mostrarli mostrono mostrarle mosterrebbe mostrògli mostro mostravi mostravono mostrano mostrandotela mostrorno mostrerai mostronne mostrarti mostrommi mostrandogli mostroti mosterrai mostrornosi mostrategli mostrino mostre mostrandoli mostrorono mostrò mostra mostrossi mosterrebbono mosterrà mosterra mostrandole
 moti : moti motis
 motivi : motivi motivo
 moto : moto motto
@@ -3913,11 +3888,11 @@ muoia : muoino muoia muore muoiono
 muovere : movendosi moveranno muoverli moviamo muovere moveresti muovino movessi movesse moverebbe moverebbono moverai muovevono movevano movessero movimenti movesti movimento movemo movendo movessino muovervi movimen muova movere moveva movessimo moverete muovono moverà muoversi moverli muove
 muovermi muoveva muoverlo muoverne muover muoverle
 muraglia : muraglie muraglia
-mura : muri muricciolo murati muro mura murate murare murata
+mura : muri muricciolo murati muro mura murate murare murata muragla
 musacchino : musacchino musachino
 musolta : musolta
 mutandis : mutandis
-mutare : mutandoli mutinsi mutolo mutò muta mutabili mutino mutando mutandosi mutano mutarci mutarle mutarlo mutarsi mutassi mutassino mutata mutati mutatici mutato mutazione mutazioni muterà muterebbe muti mutiamo mutiate mutorno mutossi rimutare tramutare
+mutare : mutandoli mutinsi mutolo mutò muta mutabili mutino mutando mutandosi mutano mutarci mutarle mutarlo mutarsi mutassi mutassino mutata mutati mutatici mutato mutazione mutazioni muterà muterebbe muti mutiamo mutiate mutorno mutossi mutarla rimutare tramutare
 mutatis : mutatis
 mutilati : mutilati
 muti : muti
@@ -3936,7 +3911,7 @@ narbona : narbona
 nardi : nardi nardis
 nare : nare
 narni : narni
-narrare : narrandola narrà narrandoli narrando narra narrazione narrato narrossi narrano narrai narrerai narrare narri narrarli narramo narravono narramogli narrà narrandogli narrandoli narrar narrata narrate narrati narratogli narratomi narrerà narreranno narreremo narrereno narrerete narrommi narro narrò narrar narratigli narrerà narreranno narrerò narrono 
+narrare : narra'li narratoli narrandola narrà narrandoli narrando narra narrazione narrato narrossi narrano narrai narrerai narrare narri narrarli narramo narravono narramogli narrà narrandogli narrandoli narrar narrata narrate narrati narratogli narratomi narrerà narreranno narreremo narrereno narrerete narrommi narro narrò narrar narratigli narrerà narreranno narrerò narrono 
 nascere : nacque nate nati natoli nascerà nataci nascie nascessi nasceva nascono nato nascere naschino nata nasca nasce nascano nasceranno nascerebbono nascano nascendo nasceranno nascerebbe nascer nascerne nascervi nascessino nascer naschi
 nascondere : nasconderà nascondetemi nascose nasconderle nascondersi nascondono nascoso 
 nasi : nasi 
@@ -3968,7 +3943,7 @@ negare : negamo negò negandoli negando nega negorono negati negarli negare nega
 negligenti : negligenti negligenzia
 negocio : negocio negoziare
 negro : negro
-nemico : nimica nemica nemici nemico nimiche nimicizia nimici nimico nimicizie inimico inimiche inimici inimci inimicato inimicissimi inimicizia inimica inimicizie inimicissimo inimicarcelo inimicarsi inimichiamo inimicar inimicarselo
+nemico : nimica nemica nemici nemico nimiche nimicizia nimici nimico nimicizie inimico inimiche inimici inimci inimicato inimicissimi inimicizia inimica inimicizie inimicissimo inimicarcelo inimicarsi inimichiamo inimicar inimicarselo 'nimici
 nemors : nemors
 nepi : nepi
 nepote : nepote nepoti
@@ -4043,7 +4018,7 @@ notario : notarii notario notarius notaro
 notificare : notifichi notificando notificarai notificare notificarli notificasi notificassi notificata notificati notificato notificatore notificazione notificherai notificherà 
 notitia : nuove notitia novamente nuova nuovamente nuovo notizia nuovi notizie nouova novam novità novissime
 notoria : notoria
-novanta : dua,  cinquecento cinquecentoottantasette cinquemila diciannove diciassette diecimila dodici dodicimila duecento duecentocinquanta duemila dugento dugentocinquanta dugentomila dumila migliaia migliaio mila milione mill mille millecinquecento millecinquecentodua millecinquecentosette milledugento millesecento milon novanta novantaquattro nove novecento novemila ottanta otto ottocento ottomila quaranta quarantamila quattordici quattro quattrocento quattrocentocinquanta quattromila quindici quindicimila secento secentomila sedici sedicimila seicento seimila sessanta sessantamila settanta settantamila sette settecento settemila trecento trecentocinquanta tredici tredicimilasettecento tremila tremilacinquecento trenta trentacinque trentamila trentatré trentuno undici venticinque venticinquemila ventidua ventidue ventimila ventinove ventiquattro ventisei ventisette ventitré ventiuno ventotto ventuno centinaia cento centinaio centocinquanta centomila centootto centroquattro centum diciotto
+novanta : cinquanta cinquantacinque cinquantamila cinquantasette cinque dua  cinquecento cinquecentoottantasette cinquemila diciannove diciassette diecimila dodici dodicimila duecento duecentocinquanta duemila dugento dugentocinquanta dugentomila dumila migliaia migliaio mila milione mill mille millecinquecento millecinquecentodua millecinquecentosette milledugento millesecento milon novanta novantaquattro nove novecento novemila ottanta otto ottocento ottomila quaranta quarantamila quattordici quattro quattrocento quattrocentocinquanta quattromila quindici quindicimila secento secentomila sedici sedicimila seicento seimila sessanta sessantamila settanta settantamila sette settecento settemila trecento trecentocinquanta tredici tredicimilasettecento tremila tremilacinquecento trenta trentacinque trentamila trentatré trentuno undici venticinque venticinquemila ventidua ventidue ventimila ventinove ventiquattro ventisei ventisette ventitré ventiuno ventotto ventuno centinaia cento centinaio centocinquanta centomila centootto centroquattro centum diciotto dua due dui tre
 novara : novara
 novella : novella novelle novello
 novembre : novembre novembris
@@ -4081,11 +4056,12 @@ obstassino : obstassino
 obstinazione : obstinazione
 obtinenda : obtinenda
 obtulentque : obtulentque
+oca : oca
 occasione : occasione occasioni
 occhi : occhio ochi occhi
 occisione : occisione
 occorrenza : occorrenza occorrenzie occorrenzia occurrenzie occorrenze ocorrenzie occurrenze
-occorrere : occurrent occurrunt occurso occorre occoressi occorrano occorrà occorsono occorresse occorso occorrerebbono occorreria occorressino occorress occorrevono occorrunt occorsa occorsero occorrerate occorsi occorse occorreci occorressi occorrendo occorrere occorra occorrerà occorrono occorrerano occorreva occorrerebbe occorreranno occorremi occorrendoci occorrendole occorrendoli occorrendomi occorrendoti occorrendovi occorrenti 
+occorrere : occore occorrendone occurrent occurrunt occurso occorre occoressi occorrano occorrà occorsono occorresse occorso occorrerebbono occorreria occorressino occorress occorrevono occorrunt occorsa occorsero occorrerate occorsi occorse occorreci occorressi occorrendo occorrere occorra occorrerà occorrono occorrerano occorreva occorrerebbe occorreranno occorremi occorrendoci occorrendole occorrendoli occorrendomi occorrendoti occorrendovi occorrenti 
 occupare : occupando occupare occupi occupata occupazione occupate occupato occupati occuparla occupatissimo occupazioni occupargli occuparle occupassino occupassi occupateci occupatissimi occupatori occupono occuporno
 occurrentiis : occurrentiis
 occurso : occurso
@@ -4116,7 +4092,7 @@ offida : offida ofida
 oggimai : oggimai
 oggi : oggi
 ògli : ògli
-ogni : ogni
+ogni : ogni ogn' ogn
 ognissanti : ognissanti
 ogniuno : ogniuno ognun ognuno
 olesi : olesi
@@ -4126,7 +4102,7 @@ olivieri : olivieri
 olmo : olma 
 oltraggio : oltraggio
 oltramontane : oltramontane oltramontani oltramontano
-oltre : oltra oltr oltre
+oltre : oltra oltr oltre oltr'a
 ombra : ombra ombre
 omettere : omesso ometta omettendo omette omettere ometterete ometterebbe ometterai ometterò omettessi ommesso ommettemo ommettere
 omicidio : omicidio omicidii omicida omicidi
@@ -4164,7 +4140,8 @@ optamus : optamus
 optimo : optimo
 opus : opus
 oraculo : oraculo
-orae : orae hora hore oretta
+oro : oro
+orae : orae hora hore oretta ora ore
 oramai : oramai
 orange : orange
 oranghe : oranghe
@@ -4175,8 +4152,9 @@ ordelaffi : ordelaffi ordelaffo
 ordigni : ordigni
 ordinamenti : ordinamenti ordinamento 
 ordinanza : ordinanza ordinanze
-ordinare : d'ordinare ordinavano ordinandogli ordinandovi ordinatovi ordinera ordinerebbe ordineremo ordininsi ordinisi ordinommi ordinono ordino ordinò ordinorono ordinossi ordinarsi ordiniate ordinarle ordinarli ordinar ordinarti ordinasi ordinasse ordinassimo ordinateli ordinatoli ordinatoti ordiniamo ordinino ordinassi ordinarlo ordinasti ordinereno ordinassino ordinarvi ordinarci ordineranno ordinare ordinando ordinano ordinati ordinerai ordinerà ordinorno ordinate ordinerete ordinata ordinamo ordinavi ordinerò ordinavono ordinato ordinatoci ordinerassi ordinava ordina ordinarai
+ordinare : ordinera'li d'ordinare ordinavano ordinandogli ordinandovi ordinatovi ordinera ordinerebbe ordineremo ordininsi ordinisi ordinommi ordinono ordino ordinò ordinorono ordinossi ordinarsi ordiniate ordinarle ordinarli ordinar ordinarti ordinasi ordinasse ordinassimo ordinateli ordinatoli ordinatoti ordiniamo ordinino ordinassi ordinarlo ordinasti ordinereno ordinassino ordinarvi ordinarci ordineranno ordinare ordinando ordinano ordinati ordinerai ordinerà ordinorno ordinate ordinerete ordinata ordinamo ordinavi ordinerò ordinavono ordinato ordinatoci ordinerassi ordinava ordina ordinarai
 ordinaria : ordinario ordinatamente ordinarii ordinariamente ordinaria ordinarie ordinari ordinatissimo
+ordivano : ordivano
 ordine : ordine ordini ordinazione ordinum
 orecchie : orecchie orechi orecchi orecchio
 oricellario : oricellario oricellaris
@@ -4226,7 +4204,7 @@ ottaviano : ottaviano
 ottavo : ottavo
 ottenere : ottenessi ottenuto ottenere ottenuta ottinere ottenute otterrà ottenerla ottenerlo ottenersi ottenevano ottenga ottenne 
 ottima : ottimamente ottime ottimo ottima ottimi
-ottobre : ottobre
+ottobre : ottobre ottobris
 ottusi : ottusi
 oviedo : oviedo
 ovvero : ovvero overo over
@@ -4250,7 +4228,7 @@ paesani : paesani
 paese : paese paesi
 paganelli : paganelli paganellis
 paganello : paganello
-pagare : pagono pago pagornogli pagorno paga paghetta pagara paghe pagherai pagherannosi paghera pagherà pagherebbe pagherei pagheremo pagherò paghette paghiamo pagarà pagarci agarle pagarliene pagarneli pagarsi pagassin pagata pagatiti pagavano pagamenti pagamento pagano pagai pagali agalla pagammo pagar pagarlo paghiate paghereno pagorono pagarla pagassino pagassi pagherete pagavono pagato pagati pagamo pagate pagarli pagare pagatore paghi pagarne pagandone paghino pagò pagheresti pagheranno pagandogli pagandoli pagandolo pagando 
+pagare : pagono pago pagornogli pagorno paga paghetta pagara paghe pagherai pagherannosi paghera pagherà pagherebbe pagherei pagheremo pagherò paghette paghiamo pagarà pagarci agarle pagarliene pagarneli pagarsi pagassin pagata pagatiti pagavano pagamenti pagamento pagano pagai pagali agalla pagammo pagar pagarlo paghiate paghereno pagorono pagarla pagassino pagassi pagherete pagavono pagato pagati pagamo pagate pagarli pagare pagatore paghi pagarne pagandone paghino pagò pagheresti pagheranno pagandogli pagandoli pagandolo pagando pagarle
 page : page
 paghanellis : paghanellis
 paghina : paghina
@@ -4331,19 +4309,19 @@ pari : pari
 paris : paris
 parlamentare : parlamentare
 parlamenti : parlamenti parlamento
-parlare : parlandone parlandotene parlandovene parlandovi parlano parli parlarci parlassi parlando parlai parlava parlato parleremo parlerete parlavi parlerà parlò parlatene parlare parlar parlandogli parlarne parlarli parlate parlandoli parlandomi parlasti parlamo parla parlerai parlargli parlari parlarle parlarlo parlarmi parlarti parlarvi parlasene parlasse parlassigli parlassimo parlassino parlatogli parlatosi parlavane parlavano parlavo parlera parlerebbe parlerei parlerenne parlereno parleronne parlerò parliamo parliate parlino pàrli parlommi parlono parlon parlo parlorono parlossi
+parlare : parlandone parlandotene parlandovene parlandovi parlano parli parlarci parlassi parlando parlai parlava parlato parleremo parlerete parlavi parlerà parlò parlatene parlare parlar parlandogli parlarne parlarli parlate parlandoli parlandomi parlasti parlamo parla parlerai parlargli parlari parlarle parlarlo parlarmi parlarti parlarvi parlasene parlasse parlassigli parlassimo parlassino parlatogli parlatosi parlavane parlavano parlavo parlera parlerebbe parlerei parlerenne parlereno parleronne parlerò parliamo parliate parlino pàrli parlommi parlono parlon parlo parlorono parlossi parla'li
 parma : parma parmigiano
 parmi : parmi
 parola : parole parola 
 parrana : parrana
 parsimonia : parsimonia
 pars : pars
-partecipare : partecipare participi partecipe partecipino partecipi participando participare participarli participarlo participato participava participazione participera
+partecipare : partecipare participi partecipe partecipino partecipi participando participare participarli participarlo participato participava participazione participera participera'lo
 partem : partem
 parte : parte parti
 particolare : particolare parteculare particolari particulariter particularità particolarità particulari particolarmente particulare particularemente particularmente particularis particular particularrnente 
 partigiano : partigiani partigiana partigiano
-partire : partano partitosi partivano partivono  parta partiti partitisi partisse partisti partiamo partì partendo partendosi partendosene partendoti partiate partii partimmi partire partitomi partirci partirno partirà partirai partirti partomi partirmi partissi partir partissino partirsi partimo partiranno partino partireno partono partirebbe partiva partirono partí partirannosi partirebbono partiremo partirete partironsi partirò partirsene partirvi 
+partire : parti' parti'mi partano partitosi partivano partivono  parta partiti partitisi partisse partisti partiamo partì partendo partendosi partendosene partendoti partiate partii partimmi partire partitomi partirci partirno partirà partirai partirti partomi partirmi partissi partir partissino partirsi partimo partiranno partino partireno partono partirebbe partiva partirono partí partirannosi partirebbono partiremo partirete partironsi partirò partirsene partirvi 
 partis : partis 
 partita : partita partite 
 partito : partito
@@ -4351,7 +4329,7 @@ parto : parto
 partorire : partorendo partorí partorire partoriranno partoriti partorirebbono partorirebbe partorito partorirà partorisca partorisce partorischino partoritone
 part : part
 parturire : parturire parturito
-paruta : parvono paruto paruta parvogli parve parveli parvemi parvongli parre parsa parràgli parrano parrebbono
+paruta : parvono paruto paruta parvogli parve parveli parvemi parvongli parre parsa parràgli parrano parrebbono parvorum
 pascere : pascere pascono pasco pasciuta pascersi pasciuti pasca pasce pascerli pascerlo pascessino
 paschino : paschino
 paschi : paschi
@@ -4402,7 +4380,7 @@ pattuire : pattuire pattuita pattuite
 paulaccio : paulaccio
 paulantonio : paulantonio pauloantonio
 paulo : paulo pauolo
-paura : paurosi paura paure pauroso impauriti
+paura : paurosi paura paure pauroso impauriti paurosa
 pava : pava
 pavia : pavia pavvia
 paziente : pazienzia pazientemente pazienza paziente pazienti
@@ -4459,12 +4437,13 @@ penuria : penuria
 penzato : penzato
 pepi : pepi pepis pepo
 peppoli : peppoli peppolis
+per : pe' pel per
 peraccino : peraccino
 peracconcio : peracconcio
 peragendum : peragendum
 perché : perché perchè  perch perciò  pertanto
 percuotere : percossi percotendogli percuotere percuoterli
-perdere : persa perse persi perdo perduta perdutasi perduti perdano perdere perduto perderci perdessi perderà perdessino perde perda perderlo perdeva perderai perdersi perso perdita perdute perdé perdelli perdemo perdendoci perdendole  perdendolo perdendo perdendosi perderanno perderebbe  perderebbono perderei perderete perderla perderle perder perderselo perdesse perdessero perdiamo perdiate perdino perdi perdite
+perdere : perdereno persa perse persi perdo perduta perdutasi perduti perdano perdere perduto perderci perdessi perderà perdessino perde perda perderlo perdeva perderai perdersi perso perdita perdute perdé perdelli perdemo perdendoci perdendole  perdendolo perdendo perdendosi perderanno perderebbe  perderebbono perderei perderete perderla perderle perder perderselo perdesse perdessero perdiamo perdiate perdino perdi perdite
 perdonare : perdonando perdoneranno perdona perdonare perdonassimo perdonato perdonava perdonerai perdonerà perdoni perdono
 pere : pere
 perfetta : perfezione perfetta perfette perfettissima perfettissimo perfetto
@@ -4563,10 +4542,10 @@ piazza : piazza piazze
 piccaman : piccaman
 picce : picce
 picchino : picchino
-piccola : piccole piccolo piccola piccoli piccolissimo piccino piccioli	
+piccola : piccole piccolo piccola piccoli piccolissimo piccino piccioli	piccol
 piccone : piccone picconi picone
-pictis : pictis
-piede : piede piedi
+pictis : pictis 
+piede : piede piedi pie' pié piè
 piegaio : piegaio
 piega : piega piegarsi piego
 piena : piena pieni pienamente pieno plenissima piene pienetto pienissima
@@ -4593,12 +4572,11 @@ pigello : pigello piggello piggiello
 piggiorando : piggiorando piggiore
 pigionali : pigionali
 pigione : pigione
-pigliare : piglerassi piglieremo pigliare pigliereno pigliarai piglerebbe piglierete pigliassino piglierai pigliassi pigliamo piglierà pigli piglieranno piglia piglino pigliandogli pigliandola pigliandolo pigliandone pigliando pigliano pigliàno pigliarci pigliarla pigliarle pigliarli pigliarlo pigliarne pigliarò pigliar pigliarsi pigliasse pigliassigli pigliassimo pigliasti pigliate pigliavano pigliava pigliavono piglierannoci pigliera piglierassi piglierebbelo piglierebbe piglierebbono piglierei piglieresti piglierieno pigliono piglio pigliò pigliorno pigliossi piglisi 
+pigliare : piglerassi piglieremo pigliare pigliereno pigliarai piglerebbe piglierete pigliassino piglierai pigliassi pigliamo piglierà pigli piglieranno piglia piglino pigliandogli pigliandola pigliandolo pigliandone pigliando pigliano pigliàno pigliarci pigliarla pigliarle pigliarli pigliarlo pigliarne pigliarò pigliar pigliarsi pigliasse pigliassigli pigliassimo pigliasti pigliate pigliavano pigliava pigliavono piglierannoci pigliera piglierassi piglierebbelo piglierebbe piglierebbono piglierei piglieresti piglierieno pigliono piglio pigliò pigliorno pigliossi piglisi ripigliarci
 pignerebbe : pignerebbe
 piic : piic
 pilato : pilato
-pilli : pilli
-pillo : pillo
+pilli : pilli pillo
 pinco : pinco
 pinioni : pinioni
 pinta : pinta
@@ -4724,7 +4702,7 @@ postposta : postposta postposto
 postscritpa : postscritpa
 potentati : potentato potentati
 potente : potentissimi potenza potenti potenzia potentissimo potente potenzie potentia potenze
-potere : possalo possano possanza possessimo possessino possevano possevi possiàn possi possessa possessioni possessione possessi possonne posson possorno potei potendoli potendomene potendone potendosi poteno poterà poterebbe poterei potereno puossene puossi puote puoi puoté possevono potete potertene potranno possin potrèno possisi possuta possiàno possete potessinne possa possemo potréno potergliene possé potrassi potrebbonsi possendola potessino potreno pote posservi potevono possendo potresti potremo possiate possiamo potesteria potessi potesse potrà potrai potrieno potendoci potendovi potergli possono possino poterli poterlo posserno poterla poterle potrebbeci possuto poteva possuti possere possisene potevo potria posseva potuto potuti possiano potercene possevo poterci potendo posso potrebbesi potrete posse potemo potersi possavamo poté potere potremmo poterne possercene poter potrebbono potèno possersene possonlo potre potra potervi posserli potetevi potrebbe possonsi potavamo posserne potessimo posser potessin poteria poterieno poterliene potermi poternelo poterono poterò potraivi potrannolo potrebbeli potrebbeno potrebbero potrebbo potrei potrensi potrestivene potriano potrò potueritis potuerit potuit potuta potute pòtuto potutosi  potersene potesterie potesti potette potetti potettono potevamo potevano potevan potevi potevon poterti poterveli poterviti potessero potessine potessisi potesssi
+potere : posse' possalo possano possanza possessimo possessino possevano possevi possiàn possi possessa possessioni possessione possessi possonne posson possorno potei potendoli potendomene potendone potendosi poteno poterà poterebbe poterei potereno puossene puossi puote puoi puoté possevono potete potertene potranno possin potrèno possisi possuta possiàno possete potessinne possa possemo potréno potergliene possé potrassi potrebbonsi possendola potessino potreno pote posservi potevono possendo potresti potremo possiate possiamo potesteria potessi potesse potrà potrai potrieno potendoci potendovi potergli possono possino poterli poterlo posserno poterla poterle potrebbeci possuto poteva possuti possere possisene potevo potria posseva potuto potuti possiano potercene possevo poterci potendo posso potrebbesi potrete posse potemo potersi possavamo poté potere potremmo poterne possercene poter potrebbono potèno possersene possonlo potre potra potervi posserli potetevi potrebbe possonsi potavamo posserne potessimo posser potessin poteria poterieno poterliene potermi poternelo poterono poterò potraivi potrannolo potrebbeli potrebbeno potrebbero potrebbo potrei potrensi potrestivene potriano potrò potueritis potuerit potuit potuta potute pòtuto potutosi  potersene potesterie potesti potette potetti potettono potevamo potevano potevan potevi potevon poterti poterveli poterviti potessero potessine potessisi potesssi pote' potr potrà'lli potra'lo potra'ne potre' potremoci puo può pò
 potestà : potestà potestatibus potestati potestatis
 potissima : potissima
 potius : potius
@@ -4798,7 +4776,7 @@ presa : presa
 presbyter : presbyter
 prescritte : prescritte
 presens : presens
-presentare : presentai presentamole presentiarum presentiate presentòmi presentò presentorno presentorono presentoronsi presentossene presentilo presentino presenteranno presenterà presenteretegli presenteretele presentereteliene presenterò presentialmente presentiamo presenta presentarai presentera presentarsi presentocci presentendo presentare presenterete presentatomi presentarla presentateci presentatogli presentatoci presentarci presenterai presentato presentamo presentati presentata presentarmi presentarti presentasse presentassi presentasti presentatagli presentategli presentate presentatisi presentatoli presentazione presentendolo 
+presentare : presentera'lli presterra'lli presentai presentamole presentiarum presentiate presentòmi presentò presentorno presentorono presentoronsi presentossene presentilo presentino presenteranno presenterà presenteretegli presenteretele presentereteliene presenterò presentialmente presentiamo presenta presentarai presentera presentarsi presentocci presentendo presentare presenterete presentatomi presentarla presentateci presentatogli presentatoci presentarci presenterai presentato presentamo presentati presentata presentarmi presentarti presentasse presentassi presentasti presentatagli presentategli presentate presentatisi presentatoli presentazione presentendolo 
 presente : presente presentem
 presentia : presenzia presenza presentia presenti presentis presenzialmente presentibus
 presentire : presentire presentissino presentissi presentita presentiti presentito
@@ -4879,13 +4857,13 @@ professione : professione
 professi : professi
 profeta : profeta profezia
 proficuo : proficuo
-profittare : profittare profittassi profittato profitteranno profittò profitto profìtto
+profittare : profittare profittassi profittato profitteranno profittò profitto profìtto profitterà
 progenitori : progenitori
 progressi : progressi progresso
 proibire : prohibisca proibirai proibirebbe proibiremo proibirli proibire proibissi proibisca proibissino proibito proibizione proibizioni
 prolissi : prolissi
 prolungare : prolungare
-promettere : promessaci promettendole promettene promettegli prometter promettendone promisse promettendo promettendoli promissi promettere promettendovi promettera prometteremo promessi promessoli promesso prometterai promette promessa promettiano prometta promesse prometterli promessione promessogli promessono promettavamo promettemi promettemo promettendogli prometteranno prometterà promettercene prometterebbe promettergliene promettergli prometterla prometterliene prometterlo prometterne prometterò promettersene promettesse promettessero promettessimo promettessino promettessi promettete prometteva promettevi promettevo promettiamo promettiamoti promettino prometti promettitore promettono prometto promisemelo promisi promisit promiso promissa promissegli promissione promissogli promissono promisso promittant promittat promittens 
+promettere : promettera'lli promessaci promettendole promettene promettegli prometter promettendone promisse promettendo promettendoli promissi promettere promettendovi promettera prometteremo promessi promessoli promesso prometterai promette promessa promettiano prometta promesse prometterli promessione promessogli promessono promettavamo promettemi promettemo promettendogli prometteranno prometterà promettercene prometterebbe promettergliene promettergli prometterla prometterliene prometterlo prometterne prometterò promettersene promettesse promettessero promettessimo promettessino promettessi promettete prometteva promettevi promettevo promettiamo promettiamoti promettino prometti promettitore promettono prometto promisemelo promisi promisit promiso promissa promissegli promissione promissogli promissono promisso promittant promittat promittens 
 promotore : promotore
 promozione : promozione
 pronosticavamo : pronosticavamo pronosticava
@@ -4919,7 +4897,7 @@ province : province provincia provincie
 provisione : provisione proviste provisto provisioni provisti provision provisoni provigionati provigionato provista provisionati provisionato
 provisore : provisore provisoribus provisori
 provocare : provocare provocati provocarli provocarsi provocazione provocherò
-provvedere : provvedessimo proverrete provide providono provedementi provvederne provvedertene provvegghino provveggono provveghino provegga provedeano provedranno provederti provediate provedimenti provedessi provedervi provvegiamo provederanno provederemovi provega proveghino provedreno provvedimento provvedimenti provvegga provedendo provedrà provvista provedersi provvedreno provvisti provvisto proveggono provvisioni provederne proveditore provederla provvisione provediamo provveditore provveduti proveduto provedete provedimento provveduto proveduti provvedere provederassi provederlo provedrebbe provedeto provedrete provedervene provedremo provedera provvedervi provedere provvega provedessino provedella provedelli provedendogli provede provederai provederannosi provederà provederci provederebbe provedereno provederle provederli provedermi provedernelo provederò provedertene provedeva provediamolo proveditori proveditor provedrai provedrannosi provedrentene provedrenvi provedrò provedute proveggasi provegghino proveggiamo proveggiate 
+provvedere : provedera'lo provvedessimo proverrete provide providono provedementi provvederne provvedertene provvegghino provveggono provveghino provegga provedeano provedranno provederti provediate provedimenti provedessi provedervi provvegiamo provederanno provederemovi provega proveghino provedreno provvedimento provvedimenti provvegga provedendo provedrà provvista provedersi provvedreno provvisti provvisto proveggono provvisioni provederne proveditore provederla provvisione provediamo provveditore provveduti proveduto provedete provedimento provveduto proveduti provvedere provederassi provederlo provedrebbe provedeto provedrete provedervene provedremo provedera provvedervi provedere provvega provedessino provedella provedelli provedendogli provede provederai provederannosi provederà provederci provederebbe provedereno provederle provederli provedermi provedernelo provederò provedertene provedeva provediamolo proveditori proveditor provedrai provedrannosi provedrentene provedrenvi provedrò provedute proveggasi provegghino proveggiamo proveggiate 
 prua : prua
 prudente : prudentissimo prudentissime prudenza prudenti prudenzie prudente prudentemente prudentissima prudentissimi prudenzia prudentes prudentissimamente
 pubblicare : pubblica pubblichi pubblicamente publica pubblici publico pubbliga pubblico pubbliche pubblicare pubblicarlo pubblicarsi pubblicata pubblicate pubblicati pubblicatogli pubblicato pubblicazione pubblicazioni pubblice pubblicherai pubblichino pubblicò pubblicossi pubblicum pubbrica publicae publicamente publicarlo publicatolo publicato publicazione publice 
@@ -4989,7 +4967,7 @@ quibus : quibus
 quicumque : quicumque
 quidem : quidem
 quid : quid
-quietare : quietamente quietare quietarli quietata quiete quieti quieto
+quietare : quietamente quietare quietarli quietata quiete quieti quieto quieta
 quietationem : quietationem
 quindi : quindi
 quinta : quinta
@@ -5052,7 +5030,7 @@ ragunare : ragunano raguna ragunate ragunata ragunati ragunassi ragunerebbe ragu
 ragusia : ragusia
 rainuccio : rainuccio
 rallargare : rallargarle rallarghi rallargarla rallargare
-rallegrare : rallegrarsi rallegrera rallegrossi rallegriate rallegrarti rallegriamo rallegrata rallegratici rallegrarvi rallegrarmi rallegrassi rallegrati rallegrato rallegratevene rallegriti rallegrarsene rallegrare rallegrai rallegroronsi rallegrò rallegri rallegramo rallegrandoci rallegrava
+rallegrare : rallegrarsi rallegrera rallegrossi rallegriate rallegrarti rallegriamo rallegrata rallegratici rallegrarvi rallegrarmi rallegrassi rallegrati rallegrato rallegratevene rallegriti rallegrarsene rallegrare rallegrai rallegroronsi rallegrò rallegri rallegramo rallegrandoci rallegrava rallegrera'ti
 rallungare : rallungare
 ramazotto : ramazzotto ramazotto
 rame : rame
@@ -5079,7 +5057,7 @@ rara : rara rari rare rarità raro
 rasegnanum : rasegnanum
 rasente : rasente
 rasignani : rasignani rasignano
-rassegnare : rassegni rassegna rassegnera rassegne rassegnalli rassegnato rassegnereteli rassegnerete rassegneranno rassegnorno rassegnerai rassegnamo rassegnassi rassegnarsi rassegnarli rassegnare rassegnarlo rassegnati rassegnate rassegnatelo rassegnata rassegnarle rassegnino
+rassegnare : rassegnera'lli rassegni rassegna rassegnera rassegne rassegnalli rassegnato rassegnereteli rassegnerete rassegneranno rassegnorno rassegnerai rassegnamo rassegnassi rassegnarsi rassegnarli rassegnare rassegnarlo rassegnati rassegnate rassegnatelo rassegnata rassegnarle rassegnino
 rassettare : rassetti rassettarsi rassettino rassettato rassettarlo rassetterebbe rassettarli rassettate rassettarle rassettassi rassettare rassettono
 rassicurando : rassicurarsi rassicurando rassicurate
 rassina : rassina
@@ -5098,8 +5076,7 @@ ravenna : ravenna
 ravvedere : ravedere ravvedersi ravvedere
 razionabile : razionabile
 realità : realmente reale realità
-reame : reame
-rebellare : rebellioni rebelle rebellibus rebelles rebell rebellare rebello rebelli ribelli rebellione rebelar
+reame : reame 
 rebuttate : rebuttati rebuttate
 recare : recandosi recato recherebbe recarsi reca recapito recherà recono recando recandola rechi recarci recar recatosi recare recassi recchi
 recetto : recetto
@@ -5136,8 +5113,7 @@ reducessi : reducessi
 redunda : redunda
 referat : referat
 refe : refe
-referendoci : referiva referi referì referí referisceci referiretele referiscono referite referirò referet referisci referisco referire referito referendoti referisca referirai referirà referisce referirono referiscie referirci referimmi referirle referirvi referita referirli referisconmi referirebbe referendosi referischino referiscemi referitone referendomi referitoci referissi referitomi referiranno referendoci referirne referirlo
-refersi : refersi
+referendoci : referiva referi referì referí referisceci referiretele referiscono referite referirò referet referisci referisco referire referito referendoti referisca referirai referirà referisce referirono referiscie referirci referimmi referirle referirvi referita referirli referisconmi referirebbe referendosi referischino referiscemi referitone referendomi referitoci referissi referitomi referiranno referendoci referirne referirlo referi' refersi
 refiutata : refiutata
 reformare : reformare
 reformazione : reformazione
@@ -5204,10 +5180,10 @@ repentina : repetendo repentina
 repererai : repererai
 reperitur : reperitur
 repetere : repetere repetito repetizione
-replicare : replicò replichiate replicherai replicherà replichiamoti replichiamo replica replicherò replicorono replico replicherrò replicherete replicono replicommi replicata replicallo replicassino replicate replicherebbono replicarvi replicati replicarti replichereno replicheranno replicato replicatolo replicheremo replichianvi replicar replicare replicando replicamo replicherei replicandola replichino replicandogli replicai replicateci replicano replicarne replicorno replicossi replicarli replichi replicarlo replicassi repliche replicassimo replicarle replichianti
+replicare : replicò replichiate replicherai replicherà replichiamoti replichiamo replica replicherò replicorono replico replicherrò replicherete replicono replicommi replicata replicallo replicassino replicate replicherebbono replicarvi replicati replicarti replichereno replicheranno replicato replicatolo replicheremo replichianvi replicar replicare replicando replicamo replicherei replicandola replichino replicandogli replicai replicateci replicano replicarne replicorno replicossi replicarli replichi replicarlo replicassi repliche replicassimo replicarle replichianti replica'gli
 repomerance : repomerance
 reporle : reporle
-reposarcene : reposarcene reposato reposavamo reposeremo reposiamo
+reposarcene : reposarcene reposato reposavamo reposeremo reposiamo reposate
 reposto : reposto
 reppererit : reppererit
 repreensione : repreensione
@@ -5281,7 +5257,7 @@ riaùto : riaùto
 riavere : riavendo riavendosi riavessino riaverle riavute riaverli riaverne riaver riavessi riaveste
 ribalderie : ribalderie ribaldo
 ribattere : ribattendo ribattere ribatte ribatterli
-ribellare : ribellare ribellarsi ribellassi ribellata ribellate ribellato ribellava ribelle ribellione ribello
+ribellare : ribellare ribellarsi ribellassi ribellata ribellate ribellato ribellava ribelle ribellione ribello rubelli ribelli rebellione rebelar rebellioni rebelle rebellibus rebelles rebell rebellare rebello rebelli
 ribollire : ribollire ribollite
 ributtata : ributtata ributtate ributtati ributtato
 ricanati : ricanati
@@ -5303,7 +5279,7 @@ riccomanni : riccomanni
 ricercare : ricercamo ricercandoci ricercandogli ricercandoli ricercandone ricercandotene ricercandoti ricercandovene ricercandovi ricercarci ricercarebbono ricercai ricerco ricercono ricerchino ricercano ricerca ricercommi ricercarà ricercherete ricercate ricercavono ricercare ricercò ricercavi ricercavamo ricerchi ricercassi ricercava ricercherai ricercandolo ricercassimo ricercherà ricercando ricerchiate ricercarla ricercarli ricercarlo ricercarne ricercarvi ricercasse ricercassino ricercasti ricercati ricercato ricercavo ricercheno ricercheranno ricercherebbe ricerche ricerchiamo ricercolo ricercone ricercovi
 ricettaculi : ricettaculi ricettaculo
 ricettando : ricettando ricettarli ricettati ricetterai ricetto
-ricevere : recevute recevuto recever riceve ricevemo riceva ricevono ricevano riceverle ricevuta ricevute ricevere ricevuti ricevereno ricevuto ricevegli ricevei ricevemmo ricevendola ricevendo riceverai riceveranno riceverà riceverci riceverebbono riceveremo ricevergli ricevé riceverla riceverli riceverlo riceverne riceverno riceverono riceverranno ricever ricevesse ricevessimo ricevessino ricevessi ricevesti ricevevo riceviamo riceviate ricevino ricevi ricevve ricevvé 
+ricevere : riceve' recevute recevuto recever riceve ricevemo riceva ricevono ricevano riceverle ricevuta ricevute ricevere ricevuti ricevereno ricevuto ricevegli ricevei ricevemmo ricevendola ricevendo riceverai riceveranno riceverà riceverci riceverebbono riceveremo ricevergli ricevé riceverla riceverli riceverlo riceverne riceverno riceverono riceverranno ricever ricevesse ricevessimo ricevessino ricevessi ricevesti ricevevo riceviamo riceviate ricevino ricevi ricevve ricevvé 
 richiamare : richiamano richiamare richiama richiamarmi richiamarli richiamato richiamati richiamino richiamarlo richiamassi richiamata richiamerai richiami richiamo richiamò richiamorno 
 ricieuto : ricieuto
 ricolgano : ricolgano ricolsono 
@@ -5317,16 +5293,16 @@ riconforterai : riconforterai
 ricongiugnersi : ricongiugnersi
 riconoscere : riconobbe riconobbi riconobbono ricognoscerebbono riconosca riconoscendomi riconoscerle riconosciuto riconosciamo riconoscerlo riconoscitori riconoscitore riconosciute riconosciuta riconoscerebbe riconoscereno riconoscere riconoscendo riconosciutoci riconoscendosi riconosceranno riconoscerà riconosceresti riconoscerli riconoscersi riconoscessino riconosciàno riconosciuti
 ricopiare : ricopiare
-ricordare : ricordai ricordamo ricordandoci ricordandogli ricordandole ricordandolo ricordando ricordandoti ricordano ricordiano ricordarsi ricordata ricordera ricordiamocene ricordava ricordiamovi ricordiamo ricordianvi ricordare ricordarlo ricordiamoti ricorderò ricordianti ricordò ricordato ricordati ricordandovi ricorderemoti ricordate ricordargliene ricorda ricordavo ricorderemovi ricordiàno ricordarti ricordarvelo ricordommi ricordandoli ricordereno ricordarci ricordarvi ricordasti ricordiate ricorderete ricordarla ricordarle ricordarliene ricordarli ricordarmi ricordarò ricordartele ricordartelo ricordasi ricordassino ricordassi ricordavamo ricordavi ricordavono ricorderai ricorderalli ricorderà ricorderebbe ricorderemo ricorderenti ricorderenvi ricorderetegli ricorderetevi  ricordevoli ricordiamole ricordiamolo ricordiamovelo ricordino ricordinsi ricordògli ricordono ricordo ricordi ricordoronmi ricordovi 
+ricordare : ricordai ricordamo ricordandoci ricordandogli ricordandole ricordandolo ricordando ricordandoti ricordano ricordiano ricordarsi ricordata ricordera ricordiamocene ricordava ricordiamovi ricordiamo ricordianvi ricordare ricordarlo ricordiamoti ricorderò ricordianti ricordò ricordato ricordati ricordandovi ricorderemoti ricordate ricordargliene ricorda ricordavo ricorderemovi ricordiàno ricordarti ricordarvelo ricordommi ricordandoli ricordereno ricordarci ricordarvi ricordasti ricordiate ricorderete ricordarla ricordarle ricordarliene ricordarli ricordarmi ricordarò ricordartele ricordartelo ricordasi ricordassino ricordassi ricordavamo ricordavi ricordavono ricorderai ricorderalli ricorderà ricorderebbe ricorderemo ricorderenti ricorderenvi ricorderetegli ricorderetevi  ricordevoli ricordiamole ricordiamolo ricordiamovelo ricordino ricordinsi ricordògli ricordono ricordo ricordi ricordoronmi ricordovi ricordera'gli ricordera'gnene ricordera'li ricordera'lo
 ricorregga : ricorregga ricorreggere ricorreggerla ricorreggerli ricorreggiate ricorreggiere 
 ricorrere : ricorrere ricorso ricorrereno ricôrre ricorre ricorle ricorra ricorrendo ricorressi ricorriamo ricorsi 
 ricuperare : ricuperare ricuperarne 
 ricusato : ricusato
 ridere : ridendo ridere ride ridersene ridevono rise risi riso
 ridire : ridica ridicendole ridicendolo ridichino ridire ridirò
-ridolfi : ridolfi ridolfis ridolfìs ridolfo ridulfo ridulphis
+ridolfi : ridolfi ridolfis ridolfìs ridolfo ridulfo ridulphis ridolphis
 ridomandare : ridomandare ridomandato
-ridurre : ridotta ridotte riducendosi riducessino ridurvi riducessi ridurre riducerlo riduchino ridurli riduciate riduce ridurgli ridutte ridutto ridotti ridursi ridurrai ridurci ridotto riducano riduca riducendola riducendole riducendolo riducendo riducera riduchinsi riducono ridurla ridurle ridurlo ridurne ridurranno ridurra ridurrà ridurrebbono ridurresti ridusse ridussigli ridutta riduttigli riduttili ridutti riduttogli
+ridurre : reducano ridotta ridotte riducendosi riducessino ridurvi riducessi ridurre riducerlo riduchino ridurli riduciate riduce ridurgli ridutte ridutto ridotti ridursi ridurrai ridurci ridotto riducano riduca riducendola riducendole riducendolo riducendo riducera riduchinsi riducono ridurla ridurle ridurlo ridurne ridurranno ridurra ridurrà ridurrebbono ridurresti ridusse ridussigli ridutta riduttigli riduttili ridutti riduttogli
 riempiere : riempiere riempier riempiessino riempieva riempino riempire
 rien : rien
 rientegri : rientegri 
@@ -5370,13 +5346,13 @@ rimeni : rimeni
 rime : rime
 rimeritare : rimeritare
 rimesta : rimesta
-rimettere : rimetteva rimessa rimetterci rimettiamo rimettendosi rimettendolo rimesso rimette rimettiate rimettercene rimettesi rimettonsi rimettere rimetterete rimetterai rimisse rimissemi rimesse rimessero rimessione rimessi rimessonsi rimessosi rimetta rimettemo rimettendocene rimettendoci rimettendoli rimettendomi rimettendo  rimettendoti rimettendovi rimettera rimetterebbono rimetteremoci rimetteremo rimetterencene rimettereno rimettergli rimetterla rimetterle rimetterli rimetterlo rimettermene rimetterne rimetterò rimetter rimettersene rimettersi rimettertene rimettervi rimettessino rimettessi rimettete rimettino rimettomene rimettomi rimettono rimetto 
+rimettere : rimettera'ti rimetteva rimessa rimetterci rimettiamo rimettendosi rimettendolo rimesso rimette rimettiate rimettercene rimettesi rimettonsi rimettere rimetterete rimetterai rimisse rimissemi rimesse rimessero rimessione rimessi rimessonsi rimessosi rimetta rimettemo rimettendocene rimettendoci rimettendoli rimettendomi rimettendo  rimettendoti rimettendovi rimettera rimetterebbono rimetteremoci rimetteremo rimetterencene rimettereno rimettergli rimetterla rimetterle rimetterli rimetterlo rimettermene rimetterne rimetterò rimetter rimettersene rimettersi rimettertene rimettervi rimettessino rimettessi rimettete rimettino rimettomene rimettomi rimettono rimetto 
 rimini : rimini rimino rimine
 rimirro : rimirro
 rimondarli : rimondarli
 rimontare : rimontare
 rimostrare : rimostrando rimostrare rimostrate rimostrorono
-rimpiastrare : rimpiastrando rimpiastrare rimpiastrata rimpiastrato rimpiastri
+rimpiastrare : rimpiastrarli rimpiastrando rimpiastrare rimpiastrata rimpiastrato rimpiastri
 rimproverato : rimproverato 
 rimuovere : rimuovere rimuovertene rimuoverli rimuoverlo rimuoversi rimuoviate rimossi rimossono rimosso
 rimurare : rimurare rimurarle rimurarlo 
@@ -5387,7 +5363,7 @@ rincepparle : rincepparle rinceppino
 rinchiudere : rinchiudere rinchiudeva rinchiuggono rinchiusi rinchiuso
 rincine : rincine rincini
 rincontrare : rincontrare rincontrarle rincontro 
-rincorare : rincorare rincora rincorarsi rincorassino rincorerebbe rincorerebbono rincoreresti rincresciuti rincresce rincrescie ricuorano
+rincorare : rincorare rincora rincorarsi rincorassino rincorerebbe rincorerebbono rincoreresti rincresciuti rincresce rincrescie ricuorano rincuorano
 rinculato : rinculato
 rinformagioni : rinformagioni
 rinforzare : rinforzare rinforza rinforzavano rinforzerai 
@@ -5397,7 +5373,6 @@ ringraziare : ringraziamento ringraziandola ringraziandole ringraziamone ringraz
 rinieri : rinieri rinier
 rinnovare : rinnovalla rinnovando rinnovare rinnovarla rinnovazione rinova
 rinscontera : rinscontera
-rinsignoriscono : rinsignoriscono
 rintenderla : rintenderla rintendiate
 rinuccini : rinuccini
 rinuccio : rinuccio
@@ -5407,13 +5382,12 @@ rinvestire : rinvestiate rinvestire rinvestirlo
 riordinare : riordinamento riordinassino riordinare riordina riordinarla riordinarli riordinarsi riordinata riordinato riordiniate riordinino
 ripae : ripae
 ripafratta : ripafratta ripefractae ripefracte libbrafatta libraffatta libbraffatta libbrafactae librafatta libbrafacta
-ripalbello : ripalbello
 ripam : ripam
 riparare : ripararci riparo ripari riparò riparare riparerà ripara ripararvi riparata riparato riparorno
-riparbello : riparbello
+riparbello : riparbello ripalbello
 ripa : ripa
 riparlare : riparlare riparlassi riparlato riparleremoci 
-ripassandovi : ripassandovi ripassato 
+ripassandovi : ripassandovi ripassato ripasseranno
 ripatriati : ripatriati
 ripenserai : ripenserai
 riperdere : riperderanno riperdere riperso
@@ -5428,7 +5402,7 @@ riporre : riponessino riponghino riporlo riporl riporne riporre riposte riposti 
 riportare : riporti riportare riporteranno riportato riportava riportarle riportarne riportarsene riportassi riportate riporterai riporterencene riportiamo
 riposare : riposandoci riposta riposo riposavamo riposato riposati riposarci riposare riposa riposarne riposarsene riposarsi riposarvi riposarvisi riposatissimo riposerai riposeremo riposereno riposiamo 
 ripregai : ripregai riprega riprego ripregò
-riprendere : riprenda riprenderà riprendere riprenderlo riprendiamo ripresano riprese ripreseno ripreso
+riprendere : ripresono riprenda riprenderà riprendere riprenderlo riprendiamo ripresano riprese  ripreseno ripreso
 ripresentarmi : ripresentarmi
 riprovedere : riprovedere riprovederle riprovisti riprovedervi riprovedessi
 riputiamo : riputiamo
@@ -5440,13 +5414,13 @@ riscaldare : riscaldando riscaldano riscaldare riscalda riscaldarli riscaldarlo 
 riscattare : riscattare riscattarsi riscatterebbe riscattino riscatto riscattò
 rischiarate : rischiarate
 rischia : rischia
-riscontrare : riscontrai riscontramo riscontrandogli riscontrandoli riscontrare riscontri riscontro riscontra riscotitori riscontrando riscontrarle riscontrarli riscontrarlo riscontrarne riscontrarno riscontrassino riscontrassi riscontrato riscontreremo riscontrerrai riscontriamo riscontrolo riscontrò 
+riscontrare : riscontrassimo riscontrai riscontramo riscontrandogli riscontrandoli riscontrare riscontri riscontro riscontra riscotitori riscontrando riscontrarle riscontrarli riscontrarlo riscontrarne riscontrarno riscontrassino riscontrassi riscontrato riscontreremo riscontrerrai riscontriamo riscontrolo riscontrò 
 riscrissi : riscrissi riscritto riscriva riscrivere riscrivervi riscriverrai riscriverrà riscriverreno riscriverrò riscrivertene riscrivervene riscriviamo riscrivino riscrivi 
 riscuotere : riscuotere riscuotino riscossa riscossi riscossono riscosso riscoterai riscoteranno riscotessino riscotessi riscotitore riscuote riscuoterle
 risecca : risecca
 riseghi : riseghi
 risentire : risenta risente risentesi risentircene risentiremo risentirvene risentirci risentissi risentire risentiti risentireti risentì risentirsi risentirtene risentita risentir risentirsene risentissene risentissino risentito risentono
-riserbare : riserbai riserbandoci riserbandomi riserbandosi riserbandoti riserbarcene riserbare riserbarlo riserbarsi riserbarvi riserbassisi riserbati riserbato riserbensi riserberai riserberà riserberemoci riserberemo riserbereno riserberete riserberò riserbiate riserbino riserbi riserbo 
+riserbare : riserbarci riserbai riserbandoci riserbandomi riserbandosi riserbandoti riserbarcene riserbare riserbarlo riserbarsi riserbarvi riserbassisi riserbati riserbato riserbensi riserberai riserberà riserberemoci riserberemo riserbereno riserberete riserberò riserbiate riserbino riserbi riserbo 
 riserrare : riserrare riserrati
 riservassi : riservassi riservato riserverebbe riserveremo riservi riservo reservarsi reservata reservato reservi reservo
 risoldare : risoldare
@@ -5465,15 +5439,15 @@ risquotere : risquotere risquoterli
 ristiarato : ristiarato
 ristio : ristio
 ristituire : ristituire ristituischino
-ristorallo : ristorallo ristorare ristorarlo ristorarsi ristorarvi ristorati ristorato  ristaurazioneristoro
-ristrengerai : ristrengerai ristrette ristrettisi ristretti ristrettola ristretto ristrettosi ristrignate ristrignessi ristrignerai ristringersi ristringa ristringere ristrignessino ristringerete ristrignere ristringerassi ristringerci ristringeretevi ristringe ristringerla ristringerle ristringermi ristringer ristringervi ristringessino ristringimenti ristringnerò ristringnimenti ristrinse
+ristorallo : ristorallo ristorare ristorarlo ristorarsi ristorarvi ristorati ristorato  ristaurazione ristoro
+ristrengerai : ristrigne ristrengerai ristrette ristrettisi ristretti ristrettola ristretto ristrettosi ristrignate ristrignessi ristrignerai ristringersi ristringa ristringere ristrignessino ristringerete ristrignere ristringerassi ristringerci ristringeretevi ristringe ristringerla ristringerle ristringermi ristringer ristringervi ristringessino ristringimenti ristringnerò ristringnimenti ristrinse
 risucitare : risucitare risucitarlo risucitato risuscitare
 risuggellata : risuggellata risuggellerete
 risultare : risultare risulta risultassino risultassi risulterà risultava risulterebbe risulti risultò
 risuona : risuona
 risurgere : risurgere risurgessero
 ritardare : ritardare ritardarti ritardassino
-ritenere : ritenuta ritenute riterranno riterra riterrete ritiene ritegno ritenello ritenendolo ritenendo ritenerlo ritenerli ritenere ritenga ritenerle ritenuto riterrai ritenuti ritenergli ritener ritenerseli ritenersi ritenessimo ritenessino ritenessi ritenesti ritenghino ritenne ritenni ritennono 
+ritenere : ritengono ritenuta ritenute riterranno riterra riterrete ritiene ritegno ritenello ritenendolo ritenendo ritenerlo ritenerli ritenere ritenga ritenerle ritenuto riterrai ritenuti ritenergli ritener ritenerseli ritenersi ritenessimo ritenessino ritenessi ritenesti ritenghino ritenne ritenni ritennono 
 ritentare : ritentare ritentarla 
 ritirare : ritirando ritirandosi ritirarci ritirati ritirare ritirarvi ritirarsi ritira ritirarle ritirarli ritirarlo ritirarsene ritirarti ritirarvene ritirassero ritirassino ritirata ritirate ritiratomi ritirato ritiratosi ritiravano ritirerai ritirerannosi ritirerete ritirino ritirinsi ritiri ritirisi ritirò ritirorno ritirorono ritirossi
 ritoccare : ritoccare ritocca ritoccommi ritoccò
@@ -5669,12 +5643,12 @@ sansoverino : sansoverino
 santiano : santiano
 santone : santone
 santoro : santoro
-santo : santità santo santa santi santis sant
+santo : santità santo santa santi santis sant san
 sanità : sanità
 sanzi : sanzi
 sanz : sanz
 saona : saona
-sapere : saprai sappi sapreno sappiamo saprà sapremo sepeno seppe seppi seppono sappiasi sappiendolo sappiendosi sappino sapppiamo saprei sapresti saprieno saprò saputa saputi saputo sapranno sapete sapea sapemo sapendolo sapendone sapendo saperla saperle saperlo  saperrebbe saper sapersi sapessino sapevamo sapevano sapevi sapevono sapiendo sapavamo sappiate saprete sanno saputosi sapessi sappia sapiamo saprebbe saperne sapeva sappiendo sapevo sapere
+sapere : sa sai saprai sappi sapreno sappiamo saprà sapremo sepeno seppe seppi seppono sappiasi sappiendolo sappiendosi sappino sapppiamo saprei sapresti saprieno saprò saputa saputi saputo sapranno sapete sapea sapemo sapendolo sapendone sapendo saperla saperle saperlo  saperrebbe saper sapersi sapessino sapevamo sapevano sapevi sapevono sapiendo sapavamo sappiate saprete sanno saputosi sapessi sappia sapiamo saprebbe saperne sapeva sappiendo sapevo sapere so
 sapiente : sapiente sapientissimo sapientissime sapienza sapienzia
 sapolcro : sapolcro
 saracinesca : saracinesca saracinetto
@@ -5695,7 +5669,7 @@ savelle : savelle
 savellesche : savellesche savellesco
 savelli : savelli savello savell savelle
 savignone : savignone
-savino : savino sansovino
+savino : savino sansovino sovini
 savi : savio saviamente savi savità savie
 savoia : savoia
 savona : savona savonese
@@ -5732,6 +5706,7 @@ scandigliare : scandigliare
 scapitati : scapitati
 scapoli : scapoli scapolo
 scappati : scappati scappato scapporno
+scarabatta : scarabatta
 scaramella : scaramella
 scaramucce : scaramuccia scaramucce scaramucciare
 scarfi : scarfi
@@ -5760,7 +5735,7 @@ scherniti : scherniti
 schifo : schifo
 sciamanna : sciamanna
 sciarpelloni : sciarpelloni
-scientia : scientia scienzia scienzie
+scientia : scientia scienzia scienzie cienza
 scierre : scierre
 sciorre : sciolti sciolto sciorre
 scipione : scipione scipioni
@@ -5796,7 +5771,7 @@ scorta : scorta scorte
 scorticate : scorticate scorticati
 scostare : scossa scostare
 scramare : scramare
-scrivere : scriverreno scrivervi scrivemoti scriverrai scriverci scriviamo scriverranno scrivervelo scripse scritta scrivendovi scritte scriviamone scritti scrittone scritto scrive scrivertene scriverlo scriverli scriverne scrivevi scriverle scriverrete scrivo scriverla scriverrò scrissono scrivevono scrittura scrivemmo scriverrei scritteci scriverti scriverrà scritteti scrittati scrittaci scrivessimo scriverebbe scrivemmovene scrivendoci scrissi scriverrebbono scrivono scrivi scrivesti scrisse scriverrebbe scriveva scriva scrivere scrivessi scritture scriverretene scrivendo scriverremo scrivemo scrittavi scrivetelo scrivete scriptis scripto scrisseci scrissemi scrisseno scrissero scrissesegli scrissesi scrissetisi scrissivi scrissse scrittevi scrittiti scrittoci scrittogli scrittoli scrittoti scrittovi scrittum scrivano scrivavamo scriveci scrivemmoti scrivemogli scrivemone scrivemovi scrivendoli scrivendomi scrivendosi scrivendoti scrivene scriveno scriverai scriveranno scriverà scrivercelo scrivercene scriverei scriveremo scrivergli scrivermi scriverò scriverra scriverrassi scriverremoti scriverrenne scriverrollo scriver scriversi scrivertelo scrivesi scrivessero scrivessine scrivessino scrivetevi scrivetisi scrivevagli scrivevano scrivevo scriviamogli scriviamoli scriviamotene scriviamoti scriviate scrivici scrivila scrivilo scrivino scrivole scrivolo scrivonci scrivonmi scrivon
+scrivere : scriverreno scrivervi scrivemoti scriverrai scriverci scriviamo scriverranno scrivervelo scripse scritta scrivendovi scritte scriviamone scritti scrittone scritto scrive scrivertene scriverlo scriverli scriverne scrivevi scriverle scriverrete scrivo scriverla scriverrò scrissono scrivevono scrittura scrivemmo scriverrei scritteci scriverti scriverrà scritteti scrittati scrittaci scrivessimo scriverebbe scrivemmovene scrivendoci scrissi scriverrebbono scrivono scrivi scrivesti scrisse scriverrebbe scriveva scriva scrivere scrivessi scritture scriverretene scrivendo scriverremo scrivemo scrittavi scrivetelo scrivete scriptis scripto scrisseci scrissemi scrisseno scrissero scrissesegli scrissesi scrissetisi scrissivi scrissse scrittevi scrittiti scrittoci scrittogli scrittoli scrittoti scrittovi scrittum scrivano scrivavamo scriveci scrivemmoti scrivemogli scrivemone scrivemovi scrivendoli scrivendomi scrivendosi scrivendoti scrivene scriveno scriverai scriveranno scriverà scrivercelo scrivercene scriverei scriveremo scrivergli scrivermi scriverò scriverra scriverrassi scriverremoti scriverrenne scriverrollo scriver scriversi scrivertelo scrivesi scrivessero scrivessine scrivessino scrivetevi scrivetisi scrivevagli scrivevano scrivevo scriviamogli scriviamoli scriviamotene scriviamoti scriviate scrivici scrivila scrivilo scrivino scrivole scrivolo scrivonci scrivonmi scrivon scriverra'ci
 scrucciati : scruciati scrucciati
 scrupulo : scrupulo
 scrutare : scrutare 
@@ -5806,7 +5781,7 @@ scudi : scudi scudo
 scultore : scultore
 scuola : scuola
 scurcigliati : scurcigliato scurcilliati scurcigliati
-scusare : escusare escusando escusarci escusabile escusassi escusi escusarsi escusorono escuserà escusera escusiamo escusar escusa escusarlo escusandosi escusarsene escusarle escusai escusò escusarla escusati escusato escusazione escusazioni escuserai escuseranno escusiate scusabile scusai scusarcene scusarlo scusarmi scusarne scusarti scusarvi scusamo scuserai scusa scusarsi scusandosi scusi scusato scusiamo scusarla scusassi scusati scusava scusavono scuseranno scusera scuse scusino scuso
+scusare : escusamo escusiamocene escusare escusando escusarci escusabile escusassi escusi escusarsi escusorono escuserà escusera escusiamo escusar escusa escusarlo escusandosi escusarsene escusarle escusai escusò escusarla escusati escusato escusazione escusazioni escuserai escuseranno escusiate scusabile scusai scusarcene scusarlo scusarmi scusarne scusarti scusarvi scusamo scuserai scusa scusarsi scusandosi scusi scusato scusiamo scusarla scusassi scusati scusava scusavono scuseranno scusera scuse scusino scuso
 sdegnare : sdegnano sdegnata sdegnare sdegno sdegnate sdegnato sdegni sdegnò 
 sdimenticare : sdimenticare sdimenticarla sdimenticato sdimenticono
 sdrucciolare : sdrucciolare sdruccioli
@@ -5849,7 +5824,7 @@ sementa : sementa
 semenza : semenza
 seme : seme
 semila : semila
-seminare : seminare semina seminassino seminate seminati seminatore seminato seminatovi seminino 
+seminare : seminare semina seminassino seminate seminati seminatore seminato seminatovi seminino semineranno
 semota : semota
 semplice : semplicemente semplici semplice semplicità
 sempre : sempre semper
@@ -5867,7 +5842,7 @@ senza : sanza senza
 separarci : separarci separarla separati separatosi separazione 
 sepolcri : sepolcri sepolcro sepulchri sepulcri sepulcro
 seppia : seppia
-seppur : seppur
+seppur : seppur sepur
 septembris : septembris settembre
 septem : septem septima
 sequente : sequente
@@ -5909,7 +5884,7 @@ serventi : serventi
 serverai : serverai
 serviendum : serviendum
 servigiale : servigiale servigio
-servire : servendoci serviamo servono serviva servivono servirai serviranno servira serviravvi serví servisserlo servissimo servissono servitole servircene serviresti servirete servirla servirlo servirnelo servirne serviron servir servirtene servirti servirvene servendolo servidore servendo servidori servino servirsene servite servire servigi serviate servito servirci serviti servitor servirà servirvi servita servirommi serverete servissino servirsi servitores servissi servirebbe servì servendosi servendotene servendoti servendovi
+servire : servendoci serviamo servono serviva servivono servirai serviranno servira serviravvi serví servisserlo servissimo servissono servitole servircene serviresti servirete servirla servirlo servirnelo servirne serviron servir servirtene servirti servirvene servendolo servidore servendo servidori servino servirsene servite servire servigi serviate servito servirci serviti servitor servirà servirvi servita servirommi serverete servissino servirsi servitores servissi servirebbe servì servendosi servendotene servendoti servendovi servirà'tene
 servi : servi servo serve servus
 servitore : servitore servitori
 servitú : servitú servitù
@@ -5957,7 +5932,7 @@ sienvi : sienvi
 sieve : sieve
 sigillato : sigillato sigillavit sigilli sigillo
 signa : signa
-significare : significata significamo significate significane significherete significano significato significarlo significhi significhiamoti significare signifcarvi significhiamo significarli significhiano significando significarle significhai significavaci significandoti significheretegli significarvi significavate significa significherai significativa significhereno significandovi significai significante significheremovi significativi significarti significavogli significandole significavano significanteci significandoli significava significassi significandogli significamoti significamus significandoci significandomi significarai significarci significaretur significasti significative significativo significavamo significavi significavono significazione significheralli significhera significherà significherebbe significheremo significherenti significherò significhiamotelo significhiamovi significhianvi significhiate significhino significolo significommi significono significorno significorono significo significò 
+significare : significata significamo significate significane significherete significano significato significarlo significhi significhiamoti significare signifcarvi significhiamo significarli significhiano significando significarle significhai significavaci significandoti significheretegli significarvi significavate significa significherai significativa significhereno significandovi significai significante significheremovi significativi significarti significavogli significandole significavano significanteci significandoli significava significassi significandogli significamoti significamus significandoci significandomi significarai significarci significaretur significasti significative significativo significavamo significavi significavono significazione significheralli significhera significherà significherebbe significheremo significherenti significherò significhiamotelo significhiamovi significhianvi significhiate significhino significolo significommi significono significorno significorono significo significò significhera'liene
 signioria : signoria signioria signoriae signorie signiorie signiori
 signonno : signonno
 signoriotti : signoriotti signorotti signorotto
@@ -5970,7 +5945,7 @@ silvio : silvio
 simigliante : simigliante similitudine
 simile : simile simil similiter similemente simili similmente
 simoncino : simoncino
-simone : simone
+simone : simone simonis
 simonetta : simonetta
 simonetto : simonetto
 simoni : simoni
@@ -6025,7 +6000,6 @@ soggiugnere : soggiugnemo soggiugnendo soggiunsono soggiunsi soggiunse soggiugne
 sogliano : sogliano soglion soglio sogli sogliono
 sognamo : sognamo sognando sogna sognassi sogni
 soiana : soiana soiano
-sola : solamente sola
 soldare : soldamo soldano soldarai soldare soldino soldassi soldarli solda soldassino soldata soldate soldavi solderà soldorno
 soldati : soldati soldato
 soldi : soldi
@@ -6041,17 +6015,17 @@ soli : soli
 solitario : solitario
 solita : solita solito solite soliti
 solleci : solleci
-sollecitare : sollecitai sollecitalo sollecitamente sollecitamo sollecitandogli sollecitandola sollecitandoli sollecitandolo sollecitandomi sollecitando sollecitandoti sollecitarai sollecitarla sollecitarlo sollecitar sollecitarti solleciteretelli sollicitava sollecitassino sollecitano sollecitudine sollicitato solleciterete sollecitera solleciterà sollecitata sollecitate sollecitiate sollecitati sollicitare sollicitudine sollecitato sollecitarle sollecitereno sollecita solleciteremo sollecitarli solleciterai sollecitassi solleciti sollecitare sollecito sollecitarvi sollecitatelo sollecitatenelo sollecitatigli sollecitatolo sollecitatori sollecitava sollecitavono solleciterebbe solleciterello sollecitiamo sollecitiamoti sollecitiano sollecitianti sollecitino sollecitono sollecitonsi sollecitorno sollecitò sollecitu sollicitarci sollicitarne sollicita sollicitata solliciterai solliciterà sollicitiamo solliciti
+sollecitare : sollecitai sollecitalo sollecitamente sollecitamo sollecitandogli sollecitandola sollecitandoli sollecitandolo sollecitandomi sollecitando sollecitandoti sollecitarai sollecitarla sollecitarlo sollecitar sollecitarti solleciteretelli sollicitava sollecitassino sollecitano sollecitudine sollicitato solleciterete sollecitera solleciterà sollecitata sollecitate sollecitiate sollecitati sollicitare sollicitudine sollecitato sollecitarle sollecitereno sollecita solleciteremo sollecitarli solleciterai sollecitassi solleciti sollecitare sollecito sollecitarvi sollecitatelo sollecitatenelo sollecitatigli sollecitatolo sollecitatori sollecitava sollecitavono solleciterebbe solleciterello sollecitiamo sollecitiamoti sollecitiano sollecitianti sollecitino sollecitono sollecitonsi sollecitorno sollecitò sollecitu sollicitarci sollicitarne sollicita sollicitata solliciterai solliciterà sollicitiamo solliciti sollecitera'lli sollecitera'lo
 sollevare : sollevamento sollevate sollevare solleverebbe sollevato sollevati sullevando sullevato
 solor : solor
-solo : solo solum
+solo : solo solum solamente sola sol
 solutionis : solutionis
 solvantur : solvantur
 solvatur : solvatur
 solvendorum : solvendorum
-solventur : solventur
+solventur : solventur solverentur
 solvere : solvere
-solvi : solvi
+solvi : solvi solve
 soma : soma some
 somigliare : somigliare somiglia somigliono
 sommano : sommano
@@ -6066,7 +6040,7 @@ sonno : sonno
 sonò : sonò
 sopirà : sopirà sopirle sopisca sopita 
 sopperire : sopperirà sopperireno sopperisca sopperire sopperirò sopperissino sopperito
-sopportare : sopportabile sopportabili sopportagli sopportandolo sopportando sopportazione sopportate sopportato sopportavono sopportare sopportiate sopporteranno sopportassi sopportati sopportarla sopportarlo sopportarne sopportar sopporta sopportassino sopportera sopporterebbe sopporteremo sopportino sopporti sopportono 
+sopportare : sopportera'li sopportabile sopportabili sopportagli sopportandolo sopportando sopportazione sopportate sopportato sopportavono sopportare sopportiate sopporteranno sopportassi sopportati sopportarla sopportarlo sopportarne sopportar sopporta sopportassino sopportera sopporterebbe sopporteremo sopportino sopporti sopportono 
 sopracarico : sopracarico sopraccarico
 sopraccollo : sopraccollo
 sopracollo : sopracollo
@@ -6091,7 +6065,7 @@ sopravolte : sopravolte
 sopravvenire : sopravveniva sopravvenga sopravvenuta sopravvenuto sopravvenendo sopravenuta sopravvenire sopravvenne sopravvenute
 sopravveste : sopravveste
 sopricazione : sopricazione
-sopr : sopr sopra
+sopr : sopr sopra sopr'a
 sorano : sorano
 sordi : sordi sordo
 sorella : sorella
@@ -6107,7 +6081,7 @@ sospettare : sospettano sospizione sospizioni sospettare sospettarne sospetta so
 sospiro : sospiro
 sosprastare : sosprastare
 sostanza : sostanza
-sostenere : sostenere sostenuta sostenga sostenerlo sostenuto sostenerla sostengono sostenuti sosterrai 
+sostenere : sustenere sostenere sostenuta sostenga sostenerlo sostenuto sostenerla sostengono sostenuti sosterrai 
 sostentare : sostentare sostenterai 
 sostituirà : sostituirà
 sotterrare : sotterrare
@@ -6124,7 +6098,7 @@ sovino : sovino
 sovoniani : sovoniani
 sovrana : sovrana
 sovrascritto : sovrascritto
-sovvenire : sovvenga sovvenire sovvenuti sovvenuto
+sovvenire : sovvenga sovvenire sovvenuti sovvenuto sovviene
 spacciare : spaccera spaccerà spaccerebbono spaccerei spaccerò spacciai spacciamo spacciarci spacceremo spacci spacciare spaccio spaccia spacciassi spacciarsi spacciarle spacciate spaccereno spacciato spacciando spacciarla : spacciarono spacciassino spacciata spacciati spaccino spacciono spacciorno spacciò
 spada : spada
 spagna : spagna spagnolo spagnoli spagnuolo spagnuoli spagnola spagnole ispagna ispagniuoli ispagnolo ispagnoli
@@ -6249,7 +6223,7 @@ stanziale : stanziale stanziali
 stanziamenti : stanziamenti stanziamento
 stanziare : stanziano stanziamo stanziare stanziato stanziorno stanziata
 stanzia : stanzia stanzie
-stare : standomi standone stesseno stessero standovi stettevi stetti stettonvi stiacci stiamone stiano stiàno stavamo stavavi stavo stativi statogli statovi stannone stannosi stano starai starassi starcene starci starebbesi starebbe starebbono staremo stieno stessi stanno standosi starvi stavano stettono stessisi stette stare starà stava stessino stareno stiamo stia starete starsi starò stando staranno stiate stavono staresti staretevi staria starmi starne starommi starsene star starvene stassi state stata statevi istar istanzia istare istanza istando
+stare : standomi standone stesseno stessero standovi stettevi stetti stettonvi stiacci stiamone stiano stiàno stavamo stavavi stavo stativi statogli statovi stannone stannosi stano starai starassi starcene starci starebbesi starebbe starebbono staremo stieno stessi stanno standosi starvi stavano stettono stessisi stette stare starà stava stessino stareno stiamo stia starete starsi starò stando staranno stiate stavono staresti staretevi staria starmi starne starommi starsene star starvene stassi state stata statevi istar istanzia istare istanza istando sta' sto
 statico : statichi statico
 stato : stato stati
 statum : statum
@@ -6335,7 +6309,7 @@ strumenti : strumenti strumento
 struzione : struzione struzioni
 studenti : studenti
 studi : studino studi studio studiosi
-stufa : stufae stufa stufe  stupha
+stufa : stufae stufa stufe  stupha stuphae
 stultizia : stultizia
 stupefatto : stupefatto
 stupha : stupha
@@ -6464,9 +6438,7 @@ tallarù : tallarù
 talmente : talmente
 taluccio : taluccio
 talvolta : talvolta
-tamburacci : tamburacci
-tamburati : tamburati tamburato tamburino 
-tamburi : tamburi tamburo
+tamburi : tamburi tamburo tamburario tamburati tamburato tamburino tamburacci tamburis
 tamen : tamen
 tamquam : tamquam
 tanagli : tanagli
@@ -6527,7 +6499,7 @@ temporibus : temporibus
 tenacità : tenacità
 tendere : tenderai tendere  tende tendevono tendiamo tendono
 tenelle : tenelle
-tenere : tenendoci terrei terremmo terremo tenutone tenutovi tenendogli tenervele tenervelo tenesse tenessile tenessimo tenessin tenendole tenendolo tenendosi tenercene tenerci tenere tenergli tenerle tenermi tenertene terrebbe tien tenerli tenendoti tenghino tener terrà tenessi tenne tenendo tenessino tenutoci tenervi tenga terranno tiene tenuti terrebbono tenuto tengono tenersi tenute tenghinne tenerlo terrai tennono tenevi terrete teniamo tenerne tenete tenerla tenuta tenetene tenetevi tenevalo  tenevano teneva tenevono tengali tengane tengano tenghi tengonsi tengo teniànci teniate tegnamo tegnano tegniamo tegnate tegniate 
+tenere : tenendoci terrei terremmo terremo tenutone tenutovi tenendogli tenervele tenervelo tenesse tenessile tenessimo tenessin tenendole tenendolo tenendosi tenercene tenerci tenere tenergli tenerle tenermi tenertene terrebbe tien tenerli tenendoti tenghino tener terrà tenessi tenne tenendo tenessino tenutoci tenervi tenga terranno tiene tenuti terrebbono tenuto tengono tenersi tenute tenghinne tenerlo terrai tennono tenevi terrete teniamo tenerne tenete tenerla tenuta tenetene tenetevi tenevalo  tenevano teneva tenevono tengali tengane tengano tenghi tengonsi tengo teniànci teniate tegnamo tegnano tegniamo tegnate tegniate terra'gli terra'lo 
 teneri : teneri
 tenero : tenero
 tene : tene
@@ -6544,7 +6516,7 @@ terram : terram
 terranuova : terranuova
 terrapieno : terrapieno
 terras : terras
-terra : terre terra
+terra : terre terra terricciole
 terrati : terrati
 terrazani : terrazani
 terreni : terreni terreno
@@ -6603,7 +6575,7 @@ toccare : tocassi toccandone toccano toccante toccassi toccare tocca toccai tocc
 toccio : toccio
 todi : todi
 tofano : tofano
-togliersi : togliamo togliendo tolte tolgasi tolse tolsogli toltine toltogli toltoli toltone tolghinli tolghino tolghinsi tolgono toliendolo toglievono torla tolsono torrai torvi torci tolto tolga tolti torlo tôrli togliersi togliessi tolta togliessino togliesti toglietene togliete toglie toglieva  torgliene torgli tôrgli torle torli tòrli tòrlo torralla torrallo torrannolo torranno torra torrà torrebbe torremo torresti torre tòrre tôrre  tòrvi tórne
+togliersi : tor togliamo togliendo tolte tolgasi tolse tolsogli toltine toltogli toltoli toltone tolghinli tolghino tolghinsi tolgono toliendolo toglievono torla tolsono torrai torvi torci tolto tolga tolti torlo tôrli togliersi togliessi tolta togliessino togliesti toglietene togliete toglie toglieva  torgliene torgli tôrgli torle torli tòrli tòrlo torralla torrallo torrannolo torranno torra torrà torrebbe torremo torresti torre tòrre tôrre  tòrvi tórne tòr tôr
 tolerabile : tolerabile tolerabili tollerabile
 toli : toli
 tòllo : tòllo
@@ -6632,7 +6604,7 @@ torcifede : torcifede
 toregli : toregli
 torello : torello torelli
 tormento : tormento
-tornare : tornino tornai tornerai torni tornono tornonsi tornorno tornorono torno tornò torniate torneranno tornerà tornerebbero tornerebbe tornerebbono torneremo tornerieno tornerommene tornerò tornandosene tornandotene tornando tornano tornarcene tornarci tornarmene tornarsene tornarsi tornartene tornar tornarvi tornasse tornassino tornassi tornata tornate tornatisene tornatisi tornati torna tornatosene tornato tornavano tornavasene tornava tornavono 
+tornare : tornino tornai tornerai torni tornono tornonsi tornorno tornorono torno tornò torniate torneranno tornerà tornerebbero tornerebbe tornerebbono torneremo tornerieno tornerommene tornerò tornandosene tornandotene tornando tornano tornarcene tornarci tornarmene tornarsene tornarsi tornartene tornar tornarvi tornasse tornassino tornassi tornata tornate tornatisene tornatisi tornati torna tornatosene tornato tornavano tornavasene tornava tornavono tornerommi 
 tornelo : tornelo
 tornese : tornese
 torniaio : torniaio
@@ -6679,7 +6651,7 @@ tramontana : tramontana tramontane
 tramutare : tramutare tramutarli
 tranquilità : tranquilità
 transcorrere : transcorrere transcorso
-transcrivere : transcritto transcrivere
+transcrivere : transcritto transcrivere transcritta
 transeuntem : transeuntem
 transferire : transferica transferirai transferirebbe transferirebbonlo transferirete transferirsi transferisca transferi transferì transferisci transferirò transferito transferirlo transferiti transferirno transferischino transferitosi transferire transferiate transferirà transferitoti transferissino transferirti transferissi transferimo transferitomi transferisse transferirvisi transferirvi transferiscono transferisco transferita
 transgressione : transgressione transgresso transgressore
@@ -6695,12 +6667,12 @@ traportare : traportare
 trario : trario
 trarre : trarci trargli trarla trarle trarlo trarnelo trarrai trarranno trarrà trarreno trassesi trassine trassi trarre traessi traghinsi trarne traeva tratta trasse trassono trarli tratte trarrebbe traga tragga trarremo trarliene trarrò trarsi trar
 trascorsi : trascorsi
-trasferire : trasferii trasferimo trasferirai trasferiranno trasferirà trasferire trasferirsi trasferisca trasferito trasferi
+trasferire : transferi' transferi'mmi trasferii trasferimo trasferirai trasferiranno trasferirà trasferire trasferirsi trasferisca trasferito trasferi
 trastullando : trastullando trastullarlo
 trattare : trattandogli trattabile trattandosi trattando trattano trattassino trattamenti trattarono trattate trattata tratterai trattasi trattare trattati trattavono trattarvi trattarle trattato trattarla trattiate trattarlo trattava trattarli trattarsi trattavano trattasse tratterete trattassi trattar trattamento
 trattenere : trattisi trattone trattenuto trattono trattenuti trattino tratterrai tratterebbono trattenga tratterebbe tratterannogli tratto tratterà trattoli tratti trattenere
 tratt : tratt
-travagliare : travaglia travagliato travagli travagliono travagliarete travaglino travagliassi travaliato travaglio travagliava travaglionsi travaglierà travagliare travagliando travagliar travagliarsi travagliati travagliamenti travalli
+travagliare : travàglino travaglia travagliato travagli travagliono travagliarete travaglino travagliassi travaliato travaglio travagliava travaglionsi travaglierà travagliare travagliando travagliar travagliarsi travagliati travagliamenti travalli
 traversare : traversare traversi traverso
 travestito : travestito
 trave : trave
@@ -6766,8 +6738,7 @@ uccidere : uccisione uccidere ucciditori
 uccio : uccio
 udente : udente
 udienza : udienza
-udire : udirai udireno udissino udiate udirli udita udissono udiranno udite udire uditi udivono udiva udimo udivo udirle udirmi udissi udirlo udito udimmi udendo udivano
-uesto : uesto
+udire : udí udì udirai udireno udissino udiate udirli udita udissono udiranno udite udire uditi udivono udiva udimo udivo udirle udirmi udissi udirlo udito udimmi udendo udivano odo
 ufficiale : uficiale ufficiali uficiali ufficiale
 uffida : uffida
 uffizio : uffizio uffici ufitio uficio ufficio uffizi
@@ -6803,7 +6774,7 @@ unire : uniti unissi unione unisce unirli unendo unita unirle unite unirti uniti
 unius : unius unum
 universale : universalità universale universalmente universali universal universis
 unzione : unzione
-uomo : uomini uomo huomini hominibus homini omini huomo
+uomo : uomini uomo huomini hominibus homini omini huomo uom omo
 uova : uovo uova
 uranges : uranges
 urbe : urbe
@@ -6813,9 +6784,9 @@ urgente : urgessino urgessi urgentissimo urgenti urgente
 urie : urie
 urtare : urtorno urtare
 usanze : usanze
-usare : userete usarla usatasi usaci usorno usereteci usavano usarle useranno usasse usarlo userai usassi usando usarli usassero usandogli usandoci usono userebbe usereno usava usate userocci usata usandovi usato usati usarne usai userò usassino usare usarvi usarai usasti usatevi usino usassisi userà usera usanza usar userebbeno useremo usano usatolo useròla userei usabile usiate usarci usiamo usitate usitati usitato usatemi
+usare : usa use usi uso usò userete usarla usatasi usaci usorno usereteci usavano usarle useranno usasse usarlo userai usassi usando usarli usassero usandogli usandoci usono userebbe usereno usava usate userocci usata usandovi usato usati usarne usai userò usassino usare usarvi usarai usasti usatevi usino usassisi userà usera usanza usar userebbeno useremo usano usatolo useròla userei usabile usiate usarci usiamo usitate usitati usitato usatemi
 uscio : uscio
-uscir : esca esce eschino esci escono usciva uscimo uscìgli uscito uscirono usciti uscire uscendo uscirà uscivano uscí uscì uscir usciranno uscirebbono uscirebbe uscirsi uscissimo uscirno uscirne uscendosene uscirsene uscivono uscissino uscissi uscirete uscite uscita usci
+uscir : n'eschino esca esce eschino esci escono usciva uscimo uscìgli uscito uscirono usciti uscire uscendo uscirà uscivano uscí uscì uscir usciranno uscirebbono uscirebbe uscirsi uscissimo uscirno uscirne uscendosene uscirsene uscivono uscissino uscissi uscirete uscite uscita usci
 usitata : usitata
 uspurgh : uspurgh
 usque : usque
@@ -6838,6 +6809,7 @@ vadinne : vadinne
 vagliamo : vagliamo vagliate vaglino vaglia vagliono vagliano
 vaglio : vaglio
 vaiano : vaiano vaini
+val : val
 valbona : valbona
 valdambra : valdambra
 valdarno : valdarno
@@ -6850,7 +6822,7 @@ valentino : valentinensem valentinensi valentini valentino valentinium valentine
 valenza : valenza
 valenzia : valenzia
 valenzio : valenzio
-valere : valervene valeant vallesi valeat valermi varrai valerci valete valendosi valeva valiate valendoti valentissimo varretevene varrà valendovi valitudine varra varrete varrebbe valsono valuta valervi valendo valse valga valerti valertene valenti valendocene valersi vale varreno varretevi vattene valerà valersene valermene valessi valiamo valessino valercene valsi
+valere : valervene valeant vallesi valeat valermi varrai valerci valete valendosi valeva valiate valendoti valentissimo varretevene varrà valendovi valitudine varra varrete varra'ti varrebbe valsono valuta valervi valendo valse valga valerti valertene valenti valendocene valersi vale varreno varretevi vattene valerà valersene valermene valessi valiamo valessino valercene valsi
 valiano : valiano
 valerio : valerio
 valiana : valianesi valiana valiani valianese
@@ -6869,7 +6841,7 @@ valtortosi : valtortosi
 valutare : valutare valuti valutando valuto valutato valutono
 vana : vana vani vane vano
 vangassino : vanghe vangatori vangassino
-vangelista : vangelista vangelo
+vangelista : vangelista vangelo vangeliste
 vannino : vannino
 vanni : vanni
 vantaggiare : vantacciata vantaggiarla vantaggiare vantaggio
@@ -6882,7 +6854,7 @@ vasto : vasto
 vauri : vauri
 vecchi : vecchio vecchie vecchietti vecchia vecchi vechierai
 vectoriis : vectorius vectoris vectoriis vectori
-vedere : vedette vista visto visti viste vedendolo vedevamo vedendola vedeno viddemi vedere vedereno vedremo vedessino vedergli vedeva videlicet vidde vedesse vedresti viddi vedrai veggono veggon vedavamo vide vederla vederle vedren vedrebbe vederlo viddono vedutili vedra vedevano vederanno vedo vederli vedete vederti vedessimo vedrassi vedendo vedono vedevi vega vedesti vedevo vederveli viddeci vedendone veda vedrete vedasi vederà vederci vedendosi vedranno vedersi vediamo vedendoci vede viddesi vedutogli vedutolo vederne vedutole vedi vedessi vidono vedrà vedrebbero veggonvi vegga vedesi vidi vederemo vedrò veder vedreno vegghi vedevono vedutola vedrebbono vedutone vedendovi vediamoci vedeci vedutomi vedute veduta vediate veggo veduto vedervi veduti
+vedere : vedette vista visto visti viste vedendolo vedevamo vedendola vedeno viddemi vedere vedereno vedremo vedessino vedergli vedeva videlicet vidde vedesse vedresti viddi vedrai veggono veggon vedavamo vide vederla vederle vedren vedrebbe vederlo viddono vedutili vedra vedevano vederanno vedo vederli vedete vederti vedessimo vedrassi vedendo vedono vedevi vega vedesti vedevo vederveli viddeci vedendone veda vedrete vedasi vederà vederci vedendosi vedranno vedersi vediamo vedendoci vede viddesi vedutogli vedutolo vederne vedutole vedi vedessi vidono vedrà vedrebbero veggonvi vegga vedesi vidi vederemo vedrò veder vedreno vegghi vedevono vedutola vedrebbono vedutone vedendovi vediamoci vederassi ver ver' vedeci vedutomi vedute veduta vediate veggo veduto vedervi veduti
 veghiare : veggendoli vegiate veghiare veggendosi veggendone veggendola veggia vegghiarle veggendole vegghiarla veghiano veggiamo veghia veggonsi veghierai veghiate veggiendoti veghiarlo vegghiassi vegghiamo veghiassi veggiendo vegliare veghiarle veghino veghiamo veggendolo  veggiendoli vegghiando vegghiono veghiava vegghino veghi veggiate veggiamoli veggiàno vegghiare veghiando veggendoci  veggendo
 velame : velame velami
 velare : velare
@@ -6939,8 +6911,7 @@ verona : veronese veronae veronesi verona
 verrazano : verrazzano verrazano
 verruca : verruche verruca  veruca 
 verrucola : verrucula verrucola verucola
-versa : versa
-versi : versi
+versa : versa versi versino
 verso : verso
 verun : verun veruna veruno
 vescovado : vescovi vescovado vescovo
@@ -7011,7 +6982,7 @@ visitare : visitare visitarlo visitasse visitato visitazione visiterai visitiate
 viso : viso
 visterino : visterino
 vitae : vitae vita
-vitelli :vitella vitellesche vitellesca vitelleschi vitelle vitellio vitello
+vitelli :vitella vitellesche vitellesca vitelleschi vitelle vitellio vitello vitegli
 vitellezzo : vitellezzo vitellozzo
 viterbo : viterbo
 vittoria : vittorioso vittoriosa vittoriosi vittoriosissima vittoria vittoriosamente vittorie
@@ -7021,7 +6992,7 @@ vittuaglie : vittuaglie vittuallie
 vituperata : vituperosamente vituperosa vituperato vituperio vituperata vituperosissima vituperoso
 vivacità : vivacità
 vivaio : vivaio
-vivere : vivendo vivono vivessino viverete vivino vivamente vivissimo vivo viver viveri viveremo viva vivereno vivissimi viveva vissuto vivi vivan viviamo vivessi viviate viventi vivente vive vivere
+vivere : vivissime vivendo vivono vivessino viverete vivino vivamente vivissimo vivo viver viveri viveremo viva vivereno vivissimi viveva vissuto vivi vivan viviamo vivessi viviate viventi vivente vive vivere
 vobis : vobis
 vocabolo : vocabolo
 vocato : vocato
@@ -7029,7 +7000,7 @@ voce : vocis vocifera voce voci
 vogognano : vogognano
 volare : volando volano volare volassino volavamo volasse volato volo
 volenteroso : volentiere volentieri volenteroso
-volere : vole vorrà volessi vorrebbe volesse volemo volli volendola volersene voglion vorrebbonsi volevano vuole voglia vorremmo vollino vorrebbon volerlo volle volerli voglio voglionsi vogliàno vorrebbesi vollono voliate voremo voléno volerti voluerint volendovi volergli volendone volevo vuol vuogli voliamotelo volendolo vuolsi voglioloso volertene volen volendoci vorremo vuoi volevamo vorrieno voglie volea vuoglia volesti vorrei vuolvisi voliàno voler volia vorrai vogliate volevi volliono vorre voleva volessimo volino volendogli volevono volere vogliam vorno volieno volendoli volete volendole volevon vuolle volendo volessin voluto volutola vogliano vorrete volersi voluti volendosi voliamo volute volendogliene volèno voluta volerle vorrebbono voliono volervi voleno voliamotene vorrebbonne voglino vuoledi volerla vogliàn volerne vogliono vorresti vorreno voluerunt volendosene voliano volermi volerci vogli volessino vogliene vorranno vogliamo volessero voliatele
+volere : vorre' vole vorrà volessi vorrebbe volesse volemo volli volendola volersene voglion vorrebbonsi volevano vuole voglia vorremmo vollino vorrebbon volerlo volle volerli voglio voglionsi vogliàno vorrebbesi vollono voliate voremo voléno volerti voluerint volendovi volergli volendone volevo vuol vuogli voliamotelo volendolo vuolsi voglioloso volertene volen volendoci vorremo vuoi volevamo vorrieno voglie volea vuoglia volesti vorrei vuolvisi voliàno voler volia vorrai vogliate volevi volliono vorre voleva volessimo volino volendogli volevono volere vogliam vorno volieno volendoli volete volendole volevon vuolle volendo volessin voluto volutola vogliano vorrete volersi voluti volendosi voliamo volute volendogliene volèno voluta volerle vorrebbono voliono volervi voleno voliamotene vorrebbonne voglino vuoledi volerla vogliàn volerne vogliono vorresti vorreno voluerunt volendosene voliano volermi volerci vogli volessino vogliene vorranno vogliamo volessero voliatele
 volfgango : volfgango
 volgare : volgare vulgare vulgo vulgarmente
 volgendosi : volgersi volgerebbono volsono volgerai volgerete volgerebbe volse volgendosi volgerlo volgerli volgerà volgeva volgevono volgono volgessino volgere volgendo volgendoci volgessi volsesi volge volgerci volga volsuto
@@ -7060,6 +7031,7 @@ zeno : zeno
 zente : zente
 zerino : zerino
 zinzania : zinzania
+zio : zio
 zione : zione
 zitolo : zitolo
 zodi : zodi
@@ -7068,7 +7040,83 @@ zucaro : zucaro
 zucca : zucca
 zuffa : zuffa zuffe
 zugo : zugo
-si : mi ti ci si s' c' t'
+si : mi ti ci si s' c' t' vi
 di : del dello dell' delle degli delli della d'
-nello : nelle nelle negli nell'
-il : lo la le gli i l'un uno un'
+nello : in nelle nelle negli nell' nei nel nell nella nelli ne'
+ne : ne
+né : né
+no : no no'
+il : lo la le gli i l'un uno un' una i e' gli gl' 'l li ei el ell
+giù : giu giu giú
+mio : mia mie miei
+vostra : vostre vostri vostro vostro'
+sul : sui sull sulle sullo
+tua : tue tuo tuoi
+quello : que' quegli quei quel quell quella quelle quelli quello quell'
+quale : quali qual
+qualche : qualch'
+questo : quest questa quest'queste questi questo sti sta uesto
+piccolomini : piccoluomini
+piú : più
+pio : pia pii pio
+io : voi tu lui lei noi loro lor
+che : ch'cui
+dacché : dacché
+là : lì
+epoca : epoca
+età : età
+non : nol
+sua : sue suo suo' suoi
+su : su' sù
+tanta : tante tanti tanto
+ciò : cio
+con : col coll'coi co'
+terrazzani : terrazzani
+tirolo : tirolo
+via : via
+vie : vie
+tra : tra
+sott'ombra : sott'ombra
+dí : dì dia die 
+invece : invece
+indica : indica
+amazzotto : amazzotto
+a : ad
+dio : dio deo
+e : ed
+dieci : dieci
+deh : deh
+fra : fra
+già : già
+chi : chi
+oda : ode
+ugo : ugo
+sí : sì
+re : rex
+LATIN : sie sin sit sed quae quæ que nec cum hac has hoc eum ex est et ubi uri ut vel vir absit abismeo
+pro : pro
+qui : qua
+ius : ius
+mai : mai
+ecc : etc
+propulsatori : propulsatori
+pur : pur
+po' : po'
+stortosi : stortosi
+aix : aix ais
+agi : agi
+ale : ale
+ammorzati : ammorzati
+fe : fe'
+tornio : tornio
+rio : rio
+se : se
+sé : sé
+ser : ser
+sei : sei
+o : ò
+de : de 
+or : or
+te : té
+me : me
+don : don

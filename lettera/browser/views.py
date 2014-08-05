@@ -1,6 +1,7 @@
 import json
 import math
 from datetime import datetime, time
+from collections import Counter, defaultdict
 from django.core.urlresolvers import reverse
 from django.template import RequestContext, loader
 from django.db.models import Count, Q, query
@@ -190,14 +191,21 @@ def family_backward_tree(request, pk) :
 
 @json_cache
 def index_word(request) : 
-  objects = Word.objects.annotate(occurrences=Count('occurrence')).order_by('pk')
+ # objects = Word.objects.annotate(occurrences=Count('occurrence')).order_by('pk')
+  occs = Occurrence.objects.all().select_related('word')
+  occurrences = Counter()
+  letters = defaultdict(set)
   answer = list()
-  for o in objects :
+  for o in occs :
+    occurrences[o.word]+=1
+    letters[o.word].add(o.letter_id)
+  for o in letters:
     r = dict()
     r['link'] = reverse('occurrence-word', args=(o.pk,))
     r['name'] = o.name
     r['family'] = o.family.name
-    r['occurrences'] = o.occurrences
+    r['occurrences'] = occurrences[o]
+    r['docfreq'] = len(letters[o])
     answer.append(r)
 
   return json.dumps({ 'aaData' : answer })
