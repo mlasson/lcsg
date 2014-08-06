@@ -29,11 +29,44 @@ function add_spans_letters(text, occurrences) {
 
 function draw_period(getData, selector) {
   var data, values, start, end;
+
+
+  d3.selection.prototype.moveToFront = function() { 
+    return this.each(function() { 
+      this.parentNode.appendChild(this); 
+    }); 
+  }; 
+
   var shift = function(x, d, dx) { 
     var ddx = new Date(d.getTime() + dx); 
     var r = x(ddx) - x(d);
     return r;
   };
+
+  var redraw = function (x, y, root) {
+    var dom = x.domain();
+    var min = dom[0];
+    var max = dom[1];
+    var filter_data = data.filter(function(d) { return min <= d.x && x.invert(shift (x, d.x, d.dx)) <= max; });
+    root.selectAll(".bar").remove();	
+    var bar = root.selectAll(".bar").data(filter_data);
+    var bar_enter = bar.enter();
+
+    bar.exit().remove();
+
+    var g = bar_enter.append("g").attr("class", "bar").attr("transform", function(d) { return "translate(" + x(d.x) + "," + y(d.y) + ")"; });
+
+    g.append("rect")
+        .attr("x", 1).attr("width", function(d){ return d3.max([shift(x, d.x, d.dx) - 1, 1]); })
+                         .attr("height", function(d) { return height - y(d.y); });
+	
+    g.append("text")
+        .attr("dy", ".75em")
+        .attr("y", 6)
+        .attr("text-anchor", "middle")
+        .text(function(d) { return d.y > 0 ? formatCount(d.y) : ""; }).attr("x", function(d){ return shift(x, d.x,d.dx) / 2; });
+
+  }
 
   var margin = {top: 10, right: 10, bottom: 100, left: 40},
       width = 960 - margin.left - margin.right,
@@ -77,15 +110,12 @@ function draw_period(getData, selector) {
     x.domain(d3.extent(values)).range([0,width]);
     x2.domain(x.domain());
 
-    focus.append("g")
-        .attr("class", "x axis")
-        .attr("transform", "translate(0," + height + ")")
-        .call(xAxis);
+   
     
     start = x.domain()[0];
     end = x.domain()[1];
-    bins_day = d3.time.day.range(start, end);
-    data = d3.layout.histogram().bins(bins_day)(values);
+    bins_month = d3.time.month.range(start, end);
+    data = d3.layout.histogram().bins(bins_month)(values);
     y.domain([0, d3.max(data, function(d) { return d.y; })]).range([height, 0]);
     var bar = focus.selectAll(".bar").data(data, function (d){ return d; });
 
@@ -105,19 +135,23 @@ function draw_period(getData, selector) {
         .attr("text-anchor", "middle")
         .text(function(d) { return formatCount(d.y); });
 
-    bins_month = d3.time.month.range(start, end);
-    data2 = d3.layout.histogram().bins(bins_month)(values);
+    focus.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis);
+
+
+    bins_year = d3.time.year.range(start, end);
+    data2 = d3.layout.histogram().bins(bins_year)(values);
     y2.domain([0, d3.max(data2, function(d) { return d.y; })])
       .range([height2, 0]);
-
-
 
     var bar = context.selectAll(".bar")
         .data(data2)
         .enter().append("g")
         .attr("class", "bar")
         .attr("transform", function(d) { return "translate(" + x(d.x) + "," + y2(d.y) + ")"; });
-
+ 
     bar.append("rect")
         .attr("x", 1)
         .attr("width", function(d){ return d3.max([shift(x2, d.x, d.dx) - 1, 1]); })
@@ -134,7 +168,7 @@ function draw_period(getData, selector) {
     context.append("g")
         .attr("class", "x axis")
         .attr("transform", "translate(0," + height2 + ")")
-        .call(xAxis);
+        .call(xAxis2);
 
     context.append("g")
         .attr("class", "x brush")
@@ -151,13 +185,9 @@ function draw_period(getData, selector) {
   function brushed() {
     x.domain(brush.empty() ? x2.domain() : brush.extent());
     
-    var bar = focus.selectAll(".bar").data(data, function (d){ return d; });
-    bar.attr("transform", function(d) { return "translate(" + x(d.x) + "," + y(d.y) + ")"; });
-    bar.selectAll("rect").attr("width", function(d){ return d3.max([shift(x, d.x, d.dx) - 1, 1]); })
-                         .attr("height", function(d) { return height - y(d.y); });
-    bar.selectAll("text").attr("x", function(d){ return shift(x, d.x,d.dx) / 2; })
-                         .text(function(d) { return formatCount(d.y); });
+    redraw(x, y, focus);
+  
     
-    focus.select(".x.axis").call(xAxis);
+    focus.select(".x.axis").call(xAxis).moveToFront();
   }
 }

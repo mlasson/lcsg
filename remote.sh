@@ -2,6 +2,8 @@
 message() {
   echo -e "\e[32m$1\e[0m"
 }
+message "killing remotely"
+ssh vitrine.ovh "srv/lcsg/command.sh true"
 message "do you want to send the database (Y/N) ?"
 read -n 1 -r
 echo ""
