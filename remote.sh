@@ -3,7 +3,7 @@ message() {
   echo -e "\e[32m$1\e[0m"
 }
 message "killing remotely"
-ssh vitrine.ovh "srv/lcsg/command.sh true"
+ssh vitrine.ovh "srv/lcsg/stop.sh"
 message "do you want to send the database (Y/N) ?"
 read -n 1 -r
 echo ""
@@ -29,7 +29,7 @@ then
   message 'compression the database ...'
   zip db.zip lettera/db.sqlite3
   message 'sending the database ...'
-  scp db.zip vitrine.ovh:srv/lcsg/ || exit
+  scp db.zip vitrine.ovh:/tmp/ || exit
   message 'unzipping remotely ...'
   ssh vitrine.ovh unzip /tmp/db.zip -d ~/srv/lcsg/ || exit
   message 'erasing local archive'

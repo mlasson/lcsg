@@ -64,10 +64,8 @@ svg {
 }
 
 .bar text {
-  fill: white;
-}
-.bar .above {
   fill: red;
+
 }
 
 .axis path, .axis line {

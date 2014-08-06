@@ -43,26 +43,30 @@ function draw_period(getData, selector) {
     return r;
   };
 
-  var redraw = function (x, y, root) {
+  var redraw = function (x, y, height, root, data) {
     var dom = x.domain();
     var min = dom[0];
     var max = dom[1];
     var filter_data = data.filter(function(d) { return min <= d.x && x.invert(shift (x, d.x, d.dx)) <= max; });
+
     root.selectAll(".bar").remove();	
+    
     var bar = root.selectAll(".bar").data(filter_data);
     var bar_enter = bar.enter();
 
     bar.exit().remove();
 
-    var g = bar_enter.append("g").attr("class", "bar").attr("transform", function(d) { return "translate(" + x(d.x) + "," + y(d.y) + ")"; });
+    var g = bar_enter.append("g")
+                     .attr("class", "bar")
+                     .attr("transform", function(d) { return "translate(" + x(d.x) + "," + y(d.y) + ")"; });
 
     g.append("rect")
         .attr("x", 1).attr("width", function(d){ return d3.max([shift(x, d.x, d.dx) - 1, 1]); })
-                         .attr("height", function(d) { return height - y(d.y); });
+                     .attr("height", function(d) { return height - y(d.y); });
 	
     g.append("text")
         .attr("dy", ".75em")
-        .attr("y", 6)
+        .attr("y", -12)
         .attr("text-anchor", "middle")
         .text(function(d) { return d.y > 0 ? formatCount(d.y) : ""; }).attr("x", function(d){ return shift(x, d.x,d.dx) / 2; });
 
@@ -117,59 +121,27 @@ function draw_period(getData, selector) {
     bins_month = d3.time.month.range(start, end);
     data = d3.layout.histogram().bins(bins_month)(values);
     y.domain([0, d3.max(data, function(d) { return d.y; })]).range([height, 0]);
-    var bar = focus.selectAll(".bar").data(data, function (d){ return d; });
-
-    bar.enter().append("g")
-        .attr("class", "bar")
-        .attr("transform", function(d) { return "translate(" + x(d.x) + "," + y(d.y) + ")"; });
-
-    bar.append("rect")
-        .attr("x", 1)
-        .attr("width", function(d){ return d3.max([shift(x, d.x, d.dx) - 1, 1]); })
-        .attr("height", function(d) { return height - y(d.y); });
-
-    bar.append("text")
-        .attr("dy", ".75em")
-        .attr("y", 6)
-        .attr("x", function(d){ return shift(x, d.x, d.dx) / 2; })
-        .attr("text-anchor", "middle")
-        .text(function(d) { return formatCount(d.y); });
+    
+   
+    redraw(x, y, height, focus, data);
 
     focus.append("g")
         .attr("class", "x axis")
         .attr("transform", "translate(0," + height + ")")
         .call(xAxis);
 
-
     bins_year = d3.time.year.range(start, end);
     data2 = d3.layout.histogram().bins(bins_year)(values);
     y2.domain([0, d3.max(data2, function(d) { return d.y; })])
       .range([height2, 0]);
-
-    var bar = context.selectAll(".bar")
-        .data(data2)
-        .enter().append("g")
-        .attr("class", "bar")
-        .attr("transform", function(d) { return "translate(" + x(d.x) + "," + y2(d.y) + ")"; });
- 
-    bar.append("rect")
-        .attr("x", 1)
-        .attr("width", function(d){ return d3.max([shift(x2, d.x, d.dx) - 1, 1]); })
-        .attr("height", function(d) { return height2 - y2(d.y); });
-
-    bar.append("text")
-        .attr("dy", ".75em")
-        .attr("y", - 12)
-        .attr("x", function(d){ return shift(x2, d.x,d.dx) / 2; })
-        .attr("text-anchor", "middle")
-        .attr("class", "above")
-        .text(function(d) { return formatCount(d.y); });
-
+    
+    redraw(x2, y2, height2, context, data2);
+    
     context.append("g")
         .attr("class", "x axis")
         .attr("transform", "translate(0," + height2 + ")")
         .call(xAxis2);
-
+  
     context.append("g")
         .attr("class", "x brush")
         .call(brush)
