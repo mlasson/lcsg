@@ -80,10 +80,20 @@
         ] 
       });
     draw_period(function (f){ 
-        $.getJSON("{% url 'index-ajax' %}", function( data ) {
-            f(data.aaData.filter(function(x){return x.date})
-                     .map(function(x){ return (new Date(x.date)) }));
-        })
+        console.log('ho');
+        $.getJSON("{% url 'index-ajax' %}", function( data_letters ) {
+          $.getJSON("{% url 'index-period-ajax' %}", function( data_periods ) {
+            console.log('hey');
+            letters = data_letters.aaData.filter(function(x){return x.date})
+                                         .map(function(x){ return (new Date(x.date)) });
+            periods = data_periods.aaData.map(function(x){
+              return { "start" : (new Date(x.start)), 
+                         "end" : (new Date(x.end)), 
+                        "name" : x.content } 
+            });
+            f (letters, periods);
+          });
+        });
       }, '.histogram');
   });
 </script>

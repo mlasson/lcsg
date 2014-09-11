@@ -60,12 +60,21 @@ svg {
 
 .bar rect {
   fill: steelblue;
+  opacity: 0.7;
   shape-rendering: crispEdges;
+}
+
+.period rect {
+  fill: lightsteelblue;
+  shape-rendering: crispEdges;
+}
+.period text {
+  fill: navy;
+  writing-mode:tb;
 }
 
 .bar text {
   fill: red;
-
 }
 
 .axis path, .axis line {

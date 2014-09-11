@@ -21,9 +21,9 @@ then
     then
       cd initdata || exit
       ./initdata.sh || exit
+      cd .. 
     fi
     message 'resetting ...'
-    cd .. 
     ./reset.sh
   fi
   message 'compression the database ...'

@@ -8,7 +8,7 @@ from django.db.models import Q
 
 max_dist = 3
 
-before_stato = [s.lower() for s in [ 'è', 'e', 'ha', 'essere', 'se\'', 'fussi', 'fosse', 'esserli', 'esserci', 'esserti', 'tu', 'io', 'sarà', 'saria', 'sarei', 'Èvi', 'essendo', 'essendoci', 'era', 'erono', 'esserne', 'sarebbe', 'sia', 'dipoi', 'già', 'ragionamento', 'sono', 'sonne', 'massime', 'ancora', 'bene', 'sempre', 'mai', 'sendone', 'mattina', 'ventura' ]]
+before_stato = [s.lower() for s in [ 'è', 'e', 'ha', 'essere', 'se\'', 'fussi', 'fosse', 'esserli', 'esserci', 'esserti', 'tu', 'io', 'sarà', 'saria', 'sarei', 'Èvi', 'essendo', 'essendoci', 'era', 'erono', 'esserne', 'sarebbe', 'sia', 'dipoi', 'già', 'ragionamento', 'sono', 'sonne', 'massime', 'ancora', 'bene', 'sempre', 'mai', 'sendone', 'mattina', 'ventura', 'sendo' ]]
 before_stati = [ 'sono', 'essere', 'siamo', 'sieno', 'fussino', 'erano', 'erono', 'eri', 'sendo', 'siate', 'noi', 'loro', 'ancora', 'dipoi', 'mai', 'suti', 'sareno', 'mattina', 'esservi', 'disordini', 'orsini', 'ora', 'e', 'non', 'medesimo']
 
 class Command(BaseCommand):

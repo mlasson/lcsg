@@ -231,7 +231,8 @@ Occurrences of {{ family.name }}
 
       return chart;
     });
-    var periods = {};
+    var periods = { 'SG' : 0 };
+    cpt = 0;
     data.forEach(function(e){
       cpt += 1;
       if (e.hasOwnProperty('period')){
@@ -240,6 +241,8 @@ Occurrences of {{ family.name }}
         } else {
           periods[e.period] = 1; 
         }
+      } else {
+        periods['SG'] += 1;
       }
     });
     chartperioddata = [];
@@ -249,6 +252,8 @@ Occurrences of {{ family.name }}
         chartperioddata.push({ label : index, value : attr});
       }
     }
+    console.log(periods);
+    console.log(chartperioddata);
     nv.addGraph(function() {
       var total = 0;
       chartPeriod = nv.models.discreteBarChart()

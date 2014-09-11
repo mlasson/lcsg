@@ -242,15 +242,6 @@ def index_period(request) :
     r['end'] = datetime.combine(o.end, time.max)
     answer.append(r)
     cpt+=1
-  letters = Letter.objects.order_by('pk')
-  for l in letters : 
-    if l.date :
-      r = dict()
-      r['id'] = cpt
-      r['content'] = "{0}@{1}".format(l.number,l.volume)
-      r['start'] = l.date
-      answer.append(r)
-      cpt+=1
 
   return json.dumps({ 'aaData' : answer }, default=date_handler)
 

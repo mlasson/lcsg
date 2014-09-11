@@ -4,15 +4,17 @@ from browser.models import Letter, Period, Word, Occurrence, Family, Sentence
 from optparse import make_option
 from itertools import tee
 
-splitting = [x.split("'") for x in ["quell'acqua", "quell'altro", "quelloche",
+splitting = [x.split("'") for x in ["quell'acqua", "quell'altro", "quell'oche",
 "quell'ora", "qualch'altra", "quest'altra", "quest'altri", "quest'altro",
 "quest'anno", "alcun'altra", "anch'egli", "ch'altro", "egl'imborsorno",
-"mill'altre", "mill'anni", "un'ora", "ch'e'", "ch'?", "ch'egli", "ch'ella",
+"mill'altre", "mill'anni", "un'ora", "ch'e'", "ch'è", "ch'egli", "ch'ella",
 "ch'elle", "ch'era", "ch'erano", "ch'erono", "ch'io", "coll'altre",
 "coll'artiglieria", "coll'aspro", "coll'oratore", "dall'altra", "dall'altre",
 "dall'altro", "dall'assedio", "dall'isola", "dall'orecchie", "dall'un",
 "dall'uno", "dagl'inganni", "un'altra", "gl'impicassino", "e'capituli",
-"bell'agio", "buon'ora", "ogn'altra ogn'altro"]]
+"bell'agio", "buon'ora", "ogn'altra", "ogn'altro"]]
+
+resplit = { "quelloche": ["quell", "oche"] }
 
 ignored_words = [ "za", "rza", "zz", "z", "vd", "tt", "tti", "tto", "trebbe", "u", 
 "uae", "ui", "q", "pp", "pre", "p", "pa", "pe", "pau", "¼", "½", "¾", "'", "am",
@@ -23,8 +25,8 @@ ignored_words = [ "za", "rza", "zz", "z", "vd", "tt", "tti", "tto", "trebbe", "u
 "ier", "is", "fotocopia", "h", "ing", "ipotizzo", "mec", "gie", "gié", "gio",
 "l", "lisogno", "mei", "men", "nc", "nde", "nic", "ro", "rr", "rra", "nit",
 "rnerai", "rsenata", "rsino", "rso", "rtezze", "rto", "ru", "s", "rza", "sp",
-"ss", "ssi", "ssimo", "ssino", "sub", "t", "ta", "tà", "to", "v", "ve",
-"taltis", "cho", "cs", "cu", "co", "nn", "dd", "dattiloscritto", "d",
+"ss", "ssi", "ssimo", "ssino", "sub", "t", "ta", "tà", "to", "v", "ve", "du",
+"taltis", "cho", "cs", "cu", "co", "nn", "dd", "dattiloscritto", "d", "ars",
 "apostrofo", "ac", "ba", "deb", "lu", "m", "dim", "nno", "alt", "lla ", "lle ",
 "do", "ran", "arne", "ars", "at", "ate", "aus", "aut", "definitivo", "fam",
 "gl", "diu", "doc", "go", "rem", "quo", "peu", "pi", "pis", "ono", "po", "pu",
@@ -33,13 +35,16 @@ ignored_words = [ "za", "rza", "zz", "z", "vd", "tt", "tti", "tto", "trebbe", "u
 "lli ", "berazione", "llo", "n", "frase", "nos", "mm", "mo", "ms", "mu", "na",
 "tei", "tel", "mova", "'n", "par", "vis", "vo'", "eti", "an", "ab", "aer",
 "ag", "ana", "angiolinum", "banderiis", "leo", "sal", "sel", "º", "ob", "oc",
-"fi", "í", "ni", "en", "montes", "ì" ]
+"fi", "í", "ni", "en", "montes", "ì", "h'", "gg", "gu", "lla", "tis", "lle", "abis", "di'", "lli" ]
 
-contractions = ['l', 's', 't', 'dell', 'l', 'all', 'sull', 'c', 'd', 'nell']
+contractions = ['l', 's', 't', 'dell', 'l', 'all', 'sull', 'c', 'd', 'nell', 'ch']
 
 # checker les bornes
 def split_contraction(string, start, end):
-  splitname = string.split("'")
+  try :
+    splitname = resplit[string]
+  except KeyError:
+    splitname = string.split("'")
 
   if len(splitname) == 0:
     logging.warning('Zero contraction: \"{0}\"'.format(splitname))
@@ -85,7 +90,7 @@ class Command(BaseCommand):
     for w in all_words:
       dic_words[w.name] = w
     print('Creating the family of ignored words ...') 
-    unknown_family = Family(name="UKNOWN WORDS")
+    unknown_family = Family(name="IGNORED WORDS")
     unknown_family.save()
     max = len(all_letters)
     cpt = 0
@@ -125,10 +130,17 @@ class Command(BaseCommand):
             print('Bug : phantom sentence ?', position, len([x for x in sentences if x.letter_id == l.id]))
             continue
         for m in re.finditer("(([^\W\d]|')+)", phrase):
+          name = m.group(0)
+          if name in ignored_words :
+            try :
+              word = dic_words[name]
+            except KeyError :
+                word = Word(name=name, family=unknown_family)
+                word.save()
+                dic_words[name] = word
+            continue
           namelist = split_contraction(m.group(0), position+m.start(), position+m.end())
           for name, start, end in namelist:
-            if name in ignored_words :
-              continue
             try :
               word = dic_words[name]
             except KeyError :
