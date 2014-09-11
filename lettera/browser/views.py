@@ -100,6 +100,7 @@ def ellipse(front, word, back, maxsize=100):
       front = u'… '+front[-half:]
   return (front,word,back)
 
+
 def build_occurrence_table(occs) : 
   answer = list()
   occs = occs.select_related('word','sentence','letter', 'period')
@@ -123,7 +124,11 @@ def occurrences_index(request, pks) :
   pks = map(int,pks.split(','))
   occs = Occurrence.objects.filter(pk__in=pks)
   answer = build_occurrence_table(pks)
-  return json.dumps({ 'aaData' : answer }, default=date_handler)
+  periods = dict()
+  for p in Period.objects.all():
+    periods[p.name] = p.size
+  periods['SG'] = Occurrence.objects.all().select_related('letter').filter(letter__period = None).count()
+  return json.dumps({ 'aaData' : answer, 'periods' : periods }, default=date_handler)
 
 @json_cache
 def participe(request) :
@@ -151,7 +156,11 @@ def occurrence_word(request, pk) :
 def occurrence_family(request, pk) :
   occs = Occurrence.objects.filter(family_id=pk)
   answer = build_occurrence_table(occs)
-  return json.dumps({ 'aaData' : answer }, default=date_handler)
+  periods = dict()
+  for p in Period.objects.all():
+    periods[p.name] = p.size
+  periods['SG'] = Occurrence.objects.all().select_related('letter').filter(letter__period = None).count()
+  return json.dumps({ 'aaData' : answer, 'periods' : periods }, default=date_handler)
 
 def forward_tree(occs) :
   st = SuffixTree()
@@ -222,6 +231,8 @@ def index_family(request) :
     r['name'] = o.name
     r['size'] = Word.objects.filter(family_id = o.id).count()
     r['occurrences'] = o.occurrences
+    r['df'] = o.df
+    r['idf'] = "{0:2.2f}".format(o.idf)
     r['frequence'] = "{0:2.2f}".format(float(o.occurrences) * 100.0 / float(size_all))
     r['frequence-ign'] = "{0:2.2f}".format(float(o.occurrences) * 100.0 / float(size_ign))
 

@@ -10,10 +10,10 @@ Occurrences of {{ family.name }}
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
   <li class="active"><a href="#tabtable" role="tab" data-toggle="tab">Table</a></li>
-  <li id="heattab"><a href="#tabheat" role="tab">Heat Map</a></li>
   <li id="histotab"><a href="#tabhisto" role="tab">Histogram of spellings</a></li>
   <li id="periodtab"><a href="#tabperiod" role="tab">Repartition in periods</a></li>
   <li><a href="#tabtree" role="tab" data-toggle="tab">Context trees</a></li>
+  <li><a href="#tabtime" role="tab" data-toggle="tab">Histogram of occurrences</a></li>
 </ul>
 
 <!-- Tab panes -->
@@ -32,15 +32,6 @@ Occurrences of {{ family.name }}
   </tbody>
 </table>
   </div>
-  <div class="tab-pane" id="tabheat">
-    <h2> Heat Map </h2>
-    <div id="cal" style="display:inline">
-    <div id="yearmap"></div>
-    <div id="month" style="display:block">
-      <div id="monthmap1"> </div>
-      <div id="monthmap2"> </div>
-  </div></div>
-  </div>
   <div class="tab-pane" id="tabhisto">
     <h2> Histogram of spellings </h2>
     <div id="chart">
@@ -52,10 +43,21 @@ Occurrences of {{ family.name }}
     <div id="periodchart">
       <svg></svg>
     </div>
+    <h2> Frequencies in periods </h2>
+    <div id="freqperiodchart">
+      <svg></svg>
+    </div>
   </div>
 
   <div class="tab-pane" id="tabtree">
     <div id="tree"></div>
+  </div>
+
+
+  <div class="tab-pane" id="tabtime">
+    <h2> Histogram of occurrences </h2>
+    <div class="histogram">
+    </div>
   </div>
 </div>
 
@@ -77,11 +79,10 @@ Occurrences of {{ family.name }}
 </div><!-- /.modal fade -->
 <script>
   var default_modal = $("#myModal").clone();
-  var yearcal = new CalHeatMap();
-  var monthcal1 = new CalHeatMap();
-  var monthcal2 = new CalHeatMap();
   var chart;
   var chartPeriod;
+  var freqChartPeriod;
+  var freqChartPeriod;
 
   // update the chart when tab is clicked for resizing issues
   $('#histotab a').click(function (e) {
@@ -95,17 +96,18 @@ Occurrences of {{ family.name }}
     e.preventDefault();
     $(this).tab('show');
     if (chartPeriod) {
-      chart.update();
+      chartPeriod.update();
+    }
+  })
+  $('#periodtab a').click(function (e) {
+    e.preventDefault();
+    $(this).tab('show');
+    if (freqChartPeriod) {
+      freqChart.update();
     }
   })
 
-  $('#heattab a').click(function (e) {
-    e.preventDefault();
-    $(this).tab('show');
-    if (cal) {
-      yearcal.rewind();
-    }
-  })
+
 
   draw_tree("{% url 'family-forward-tree-ajax' family.id %}", 
             "{% url 'family-backward-tree-ajax' family.id %}", "#tree"); 
@@ -125,6 +127,7 @@ Occurrences of {{ family.name }}
   $(document).ready(function() {
     $.getJSON("{% url 'occurrence-family-ajax' family.id %}", function( json ) {
       data = json.aaData;
+      period_sizes = json.periods;
       var oTable = $('#myIndexList').dataTable({
         "bProcessing": true,
         "bAutoWith": true,
@@ -154,28 +157,17 @@ Occurrences of {{ family.name }}
              { "mData": "word" },
              { "mData": "sentence" }
         ] 
-      });
+      }); 
     var dict = {};
-    var dates = {};
     var cpt = 0;
-    var min = new Date(Date.now());
-    var timestamp = function(d) { return d.getTime() / 1000; };
     data.forEach(function(e){
       cpt += 1;
-      date = new Date(e.date);
-      time = timestamp(date);
-      min = date < min ? date : min;
-      if (dates.hasOwnProperty(time)){
-        dates[time] += 1;
-      } else {
-        dates[time] = 1;
-      }
       if (dict.hasOwnProperty(e.word)){
         dict[e.word] += 1;
       } else {
         dict[e.word] = 1; 
       }
-    });
+    }); 
     chartdata = [];
     for(var index in dict) { 
       if (dict.hasOwnProperty(index)) {
@@ -183,37 +175,10 @@ Occurrences of {{ family.name }}
         if (attr / cpt > 0.01) 
           chartdata.push({ label : index, value : attr});
       }
-    }
-    var legend = [1,2,3,4,5];
-    var legendColors = ["#dfdfdf", "steelblue"];
-
-    var initYear = function(year) {
-      monthcal1.init({range:6, domain:"month", subDomain:"day", data : dates, legend:legend, itemSelector: "#monthmap1",
-          start:new Date(year, 0, 1), cellSize: 20,domainGutter:15,displayLegend:false, legendColors: legendColors,
-          });
-      monthcal2.init({range:6, domain:"month", subDomain:"day", data : dates, legend:legend, itemSelector: "#monthmap2",
-          start:new Date(year, 6, 1), cellSize: 20, domainGutter:15,displayLegend:false, legendColors: legendColors,
-          });
-    }
-
-    var moveYear = function(year) {
-      monthcal1.jumpTo(new Date(year, 0, 1), true);
-      monthcal2.jumpTo(new Date(year, 6, 1), true);
-    }
- 
-    yearcal.init({start:min, range:15, domain:"year", subDomain:"month", data : dates, legend:legend, itemSelector: "#yearmap",
-        verticalOrientation: true, cellSize : 20, legendCellSize:30, legendColors: legendColors,
-        minDate:new Date("1498"), legendHorizontalPosition: "left", legendVerticalPosition: "center", legendOrientation:"vertical",
-        maxDate:new Date("1511"),
-        onClick: function (date, value) {
-             moveYear(date.getFullYear());
-          }
-        });
-    initYear(min.getFullYear());
-
+    }  
     nv.addGraph(function() {
       var total = 0;
-      chart = nv.models.discreteBarChart()
+      chartPeriod = nv.models.discreteBarChart()
       .x(function(d) { return d.label })    //Specify the data accessors.
       .y(function(d) { return d.value })
       .valueFormat(function(d) { return d + " ("+d3.format(',.2f')(100.0*d/cpt)+" %)"  })
@@ -225,11 +190,11 @@ Occurrences of {{ family.name }}
 
       d3.select('#chart svg')
         .datum([{ key : "spellings", values : chartdata}])
-        .call(chart);
+        .call(chartPeriod);
      
-      nv.utils.windowResize(chart.update);
+      nv.utils.windowResize(chartPeriod.update);
 
-      return chart;
+      return chartPeriod;
     });
     var periods = { 'SG' : 0 };
     cpt = 0;
@@ -252,30 +217,60 @@ Occurrences of {{ family.name }}
         chartperioddata.push({ label : index, value : attr});
       }
     }
-    console.log(periods);
-    console.log(chartperioddata);
     nv.addGraph(function() {
       var total = 0;
-      chartPeriod = nv.models.discreteBarChart()
+      freqChart = nv.models.discreteBarChart()
       .x(function(d) { return d.label })    //Specify the data accessors.
       .y(function(d) { return d.value })
+      .valueFormat(function(d) { return d + " ("+d3.format(',.2f')(100.0*d/cpt)+" %)"  })
+      .staggerLabels(true)    // Too many bars and not enough room? Try staggering labels.
+      .tooltips(false)        // Don't show tooltips
+      .showValues(true)       // ... instead, show the bar value right on top of each bar.
+      .transitionDuration(350)
+      ;
+
+      d3.select('#periodchart svg')
+        .datum([{ key : "periods", values : chartperioddata}])
+        .call(freqChart);
+     
+      nv.utils.windowResize(chartPeriod.update);
+
+      return freqChart;
+    });
+
+    nv.addGraph(function() {
+      var total = 0;
+      freqChartPeriod = nv.models.discreteBarChart()
+      .x(function(d) { return d.label })    //Specify the data accessors.
+      .y(function(d) { return d.value / period_sizes[d.label] })
+      .valueFormat(function(d) { return d3.format(',.2f')(100.0*d)+" %" })
       .staggerLabels(true)    //Too many bars and not enough room? Try staggering labels.
       .tooltips(false)        //Don't show tooltips
       .showValues(true)       //...instead, show the bar value right on top of each bar.
       .transitionDuration(350)
       ;
 
-      d3.select('#periodchart svg')
-        .datum([{ key : "spellings", values : chartperioddata}])
-        .call(chart);
+      d3.select('#freqperiodchart svg')
+        .datum([{ key : "frequencies", values : chartperioddata}])
+        .call(freqChartPeriod);
      
-      nv.utils.windowResize(chartPeriod.update);
+      nv.utils.windowResize(freqChartPeriod.update);
 
       return chart;
     });
 
-
-
+    draw_period(function (f){ 
+          $.getJSON("{% url 'index-period-ajax' %}", function( data_periods ) {
+            occurrences = data.filter(function(x){return x.date})
+                                         .map(function(x){ return (new Date(x.date)) });
+            periods = data_periods.aaData.map(function(x){
+              return { "start" : (new Date(x.start)), 
+                         "end" : (new Date(x.end)), 
+                        "name" : x.content } 
+            });
+            f (occurrences, periods);
+          });
+      }, '.histogram');
   });
 });
 </script>

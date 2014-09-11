@@ -9,6 +9,7 @@ class Period(models.Model):
   start = models.DateField(null=True, blank=True)
   end = models.DateField(null=True, blank=True)
   name = models.CharField(max_length=word_size)
+  size = models.IntegerField(default = 0)
  
   def __str__(self):
     return '{0} : {1} - {2}'.format(self.name, self.start, self.end)
@@ -27,7 +28,8 @@ class Letter(models.Model):
 
 class Family(models.Model):
   name = models.CharField(max_length=word_size)
-
+  df = models.IntegerField(default = 0)
+  idf = models.FloatField(default = 0.0)
   def __str__(self):
     return self.name
 
@@ -59,6 +61,14 @@ class Occurrence(models.Model):
 
   def __str__(self):
     return '{0}@{1}+{2}'.format(self.word, str(self.letter), self.start_position)
+
+class Frequency(models.Model):
+  family = models.ForeignKey(Family)
+  letter = models.ForeignKey(Letter)
+  raw = models.FloatField(default=0.0)
+  logarithmic = models.FloatField(default=0.0)
+  augmented = models.FloatField(default=0.0)
+
 
 class Tag(models.Model):
   occurrence = models.ForeignKey(Occurrence)

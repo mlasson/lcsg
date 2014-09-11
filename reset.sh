@@ -16,7 +16,11 @@ message 'python manage.py loaddata datas'
 python manage.py loaddata datas || exit
 message 'python manage.py initdb'
 python manage.py initdb || exit
+message 'python manage.py filter'
+python manage.py filter || exit
 message 'python manage.py precomp'
 python manage.py precomp || exit
+message 'python manage.py frequency'
+python manage.py frequency || exit
 message 'python manage.py runserver'
 screen -d -m python manage.py runserver || exit

@@ -7,9 +7,14 @@ import re, codecs, logging
 global_id = 0
 global_id = 1
 
-def first(n) : 
-  table = [0,304,702,1085,1603,2168,2470]
-  return table[n-1]
+first_volume_dict = dict() 
+
+def first_volume(n) : 
+  return first_volume_dict[n]
+
+def check_volume(n, k):
+  if k not in first_volume_dict:
+    first_volume_dict[k] = n
 
 def parse_date(s):
   l = s.split('/')
@@ -57,6 +62,10 @@ class Period :
     self.name = name
     self.volume = volume
     self.letters = letters
+  
+  def output(self):
+    print self.name, ':'
+    print ', '.join(map(str, self.letters))
 
   def json(self):
     return u'''{{
@@ -86,7 +95,7 @@ def fill_period_table():
       ran = [int(r[0])]
     else : 
       raise Exception('Strange range :'+l[1])
-    ran = [ first(volume) + x - 1 for x in ran ]
+    ran = [ first_volume(volume) + x - 1 for x in ran ]
     start = infos[0]
     if len(infos[1]) > 0:
       end = infos[1]
@@ -221,20 +230,29 @@ if __name__ == "__main__" :
   corpus_name = ["I","II", "III", "IV", "V", "VI", "VII"]
   database = list()
 
-  # fill periods :
-  periods = fill_period_table()
 
   for i in xrange(0,len(corpis)) : 
     print '-- Traitement du volume', corpus_name[i]
     output = parsing.parse_file("data/"+corpis[i])
     for num, title, text, comment in output : 
       lettera = Lettera(parsing_letter_number(num), corpus_name[i], title, text, comment)
-      for p in periods : 
-	if p.volume == lettera.volume and lettera.number in p.letters:
-	  if lettera.period_id :
-	    logging.warning('the letter {0} in the volume {1} already in period {2}'.format(lettera.number, lettera.volume, lettera.ident))
-          lettera.period_id = p.ident
+      check_volume(lettera.ident, i+1)
       database.append(lettera)
+  # fill periods :
+  periods = fill_period_table()
+  print('periods are :')
+  for p in periods:
+    p.output()
+  for lettera in database:
+    if lettera.ident == 2261:
+      print 'hey' 
+    for p in periods:
+      if p.volume == lettera.volume and lettera.ident in p.letters:
+        if lettera.ident == 2261:
+          print 'ho' 
+        if lettera.period_id: 
+          logging.warning('the letter {0} in the volume {1} already in period {2}'.format(lettera.number, lettera.volume, lettera.ident))
+        lettera.period_id = p.ident
 
   print '-- Ajout des informations ...'
   for k in range(1, 8) : 
@@ -246,11 +264,11 @@ if __name__ == "__main__" :
     for line in f.readlines(): 
       m = pat.match(line)
       if m : 
-	r = m.groups()
-	infos[r[0]] = r
+        r = m.groups()
+        infos[r[0]] = r
     for l in database:
       if l.volume == k and str(l.number) in infos: 
-	l.update_info(infos[str(l.number)])
+        l.update_info(infos[str(l.number)])
 
 
   words = Words()

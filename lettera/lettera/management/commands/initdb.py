@@ -86,6 +86,8 @@ class Command(BaseCommand):
     all_letters = Letter.objects.all()
     all_words = Word.objects.all()
     dic_words = dict()
+    print('Clearing occurrences ...')
+    Occurrence.objects.all().delete()
     print('Organizing words into a dictionarry ...') 
     for w in all_words:
       dic_words[w.name] = w
@@ -113,7 +115,6 @@ class Command(BaseCommand):
     Sentence.objects.bulk_create(sentences)
     sentences=list(Sentence.objects.all())
     print('Filling the base of occurrences ...') 
-    Occurrence.objects.all().delete()
     cpt = 0
     for l in all_letters:
       sys.stdout.write("%5d / %d\r" % (cpt, max))
@@ -155,3 +156,4 @@ class Command(BaseCommand):
       logging.warning('Beware the following words have been classofied:\n'+', '.join(list(unknown)))
     print('Writing to the database all occurrences ...')
     Occurrence.objects.bulk_create(occurrences)
+

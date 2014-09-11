@@ -23,7 +23,6 @@
 <h2> Histogram </h2>
 <div class="histogram">
 </div>
-<h2> <3 </h2>
 
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
@@ -80,10 +79,8 @@
         ] 
       });
     draw_period(function (f){ 
-        console.log('ho');
         $.getJSON("{% url 'index-ajax' %}", function( data_letters ) {
           $.getJSON("{% url 'index-period-ajax' %}", function( data_periods ) {
-            console.log('hey');
             letters = data_letters.aaData.filter(function(x){return x.date})
                                          .map(function(x){ return (new Date(x.date)) });
             periods = data_periods.aaData.map(function(x){
