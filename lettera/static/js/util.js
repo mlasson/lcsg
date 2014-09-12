@@ -165,10 +165,17 @@ function draw_period(getData, selector) {
       .x(x3)
       .on("brush", brushed).on("brushend", brushended);
 
+  var extend_domain = function (interval, domain) {
+     var start = interval.offset(domain[0], -1);
+     var end = interval.offset(domain[1], +1);
+     return [start, end];
+  }
+
   getData (function (values, periods) {
-    x.domain(d3.extent(values)).range([0,width]);
-    x2.domain(x.domain());
-    x3.domain(x.domain());
+    
+    x.domain(extend_domain(d3.time.day, d3.extent(values))).range([0,width]);
+    x2.domain(extend_domain(d3.time.month, x.domain()));
+    x3.domain(extend_domain(d3.time.year, x.domain()));
     
     var start = x.domain()[0];
     var end = x.domain()[1];
