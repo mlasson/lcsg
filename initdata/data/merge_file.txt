@@ -2845,7 +2845,8 @@ guccio : guccio
 guelfa : guelfa guelfe guelfi guelfo
 guernieri : guernieri
 guernigione : guernigione guernigioni
-guerra : guerrae guerriabile guerriero guerrieri guerra guerriere guerre guerreggiato 
+guerra : guerrae guerriabile guerra guerre guerreggiato
+guerriero: guerrieri guerriere 
 guerrino : guerrino
 guerrini : guerrini guerrero
 guglielmo : guglielmo

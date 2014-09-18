@@ -58,6 +58,10 @@ Occurrences of {{ family.name }}
     <h2> Histogram of occurrences </h2>
     <div class="histogram">
     </div>
+     <span class="input-group-addon">
+       <input type="checkbox" class="displayperiod">
+       <span class="label label-default" checked="true"> Display of periods.</span>
+     </span>
   </div>
 </div>
 
@@ -257,7 +261,6 @@ Occurrences of {{ family.name }}
 
       return chart;
     });
-
     draw_period(function (f){ 
           $.getJSON("{% url 'index-period-ajax' %}", function( data_periods ) {
             occurrences = data.filter(function(x){return x.date})
@@ -270,6 +273,7 @@ Occurrences of {{ family.name }}
             f (occurrences, periods);
           });
       }, '.histogram');
+
   });
 });
 </script>

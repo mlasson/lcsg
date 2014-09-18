@@ -42,12 +42,12 @@ svg {
 
 #chart svg {
   width : auto !important;
-  height : 500px !important;
+  height : 300px !important;
 }
 
-#periodchart svg {
+#periodchart svg, #freqperiodchart svg {
   width : auto !important;
-  height : 500px !important;
+  height : 300px !important;
 }
 
 #yearmap, #monthmap1, #monthmap2 {
@@ -65,7 +65,7 @@ svg {
 }
 
 .period rect {
-  fill: lightsteelblue;
+  fill: palegreen;
   shape-rendering: crispEdges;
 }
 .period text {

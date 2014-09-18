@@ -221,7 +221,7 @@ def index_word(request) :
 
 @json_cache
 def index_family(request) : 
-  objects = Family.objects.annotate(occurrences=Count('word__occurrence')).order_by('pk')
+  objects = Family.objects.annotate(occurrences=Count('occurrence')).order_by('pk')
   size_all = Occurrence.objects.count()
   size_ign = Occurrence.objects.exclude(word__family__name__contains = "IGNORED").count()
   answer = list()
