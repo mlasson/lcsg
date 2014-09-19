@@ -29,7 +29,8 @@ path.link {
 }
 
 svg {
-  width : auto !important;
+  /* width : auto !important; */
+  width: 900px;
   height : auto !important;
 }
 
@@ -41,12 +42,20 @@ svg {
 }
 
 #chart svg {
-  width : auto !important;
+  /* width : auto !important; */
+  width: 900px;
   height : 300px !important;
 }
 
+#periodchart, #freqperiodchart {
+  /* width : auto !important; */
+  width: 900px;
+}
+
+
 #periodchart svg, #freqperiodchart svg {
-  width : auto !important;
+  /* width : auto !important; */
+  width: 900px;
   height : 300px !important;
 }
 
