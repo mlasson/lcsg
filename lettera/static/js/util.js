@@ -19,7 +19,7 @@ function add_spans_letters(text, occurrences) {
     } else {
       result+= '<span class="bg-warning">';
     }
-    result+= text.substring(occ.start_position, occ.end_position);
+    result+= text.substring(occ.start_position, occ.end_position).replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;").replace(/"/g, "&quot;");
     result+= '</span>';
     
     position = occ.end_position;

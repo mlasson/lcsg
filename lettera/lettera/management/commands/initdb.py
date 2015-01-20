@@ -45,12 +45,10 @@ def split_contraction(string, start, end):
     splitname = resplit[string]
   except KeyError:
     splitname = string.split("'")
-
-  if len(splitname) == 0:
-    logging.warning('Zero contraction: \"{0}\"'.format(splitname))
+  if len(string) == 0:
     return []
-  if splitname == ['']: 
-    logging.warning('Zero contraction: \"{0}\"'.format(splitname))
+  if len(splitname) == 0:
+    logging.warning('Zero contraction: \"{0}\" in \"{1}\"'.format(splitname, string))
     return []
   if splitname[0] == '':
     splitname = splitname[1:]
@@ -130,8 +128,12 @@ class Command(BaseCommand):
         if not sentence:
             print('Bug : phantom sentence ?', position, len([x for x in sentences if x.letter_id == l.id]))
             continue
-        for m in re.finditer("(([^\W\d]|')+)", phrase):
+        for m in re.finditer("(([^\W\d]|['<>])+)", phrase):
           name = m.group(0)
+          name = name.replace('<', '')
+          name = name.replace('>', '')
+          if len(name) == 0: 
+            logging.warning('Empty name in : \"{0}\"'.format(phrase))
           if name in ignored_words :
             try :
               word = dic_words[name]
@@ -140,7 +142,7 @@ class Command(BaseCommand):
                 word.save()
                 dic_words[name] = word
             continue
-          namelist = split_contraction(m.group(0), position+m.start(), position+m.end())
+          namelist = split_contraction(name, position+m.start(), position+m.end())
           for name, start, end in namelist:
             try :
               word = dic_words[name]
