@@ -148,7 +148,6 @@ agia : agia
 aginti : aginti
 agio : agio
 agitarsi : agitata agitazioni agitandosi agitarsi agitazione
-agli : agli all'
 agnola : agnola
 agnolaccio : agnolaccio
 agnoleti : agnoletti agnoleti
@@ -197,7 +196,7 @@ alia : alia aliam alias alii aliis alio alios allio
 alienare : alienarsi alienate alienati alienato alieni alienazione alienarla alienare alieno alienassi alienarlo alienono alienerai aliena
 alimentarsi : alimentato alimentarsi
 aliqua : aliqua aliquam aliisque aliquid aliquo
-alla : all all' alle alli allo a' ai al
+alla : all all' alle alli allo a' ai al agli
 allagare : allagare allagato
 allegare : allegandogli allegandoli aligato allegandovi allegherò allegando allegato allegandosi allegassino allegarla allegare allego allegòmmi allega allegherete allegorno allegandone allegata aliga allegherai allegate alleghi allegava allegarne allegono allegò alligate allegati allegavo alligata allegassi alligato allegai allegano allegovi allegavate alligati
 alleggerire : alleggeriti alleggierirli alleggerissinsi alleggerissi alleggerito alleggerirsi alleggerite alleggerirli alleggierire alleggerirne alleggerissino alleggerirai alleggerirvi alleggerire alleggerilla
@@ -1375,7 +1374,7 @@ comune : comune comun comunem comunemente
 comunicare : comunicarla comunicherò comunicarle comunicassi comunicarli comunicarmi comunichera'lli comunicarvi comunicate comunicornosi comunicabile comunicai comunicherà comunichera comunicherete comunicabili comunicava comunicocci comunicato comunicata comunichi comunicavo comunichiate comunica comunicherai comunicheretela comunicare comunicando comunicò comunicazione
 comuni : comuni comunitati comunitatis comunitatem comunità
 comunque : comunque comunche
-con : col coll' coi
+con : col coll'coi co'
 conabimur : conabimur
 conati : conati conato
 concedere : concederlo concedendolo concederete concederli concedessino concessi concederle concessa concederai concederla concedeva concessono concediamo concestoro concessioue concederemo concedessi concedemoli concederanno conceda concederà concede concederliene concederne concedute concessogli concesse concedendo conceduta concederebbono concedere concesso concederno conceduto concedé concessione concediate
@@ -1733,7 +1732,7 @@ dedurre : dedurre deducendoli
 defalcato : defalcato defalcatone
 degenerare : degenerare
 degit : degit
-degl : degl deli dei dell dell'
+degl : degl deli dei dell
 delfinato : delfinato
 deliberare : delibera delibe deliberai delliberassi deliberamo deliberando deliberanno deliberano deliberàno deliberarci deliberare deliberarla deliberarli deliberarne deliberarsi deliberarvi deliberassi deliberassino deliberata deliberate deliberati deliberationum deliberato deliberatone deliberatosi deliberaverunt deliberazione deliberazioni delibererà delibererai delibererann delibereranno delibereremo delibererete deliberiamo deliberiàno deliberiate deliberi deliberino deliberò deliberorno deliberorono deliberossi deliberrà deliberrai deliberranno deliberremo deliberreno deliberrete  diliberazione
 delinquente : delinquente delinquenti
@@ -2019,7 +2018,6 @@ ducis : ducis
 dunais : dunais
 duogli : duogli
 duoi : duoi
-duolsi : duolsi
 duomo : duomo
 duos : duos
 duplicare : duplicato duplicate duplicati duplicata duplicare duplicatamente
@@ -3167,9 +3165,8 @@ intendere : intesi intesosi inteso intesone gl'intenderà intesola intesolo inte
 inten : inten
 intenso : intenso
 intenzione : intenzione intenzion  intentata intento
-intera : intere intero intera interamente ntero
-intercedenti : intercedenti
-intercedere : intercedessi intercetta intercedere intercette intercessione intercepessi ntercedessi intercedenti
+intera : intere intero intera interamente ntero interi 'ntero
+intercedere : intercedessi intercetta intercedere intercette intercessione intercepessi ntercedessi intercedenti 
 intercludevano : intercludevano
 interdetti : interdetto interditta interditto interditti interdetti
 interesse : interessi interesso interesse
@@ -3177,11 +3174,9 @@ interim : interim
 inter : inter
 intermettere : intermissione intermettere
 internunzii : internunzii
-ntero : ntero interi 'ntero
 interpetrare : interpetrato interpetrando interpetravasi interpretiamo interpretata interpretazione interprete interpretato interpetrono interpretare interpetrazione interpretassino interpetriamo interpetrare interpetra interpretino interpreti
 interporre : interponessi interporsi interporrai interposizione interponga interporre
 interrompere : interrotto interrompa interrompino interrotti interrompere
-intervenendo : intervenendo
 intervenire : intervenendo intervenuti intervenuto intervenga intervenne interverrebbe intervenire interviene interverrà intervengono intervenuta intervenisseno intervenissi
 intiepidito : intiepidito intepidire intepidendo intepidissino intepidito
 intimate : intimazione intimato intimate
@@ -3434,7 +3429,6 @@ lorenzino : lorenzino
 lorenzo : lorenzo
 loreto : loreto
 lorini : lorini lorino
-loro : loro
 losticino : losticino
 lotti : lotti lottis loctis locti
 lozamenti : lozamenti
@@ -3490,7 +3484,6 @@ maggior : maggiori maggiormente maggiore maior maiori
 magione : magione
 magistrati : magistrati magistrato magistratus magistri
 magliana : magliana maglianes magliares magnares maliares
-magna : magna
 magnicis : magnicis
 magnifica : magnifìcis maginificis magnificus magnifis magnificorum magnifice magnificò magnificamente magnificare magnifici magnificenze magnificano magnificentiae magnificenza magnifica magnificenzia magnificentie magnificis magnificenzie magnifico
 magno : magno
@@ -3532,8 +3525,7 @@ mancare : manchino mancherebbono mancarvi mancarti mancandoti mancassino mancarn
 mancino : mancino
 manco : manco
 mandamusque : mandamusque mandavimusque
-mandare : mittatur mitterentur mittimus
-mandano mandera'gli mandera'la mandera'le mandera'lli mandera'lo manderieno mandatolo mandaci mandandocene mandandoci mandatati mandatavi manderia manderolla manderò manderonne manderrebbono mandiamo mandiamotele mandiamoti mandiamovi mandiano mandiàno mandianvi mandiate mandi mandinlo mandinmi mandino mandinsi mandisi mandolle mandollo mando mandò mandommela mandono mandonsi mandonvi mandorno mandorono mandoronsi mandoronvisi mandossi mandovi mandovvi  mandateci mandatele mandate mandatemi mandatene mandateti mandatevele mandatevi mandati mandatisi màndatisi mandatis mandatoci mandatogli mandatoli mandato mandatorum mandatotene mandatoti mandava mandavamo mandavano mandavi mandavimus mandavisi mandavo mandavono manderai mandera manderà manderanno manderannosi manderannotisi manderasi manderassi manderavvisi manderebbe manderebbene manderebbevi manderebbono manderegli manderei manderello manderemola manderemo manderemoti mandereno manderenti manderenvi manderesti manderetecene mandereteci manderetegli manderetelo manderete manderetemene manderetevi mandarne mandarono mandarsi mandartela mandartele mandarteli mandartelo mandartene mandarti mandarvegli mandarvele mandarveli mandarvene mandarvi mandasi mandasse mandassi mandassimo mandassino mandassivi mandasti mandataci mandatali mandata mandandogli mandandola mandandoli mandandolo mandando mandandomela mandandomi mandandone mandandosi mandandoti mandandovela mandandovisi mandarai mandara mandarannosegli mandarcela mandarcele mandarceli mandarcene mandarci mandare mandarevi mandarla mandarle mandarliene mandarli mandarlo mandar mandarmelo mandarmi  mandagli mandai mandale mandalli manda mandammo mandamole mandamo mandamoti mandamovi 
+mandare : mittatur mitterentur mittimus mandano mandera'gli mandera'la mandera'le mandera'lli mandera'lo manderieno mandatolo mandaci mandandocene mandandoci mandatati mandatavi manderia manderolla manderò manderonne manderrebbono mandiamo mandiamotele mandiamoti mandiamovi mandiano mandiàno mandianvi mandiate mandi mandinlo mandinmi mandino mandinsi mandisi mandolle mandollo mando mandò mandommela mandono mandonsi mandonvi mandorno mandorono mandoronsi mandoronvisi mandossi mandovi mandovvi  mandateci mandatele mandate mandatemi mandatene mandateti mandatevele mandatevi mandati mandatisi màndatisi mandatis mandatoci mandatogli mandatoli mandato mandatorum mandatotene mandatoti mandava mandavamo mandavano mandavi mandavimus mandavisi mandavo mandavono manderai mandera manderà manderanno manderannosi manderannotisi manderasi manderassi manderavvisi manderebbe manderebbene manderebbevi manderebbono manderegli manderei manderello manderemola manderemo manderemoti mandereno manderenti manderenvi manderesti manderetecene mandereteci manderetegli manderetelo manderete manderetemene manderetevi mandarne mandarono mandarsi mandartela mandartele mandarteli mandartelo mandartene mandarti mandarvegli mandarvele mandarveli mandarvene mandarvi mandasi mandasse mandassi mandassimo mandassino mandassivi mandasti mandataci mandatali mandata mandandogli mandandola mandandoli mandandolo mandando mandandomela mandandomi mandandone mandandosi mandandoti mandandovela mandandovisi mandarai mandara mandarannosegli mandarcela mandarcele mandarceli mandarcene mandarci mandare mandarevi mandarla mandarle mandarliene mandarli mandarlo mandar mandarmelo mandarmi  mandagli mandai mandale mandalli manda mandammo mandamole mandamo mandamoti mandamovi 
 mandarnelo : mandarneli mandarnelo
 mandatarie : mandatarium mandatarie mandatarius mandatarii mandatario mandatari mandantes
 manecti : manecti
@@ -3827,7 +3819,6 @@ montefoscoli : montefoscoli
 montegiordano : montegiordano
 montelucci : montelucci
 montelupo : montelupo
-monte : monte 
 montemurlo : montemurlo
 montepoggiolo : montepoggiolo
 montepulcianese : montepulcianese muntepulcianesi multepulcianesi
@@ -3892,10 +3883,9 @@ mura : muri muricciolo murati muro mura murate murare murata muragla
 musacchino : musacchino musachino
 musolta : musolta
 mutandis : mutandis
-mutare : mutandoli mutinsi mutolo mutò muta mutabili mutino mutando mutandosi mutano mutarci mutarle mutarlo mutarsi mutassi mutassino mutata mutati mutatici mutato mutazione mutazioni muterà muterebbe muti mutiamo mutiate mutorno mutossi mutarla rimutare tramutare
+mutare : mutandoli mutinsi mutolo mutò muta mutabili mutino mutando mutandosi mutano mutarci mutarle mutarlo mutarsi mutassi mutassino mutata mutati mutatici mutato mutazione mutazioni muterà muterebbe muti mutiamo mutiate mutorno mutossi mutarla rimutare tramutare rimutarci rimutarlo rimutassi
 mutatis : mutatis
 mutilati : mutilati
-muti : muti
 mutinazione : mutinazione
 mutrone : mutrone
 muzio : muzio
@@ -3956,7 +3946,7 @@ neroni : neroni
 nerozzo : nerozzo
 nervo : nervo
 neso : neso
-nessuno : nissuna nessun nessuno nessuna
+nessuno : nissuna nessun nessuno nessuna nissun nissuno niuna niuno
 nettare : nettamente netta nettare nettandola nette netti nettin netto
 nettunno : nettunno
 neutrale : neutrale neutrali neutri
@@ -3984,7 +3974,6 @@ nipote : nipote nipoti
 nisi : nisi
 nisio : nisio
 nissimo : nissimo
-nissuna : nissuna nissun nissuno niuna niuno
 niversa : niversa
 nizza : nizza
 nobile : nobile nobilibus nobili nobilis nobilissimi nobilissimo
@@ -4019,7 +4008,6 @@ novara : novara noara
 novella : novella novelle novello
 novembre : novembre novembris
 novem : novem
-nove : nove
 novi : novi
 novum : novum
 nozze : nozze
@@ -4056,7 +4044,6 @@ occorrenza : occorrenza occorrenzie occorrenzia occurrenzie occorrenze ocorrenzi
 occorrere : occore occorrendone occurrent occurrunt occurso occorre occoressi occorrano occorrà occorsono occorresse occorso occorrerebbono occorreria occorressino occorress occorrevono occorrunt occorsa occorsero occorrerate occorsi occorse occorreci occorressi occorrendo occorrere occorra occorrerà occorrono occorrerano occorreva occorrerebbe occorreranno occorremi occorrendoci occorrendole occorrendoli occorrendomi occorrendoti occorrendovi occorrenti 
 occupare : occupando occupare occupi occupata occupazione occupate occupato occupati occuparla occupatissimo occupazioni occupargli occuparle occupassino occupassi occupateci occupatissimi occupatori occupono occuporno
 occurrentiis : occurrentiis
-occurso : occurso
 ochan : ochan
 oche : oche
 octava : octava
@@ -4188,7 +4175,6 @@ ostilmente : ostilmente
 ostinazione : ostinata ostinati ostinatissimi ostinatissimo ostinato ostinazione
 osti : osti
 ostì : ostì
-ottanta : ottanta
 otta : otta
 ottavanti : ottavanti
 ottava : ottava
@@ -4461,7 +4447,7 @@ pescare : pescali pescare
 pescaria : pescaria
 pesce : pesce
 peschiera : peschiera
-pescia : pescia pescie pisciae 
+pescia : pescia pescie pisciae piscia piscie
 pescioni : pescioni
 pessima : pessima pessimi pessimo
 pesta : pesta peste
@@ -4553,7 +4539,6 @@ pionta : pionta
 piovere : piovano piova piovendo piove piovere piovessi piovono piovute piovuto
 pippioni : pippioni
 pisa : pisanam pisane pisanos pisana pisani pisa pisano pisas pisarum pisis
-pisciae : pisciae piscia piscie
 pistoia : pistorii pistoia pistolesi pistolese pistoriensi pistorio
 piteglio : piteglio
 pitigliano : pitigliano
@@ -5193,7 +5178,6 @@ riabbia : riabbia riabbino riabbi
 riabbracciare : riabbracciare
 riaccettare : riaccettare
 riacquistare : riacquistare riacquistarlo
-riaddomandiamo : riaddomandiamo
 riandare : riandare riandò riandorono riandremo
 riaprire : riaprire
 riaranno : riaranno
@@ -5305,7 +5289,6 @@ rimpiastrare : rimpiastrarli rimpiastrando rimpiastrare rimpiastrata rimpiastrat
 rimproverato : rimproverato 
 rimuovere : rimuovere rimuovertene rimuoverli rimuoverlo rimuoversi rimuoviate rimossi rimossono rimosso
 rimurare : rimurare rimurarle rimurarlo 
-rimutare : rimutarci rimutare rimutarlo rimutassi
 rinaldi : rinaldi rinaldis rinaldo
 rincavallare : rincavallandosi rincavallare
 rincepparle : rincepparle rinceppino
@@ -5439,7 +5422,6 @@ rodi : rodi
 rodulfo : rodulfo rodulfus rodulpho rudolfi rudolfo rudulfo  rudulfum rudulpho rudulphus
 rogata : rogata rogato rogatus rogo  rogò
 rogna : rogna
-romae : romae
 romagna : romagna romagnia romagnoli romagnuoli romandiolae romandiolensi romandiole romania
 romana : romani romano romanum romana
 romanello : romanello
@@ -5447,7 +5429,6 @@ romaneschi : romaneschi
 roma : roma romae rome
 romena : romena
 romeo : romeo
-rome : rome
 romiro : romiro
 romito : romito
 romolino : romolino
@@ -5614,7 +5595,6 @@ sassi : sassi sasso
 sassonia : sassonia
 satisfare : satisfaccendoci satisfacciamo satisfaccia satisfacendosene satisfacessimo satisfacessino satisfannoci satisfarai satisfaranno satisfarcene satisfarci satisfarete satisfarne satisfartene satisfarti satisfanno satisfarli satisfatte satisfatta satisferanno satisfarla satisfarle satisfattissimi satisfattissimo satisfacessi satisfarvi satisfargli satisfatti satisfarsi satisfa satisfà satisfaremo satisfare satisfarà satisfacevo satisfareno satisfacci satisfaceva satisfarebbono satisfarebbe satisfarlo satisfacevano satisfazione satisfattissime satisfaccendo satisfaccino satisfactione satisfatto satisfazion satisfece satisfeci satisfereno satisfe satisfé satisfo
 savamo : savamo
-savelle : savelle
 savellesche : savellesche savellesco
 savelli : savelli savello savell savelle
 savignone : savignone
@@ -7018,7 +6998,6 @@ sua : sue suo suo' suoi
 su : su' sù
 tanta : tante tanti tanto
 ciò : cio
-con : col coll'coi co'
 terrazzani : terrazzani
 tirolo : tirolo
 via : via
