@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load staticfiles %}
 {% load i18n %}
 {% block title %}
 Occurrences of {{ family.name }}
@@ -161,6 +162,8 @@ Occurrences of {{ family.name }}
              { "mData": "sentence" }
         ] 
       }); 
+    var tt = new $.fn.dataTable.TableTools( oTable, { "sSwfPath": "{% static 'js/copy_csv_xls_pdf.swf' %}" });
+    $( tt.fnContainer() ).insertAfter('div.dataTables_wrapper');
     var dict = {};
     var cpt = 0;
     data.forEach(function(e){

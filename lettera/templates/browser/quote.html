@@ -74,6 +74,8 @@
              { "mData": "period" }
         ] 
       });
+    var tt = new $.fn.dataTable.TableTools( oTable, { "sSwfPath": "{% static 'js/copy_csv_xls_pdf.swf' %}" });
+    $( tt.fnContainer() ).insertAfter('div.dataTables_wrapper');
   });
 </script>
 {% endblock %}
