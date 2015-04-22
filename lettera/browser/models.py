@@ -76,6 +76,12 @@ class Tag(models.Model):
   def __str__(self):
     return '{0}({1})'.format(self.name, str(self.occurrence))
 
+class Subcorpus(models.Model):
+  name = models.TextField()
+  letters = models.TextField()
+  def __str__(self):
+    return '{0}({1})'.format(self.name, str(self.letters))
+
 class Cache(models.Model):
   name = models.TextField()
   args = models.TextField()

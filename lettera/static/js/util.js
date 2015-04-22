@@ -28,6 +28,9 @@ function add_spans_letters(text, occurrences) {
 }
 
 function draw_period(getData, selector) {
+
+  $(selector).empty();
+ 
   var data_year, data_month, data_day;
 
 

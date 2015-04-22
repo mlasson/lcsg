@@ -21,6 +21,8 @@ python manage.py filter || exit
 message 'python manage.py precomp'
 python manage.py precomp || exit
 message 'python manage.py frequency'
-python manage.py frequency || exit
+python manage.py precomp || exit
+message 'python manage.py corpus_period'
+python manage.py corpus_period || exit
 message 'python manage.py runserver'
 screen -d -m python manage.py runserver || exit

@@ -2,16 +2,18 @@
 {% load staticfiles %}
 {% load i18n %}
 {% block title %}
-  My title
+  Index of letters
 {% endblock %}
 {% block header %}
   Index of letters
 {% endblock %}
 {% block content %}
+
 <table class="table table-striped" id="myIndexList" width="100%">
     <thead><tr>
     <th> View </th>
     <th> Invisible</th>
+    <th> Key</th>
     <th> Volume </th>
     <th> Number </th> 
     <th> Length </th> 
@@ -20,9 +22,27 @@
   <tbody>
   </tbody>
 </table>
+<div id="export-buttons" class="form-group">
+</div>
 
-<h2> Histogram </h2>
-<div class="histogram">
+{% include "browser/filter-form.html" %}
+
+
+<div class="panel panel-default">
+ <div class="panel-heading">
+   <h3> Histogram <span class="glyphicon glyphicon-collapse-down close" aria-hidden="true" data-toggle="collapse" data-target="#collapse-histogram"></span></h3>
+ </div>
+ <div class="panel-body">
+  <div class="collapse" id="collapse-histogram">
+    <div class="histogram">
+    </div>
+
+      <p>
+        <input type="checkbox" id="histogram-periods"> Draw periods
+      </p>
+
+  </div>
+ </div>
 </div>
 
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -43,10 +63,10 @@
 </div><!-- /.modal fade -->
 <script>
   var default_modal = $("#myModal").clone();
-  function onclick_modal(elem){
+  
+  function onclick_modal(letter_url){
      $("#myModal").empty();
      $("#myModal").append(default_modal);
-     var letter_url = $(elem).find("span").data('content-url');
      $.ajax({
       url: letter_url,
       success: function(html){
@@ -55,23 +75,84 @@
         }
       });
   }
+
+  function onclick_select(pk) {
+    console.log("click_select", pk);
+    if (selected_letters.isIn(pk)) {
+      console.log("click_select remove", pk);
+      selected_letters.remove(pk);
+    } else {
+      console.log("click_select add", pk);
+      selected_letters.add(pk);
+    }
+  }
+
+  function redraw_histogram() {
+    draw_period(function (f){ 
+        $.getJSON("{% url 'index-ajax' %}", function( data_letters ) {
+          $.getJSON("{% url 'index-period-ajax' %}", function( data_periods ) {
+            letters = data_letters.aaData.filter(function(x){return x.date && selected_letters.isIn(x.pk);})
+                                         .map(function(x){ return (new Date(x.date)); });
+         
+            if (letters.length === 0) {
+              letters = data_letters.aaData.filter(function(x){return x.date; })
+                                           .map(function(x){ return (new Date(x.date)); });
+            }
+         
+            periods = data_periods.aaData.map(function(x){
+              return { "start" : (new Date(x.start)), 
+                         "end" : (new Date(x.end)), 
+                        "name" : x.content } 
+            });
+            if (! $("#histogram-periods").prop('checked'))
+              periods = [];
+            f (letters, periods);
+          });
+        });
+      }, '.histogram');
+  }
+
+  var oTable;
   $(document).ready(function() {
-    var oTable = $('#myIndexList').dataTable({
+    oTable = $('#myIndexList').dataTable({
         "bProcessing": true,
         "sAjaxSource": "{% url 'index-ajax' %}",
+        "fnDrawCallback": function(oSettings) {
+            $( "button#modal_button" ).each(function (index, button) {
+              var letter_url = $(button).data('content-url');
+              $(button).off('click').on('click', function (event) { 
+                onclick_modal(letter_url); 
+              });
+             });
+            $( "button#select_button" ).each(function () {
+              var that = this;
+              var pk = that.getAttribute("data-pk");
+              var select = function (selection) {
+                if (selection.isIn(pk)) {
+                  $(that).addClass('active');
+                } else {
+                  $(that).removeClass('active');
+                }
+              };
+              $(that).off('click').on('click', function () { onclick_select(pk); });
+              select(selected_letters);
+              selected_letters.onChange(select);
+            });
+         },
         "aoColumnDefs" : [
              { "mRender" : function (data, type, row) { 
-             return '<button type="button" class="btn btn-default btn-xs" onclick="onclick_modal(this)">'+
-                    '<span class="glyphicon glyphicon-eye-open" data-toggle="modal" data-target="#myModal"'+ 
-                    'data-content-url="'+data+'"></span></button>'+
+             return '<button type="button" id="modal_button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#myModal" '+'data-content-url="'+data+'">'+
+                    '<span class="glyphicon glyphicon-eye-open"></span></button>'+
                     '<a href="'+row.link+'" class="btn btn-default btn-xs">'+
-                    '<span class="glyphicon glyphicon-link"></span></a>';
+                    '<span class="glyphicon glyphicon-link"></span></a>' + 
+                    '<button class="btn btn-default btn-xs" id="select_button" data-pk="'+row.pk+'"><span class="glyphicon glyphicon-pushpin""></span></button>';
                 }, 
                "aTargets": [ 0 ]
                }, {"bVisible" : false, "aTargets":[1]}, {"sType" : "date", "aTargets":[5]}, {"sType" : "numeric", "aTargets":[2,3,4]}],
         "aoColumns": [
              { "mData": "modal" },
              { "mData": "link" },
+             { "mData": "pk" },
              { "mData": "volume" },
              { "mData": "number" },
              { "mData": "length" },
@@ -79,22 +160,12 @@
              { "mData": "period" }
         ] 
       });
+    
     var tt = new $.fn.dataTable.TableTools( oTable, { "sSwfPath": "{% static 'js/copy_csv_xls_pdf.swf' %}" });
-    $( tt.fnContainer() ).insertAfter('div.dataTables_wrapper');
-    draw_period(function (f){ 
-        $.getJSON("{% url 'index-ajax' %}", function( data_letters ) {
-          $.getJSON("{% url 'index-period-ajax' %}", function( data_periods ) {
-            letters = data_letters.aaData.filter(function(x){return x.date})
-                                         .map(function(x){ return (new Date(x.date)) });
-            periods = data_periods.aaData.map(function(x){
-              return { "start" : (new Date(x.start)), 
-                         "end" : (new Date(x.end)), 
-                        "name" : x.content } 
-            });
-            f (letters, periods);
-          });
-        });
-      }, '.histogram');
+    $( '#header-right' ).append($( tt.fnContainer() ));
+    redraw_histogram();
+    selected_letters.onChange(redraw_histogram);
+    $("#histogram-periods").change(redraw_histogram);
   });
 </script>
 {% endblock %}

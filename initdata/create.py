@@ -185,6 +185,9 @@ class Lettera :
     period = 'null'
     if self.period_id : 
       period = self.period_id
+    ignore = 'false'
+    if self.ignore : 
+      ignore = 'true'
     return u'''{{
   "pk" : {0.ident}, 
   "model" : "browser.letter", 
@@ -195,9 +198,9 @@ class Lettera :
     "date" : {1},
     "text" : "{2}",
     "author" : "{0.author}",
-    "ignore" : "{0.ignore}"
+    "ignore" : "{4}"
   }}
-}}'''.format(self, date, escape(self.text), period)
+}}'''.format(self, date, escape(self.text), period, ignore)
 
   def update_info(self, infos) : 
     if not (infos[1] == '??') : 
@@ -212,7 +215,7 @@ class Lettera :
     if not (infos[3] == '????') and not (infos[2] == '??') and not (infos[1] == '??'):
       self.date = infos[3]+'-'+infos[2]+'-'+infos[1].split('-')[0]
     if re.search ("à M", self.note) or re.search ("sur M", self.note) or re.search ("ignore", self.note) : 
-      self.ignore = 'true'
+      self.ignore = True
     # print self.volume, self.number, infos[1], infos[2], infos[3], self.date
 
 def parsing_letter_number (s) : 

@@ -1,6 +1,6 @@
 import json
 import math
-from datetime import datetime, time
+from datetime import datetime, time, date
 from collections import Counter, defaultdict
 from django.core.urlresolvers import reverse
 from django.template import RequestContext, loader
@@ -11,6 +11,9 @@ from django.views import generic
 from browser.models import *
 from django.core.paginator import Paginator
 from utils.suffixtree import SuffixTree
+from django.utils.decorators import method_decorator
+from django.views.decorators.csrf import ensure_csrf_cookie, csrf_protect
+from browser.corpus import Corpus
 
 class json_cache(object):
   def __init__(self, func):
@@ -18,10 +21,13 @@ class json_cache(object):
     self.name = func.__name__
     
   def __call__(self, arg, **args):
-    query = Cache.objects.filter(name = self.name, args = repr(arg.path)).first()
+    input_data = arg.path
+    if arg.method == 'POST' and arg.body:
+      input_data += arg.body.decode()
+    query = Cache.objects.filter(name = self.name, args = repr(input_data)).first()
     if not query:
       result = self.func(arg, **args)
-      new_entry = Cache(name=self.name, args=repr(arg.path), value = result)
+      new_entry = Cache(name=self.name, args=repr(input_data), value = result)
       new_entry.save()
     else :
       result = query.value
@@ -44,11 +50,15 @@ def date_handler(obj):
     raise TypeError ('Object of type %s with value of %s is not JSON serializable' % (type(obj), repr(obj)))
 
 @json_cache
-def index_letter(request) : 
+def index_letter(request, letters=None) : 
   objects = Letter.objects.annotate(length=Count('occurrence')).order_by('pk')
   answer = list()
+  if letters:
+    letters = [ int(pk) for pk in letters.split(',') ]
+    objects = [ l for l in objects if l.pk in letters ]
   for l in objects :
     r = dict()
+    r['pk'] = l.pk
     r['link'] = reverse('letter', args=(l.pk,))
     r['modal'] = reverse('modal-letter', args=(l.pk,))
     r['volume'] = l.volume
@@ -63,6 +73,25 @@ def index_letter(request) :
     answer.append(r)
 
   return json.dumps({ 'aaData' : answer }, default=date_handler)
+
+@json_cache
+def letters_from_date(request, start, end):
+  try:
+    [year, month, day] = map (int, start.split('-'))
+    start = date(year, month, day)
+    [year, month, day] = map (int, end.split('-'))
+    end = date(year, month, day)
+    objects = Letter.objects.all()
+    result = []
+    for l in objects:
+      if l.date and start <= l.date and l.date <= end :
+        result.append(l.pk)
+    return json.dumps(result)
+  except ValueError:
+    return json.dumps([])
+  
+def index_letter_subcorpus(request, subcorpus):
+  return index_letter(request, letters=Subcorpus.objects.filter(name=subcorpus)[0].letters)
 
 @json_cache
 def occurrences_letter(request, pk) : 
@@ -107,6 +136,7 @@ def build_occurrence_table(occs) :
   for o in occs:
     r = dict()
     r['link'] = (reverse('modal-letter', args=(o.letter_id,)),o.start_position,o.end_position)
+    r['pk'] = o.letter_id
     r['volume'] = o.letter.volume
     r['letter'] = o.letter.number
     if o.letter.period :
@@ -220,27 +250,6 @@ def index_word(request) :
   return json.dumps({ 'aaData' : answer })
 
 @json_cache
-def index_family(request) : 
-  objects = Family.objects.annotate(occurrences=Count('occurrence')).order_by('pk')
-  size_all = Occurrence.objects.count()
-  size_ign = Occurrence.objects.exclude(word__family__name__contains = "IGNORED").count()
-  answer = list()
-  for o in objects :
-    r = dict()
-    r['link'] = reverse('occurrence-family', args=(o.pk,))
-    r['name'] = o.name
-    r['size'] = Word.objects.filter(family_id = o.id).count()
-    r['occurrences'] = o.occurrences
-    r['df'] = o.df
-    r['idf'] = "{0:2.2f}".format(o.idf)
-    r['frequence'] = "{0:2.2f}".format(float(o.occurrences) * 100.0 / float(size_all))
-    r['frequence-ign'] = "{0:2.2f}".format(float(o.occurrences) * 100.0 / float(size_ign))
-
-    # Occurrence.objects.filter(word__family__id = o.id).count()
-    answer.append(r)
-  return json.dumps({'aaData' : answer })
-
-@json_cache
 def index_period(request) : 
   objects = Period.objects.order_by('pk')
   answer = list()
@@ -325,11 +334,86 @@ def index_quote(request) :
 
   return json.dumps({ 'aaData' : answer }, default=date_handler)
 
+@json_nocache
+def create_subcorpus_full(request, ident, letters):
+  existing = Subcorpus.objects.filter(name=ident)
+  if existing :
+    return "The corpus '{0}' already exists.".format(ident);
+  subcorpus = Subcorpus(name=ident, letters=letters)
+  subcorpus.save()
+  return "OK"
+
+@ensure_csrf_cookie
+def create_subcorpus(request):
+  body = request.body.decode()
+  corpi = json.loads(body)
+  name = corpi['name']
+  letters = ','.join(map(str, corpi['letters']))
+  existing = Subcorpus.objects.filter(name=name)
+  if existing :
+    return HttpResponse("The corpus '{0}' already exists.".format(name));
+  subcorpus = Subcorpus(name=name, letters=letters)
+  subcorpus.save()
+  return HttpResponse("OK")
+
+def search_subcorpus(request):
+  corpus = Corpus()
+  body = request.body.decode()
+  json_request = json.loads(body)
+  search = json_request['search']
+  search_mode = json_request['search_mode']
+  if search_mode == "family":
+    answer = corpus.search_family_letters(search)
+  else : 
+    answer = corpus.search_word_letters(search)
+    
+  return HttpResponse(json.dumps(answer))
+
+@json_cache
+def index_families_post(request):
+  corpus = Corpus()
+  if request.method == 'POST' and request.body:
+    body = request.body.decode()
+    print(body)
+    json_request = json.loads(body)
+    subcorpus_id = json_request['subcorpus']
+    if subcorpus_id is None:
+      subcorpus_id = Subcorpus.objects.get(name='All').pk
+    return json.dumps(corpus.subcorpus_statistics(subcorpus_id))
+
+@ensure_csrf_cookie
+def delete_subcorpus(request):
+  body = request.body.decode()
+  corpi = json.loads(body)
+  pk = int(corpi['pk'])
+  Subcorpus.objects.filter(pk=pk).delete()
+  return HttpResponse("OK")
+
+@json_nocache
+def get_subcorpi(request):
+ subcorpi = Subcorpus.objects.all()
+ result = []
+ try:
+   def is_int(x):
+     try:
+       int(x)
+       return True
+     except ValueError:
+       return False
+   for c in subcorpi:
+      l = list(int(x) for x in c.letters.split(',') if is_int(x))
+      result.append({'pk' : c.pk, 'name' : c.name, 'letters' : l})
+   return json.dumps(result)
+ except ValueError:
+   return json.dumps(result)
 class QuoteView(generic.TemplateView):
   template_name = 'browser/quote.html'
 
 class IndexView(generic.TemplateView):
   template_name = 'browser/index.html'
+  @method_decorator(ensure_csrf_cookie)
+  def dispatch(self, *args, **kwargs):
+      return super(IndexView, self).dispatch(*args, **kwargs)
 
 class ParticipeView(generic.TemplateView):
   template_name = 'browser/participe.html'
@@ -345,8 +429,8 @@ class OccurrenceFamilyView(generic.DetailView):
   model = Family
   template_name = 'browser/index-occurrence-family.html'
 
-class FamilyView(generic.TemplateView):
-  template_name = 'browser/index-family.html'
+class FamiliesView(generic.TemplateView):
+  template_name = 'browser/index-families.html'
 
 class LetterView(generic.DetailView):
   model = Letter

@@ -1,0 +1,494 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <div class="panel-title">
+      
+       <div class="btn-group pull-right">
+          <button id="hide-button" type="button" class="btn btn-default">
+            <span class="glyphicon glyphicon-filter" aria-hidden="true"></span> Hide / Show
+          </button>
+          <button id="reset-button" type="button" class="btn btn-default">
+              <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Reset
+          </button>
+        </div>
+      <h3> Manage filters and selections </h3>
+    </div>
+  </div>
+
+
+<p> Tools for selecting and filtering: </p>
+<div class="panel-body">
+<div role="tabpanel">
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#includes" aria-controls="includes" role="tab" data-toggle="tab">Includes</a></li>
+    <li role="presentation"><a href="#ranges" aria-controls="ranges" role="tab" data-toggle="tab">Ranges</a></li>
+    <li role="presentation"><a href="#occurrences" aria-controls="occurrences" role="tab" data-toggle="tab">Occurrences</a></li>
+    <li role="presentation"><a href="#lists" aria-controls="lists" role="tab" data-toggle="tab">Lists</a></li>
+    <li role="presentation"><a href="#create-delete-panel" aria-controls="create-delete-panel" role="tab" data-toggle="tab">Create/Delete</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="includes">
+      <p> Select or filter according to an existing corpus. </p>
+      <form class="form-horizontal">
+        <div class="form-group"> 
+          <label class="col-sm-2 control-label"> Corpus: </label>
+          <div class="col-sm-10">
+            <select id="corpus-list" class="form-control">
+            </select>
+          </div>
+        </div>
+       <div class="form-group"> <div class="col-sm-offset-2 col-sm-10">
+         <button id="corpus-include-button" type="button" class="btn btn-default"
+           data-container="body" data-toggle="popover" data-placement="bottom" 
+           data-trigger="hover"> Include </button>
+         <button id="corpus-select-button" type="button" class="btn btn-default"
+           data-container="body" data-toggle="popover" data-placement="bottom" 
+           data-trigger="hover"> Select </button>
+         <button id="corpus-filter-button" type="button" class="btn btn-default"
+           data-container="body" data-toggle="popover" data-placement="bottom" 
+           data-trigger="hover"> Filter </button>
+         <button id="corpus-subtract-button" type="button" class="btn btn-default"
+           data-container="body" data-toggle="popover" data-placement="bottom" 
+           data-trigger="hover"> Subtract </button>
+         <button id="corpus-complement-button" type="button" class="btn btn-default"
+           data-container="body" data-toggle="popover" data-placement="bottom" 
+           data-trigger="hover"> Complement </button>
+       </div> </div>
+      </form>
+    </div> <!-- tabpanel -->
+
+    <div role="tabpanel" class="tab-pane" id="ranges">
+      <p> Select or filter a time interval. </p>
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Start date:</label>
+          <div class="col-sm-10">
+            <input type="date" class="form-control" id="range-start-date" value="1498-01-01">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">End date:</label>
+          <div class="col-sm-10">
+            <input type="date" class="form-control" id="range-end-date" value="1513-01-01">
+          </div>
+        </div>
+         <div class="form-group"> <div class="col-sm-offset-2 col-sm-10">
+           <button id="range-include-button" type="button" class="btn btn-default"
+           data-container="body" data-toggle="popover" data-placement="bottom" 
+           data-trigger="hover"> Include </button>
+           <button id="range-select-button" type="button" class="btn btn-default"
+           data-container="body" data-toggle="popover" data-placement="bottom" 
+           data-trigger="hover"> Select </button>
+           <button id="range-filter-button" type="button" class="btn btn-default"
+           data-container="body" data-toggle="popover" data-placement="bottom" 
+           data-trigger="hover"> Filter </button>
+           <button id="range-subtract-button" type="button" class="btn btn-default"
+           data-container="body" data-toggle="popover" data-placement="bottom" 
+           data-trigger="hover"> Subtract </button>
+           <button id="range-complement-button" type="button" class="btn btn-default"
+           data-container="body" data-toggle="popover" data-placement="bottom" 
+           data-trigger="hover"> Complement </button>
+         </div> </div>
+      </form>
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="occurrences">
+     <p> Create filter from search: </p>
+      <div class="col-sm-offset-2 form-inline">
+        <div class="form-group">
+          <label class="control-label">Search:</label>
+          <input id="search-input" type="text" class="form-control" placeholder="Enter search" />
+        </div>
+    
+        <div class="form-group">
+            <select id="search-select" class="form-control"><option value="family">Family</option><option value="word">Word</option></select>
+        </div> 
+      </div>
+ 
+      <div class="form">
+       <div class="form-group"> <div class="col-sm-offset-2 col-sm-10">
+         <button id="search-include-button" type="button" class="btn btn-default"> Include </button>
+         <button id="search-select-button" type="button" class="btn btn-default"> Select </button>
+         <button id="search-filter-button" type="button" class="btn btn-default"> Filter </button>
+         <button id="search-subtract-button" type="button" class="btn btn-default"> Subtract </button>
+         <button id="search-complement-button" type="button" class="btn btn-default"> Complement </button>
+       </div> </div><!-- /.col-lg-6 --></div>
+    </div>
+
+   <div role="tabpanel" class="tab-pane" id="lists">
+     <form class="form">
+       <div class="form-group">
+         <label> This is the current selection: </label>
+         <textarea id="selection-list" class="form-control" rows="3"></textarea>
+       </div>
+       <div class="form-group">
+         <button id="selection-list-button" type="button" class="btn btn-default"> Apply </button>
+       </div>
+    </form>
+   </div>
+
+   <div role="tabpanel" class="tab-pane" id="create-delete-panel">
+     <p> Creating and deleting corpus: </p>
+      <div class="form-horizontal"> <div class="col-sm-12 form-group">
+        <label class="col-sm-2 control-label">Create:</label>
+        <div class="col-sm-10 input-group">
+          <input id="create-input" type="text" class="form-control" placeholder="Enter new name" />
+          <span class="input-group-btn">
+            <button id="create-button" class="btn btn-primary" type="submit">Proceed</button>
+          </span>
+        </div>
+      </div>
+      <div class="col-sm-12 form-group">
+        <label class="col-sm-2 control-label">Delete:</label>
+        <div class="col-sm-10 input-group">
+          <select id="delete-input" type="text" class="form-control"></select>
+          <span class="input-group-btn">
+            <button id="delete-button" class="btn btn-primary" type="button">Proceed</button>
+          </span>
+        </div>
+      </div>
+    </div> </div>
+  </div> <!-- tabpanel --> 
+</div> <p> &nbsp; </p>
+<div id="ajax-response" class="col-sm-10 row"></div>
+</div>
+</div>
+<script>
+{% include "browser/corpus-manager.js" %}
+
+var include_diagram = '<svg width="150" height="100" style="width: auto !important;"><circle cx="50" cy="50" r="40" fill="red"/><circle cx="100" cy="50" r="40" fill="red"/><circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="transparent" /><circle cx="100" cy="50" r="40" stroke="black" stroke-width="4" fill="transparent" /><text x="40" y="55" fill="black" text-anchor="middle">Old</text><text x="110" y="55" fill="black" text-anchor="middle">New</text></svg>';
+var select_diagram = '<svg width="150" height="100" style="width: auto !important;"> <circle cx="100" cy="50" r="40" stroke="black" stroke-width="4" fill="red" /> <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="transparent" /> <text x="40" y="55" fill="black" text-anchor="middle">Old</text> <text x="110" y="55" fill="black" text-anchor="middle">New</text> </svg>';
+var filter_diagram = '<svg width="150" height="100" style="width: auto !important;"><clipPath id="clip1"><circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" /> </clipPath> <circle cx="100" cy="50" r="40" stroke="black" stroke-width="4" fill="red" clip-path="url(\'#clip1\')"/><circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="transparent" /><circle cx="100" cy="50" r="40" stroke="black" stroke-width="4" fill="transparent" /><text x="40" y="55" fill="black" text-anchor="middle">Old</text><text x="110" y="55" fill="black" text-anchor="middle">New</text></svg>';
+var subtract_diagram = '<svg width="150" height="100" style="width: auto !important;"><defs><mask id="hole"><circle r="40" cx="50" cy="50" fill="white"/><circle r="40" cx="100" cy="50" fill="black" /></mask></defs><circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="red" mask="url(\'#hole\')"/><circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="transparent" /><circle cx="100" cy="50" r="40" stroke="black" stroke-width="4" fill="transparent" /><text x="40" y="55" fill="black" text-anchor="middle">Old</text><text x="110" y="55" fill="black" text-anchor="middle">New</text></svg>';
+var complement_diagram = '<svg width="150" height="100" style="width: auto !important;"><defs><mask id="hole2"><circle r="40" cx="100" cy="50" fill="white" /><circle r="40" cx="50" cy="50" fill="black" /></mask></defs><circle cx="100" cy="50" r="40" stroke="black" stroke-width="4" fill="red" mask="url(\'#hole2\')"/><circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="transparent" /><circle cx="100" cy="50" r="40" stroke="black" stroke-width="4" fill="transparent" /><text x="40" y="55" fill="black" text-anchor="middle">Old</text><text x="110" y="55" fill="black" text-anchor="middle">New</text></svg>';
+
+
+$(document).ready(function() {
+
+
+
+
+  corpus_list.add($("select#delete-input"));
+  corpus_list.add($("select#corpus-list"));
+  corpus_list.reload();
+  
+  var csrftoken = $.cookie('csrftoken');
+
+  function csrfSafeMethod(method) {
+      return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+  }
+
+  $.ajaxSetup({
+      beforeSend: function(xhr, settings) {
+          if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+              xhr.setRequestHeader("X-CSRFToken", csrftoken);
+          }
+      }
+  });
+
+  $("#delete-button").on('click', function() {
+    var pk = parseInt($("#delete-input").val());
+    $.ajax({
+      url        : "{% url 'ajax-subcorpus-delete' %}",
+      dataType   : 'json',
+      contentType: 'application/json; charset=UTF-8', // This is the money shot
+      data       : JSON.stringify({ pk : pk }),
+      type       : 'POST',
+      complete   : function (xhr) { 
+        corpus_list.reload();
+        if (xhr.responseText === "OK") { 
+          $("#ajax-response").append('<div class="alert alert-success alert-dismissible fade in" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button><strong>Operation successful!</strong> The corpus \''+name+'\' has been successfully deleted.</div>');
+        } else {
+          $("#ajax-response").append('<div class="alert alert-danger alert-dismissible fade in" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button><strong>Something went wrong:</strong> '+xhr.responseText+'</div>');
+        }
+      }
+    });
+  });
+
+  $("#create-input").keyup(function(event){
+    if(event.keyCode == 13){
+        $("#create-button").click();
+    }
+  });
+  
+  $("#create-button").on('click', function() {
+    var name = $("#create-input").val();
+    if (name == null || name === "") {
+      $("#ajax-response").append('<div class="alert alert-warning alert-dismissible fade in" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button><strong>Operation not committed.</strong> Please provide a name to create a new corpus.</div>');
+      return ;
+    }
+    var letters = selected_letters.keys;
+    $.ajax({
+      url        : "{% url 'ajax-subcorpus-create' %}",
+      dataType   : 'json',
+      contentType: 'application/json; charset=UTF-8', // This is the money shot
+      data       : JSON.stringify({ name : name, letters : letters}),
+      type       : 'POST',
+      complete   : function (xhr) { 
+        corpus_list.reload();
+        if (xhr.responseText === "OK") { 
+          $("#ajax-response").append('<div class="alert alert-success alert-dismissible fade in" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button><strong>Operation successful!</strong> The corpus \''+name+'\' has been successfully created.</div>');
+        } else {
+          $("#ajax-response").append('<div class="alert alert-danger alert-dismissible fade in" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button><strong>Something went wrong:</strong> '+xhr.responseText+'</div>');
+        }
+      }
+    });
+  });
+
+  var apply_search_operation = function(operation) {
+    var search = $("#search-input").val();
+    var search_mode = $("#search-select").val();
+    if (search == null || search === "") {
+      $("#ajax-response").append('<div class="alert alert-warning alert-dismissible fade in" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button><strong>Operation not committed.</strong> Please provide a non-empty search.</div>');
+      return ;
+    }
+    $.ajax({
+      url        : "{% url 'ajax-subcorpus-search' %}",
+      dataType   : 'json',
+      contentType: 'application/json; charset=UTF-8', // This is the money shot
+      data       : JSON.stringify({ search : search, search_mode : search_mode }),
+      type       : 'POST',
+      success   : function (json) { 
+          corpus_list.reload();
+          operation(json);
+          $("#ajax-response").append('<div class="alert alert-success alert-dismissible fade in" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button><strong>Operation successful!</strong> The search is completed, '+ json.length +' letters matched.</div>');
+      }
+    });
+  };
+
+$( "#search-include-button" ).on('click', function () {apply_search_operation(function (json) { selected_letters.select(json); })});
+$( "#corpus-include-button" ).popover( { html : true, container : 'body', content : function () {
+  return include_diagram;
+} } );
+$( "#search-select-button" ).on('click', function () {apply_search_operation(function (json) { selected_letters.reset(json); })});
+$( "#corpus-select-button" ).popover( { html : true, container : 'body', content : function () {
+  return select_diagram;
+} } );
+$( "#search-filter-button" ).on('click', function () {apply_search_operation(function (json) { selected_letters.filter(json); })});
+$( "#corpus-filter-button" ).popover( { html : true, container : 'body', content : function () {
+  return filter_diagram;
+} } );
+$( "#search-complement-button" ).on('click', function () {apply_search_operation(function (json) { selected_letters.complement(json); })});
+$( "#corpus-complement-button" ).popover( { html : true, container : 'body', content : function () {
+  return complement_diagram;
+} } );
+$( "#search-subtract-button" ).on('click', function () {apply_search_operation(function (json) { selected_letters.subtract(json); })});
+$( "#corpus-subtract-button" ).popover( { html : true, container : 'body', content : function () {
+  return subtract_diagram;
+} } );
+
+
+
+
+});
+
+var apply_corpus_operation = function(operation) {
+   var k = $("select#corpus-list").val();
+   var item = corpus_list.get(k);
+   operation(item.letters);
+};
+$( "#corpus-include-button" ).on('click', function () {apply_corpus_operation(function (letters) { selected_letters.select(letters); })});
+$( "#corpus-include-button" ).popover( { html : true, container : 'body', content : function () {
+  return include_diagram;
+} } );
+
+
+$( "#corpus-select-button" ).on('click', function () {apply_corpus_operation(function (letters) { selected_letters.reset(letters); })});
+$( "#corpus-select-button" ).popover( { html : true, container : 'body', content : function () {
+  return select_diagram;
+} } );
+$( "#corpus-filter-button" ).on('click', function () {apply_corpus_operation(function (letters) { selected_letters.filter(letters); })});
+$( "#corpus-filter-button" ).popover( { html : true, container : 'body', content : function () {
+  return filter_diagram;
+} } );
+$( "#corpus-subtract-button" ).on('click', function () {apply_corpus_operation(function (letters) { selected_letters.subtract(letters); })});
+$( "#corpus-subtract-button" ).popover( { html : true, container : 'body', content : function () {
+  return subtract_diagram;
+} } );
+$( "#corpus-complement-button" ).on('click', function () {apply_corpus_operation(function (letters) { selected_letters.complement(letters); })});
+$( "#corpus-complement-button" ).popover( { html : true, container : 'body', content : function () {
+  return complement_diagram;
+} } );
+
+
+var apply_range_operation = function(operation) {
+  var start = $( "#range-start-date" ).val();
+  var end = $( "#range-end-date" ).val();
+  var url = "{% url 'ajax-letters-from-date' '0000-00-99' '0000-00-98' %}".replace('0000-00-99', start).replace('0000-00-98', end);
+  $.ajax({
+      url: url,
+      dataType: "json",
+      success: function(json){
+          operation(json);
+        }
+      });
+};
+
+$( "#range-include-button" ).on('click', function () {apply_range_operation(function (json) { selected_letters.select(json); })});
+$( "#corpus-include-button" ).popover( { html : true, container : 'body', content : function () {
+  return include_diagram;
+} } );
+$( "#range-select-button" ).on('click', function () {apply_range_operation(function (json) { selected_letters.reset(json); })});
+$( "#corpus-select-button" ).popover( { html : true, container : 'body', content : function () {
+  return select_diagram;
+} } );
+$( "#range-filter-button" ).on('click', function () {apply_range_operation(function (json) { selected_letters.filter(json); })});
+$( "#corpus-filter-button" ).popover( { html : true, container : 'body', content : function () {
+  return filter_diagram;
+} } );
+$( "#range-complement-button" ).on('click', function () {apply_range_operation(function (json) { selected_letters.complement(json); })});
+$( "#corpus-complement-button" ).popover( { html : true, container : 'body', content : function () {
+  return complement_diagram;
+} } );
+$( "#range-subtract-button" ).on('click', function () {apply_range_operation(function (json) { selected_letters.subtract(json); })});
+$( "#corpus-subtract-button" ).popover( { html : true, container : 'body', content : function () {
+  return subtract_diagram;
+} } );
+
+
+
+var toggle_filtering = false;
+
+$.fn.dataTable.ext.search.push(
+    function( settings, data, dataIndex ) {
+      if (! toggle_filtering)
+         return true;
+      var pk = data[2];
+      return selected_letters.isIn(pk);
+    }
+);
+
+$( "#hide-button" ).on('click', function(event) {
+    if (toggle_filtering) {
+      toggle_filtering = false;
+      $(event.target).removeClass("active");
+    } else {
+      toggle_filtering = true;
+      $(event.target).addClass("active");
+    }
+    $("#myIndexList").DataTable().draw();
+});
+$( "#reset-button" ).on('click', function() {
+  selected_letters.reset([]);
+});
+
+var selected_letters = {
+   table : {},
+   keys : [],
+   callbacks: [],
+   change : function () {
+      console.log("change");
+      $("#myIndexList").DataTable().draw();
+      for (k in this.callbacks) {
+        if (this.callbacks.hasOwnProperty(k)) {
+          this.callbacks[k](this);
+        }
+      }
+   },
+   isIn : function (pk) {
+     pk = parseInt(pk);
+     return (this.table[pk] != null && this.table[pk]);
+   },
+   add : function (pk) {
+     pk = parseInt(pk);
+     if (this.table[pk] == null || this.table[pk] === false) {
+       this.table[pk] = true;
+       this.keys.push(pk);
+       this.change();
+     }
+   },
+   remove : function(pk) {
+     pk = parseInt(pk);
+     if (this.table[pk]){
+      delete this.table[pk];
+      var k = this.keys.indexOf(pk);
+      this.keys.splice(k, 1);
+      this.change();
+     }
+   },
+   toString : function () {
+      this.keys.sort(function (a,b) { return a - b; });
+      return this.keys.join(',');
+   },
+   onChange : function (f) {
+     this.callbacks.push(f);
+   },
+   select : function (l) {
+     console.log("select", l);
+     var length = l.length;
+     for (var i = 0; i < length; i++) {
+         var pk = parseInt(l[i]);
+         if (this.table[pk] == null) {
+          this.table[pk] = true;
+          this.keys.push(pk); 
+        }
+     }
+     this.change();
+   }, 
+   filter : function (l) {
+     console.log("filter", l);
+     var intersection = [];
+     var length = l.length;
+     for (var i = 0; i < length; i++) {
+         var pk = parseInt(l[i]);
+         if (this.table[pk]) {
+          intersection.push(pk);
+         }
+     }
+     this.reset(intersection);
+   },
+   subtract : function (l) {
+     console.log("subtract", l);
+     var result = [];
+     var hash = {};
+     var length = result.length;
+     for (var k = 0; k < length; k ++) {
+       hash[l[k]] = true;
+     }
+     length = this.keys.length;
+     for (var k = 0; k < length; k ++) {
+       var pk = this.keys[k];
+       if (! hash[pk]) {
+         result.push(pk);
+       }
+     }
+     this.reset(result);
+   },
+   complement : function (l) {
+     console.log("complement", l);
+     var result = [];
+     var length = l.length;
+     for (var k = 0; k < length; k ++) {
+       var pk = l[k];
+       if (! this.table[pk]) {
+         result.push(pk);
+       }
+     }
+     this.reset(result);
+   },
+
+   reset : function (l) {
+     console.log("reset", l)
+     this.keys = [];
+     this.table = {};
+     this.select(l);
+   }
+};
+
+selected_letters.onChange (function (selection) {
+  $( "#selection-list" )[0].value = selection.toString();
+});
+
+$( "#selection-list-button" ).click(function (event) {
+  var text = $("#selection-list")[0].value;
+  var reg = /\d+/g;   
+  var result;
+  var pks = []
+  while((result = reg.exec(text)) !== null) 
+      pks.push(result);
+  selected_letters.reset(pks);
+});
+
+</script>

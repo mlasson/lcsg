@@ -1,0 +1,512 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% block title %}
+  Index of families
+{% endblock %}
+{% block header %}
+  Index of families
+{% endblock %}
+{% block content %}
+
+<p> (Beware, it may take some time). </p>
+
+<table class="table table-striped" id="myIndexList" width="100%">
+    <thead><tr>
+      <th> View </th>
+      <th data-toggle="tooltip" data-placement="top" title="Name of the family."> Name </th>
+      <th data-toggle="tooltip" data-placement="top" title="Number of different spelling."> Size </th>
+      <th data-toggle="tooltip" data-placement="top" title="Number of occurrences in the sub-corpus."> Occurrences </th>
+      <th data-toggle="tooltip" data-placement="top" title="Number of occurrences in the whole corpus."> Occurrences* </th>
+      <th data-toggle="tooltip" data-placement="top" title="Frequency per 10000 words in the sub-corpus."> Frequency </th>
+      <th data-toggle="tooltip" data-placement="top" title="Frequency per 10000 words in the whole corpus."> Frequency* </th>
+      <th data-toggle="tooltip" data-placement="top" title="Quotient of the two previous columns."> Relative </th>
+      <th data-toggle="tooltip" data-placement="top" title="Number of letters in which the word occurs at least once."> Letters </th>
+      <th data-toggle="tooltip" data-placement="top" title="Normalized (between 0 and 1) index expressing the average distance of the frequency of a word in each letters to the frequency in the whole corpus. A value close to 0 (probably) means that the family is a function word whereas a value close to 1 means it is very specific to some letters."> Dispersion </th>
+      <th data-toggle="tooltip" data-placement="top" title="Normalized index (between -1 and 1). For positive values, it expresses the surprise to see that the word is used more often in the sub-corpus than in the whole corpus. For negative values, the surprise that it is used less often in the sub-corpus."> Hypertest </th>
+    </tr></thead>
+  <tbody>
+
+  </tbody>
+</table>
+
+<p> </p>
+<div class="panel panel-primary">
+<div class="panel-heading"><div class="panel-title">
+  Subcorpus selection
+</div></div>
+<div class="panel-body">
+<form class="form-horizontal">
+    <div class="form-group">
+      <label class="col-sm-2 control-label">Subcorpus:</label>
+      <div class="col-sm-8 input-group">
+        <select id="subcorpus-input" type="text" class="form-control"></select>
+      </div>
+    </div>
+</form>
+</tr>
+</div>
+</div>
+
+<div class="panel panel-default">
+ <div class="panel-heading">
+   <h4> Filters <span class="glyphicon glyphicon-collapse-down close" aria-hidden="true" data-toggle="collapse" data-target="#collapse-filter"></span></h4>
+ </div>
+ <div class="panel-body">
+    <div class="collapse" id="collapse-filter">
+      <form class="form-horizontal">
+        <!-- Size: -->
+        <div class="col-xs-12 form-group">
+            <label class="col-xs-3 control-label"> Size: </label>
+            <div class="col-xs-3">
+              <input class="form-control" type="number" step="1" name="min-size" id="min-size" min="0" max="10000" value="0" disabled> 
+            </div> 
+            <p class="col-xs-1 form-control-static"> - </p>
+            <div class="col-xs-3">
+              <input  class="form-control" type="number" step="1" name="max-size" id="max-size" min="0" max="10000" value="10000" disabled> 
+            </div>
+            <div class="col-xs-2 checkbox">
+              <label>
+                <input type="checkbox" id="active-size"> active
+              </label>
+            </div>
+        </div>
+        <!-- Occurrences: -->
+        <div class="col-xs-12 form-group">
+            <label class="col-xs-3 control-label"> Occurrences: </label>
+            <div class="col-xs-3">
+              <input class="form-control" type="number" step="1" name="min-occurrences" id="min-occurrences" min="0" value="0" disabled> 
+            </div> 
+            <p class="col-xs-1 form-control-static"> - </p>
+            <div class="col-xs-3">
+              <input  class="form-control" type="number" step="1" name="max-occurrences" id="max-occurrences" min="0" value="100000" disabled> 
+            </div>
+            <div class="col-xs-2 checkbox">
+              <label>
+                <input type="checkbox" id="active-occurrences"> active
+              </label>
+            </div>
+        </div>
+        <!-- Total occurrences: -->
+        <div class="col-xs-12 form-group">
+            <label class="col-xs-3 control-label"> Total occurrences: </label>
+            <div class="col-xs-3">
+              <input class="form-control" type="number" step="1" name="min-total_occurrences" id="min-total_occurrences" min="0" value="0" disabled> 
+            </div> 
+            <p class="col-xs-1 form-control-static"> - </p>
+            <div class="col-xs-3">
+              <input  class="form-control" type="number" step="1" name="max-total_occurrences" id="max-total_occurrences" min="0" value="100000" disabled> 
+            </div>
+            <div class="col-xs-2 checkbox">
+              <label>
+                <input type="checkbox" id="active-total_occurrences"> active
+              </label>
+            </div>
+        </div>
+        <!-- Frequency: -->
+        <div class="col-xs-12 form-group">
+            <label class="col-xs-3 control-label"> Frequency: </label>
+            <div class="col-xs-3">
+              <input class="form-control" type="number" step="1" name="min-frequency" id="min-frequency" min="0" max="1000" value="0" disabled> 
+            </div> 
+            <p class="col-xs-1 form-control-static"> - </p>
+            <div class="col-xs-3">
+              <input  class="form-control" type="number" step="1" name="max-frequency" id="max-frequency" min="0" max="1000" value="1000" disabled> 
+            </div>
+            <div class="col-xs-2 checkbox">
+              <label>
+                <input type="checkbox" id="active-frequency"> active
+              </label>
+            </div>
+        </div>
+        <!-- Total frequency: -->
+        <div class="col-xs-12 form-group">
+            <label class="col-xs-3 control-label"> Total frequency: </label>
+            <div class="col-xs-3">
+              <input class="form-control" type="number" step="1" name="min-total_frequency" id="min-total_frequency" min="0" max="1000" value="0" disabled> 
+            </div> 
+            <p class="col-xs-1 form-control-static"> - </p>
+            <div class="col-xs-3">
+              <input  class="form-control" type="number" step="1" name="max-total_frequency" id="max-total_frequency" min="0" max="1000" value="1000" disabled> 
+            </div>
+            <div class="col-xs-2 checkbox">
+              <label>
+                <input type="checkbox" id="active-total_frequency"> active
+              </label>
+            </div>
+        </div>
+        <!-- Relative frequency: -->
+        <div class="col-xs-12 form-group">
+            <label class="col-xs-3 control-label"> Relative frequency: </label>
+            <div class="col-xs-3">
+              <input class="form-control" type="number" step="1" name="min-relative_frequency" id="min-relative_frequency" min="0" value="0" disabled> 
+            </div> 
+            <p class="col-xs-1 form-control-static"> - </p>
+            <div class="col-xs-3">
+              <input  class="form-control" type="number" step="1" name="max-relative_frequency" id="max-relative_frequency" min="0" value="1000" disabled> 
+            </div>
+            <div class="col-xs-2 checkbox">
+              <label>
+                <input type="checkbox" id="active-relative_frequency"> active
+              </label>
+            </div>
+        </div>
+
+        <!-- Letters: -->
+        <div class="col-xs-12 form-group">
+            <label class="col-xs-3 control-label"> Letters: </label>
+            <div class="col-xs-3">
+              <input class="form-control" type="number" step="1" name="min-letters" id="min-letters" min="0" max="3000" value="0" disabled> 
+            </div> 
+            <p class="col-xs-1 form-control-static"> - </p>
+            <div class="col-xs-3">
+              <input  class="form-control" type="number" step="1" name="max-letters" id="max-letters" min="0" max="3000" value="3000" disabled> 
+            </div>
+            <div class="col-xs-2 checkbox">
+              <label>
+                <input type="checkbox" id="active-letters"> active
+              </label>
+            </div>
+        </div>
+        <!-- Dispersion: -->
+        <div class="col-xs-12 form-group">
+            <label class="col-xs-3 control-label"> Dispersion: </label>
+            <div class="col-xs-3">
+              <input class="form-control" type="number" step="1" name="min-dispersion" id="min-dispersion" min="0" max="10000" value="0" disabled> 
+            </div> 
+            <p class="col-xs-1 form-control-static"> - </p>
+            <div class="col-xs-3">
+              <input  class="form-control" type="number" step="1" name="max-dispersion" id="max-dispersion" min="0" max="10000" value="10000" disabled> 
+            </div>
+            <div class="col-xs-2 checkbox">
+              <label>
+                <input type="checkbox" id="active-dispersion"> active
+              </label>
+            </div>
+        </div>
+        <!-- Hypertest: -->
+        <div class="col-xs-12 form-group">
+            <label class="col-xs-3 control-label"> Hypertest: </label>
+            <div class="col-xs-3">
+              <input class="form-control" type="number" step="0.01" name="min-hypertest" id="min-hypertest" min="-1.0" max="1.0" value="-1.0" disabled> 
+            </div> 
+            <p class="col-xs-1 form-control-static"> - </p>
+            <div class="col-xs-3">
+              <input class="form-control" type="number" step="0.01" name="max-hypertest" id="max-hypertest" min="-1.0" max="1.0" value="1.0" disabled> 
+            </div>
+            <div class="col-xs-2 checkbox">
+              <label>
+                <input type="checkbox" id="active-hypertest"> active
+              </label>
+            </div>
+        </div>
+
+      </form>
+    </div> <!-- collapse -->
+  </div>
+</div> <!-- panel -->
+
+<div class="panel panel-default">
+ <div class="panel-heading">
+   <h4> Word cloud creator <span class="glyphicon glyphicon-collapse-down close" aria-hidden="true" data-toggle="collapse" data-target="#collapse-word-cloud"></span></h4>
+ </div>
+ <div class="panel-body">
+    <div class="collapse" id="collapse-word-cloud">
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Title:</label>
+          <div class="col-sm-10"><input class="form-control" type="text" id="name-word-cloud" value="Word cloud"></div>
+          <p class="col-sm-offset-2 col-sm-10 help-block">Identifier for the image.</p>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Height:</label>
+          <div class="col-sm-10"><input class="form-control" type="number" id="height-word-cloud" value="1000"></div>
+          <p class="col-sm-offset-2 col-sm-10 help-block">Height of the image.</p>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Width:</label>
+          <div class="col-sm-10"><input class="form-control" type="number" id="width-word-cloud" value="1000"></div>
+          <p class="col-sm-offset-2 col-sm-10 help-block">Width of the image.</p>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Max-size:</label>
+          <div class="col-sm-10"><input class="form-control" type="number" id="maxsize-word-cloud" value="200"></div>
+          <p class="col-sm-offset-2 col-sm-10 help-block">Size of the biggest word.</p>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Number of words:</label>
+          <div class="col-sm-10"><input class="form-control" type="number" id="number-word-cloud" value="200"></div>
+          <p class="col-sm-offset-2 col-sm-10 help-block">Maximum number of words in the cloud.</p>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Parameter:</label>
+          <div class="col-sm-10"><select class="form-control" id="parameter-word-cloud"> 
+            <option value="Frequency"> Frequency </option>
+            <option value="Relative requency"> Relative frequency </option>
+            <option value="Hypertest"> Hypertest </option>
+          </select></div>
+          <p class="col-sm-offset-2 col-sm-10 help-block">Parameter.</p>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Sizing factor:</label>
+          <div class="col-sm-10"><input type="number" step="0.1" min="0.0" value="1.0" class="form-control" id="factor-word-cloud"></div>
+          <p class="col-sm-offset-2 col-sm-10 help-block"> Scale for sizing.</p>
+        </div>
+
+        <div class="form-group"> <div class="col-sm-offset-2 col-sm-10"> 
+          <button type="button" class="btn btn-default" id="draw-word-cloud">Draw</button>
+        </div></div>
+      </form>
+    </div>
+ </div> <!-- panel-body -->
+</div>
+
+<div id="word-cloud">
+
+</div>
+
+{% csrf_token %}
+<script>
+  {% include 'browser/corpus-manager.js' %}
+  corpus_list.add($('select#subcorpus-input'));
+  fields = [ "size", "occurrences", "total_occurrences", "frequency", "total_frequency", "relative_frequency", "letters", "dispersion", "hypertest" ]
+  /* Filter form control */
+
+  $.fn.dataTable.ext.search.push(
+    function( settings, data, dataIndex ) {
+      var result = true;
+      for (var k = 0; k < fields.length; k ++) {
+        var field = fields[k];
+        if ($("#active-"+field).prop('checked')) {
+          var min = parseFloat( $('#min-'+field).val());
+          var max = parseFloat( $('#max-'+field).val());
+          var val = parseFloat( data[2+k] ); 
+          if (! isNaN(val)) {
+            if (! isNaN(min)) {
+               result &= min <= val;
+            } 
+            if (! isNaN(max)) {
+               result &= val <= max;
+            }
+         } else {
+           console.log(val);
+         }
+       }
+      }
+      return result;
+    }
+  );
+
+  for (var k = 0; k < fields.length; k ++) {
+    var field = fields[k];
+    $( "#active-"+ field).change(function () {
+      if ($( "#active-"+ this.field).prop('checked')) {
+         $("input#min-" + this.field).removeAttr('disabled');
+         $("input#max-" + this.field).removeAttr('disabled');
+      } else { 
+         $("input#min-" + this.field).attr('disabled', true);
+         $("input#max-" + this.field).attr('disabled', true);
+      }
+    }.bind({ 'field' : fields[k] }));
+    $( "#active-"+ field).add($( "#min-"+ field))
+                         .add($( "#max-"+ field))
+                         .change((function () {
+             $('#myIndexList').dataTable().fnDraw(false);
+           }));
+  }
+
+  /* End of filter form control */
+  function load_table() {
+      var table = $('#myIndexList').dataTable( {
+        "processing": true,
+        "ajax": function (data, callback, settings) {
+            subcorpus = parseInt($("select#subcorpus-input").val());
+            $.ajax({
+                url        : "{% url 'ajax-index-families' %}",
+                dataType   : 'json',
+                contentType: 'application/json; charset=UTF-8', 
+                data       : JSON.stringify({ subcorpus : subcorpus }),
+                type       : 'POST',
+                success   : function (json) { 
+                    var data = json['data'];
+                    var l = data.length;
+                    for (var k = 0; k < fields.length; k ++) {
+                      var field = fields[k];
+                      var min_val = data[0][field];
+                      var max_val = data[0][field];
+                      for (var i = 1; i < data.length; i ++) {
+                        var x = data[i][field];
+                        if (x < min_val) 
+                          min_val = x;
+                        if (x > max_val)
+                          max_val = x;
+                      }
+                      min_val = min_val % 1 === 0 ? min_val : Math.floor(min_val * 10000) / 10000;
+                      max_val = max_val % 1 === 0 ? max_val : max_val.toFixed(3);
+                      var min_sel = $("#min-"+field);
+                      var max_sel = $("#max-"+field);
+                      min_sel.add(max_sel).attr('min', min_val).attr('max', max_val);
+                      min_sel.attr('value', min_val);
+                      max_sel.attr('value', max_val);
+                    }
+                    callback(json);
+                }
+              });
+        },
+        "columnDefs": [ {
+          "targets": 0,
+          "data": "link",
+          "render": function ( data, type, full, meta ) {
+             return '<a href="'+data+'" class="btn btn-default btn-xs">'+
+                    '<span class="glyphicon glyphicon-link"></span></a>';
+          }
+        },{
+          "targets": 5,
+          "data": "frequency",
+          "render": function ( data, type, full, meta ) {
+             return (data).toFixed(2);
+          }
+        },{
+          "targets": 6,
+          "data": "total_frequency",
+          "render": function ( data, type, full, meta ) {
+             return (data).toFixed(2);
+          }
+        },{
+          "targets": 7,
+          "data": "relative_frequency",
+          "render": function ( data, type, full, meta ) {
+             return (data).toFixed(2);
+          }
+        },{
+          "targets": 9,
+          "data": "dispersion",
+          "render": function ( data, type, full, meta ) {
+             return (data).toFixed(2);
+          }
+        }, {
+          "targets": 10,
+          "data": "hypertest",
+          "render": function ( data, type, full, meta ) {
+             if (data) 
+               return data.toExponential(4);
+             else
+               return "";
+          }
+        }, ],
+        "columns": [
+            { "data": "link" }, // 0
+            { "data": "name" }, // 1
+            { "data": "size" }, // 2
+            { "data": "occurrences" }, // 3
+            { "data": "total_occurrences" }, // 4
+            { "data": "frequency" }, // 5
+            { "data": "total_frequency" }, // 6
+            { "data": "relative_frequency" }, // 7
+            { "data": "letters" }, // 8
+            { "data": "dispersion" }, // 9
+            { "data": "hypertest" }, // 10
+        ]
+    } );
+    var tt = new $.fn.dataTable.TableTools( table, { "sSwfPath": "{% static 'js/copy_csv_xls_pdf.swf' %}" });
+    $( '#header-right' ).append($( tt.fnContainer() ));
+  }
+
+  function word_cloud(width, height, words, node) {
+      var fill = d3.scale.category20();
+
+    d3.layout.cloud().size([width, height])
+        .words(words)
+        .rotate(function() { return ~~(Math.random() * 2) * 90; })
+        .font("Impact")
+        .fontSize(function(d) { return d.size; })
+        .on("end", draw)
+        .start();
+
+    function draw(words) {
+      d3.select(node).append("svg")
+          .attr("width", width)
+          .attr("height", height)
+          .append("g")
+          .attr("transform", "translate("+width / 2+","+ height / 2+")")
+          .selectAll("text")
+          .data(words)
+          .enter().append("text")
+          .style("font-size", function(d) { return d.size + "px"; })
+          .style("font-family", "Impact")
+          .style("fill", function(d, i) { return fill(i); })
+          .attr("text-anchor", "middle")
+          .attr("transform", function(d) {
+            return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+          })
+          .text(function(d) { return d.text; });
+    }
+  }
+
+  function draw_wordcloud() {
+    var height = $("input#height-word-cloud").val();
+    var width =  $("input#width-word-cloud").val();
+    var root = $("#word-cloud");
+    var alert = $('<div class="alert alert-warning alert-dismissible fade in" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+    root.append(alert);
+
+    var filteredrows = $("#myIndexList").dataTable()._('tr', {"filter": "applied"});
+
+    var sign = 1;
+    if ($("select#order-word-cloud").val() == "Descending") {
+      sign = -1;
+    }
+
+    var proj = function (a) { 
+      var freq = a.frequency;
+      freq /= 10000.0;
+      return sign < 0 ? 1 - freq : freq; };
+    
+    if ($("select#parameter-word-cloud").val() == "Relative frequency") {
+      proj = function (a) { return sign < 0 ? a["relative_frequency"] : 1 - 1 / a["relative_frequency"]; };
+    }
+    
+    if ($("select#parameter-word-cloud").val() == "Hypertest") {
+      proj = function (a) { 
+         var prob = a["hypertest"];
+         prob = (prob < 0.0 ? -prob : prob);
+         var log = 1 + 1 / Math.log(prob);
+         return log;
+      };
+    }
+
+    function comp (proj) { 
+      return function(a,b) {
+         return (proj(b) - proj(a));
+      }
+    }
+
+    filteredrows.sort(comp(proj));
+    var number = parseInt($("input#number-word-cloud").val());
+    filteredrows = filteredrows.splice(0, number);
+ 
+    var max_size = parseInt($("input#maxsize-word-cloud").val());
+    var factor = parseFloat($("input#factor-word-cloud").val());
+    var first = proj(filteredrows[0]);
+ 
+    function size (r) {
+       return max_size*(Math.pow(proj(r) / first, factor));
+    }
+
+    words = filteredrows.map(function(r) {
+      return { 'text' : r.name, 'proba' : proj(r),
+               'size' : size(r) };
+    });
+
+    word_cloud(width, height, words, alert[0]);
+  }
+
+  $(document).ready(function() {
+    $('[data-toggle="tooltip"]').tooltip({ container: 'body' });
+    corpus_list.reload();
+    load_table();
+    $("select#subcorpus-input").change(function () {$('#myIndexList').DataTable().ajax.reload()});
+    $("button#draw-word-cloud").click(draw_wordcloud);
+  });
+</script>
+{% endblock %}

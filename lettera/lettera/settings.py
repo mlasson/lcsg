@@ -10,6 +10,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 
@@ -57,7 +58,8 @@ TEMPLATE_CONTEXT_PROCESSORS = ("django.contrib.auth.context_processors.auth",
         "django.core.context_processors.static",
         "django.core.context_processors.tz",
         "django.contrib.messages.context_processors.messages", 
-        "django.core.context_processors.request")
+        "django.core.context_processors.request", 
+        "lettera.menu.menu_structure")
 
 ROOT_URLCONF = 'lettera.urls'
 

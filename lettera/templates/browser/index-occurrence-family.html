@@ -8,6 +8,8 @@ Occurrences of {{ family.name }}
 Occurrences of {{ family.name }}
 {% endblock %}
 {% block content %}
+
+
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
   <li class="active"><a href="#tabtable" role="tab" data-toggle="tab">Table</a></li>
@@ -20,10 +22,22 @@ Occurrences of {{ family.name }}
 <!-- Tab panes -->
 <div class="tab-content">
   <div class="tab-pane active" id="tabtable">
+<!-- Subcorpus selection -->
+<form class="form-horizontal">
+    <div class="form-group">
+      <label class="col-sm-2 control-label">Subcorpus:</label>
+      <div class="col-sm-8 input-group">
+        <select id="subcorpus-input" type="text" class="form-control"></select>
+      </div>
+    </div>
+</form>
+<!-- / -->
+
   <h2> Table of occurrences </h2>
 <table class="table table-striped" id="myIndexList" width="100%">
     <thead><tr>
     <th> View </th>
+    <th> Key </th>
     <th> Vol </th>
     <th> Num </th> 
     <th> Date </th> 
@@ -83,6 +97,25 @@ Occurrences of {{ family.name }}
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal fade -->
 <script>
+  {% include 'browser/corpus-manager.js' %}
+  corpus_list.add($('select#subcorpus-input'));
+  corpus_list.reload();
+  $("select#subcorpus-input").change(function () {
+     $('#myIndexList').DataTable().draw(false)
+  });
+  $.fn.dataTable.ext.search.push(
+    function( settings, data, dataIndex ) {
+        var k = $("select#subcorpus-input").val();
+        var letters = corpus_list.get(k).letters;
+        var val = parseInt(data[1]) || 0 ; // use data for the age column
+        var res = $.inArray(val, letters);
+        console.log(res);
+        return res >= 0;
+    }
+);
+
+
+
   var default_modal = $("#myModal").clone();
   var chart;
   var chartPeriod;
@@ -116,10 +149,9 @@ Occurrences of {{ family.name }}
   draw_tree("{% url 'family-forward-tree-ajax' family.id %}", 
             "{% url 'family-backward-tree-ajax' family.id %}", "#tree"); 
 
-  function onclick_modal(elem){
+  function onclick_modal(letter_url){
      $("#myModal").empty();
      $("#myModal").append(default_modal);
-     var letter_url = $(elem).find("span").data('content-url');
      $.ajax({
       url: letter_url,
       success: function(html){
@@ -128,42 +160,10 @@ Occurrences of {{ family.name }}
         }
       });
   }
-  $(document).ready(function() {
-    $.getJSON("{% url 'occurrence-family-ajax' family.id %}", function( json ) {
-      data = json.aaData;
-      period_sizes = json.periods;
-      var oTable = $('#myIndexList').dataTable({
-        "bProcessing": true,
-        "bAutoWith": true,
-        "data": data,
-        "aoColumnDefs" : [
-             { "mRender" : function (data, type, row) { 
-             return '<button type="button" class="btn btn-default btn-xs" onclick="onclick_modal(this)">'+
-                    '<span class="glyphicon glyphicon-eye-open" data-toggle="modal" data-target="#myModal"'+ 
-                    'data-content-url="'+data+'"></span></button>'+
-                    '</a>';
-                }, 
-               "aTargets": [ 0 ]
-               }, { "mRender" : function (data, type, row) { 
-                   return data[0]+' <span class="bg-info">'+data[1]+'</span> '+data[2];
-                }, 
-               "aTargets": [ 5 ]
-               },
-                 {"bVisible" : false, "aTargets":[]}, 
-                 {"sWidth" : "3%", "aTargets":[0,1,2]}, 
-                 {"sType" : "date", "aTargets":[3]},
-                 {"sType" : "numeric", "aTargets":[1,2]}],
-        "aoColumns": [
-             { "mData": "link" },
-             { "mData": "volume" },
-             { "mData": "letter" },
-             { "mData": "date" },
-             { "mData": "word" },
-             { "mData": "sentence" }
-        ] 
-      }); 
-    var tt = new $.fn.dataTable.TableTools( oTable, { "sSwfPath": "{% static 'js/copy_csv_xls_pdf.swf' %}" });
-    $( tt.fnContainer() ).insertAfter('div.dataTables_wrapper');
+
+  function fill_everything_else_with_data (json) {
+    var data = json.aaData;
+    var period_sizes = json.periods;
     var dict = {};
     var cpt = 0;
     data.forEach(function(e){
@@ -276,8 +276,64 @@ Occurrences of {{ family.name }}
             f (occurrences, periods);
           });
       }, '.histogram');
+  }
+ 
 
-  });
+
+  $(document).ready(function() {
+    var oTable = $('#myIndexList').dataTable({
+      "processing": true,
+      "bAutoWith": true,
+       "fnDrawCallback": function(oSettings) {
+            $( "button#modal-button" ).each(function (index, button) {
+              var letter_url = $(button).data('content-url');
+              $(button).off('click').on('click', function (event) { 
+                onclick_modal(letter_url); 
+              });
+             });
+        },
+      "ajax": function (data, callback, settings) {
+          /* subcorpus = parseInt($("select#subcorpus-input").val()); */
+          $.ajax({
+              url        : "{% url 'occurrence-family-ajax' family.id %}",
+              dataType   : 'json',
+              contentType: 'application/json; charset=UTF-8', 
+              data       : JSON.stringify({ subcorpus : "All" }),
+              type       : 'POST',
+              success   : function (json) { 
+                  console.log(json);
+                  fill_everything_else_with_data(json);                 
+                  callback(json);
+              }
+            });
+      },
+      "columnDefs" : [
+           { "render" : function (data, type, full, meta) { 
+           return '<button type="button" class="btn btn-default btn-xs" id="modal-button" data-toggle="modal" data-target="#myModal" '+
+                  'data-content-url="'+data+'">' + '<span class="glyphicon glyphicon-eye-open"></span></button> </a>';
+              }, 
+             "targets": [ 0 ]
+             }, { "render" : function (data, type, full, meta) { 
+                 return data[0]+' <span class="bg-info">'+data[1]+'</span> '+data[2];
+              }, 
+             "targets": [ 6 ]
+             },
+               {"width" : "3%", "targets":[0,1,2,3]}, 
+               {"type" : "date", "targets":[4]},
+               {"type" : "numeric", "targets":[1,2,3]}],
+      "columns": [
+           { "data": "link" },
+           { "data": "pk" },
+           { "data": "volume" },
+           { "data": "letter" },
+           { "data": "date" },
+           { "data": "word" },
+           { "data": "sentence" }
+      ] 
+    }); 
+  
+  var tt = new $.fn.dataTable.TableTools( oTable, { "sSwfPath": "{% static 'js/copy_csv_xls_pdf.swf' %}" });
+  $( tt.fnContainer() ).insertAfter('div.dataTables_wrapper');
 });
 </script>
 {% endblock %}
