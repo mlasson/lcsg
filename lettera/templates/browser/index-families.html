@@ -488,6 +488,45 @@
     var max_size = parseInt($("input#maxsize-word-cloud").val());
     var factor = parseFloat($("input#factor-word-cloud").val());
     var first = proj(filteredrows[0]);
+    var step = 0.1;
+
+    if (true && filteredrows.length > 0) {
+      var length = filteredrows.length;
+      var min_proj = proj(filteredrows[0]);
+      for (var k = 1;k < length; k ++) {
+        var x = proj(filteredrows[k]);
+        if (x < min_proj)
+          min_proj = x; 
+      }
+      var factor = Math.log(5.0 / max_size) / Math.log(min_proj) + 0.1;
+      var prev_factor = factor;
+      var test = true;
+      while (test) {
+        test = false;
+        for (var k = 0;k < length; k ++) {
+          var a = Math.pow(proj(filteredrows[k]) / first, factor) * max_size;
+          if (a < 5) {
+            test = true;
+            break;
+          }
+        }
+        if (test) {
+          prev_factor = factor; 
+          factor -= step;
+          if (factor < 0) {
+            factor = 0.0;
+          } else {
+            step *= 2.0;
+          }
+        } else {
+          if (step > 0.1 && prev_factor - factor > 0.1) {
+            step = 0.1;
+            test = true;
+          }
+          factor = prev_factor;
+        }
+      }
+    }
  
     function size (r) {
        return max_size*(Math.pow(proj(r) / first, factor));
