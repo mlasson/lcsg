@@ -8,12 +8,14 @@ from django.db.models import Count, Q, query
 from django.shortcuts import render
 from django.http import HttpResponse 
 from django.views import generic
+from django.contrib.auth.decorators import login_required
 from browser.models import *
 from django.core.paginator import Paginator
 from utils.suffixtree import SuffixTree
 from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import ensure_csrf_cookie, csrf_protect
 from browser.corpus import Corpus
+from browser import corpus
 
 class json_cache(object):
   def __init__(self, func):
@@ -356,6 +358,34 @@ def create_subcorpus(request):
   subcorpus.save()
   return HttpResponse("OK")
 
+
+class HypertestView(generic.TemplateView):
+  template_name = 'browser/hypertest.html'
+  @method_decorator(login_required)
+  def dispatch(self, *args, **kwargs):
+      return super(HypertestView, self).dispatch(*args, **kwargs)
+
+
+
+def hypertest_histogram(request):
+  if request.method == 'POST' and request.body:
+    body = request.body.decode()
+    json_request = json.loads(body)
+
+    N = json_request['N'] or 100
+    n = json_request['n'] or 10
+    K = json_request['K'] or 30
+  else : 
+    N = 100
+    n = 10
+    K = 30
+  
+  answer = corpus.histogram_hypertest(N, n, K)
+    
+  return HttpResponse(json.dumps(answer))
+
+
+
 def search_subcorpus(request):
   corpus = Corpus()
   body = request.body.decode()
@@ -412,32 +442,55 @@ class QuoteView(generic.TemplateView):
 class IndexView(generic.TemplateView):
   template_name = 'browser/index.html'
   @method_decorator(ensure_csrf_cookie)
+  @method_decorator(login_required)
   def dispatch(self, *args, **kwargs):
       return super(IndexView, self).dispatch(*args, **kwargs)
 
 class ParticipeView(generic.TemplateView):
   template_name = 'browser/participe.html'
+  @method_decorator(login_required)
+  def dispatch(self, *args, **kwargs):
+      return super(ParticipeView, self).dispatch(*args, **kwargs)
+
 
 class WordView(generic.TemplateView):
   template_name = 'browser/index-word.html'
+  @method_decorator(login_required)
+  def dispatch(self, *args, **kwargs):
+      return super(WordView, self).dispatch(*args, **kwargs)
 
 class OccurrenceWordView(generic.DetailView):
   model = Word
   template_name = 'browser/index-occurrence-word.html'
+  @method_decorator(login_required)
+  def dispatch(self, *args, **kwargs):
+      return super(OccurrenceWordView, self).dispatch(*args, **kwargs)
 
 class OccurrenceFamilyView(generic.DetailView):
   model = Family
   template_name = 'browser/index-occurrence-family.html'
+  @method_decorator(login_required)
+  def dispatch(self, *args, **kwargs):
+      return super(OccurrenceFamilyView, self).dispatch(*args, **kwargs)
 
 class FamiliesView(generic.TemplateView):
   template_name = 'browser/index-families.html'
+  @method_decorator(login_required)
+  def dispatch(self, *args, **kwargs):
+      return super(FamiliesView, self).dispatch(*args, **kwargs)
 
 class LetterView(generic.DetailView):
   model = Letter
   template_name = 'browser/detail.html'
+  @method_decorator(login_required)
+  def dispatch(self, *args, **kwargs):
+      return super(LetterView, self).dispatch(*args, **kwargs)
 
 class PeriodView(generic.TemplateView):
   template_name = 'browser/index-period.html'
+  @method_decorator(login_required)
+  def dispatch(self, *args, **kwargs):
+      return super(PeriodView, self).dispatch(*args, **kwargs)
 
 class FranciaView(generic.TemplateView):
   template_name = 'browser/index-francia.html'
@@ -445,6 +498,9 @@ class FranciaView(generic.TemplateView):
 class ModalLetterView(generic.DetailView):
   model = Letter
   template_name = 'browser/modal-letter.html'
+  @method_decorator(login_required)
+  def dispatch(self, *args, **kwargs):
+      return super(ModalLetterView, self).dispatch(*args, **kwargs)
 
 class ZipfView(generic.TemplateView):
   template_name = 'browser/zipflaw.html'

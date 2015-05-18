@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% block title %}
+  Logout
+{% endblock %}
+{% block header %}
+  Logged-out
+{% endblock %}
+{% block content %}
+{% if user.is_authenticated %}
+    <p>Welcome, {{ user.username }}. Thanks for logging in.</p>
+{% else %}
+    <p>Welcome, new user. Please <a href="{% url 'login' %}">log in</a>.</p>
+{% endif %}
+{% endblock %}

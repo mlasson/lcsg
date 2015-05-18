@@ -1,0 +1,194 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% block title %}
+  Hypertest's histogram
+{% endblock %}
+{% block header %}
+  Hypertest's histogram
+{% endblock %}
+{% block content %}
+
+<form class="form-horizontal">
+  
+  <div class="col-xs-12 form-group">
+    <label class="col-xs-8 control-label"> Corpus size: </label>
+    <div class="col-xs-4">
+       <input class="form-control" type="number" name="corpus-size" id="corpus-size" value="100"> 
+    </div> 
+  </div>
+  
+  <div class="col-xs-12 form-group">
+    <label class="col-xs-8 control-label"> Sub-corpus size: </label>
+    <div class="col-xs-4">
+       <input class="form-control" type="number" name="subcorpus-size" id="subcorpus-size" value="10"> 
+    </div> 
+  </div>
+
+  <div class="col-xs-12 form-group">
+    <label class="col-xs-8 control-label"> Total number of occurrences: </label>
+    <div class="col-xs-4">
+       <input class="form-control" type="number" name="family-size" id="family-size" value="30"> 
+    </div> 
+  </div>
+  
+  <div class="col-xs-12 form-group">
+    <label class="col-xs-8 control-label"> Observed value: </label>
+    <div class="col-xs-4">
+       <input class="form-control" type="number" name="observed" id="observed"> 
+    </div> 
+  </div>
+        
+  <div class="col-xs-12 form-group"> 
+    <div class="col-xs-offset-8"> 
+      <button type="button" class="btn btn-default" id="draw-histogram">Draw</button>
+    </div>
+  </div>
+
+</form>
+<p> Results : </p>
+<div id="results">
+</div>
+
+<script>
+  $(document).ready(function() {
+
+   function draw_histogram (root, data) {
+    data = data.filter(function(d) { return d.y > 0.00001; });
+    
+    var margin = {top: 20, right: 20, bottom: 30, left: 40},
+      width = 1000 - margin.left - margin.right,
+      height = 500 - margin.top - margin.bottom;
+
+    var x = d3.scale.ordinal()
+        .rangeRoundBands([0, width], .1);
+
+    var y = d3.scale.linear()
+        .range([height, 0]);
+
+    var xAxis = d3.svg.axis()
+        .scale(x)
+        .orient("bottom");
+
+    var yAxis = d3.svg.axis()
+        .scale(y)
+        .orient("left")
+        .ticks(10, "%");
+
+    var svg = d3.select(root).append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+
+    x.domain(data.map(function(d) { return d.x; }));
+    y.domain([0, d3.max(data, function(d) { return d.y; })]);
+
+    var xAxisSelect = svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(xAxis);
+
+    if (data.length > 30) {
+      xAxisSelect.selectAll("text")
+      .attr("y", 0)
+      .attr("x", 9)
+      .attr("dy", ".35em")
+      .attr("transform", "rotate(90)")
+      .style("text-anchor", "start");
+    }
+
+    svg.append("text")
+      .attr("class", "x label")
+      .attr("text-anchor", "end")
+      .attr("x", width)
+      .attr("y", height - 6)
+      .text("Occurrences");
+
+    svg.append("g")
+      .attr("class", "y axis")
+      .call(yAxis)
+      .append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 6)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")
+      .text("Probability");
+
+    svg.selectAll(".bar")
+       .data(data)
+       .enter().append("rect")
+       .attr("class", "bar")
+       .attr("x", function(d) { return x(d.x); })
+       .attr("width", x.rangeBand())
+       .attr("y", function(d) { return y(d.y); })
+       .attr("height", function(d) { return height - y(d.y); })
+       .style('fill', function (d) { 
+          if (d.tail) {
+           return 'red';
+          } else {
+           return 'steelblue';
+          }});
+   }
+    
+   $('#draw-histogram').click (function () {
+      var root = $("#results");
+      var alert = $('<div class="alert alert-warning alert-dismissible fade in" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+      root.append(alert);
+
+      var N = parseInt($('#corpus-size').val());
+      var K = parseInt($('#family-size').val());
+      var n = parseInt($('#subcorpus-size').val());
+      var k = parseInt($('#observed').val());
+      var avg = n * K / N;
+      
+            $.ajax({
+        url        : "{% url 'ajax-hypertest-histogram' %}",
+        dataType   : 'json',
+        contentType: 'application/json; charset=UTF-8', 
+        data       : JSON.stringify({ N : N, K : K, n : n }),
+        type       : 'POST',
+        success   : function (json) { 
+          var data = [];
+          console.log(json);
+          var specificite = 0.0;
+          for (key in json) {
+            if (json.hasOwnProperty(key)) {
+              var x = parseInt(key);
+              var y = json[key]
+              tail = false;
+
+              if (k) {
+                if (k <= avg) {
+                  tail = x <= k;
+                } else {
+                  tail = x >= k;
+                }
+                if (tail){
+                  specificite += y;
+                }
+              }
+              
+              data.push({ 'x' : x, 'y' : y, tail : tail });
+            }
+          }
+          console.log(data);
+          draw_histogram(alert[0], data);
+          alert.append($('<p> Probability distribution of observing occurrences of a given form in corpus of size '+N+', a subcorpus of size '+n+' and assumming there is a total number of '+K+' occurrences of the form. </p>'));
+          if (k) {
+            if (k < avg) {
+              alert.append($('<p> If '+k+' occurrences has been observed which is less than the average ('+avg.toFixed(2)+'), which means the form is under-represented. The area in red expresses the specificity index (the lower the more surprising).</p>'));
+            } else {
+              alert.append($('<p> If '+k+' occurrences has been observed which is more than the average ('+avg.toFixed(2)+'), which means the form is over-represented. The area in red expresses the specificity index (the lower the more surprising).</p>'));
+            }
+            alert.append($('<p> The specificity area is equal to '+specificite+'.<p>'));
+          }
+
+
+        }
+      });
+   });
+  });
+</script>
+{% endblock %}

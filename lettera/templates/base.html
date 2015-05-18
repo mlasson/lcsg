@@ -77,8 +77,10 @@
                 <li class="divider"></li>
                 <li class="dropdown-header">Words</li>
                 <li class="{% active request 'index-word' %}"><a href="{% url 'index-word' %}">Index</a></li>
+                <li class="divider"></li>
                 <li class="dropdown-header">Divers</li>
                 <li class="{% active request 'participe' %}"><a href="{% url 'participe' %}">Participe</a></li>
+                <li class="{% active request 'index-hypertest' %}"><a href="{% url 'index-hypertest' %}">Hypertest plotter</a></li>
              <!-- Now Hidden:
                 <li class="dropdown-header">Periods</li>
                 <li class="{% active request 'index-period' %}"><a href="{% url 'index-period' %}">Periods</a></li>
@@ -97,19 +99,28 @@
     <div class="container">
       <div class="container-fluid">
         <div class="page-header">
-          <div class="row"> <h1 class="col-md-8">{% block header %}UNDEFINED TITLE{% endblock %}</h1> <div class="col-md-4" id="header-right"> </div>
+          <div class="row"> <h1 class="col-md-8">{% block header %}UNDEFINED TITLE{% endblock %}</h1> <div class="col-md-4" id="header-right"> </div> </div>
         </div>
       </div>
       {% block content %}
       <p class="lead">This a bug. Please report it. </p>
       {% endblock %}
     </div>
-    <div id="footer">
+
+
+
+    <footer id="footer">
       <div class="container">
         <p class="text-muted"> 
-      {% block footer %}
-      {% endblock %}
+         {% if user.is_authenticated %}
+           You are logged as {{ user.username }}.
+            <a href="{% url 'logout' %}" class="btn btn-danger pull-right">Logout</a>
+         {% else %}
+            You are not logged in.
+            <a href="{% url 'login' %}" class="btn btn-success pull-right">Login</a>
+         {% endif %} 
         </p>
       </div>
-    </div>
+    </footer>
   </body>
+</html>

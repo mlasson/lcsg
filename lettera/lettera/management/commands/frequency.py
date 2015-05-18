@@ -72,7 +72,7 @@ class Command(BaseCommand):
       cpt+=1
       sys.stdout.write("%6d / %d\r" % (cpt, N))
       sys.stdout.flush()
-      size = Occurrence.objects.all().select_related('letter').filter(letter__period = p.pk).count()
+      size = Occurrence.objects.all().select_related('letter').filter(letter__period_id = p.pk).count()
       p.size = size
       p.save()
     sys.stdout.write("\r%6d / %d" % (cpt, maxcpt))

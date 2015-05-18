@@ -14,6 +14,8 @@ message 'python manage.py syncdb'
 python manage.py syncdb || exit
 message 'python manage.py loaddata datas'
 python manage.py loaddata datas || exit
+message 'python manage.py create_users'
+python manage.py create_users || exit
 message 'python manage.py initdb'
 python manage.py initdb || exit
 message 'python manage.py filter'
@@ -21,7 +23,7 @@ python manage.py filter || exit
 message 'python manage.py precomp'
 python manage.py precomp || exit
 message 'python manage.py frequency'
-python manage.py precomp || exit
+python manage.py frequency || exit
 message 'python manage.py corpus_period'
 python manage.py corpus_period || exit
 message 'python manage.py runserver'

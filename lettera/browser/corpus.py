@@ -41,6 +41,53 @@ def load_corpus():
     loc = LOccurrence(o.pk, words[o.word_id], families[o.family_id], o.sentence_id)
     letters[o.letter_id].append(loc)
   return [families, words, letters]
+ 
+def log_factorial(n) :
+  if n <= 100:
+   return log(factorial(n))
+  return n*log(n) - n + log(n * ( 1 + 4*n*(1+2*n))) / 6 + log(pi) / 2
+
+
+def log_binom (n, p) : 
+  return log_factorial(n) - log_factorial(n-p) - log_factorial(p)
+
+def avg(N, n, K):
+  return float ((K * n) / N )
+
+def hyper (N, n, CnN, K, k): 
+  l = log_binom(K, k) + log_binom(N - K, n - k) - CnN
+  try:
+    return exp(l)
+  except OverflowError:
+    print (N, n, K, k, l)
+    return 0.0
+
+def test (N, n, K, k): 
+  CnN = log_binom(N, n)
+  if k >= avg(N, n, K):
+    step = 1
+  else : 
+    step = -1
+  result = 0.0
+  while True:
+    increment = hyper(N, n, CnN, K, k)
+    result += increment
+    k += step
+    if k < 0 or k > K or k < n - N + K or k > n or increment < 1e-20:
+      break
+  return step*result 
+
+def histogram_hypertest(N, n, K):
+  min_support = max(0, n+K-N)
+  max_support = min(n, K)
+  support = range (min_support, max_support + 1)
+  result = dict()
+  CnN = log_binom(N, n)
+  for k in support:
+    bar = hyper(N, n, CnN, K, k)
+    result[k] = bar
+  return result
+
 
 class Corpus :
   
@@ -99,51 +146,17 @@ class Corpus :
     subcorpus = self.subcorpus(subcorpus_id)
     result = subcorpus.statistics()
 
-    def log_factorial(n) :
-       if n <= 100:
-         return log(factorial(n))
-       return n*log(n) - n + log(n * ( 1 + 4*n*(1+2*n))) / 6 + log(pi) / 2
-
-
-    def log_binom (n, p) : 
-      return log_factorial(n) - log_factorial(n-p) - log_factorial(p)
-
     N = self.total
     n = subcorpus.total 
 
     assert (n <= N)
 
-    CnN = log_binom(N, n)
-
-    def avg(K):
-      return float ((K * n) / N )
-
-    def hyper (K, k): 
-      l = log_binom(K, k) + log_binom(N - K, n - k) - CnN
-      try:
-        return exp(l)
-      except OverflowError:
-        print (N, n, K, k, l)
-        return 0.0
-    def test (K, k): 
-      if k >= avg(K):
-        step = 1
-      else : 
-        step = -1
-      result = 0.0
-      while True:
-        increment = hyper(K, k)
-        result += increment
-        k += step
-        if k < 0 or k > K or k < n - N + K or k > n or increment < 1e-20:
-          break
-      return step*result 
 
     for row in result['data']: 
       family_id = row['pk']
       K = self.occurrences[family_id]
       k = subcorpus.occurrences[family_id]
-      row['hypertest'] = test(K, k)
+      row['hypertest'] = test(N, n, K, k)
       row['total_occurrences'] = K
       row['total_frequency'] = self.frequencies[family_id]
       row['relative_frequency'] = subcorpus.frequencies[family_id] / self.frequencies[family_id]

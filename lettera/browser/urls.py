@@ -3,6 +3,8 @@ from browser import views
 
 urlpatterns = [
         url(r'^$', views.IndexView.as_view(), name='index'), 
+        url(r'^hypertest/$', views.HypertestView.as_view(), name='index-hypertest'), 
+        url(r'^ajax/hypertest-histo/$', views.hypertest_histogram, name='ajax-hypertest-histogram'), 
         url(r'^ajax/subcorpus-search/$', views.search_subcorpus, name='ajax-subcorpus-search'), 
         url(r'^ajax/subcorpus-create/$', views.create_subcorpus, name='ajax-subcorpus-create'), 
         url(r'^ajax/subcorpus-delete/$', views.delete_subcorpus, name='ajax-subcorpus-delete'), 
