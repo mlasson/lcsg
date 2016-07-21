@@ -21,8 +21,23 @@ then
     then
       cd initdata || exit
       ./initdata.sh || exit
-      cd .. 
+      cd ..
+      message "do you want to generate a remote backup (Y/N) ?"
+      read -n 1 -r
+      echo ""
+      if [[ $REPLY =~ ^[Yy]$ ]]
+      then
+        message 'generating remote backup ...'
+        ssh vitrine.ovh "srv/lcsg/backup.sh" || exit
+        message 'zipping backup remotely ...'
+        ssh vitrine.ovh "zip /tmp/backup.zip srv/lcsg/lettera/backup.json" || exit
+        message 'downloading backup ...'
+        scp vitrine.ovh:/tmp/backup.zip /tmp/ || exit
+        message 'unzipping locally ...'
+        unzip /tmp/backup.zip -d lettera/fixture/ || exit
+      fi
     fi
+
     message 'resetting ...'
     ./reset.sh
   fi
