@@ -12,8 +12,10 @@ message 'erasing the database'
 rm -f db.sqlite3
 message 'python manage.py syncdb'
 python manage.py syncdb || exit
-message 'python manage.py loaddata datas'
-python manage.py loaddata datas || exit
+for file in fixture/*.json; do 
+  message "python manage.py loaddata ${file%.*}"
+  python manage.py loaddata ${file%.*} || exit
+done
 message 'python manage.py create_users'
 python manage.py create_users || exit
 message 'python manage.py initdb'

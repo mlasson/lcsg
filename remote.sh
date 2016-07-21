@@ -30,7 +30,7 @@ then
         message 'generating remote backup ...'
         ssh vitrine.ovh "srv/lcsg/backup.sh" || exit
         message 'zipping backup remotely ...'
-        ssh vitrine.ovh "zip /tmp/backup.zip srv/lcsg/lettera/backup.json" || exit
+        ssh vitrine.ovh "zip /tmp/backup.zip -j srv/lcsg/lettera/backup.json" || exit
         message 'downloading backup ...'
         scp vitrine.ovh:/tmp/backup.zip /tmp/ || exit
         message 'unzipping locally ...'

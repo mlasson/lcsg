@@ -185,9 +185,9 @@ class Lettera :
     period = 'null'
     if self.period_id : 
       period = self.period_id
-    ignore = 'false'
+    ignore = 'False'
     if self.ignore : 
-      ignore = 'true'
+      ignore = 'True'
     return u'''{{
   "pk" : {0.ident}, 
   "model" : "browser.letter", 
