@@ -36,4 +36,4 @@ then
   rm -f db.zip 
 fi
 message 'launching remotely'
-ssh vitrine.ovh "srv/lcsg/launch.sh 192.168.1.1:8087"
+ssh vitrine.ovh "srv/lcsg/launch.sh localhost:8087"
