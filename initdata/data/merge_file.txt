@@ -2454,7 +2454,7 @@ fortilitii : fortilitii
 fortini : fortini
 fortinis : fortinis
 fortuna : fortuna fortune fortunato fortunatissimo
-forzare : forzato forza forzati forzata franzese franzesi forzatamente forzassino forzorono forzassi forzare forzarlo forzerebbe forzarli forzerai forze
+forzare : forzato forza forzati forzata forzatamente forzassino forzorono forzassi forzare forzarlo forzerebbe forzarli forzerai forze
 forziere : forziere forzieri
 fossa : fossa
 fossan : fossan
@@ -2480,6 +2480,7 @@ franco : franco
 francorum : francorum
 frangente : frangente frangenti
 franza : franza
+franzese : franzese franzesi
 frasche : frasche
 frassineto : frassineto
 frassinino : frassinino
@@ -4316,9 +4317,8 @@ pasqualino : pasqualino
 pasqua : pasqua
 pasquini : pasquini pasquino
 passaggio : passaggio passaggi
-passare : passai passi passollo passo passorno passorono passerai passera passerebbono passeremo passiate passin  passavono passatosene passavano passava passatoi passatola passandovi passeranno passando passassi passono passerebbe passare passino passò passata passerà passate passano passar passa passaranno passarla passarlo passarre passartene passassino passassin passasti
-passati : passati 
-passato : passato
+passare : passai passi passollo passo passorno passorono passerai passera passerebbono passeremo passiate passin  passavono passatosene passavano passava passatoi passatola passandovi passeranno passando passassi passono passerebbe passare passino passò passerà passano passar passa passaranno passarla passarlo passarre passartene passassino passassin passasti
+passato : passato passati passate passata
 passavolante : passavolante passavolanti
 passengeri : passengeri
 passione : passionati passionato passioni passione
