@@ -21,6 +21,10 @@ class Command(BaseCommand):
         result[period.name].append(l.pk)
       else:
         result['SG'].append(l.pk)
+      if '"' in l.text or '«' in l.text:
+        result['HAS_QUOTES'].append(l.pk)
+
+
     subcorpis = []
     for key, value in result.items():
       sc = Subcorpus(name = key, letters=','.join(map(str, value)))
