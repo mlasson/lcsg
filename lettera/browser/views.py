@@ -148,7 +148,7 @@ def ellipse(front, word, back, maxsize=100):
 
 def build_occurrence_table(occs):
     answer = list()
-    occs = occs.select_related('word', 'sentence', 'letter', 'period')
+    occs = occs.select_related('word', 'sentence', 'letter')
     for o in occs:
         r = dict()
         r['link'] = (reverse('modal-letter', args=(o.letter_id, )),
@@ -171,7 +171,7 @@ def build_occurrence_table(occs):
 @json_cache
 def occurrences_index(request, pks):
     pks = map(int, pks.split(','))
-    occs = Occurrence.objects.filter(pk__in=pks)
+    # occs = Occurrence.objects.filter(pk__in=pks)
     answer = build_occurrence_table(pks)
     periods = dict()
     for p in Period.objects.all():
