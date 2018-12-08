@@ -15,7 +15,7 @@ For more information, please contact <span id="e781554389">[javascript protected
 <p class="text-danger">Your username and password didn't match. Please try again.</p>
 {% endif %}
 
-<form class="form-horizontal" method="post" action="{% url 'django.contrib.auth.views.login' %}">
+<form class="form-horizontal" method="post" action="{% url 'login' %}">
     {% csrf_token %}
     <div class="form-group">
       <label class="col-sm-2 control-label" for="{{ form.username.id_for_label }}">User name:</label>

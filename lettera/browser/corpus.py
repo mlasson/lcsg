@@ -1,5 +1,5 @@
 from django.core.cache import cache
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from collections import defaultdict, Counter
 from browser.models import *
 from math import factorial, log, exp, pi

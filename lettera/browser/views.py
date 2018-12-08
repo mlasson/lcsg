@@ -2,7 +2,7 @@ import json
 import math
 from datetime import datetime, time, date
 from collections import Counter, defaultdict
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.template import RequestContext, loader
 from django.db.models import Count, Q, query
 from django.shortcuts import render

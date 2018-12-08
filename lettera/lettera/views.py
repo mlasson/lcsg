@@ -1,14 +1,14 @@
-from django.views import generic
+from django.views.generic import TemplateView
 from django.contrib.auth import logout
 
-class HomeView(generic.TemplateView):
+class HomeView(TemplateView):
   template_name = 'home.html'
 
-class AboutView(generic.TemplateView):
+class AboutView(TemplateView):
   template_name = 'about.html'
 
-class ProfileView(generic.TemplateView):
+class ProfileView(TemplateView):
   template_name = 'registration/profile.html'
 
-class ContactView(generic.TemplateView):
+class ContactView(TemplateView):
   template_name = 'contact.html'
