@@ -7,9 +7,8 @@ from collections import defaultdict
 
 
 class Command(BaseCommand):
-  args = '<???>'
-  help = 'Clear the cache table'
+    args = '<???>'
+    help = 'Clear the cache table'
 
-  def handle(self, *args, **options):
-    Cache.objects.all().delete()       
-        
+    def handle(self, *args, **options):
+        Cache.objects.all().delete()

@@ -10,4 +10,3 @@ admin.site.register(Occurrence)
 admin.site.register(Cache)
 admin.site.register(Tag)
 admin.site.register(Subcorpus)
-
