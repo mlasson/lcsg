@@ -43,7 +43,7 @@ global_key = []
 
 def getkey():
     global global_key
-    if len(global_key) < 0:
+    if len(global_key) < 1:
         global_key.append(getpass('Enter the passphrase: ').encode('utf-8'))
     return global_key[0]
 
