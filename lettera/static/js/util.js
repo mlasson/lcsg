@@ -14,7 +14,7 @@ function add_spans_letters(text, occurrences) {
   for (var i = 0; i < occ_len; i ++){
     var occ = occurrences[i];
     result+= text.substring(position, occ.start_position);
-    if (occ.family != "UNKNOWN WORDS") {
+    if (occ.family != "IGNORED WORDS") {
       result+= '<span class="bg-info" data-toggle="tooltip" data-placement="right" title="'+occ.family+'">';
     } else {
       result+= '<span class="bg-warning">';

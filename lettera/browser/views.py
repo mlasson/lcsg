@@ -30,9 +30,9 @@ class json_cache(object):
             name=self.name, args=repr(input_data)).first()
         if not query:
             result = self.func(arg, **args)
-            new_entry = Cache(
-                name=self.name, args=repr(input_data), value=result)
-            new_entry.save()
+            if result:
+                new_entry = Cache(name=self.name, args=repr(input_data), value=result)
+                new_entry.save()
         else:
             result = query.value
         return HttpResponse(result, content_type='application/javascript')
@@ -462,6 +462,7 @@ def search_subcorpus(request):
 @json_cache
 def index_families_post(request):
     corpus = Corpus()
+    print(request.method)
     if request.method == 'POST' and request.body:
         body = request.body.decode()
         print(body)
