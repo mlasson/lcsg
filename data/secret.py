@@ -39,13 +39,13 @@ def decrypt_file(key, input_file, output_file):
             output.write(decrypt(key, data))
 
 
-global_key = None
+global_key = []
 
 def getkey():
     global global_key
-    if not global_key:
-        global_key = getpass('Enter the passphrase: ').encode('utf-8')
-    return global_key
+    if len(global_key) < 0:
+        global_key.append(getpass('Enter the passphrase: ').encode('utf-8'))
+    return global_key[0]
 
 def main():
     parser = argparse.ArgumentParser()
