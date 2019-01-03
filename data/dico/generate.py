@@ -87,11 +87,11 @@ class Reader():
         }}
     }}'''.format(id, word, family_id))
 
-def main():
+def main(force):
     dir_path = os.path.dirname(os.path.realpath(__file__))
     dico_file = os.path.join(dir_path, "dico.txt")
     json_file = os.path.join(dir_path, "../fixtures/dico.json")
-    if not os.path.exists(dico_file):
+    if not os.path.exists(dico_file) or force:
         file_enc = dico_file + '.encoded'
         if not os.path.exists(file_enc):
             raise Exception("Unable to find '{0}'".format(file_enc))

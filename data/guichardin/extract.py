@@ -30,11 +30,11 @@ def read_letters():
                 current.append(line)
     return result
 
-def main():
+def main(force):
     result = []
     key = None
     for file in files:
-        if not os.path.exists(file):
+        if not os.path.exists(file) or force:
             file_enc = file + '.encoded'
             if not os.path.exists(file_enc):
                 raise Exception("Unable to find '{0}'".format(file_enc))

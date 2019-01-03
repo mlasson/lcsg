@@ -462,10 +462,8 @@ def search_subcorpus(request):
 @json_cache
 def index_families_post(request):
     corpus = Corpus()
-    print(request.method)
     if request.method == 'POST' and request.body:
         body = request.body.decode()
-        print(body)
         json_request = json.loads(body)
         subcorpus_id = json_request['subcorpus']
         if subcorpus_id is None:
