@@ -10,15 +10,18 @@
 {% block content %}
 
 <table class="table table-striped" id="myIndexList" width="100%">
-    <thead><tr>
-    <th> View </th>
-    <th> Invisible</th>
-    <th> Key</th>
-    <th> Volume </th>
-    <th> Number </th> 
-    <th> Length </th> 
-    <th> Date </th> 
-    <th> Period </th></tr></thead>
+  <thead>
+    <tr>
+      <th> View </th>
+      <th> Invisible</th>
+      <th> Key</th>
+      <th> Volume </th>
+      <th> Number </th>
+      <th> Length </th>
+      <th> Date </th>
+      <th> Period </th>
+    </tr>
+  </thead>
   <tbody>
   </tbody>
 </table>
@@ -141,11 +144,11 @@
          },
         "aoColumnDefs" : [
              { "mRender" : function (data, type, row) { 
-             return '<button type="button" id="modal_button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#myModal" '+'data-content-url="'+data+'">'+
+             return '<div class="btn-group"><button type="button" id="modal_button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#myModal" '+'data-content-url="'+data+'">'+
                     '<span class="glyphicon glyphicon-eye-open"></span></button>'+
                     '<a href="'+row.link+'" class="btn btn-default btn-xs">'+
                     '<span class="glyphicon glyphicon-link"></span></a>' + 
-                    '<button class="btn btn-default btn-xs" id="select_button" data-pk="'+row.pk+'"><span class="glyphicon glyphicon-pushpin""></span></button>';
+                    '<button class="btn btn-default btn-xs" id="select_button" data-pk="'+row.pk+'"><span class="glyphicon glyphicon-pushpin""></span></button></div>';
                 }, 
                "aTargets": [ 0 ]
                }, {"bVisible" : false, "aTargets":[1]}, {"sType" : "date", "aTargets":[5]}, {"sType" : "numeric", "aTargets":[2,3,4]}],
