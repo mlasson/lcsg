@@ -10,32 +10,17 @@ from django.db.models import Q
 
 class Command(BaseCommand):
     args = '<???>'
-    help = 'Compute inverse and direct frequencies'
+    help = 'Filter empty and unused families'
 
     def handle(self, *args, **options):
-        print(
-            'Checking families that families are not empty and contains at least one occurrence'
-        )
-        all_families = Family.objects.annotate(
-            occurrences=Count('word__occurrence')).order_by('pk')
-        maxcpt = all_families.count()
-        cpt = 0
-        empty_families = list()
-        noocc_families = list()
-        for f in all_families:
-            cpt += 1
-            if cpt % 10 == 1:
-                sys.stdout.write("\r%6d / %d" % (cpt, maxcpt))
-                sys.stdout.flush()
-            sys.stdout.write("\r%6d / %d" % (cpt, maxcpt))
-            size = Word.objects.filter(family_id=f.id).count()
-            if size == 0:
-                empty_families.append(f.name)
-                f.delete()
-            elif f.occurrences == 0:
-                noocc_families.append(f.name)
-                f.delete()
+        empty_families = Family.objects.annotate(cnt=Count('word')).filter(cnt=0)
         print('\nThe following families are empty:')
-        print(', '.join(empty_families))
+        print(', '.join(map(str, empty_families)))
+        print(empty_families.count())
+        empty_families.delete()
+        
+        noocc_families = Family.objects.annotate(cnt=Count('occurrence')).filter(cnt=0)
         print('The following families never occur:')
-        print(', '.join(noocc_families))
+        print(', '.join(map(str, noocc_families)))
+        print(noocc_families.count())
+        noocc_families.delete()
