@@ -48,9 +48,9 @@ class Reader():
                     print("Possible merge of '{1}' with family '{0}'".format(self.family[word], word))
                 else:
                     print("Global duplicate detected '{0}'".format(word))
-        if title not in words and title != "NUMERALS" and title != "LATIN":
+        if title not in words :
             print("Missing title '{0}' in words".format(title))
-            line_set.add(title)
+            # line_set.add(title)
 
     def parse_dico(self):
         line_number = 0
@@ -64,6 +64,8 @@ class Reader():
                 self.parse_entry(entry[0], entry[1])
 
     def output_title(self, id, title, stream):
+        if title == 'IGNORED': 
+            title = 'IGNORED WORDS'
         stream.append(u'''
     {{
         "pk" : {0},
