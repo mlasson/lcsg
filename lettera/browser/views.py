@@ -6,7 +6,7 @@ from django.urls import reverse
 from django.template import RequestContext, loader
 from django.db.models import Count, Q, query
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseBadRequest
 from django.views import generic
 from django.contrib.auth.decorators import login_required
 from browser.models import *
@@ -469,7 +469,7 @@ def index_families_post(request):
         if subcorpus_id is None:
             subcorpus_id = Subcorpus.objects.get(name='All').pk
         return json.dumps(corpus.subcorpus_statistics(subcorpus_id))
-
+    return HttpResponseBadRequest(['POST'])
 
 @ensure_csrf_cookie
 def delete_subcorpus(request):
