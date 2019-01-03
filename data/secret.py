@@ -21,9 +21,11 @@ def decrypt(key, source, decode=True):
     IV = source[:AES.block_size]
     decryptor = AES.new(key, AES.MODE_CBC, IV)
     data = decryptor.decrypt(source[AES.block_size:])
-    padding = ord(data[-1]) - ord('a')
-    if data[-padding:] != chr(ord('a') + padding) * padding:
-        raise ValueError("Invalid padding...")
+    padding = data[-1] - ord('a')
+    print(padding)
+    expected = (chr(ord('a') + padding) * padding).encode()
+    if data[-padding:] != expected:
+        raise ValueError("Invalid padding... '{0}' = '{1}'".format(expected, data[-padding:]))
     return data[:-padding]
 
 def encrypt_file(key, input_file, output_file):
